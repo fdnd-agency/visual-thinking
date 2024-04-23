@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/tekenmethodes/[slug]/stappenplan/+page.svelte";
