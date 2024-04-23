@@ -44,6 +44,7 @@
   <div class="flex-s">
     <div class="tags-b">
 
+      <img class="icon" src="/icon1.svg" alt="icon" />
       <div class="wrapper-methods">
 
       <img class="icon" src="/images/category.svg" alt="icon" />
