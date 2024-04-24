@@ -1,6 +1,6 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import MethodsHeader from "$lib/organisms/methodsHeader.svelte";
+  import MethodHeader from "$lib/organisms/methodHeader.svelte";
 
   export let data;
 
@@ -37,14 +37,12 @@
   bgc="var(--vtYellow)"
 />
 
-<MethodsHeader {data} />
+<MethodHeader {data} />
 
 
 <article class="grid">
   <div class="flex-s">
     <div class="tags-b">
-
-      <img class="icon" src="/icon1.svg" alt="icon" />
       <div class="wrapper-methods">
 
       <img class="icon" src="/images/category.svg" alt="icon" />
