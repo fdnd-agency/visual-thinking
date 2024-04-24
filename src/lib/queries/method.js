@@ -1,7 +1,7 @@
-export default function getQueryUrl(gql, slug) {
+export default function methodDescriptionQuery(gql, slug) {
     return gql`
       query VisualThinking {
-        methods(where: { slug: "${slug}" }) {
+        method(where: { slug: "${slug}" }) {
           title
           slug
           id

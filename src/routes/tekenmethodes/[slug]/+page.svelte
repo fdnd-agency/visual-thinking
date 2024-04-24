@@ -1,6 +1,6 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
-  import MethodsHeader from "$lib/organisms/methodsHeader.svelte";
+  import MethodHeader from "$lib/organisms/methodHeader.svelte";
 
   export let data;
 </script>
@@ -11,17 +11,13 @@
   bgc="var(--vtYellow)"
 />
 
-<MethodsHeader {data} />
+<MethodHeader {data} />
 
 <section class="section-wrapper">
-  {#each data.methods as method}
-    <img src={method?.template?.url} alt="template_image" loading="lazy" />
-  {/each}
+  <img src={data.method?.template?.url} alt="template_image" loading="lazy" />
 
   <p>
-    {#each data.methods as method}
-      {@html method?.description.html}
-    {/each}
+      {@html data.method?.description.html}
   </p>
 </section>
 

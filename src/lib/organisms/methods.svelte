@@ -6,6 +6,7 @@
   <h2>Alle methodes ({data.length})</h2>
   {#if data && data.length > 0}
     {#each data as method, index}
+    <div class="methods-focus-state">
       <article class="methods-container" data-index={index}>
         <a href="/tekenmethodes/{method.slug}">
           {#if method.template && method.template.url}
@@ -23,9 +24,10 @@
               alt="Placeholder"
             />
           {/if}
-          <h3>{method.title}</h3>
         </a>
       </article>
+      <h3>{method.title}</h3>
+    </div>
     {/each}
   {/if}
 </section>
@@ -48,8 +50,7 @@
     font-size: 19px;
     font-weight: 400;
     margin: 0;
-    width:100%;
-    
+    width: 100%;
   }
 
   a {
@@ -65,15 +66,17 @@
     border: 1px solid #ccc;
   }
 
-  article:hover,
-  article:focus-visible {
-    border-color: var(--vtYellow);
-    outline: none;
-  }
-
   article img {
     width: 100%;
     height: auto;
+  }
+
+  .methods-focus-state:hover,
+  .methods-focus-state:hover h3 {
+    border: 1em solid #f9f8f8;
+    border-bottom: 0.2em solid #feb51e;
+    background-color: #f9f8f8;
+    /* background: no-repeat; */
   }
 
   @media screen and (min-width: 36em) {

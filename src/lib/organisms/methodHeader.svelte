@@ -1,6 +1,8 @@
 <script>
   export let data;
-  const method = data.methods[0]
+
+  console.log(data);
+  const method = data.method;
 </script>
 
 <header>
@@ -98,7 +100,7 @@
     margin-bottom: 0.5em;
 	}
   
-	:hover .button-pdf {
+	.button-pdf:hover {
 	  color: var(--vtDarkBlue);
 	  background-color: rgb(188, 188, 188);
 	}

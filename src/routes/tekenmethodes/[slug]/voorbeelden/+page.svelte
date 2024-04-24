@@ -1,6 +1,6 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import MethodsHeader from "$lib/organisms/methodsHeader.svelte";
+  import MethodHeader from "$lib/organisms/methodHeader.svelte";
   import { onMount } from "svelte";
 
   export let data;
@@ -26,7 +26,7 @@
 </script>
 
 <Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
-<MethodsHeader {data} />
+<MethodHeader {data} />
 
 <section class="images-buttons">
   <div class="js-disable">
