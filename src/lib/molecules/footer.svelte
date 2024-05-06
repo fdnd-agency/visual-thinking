@@ -1,11 +1,12 @@
 <footer>
   <nav>
-    <a href="/">
+    <a href="/" class="footer-content">
       <img
-        src="/images/visual-thinking-hbo-logo-footer.svg"
+        src="/images/visual-thinking-hbo-logo.svg"
         class="logo-footer"
         alt="Visual thinking logo"
       />
+      <h1>Visual Thinking in het hbo</h1>
     </a>
 
     <div>
@@ -86,14 +87,79 @@
     transform: scale(1.1);
   }
 
+  .logo-footer {
+    padding-top: 1em;
+    width: 5em;
+  }
+
+  h1 {
+    font-family: var(--vtPrimaryFont);
+    color: var(--vtDarkBlue);
+    font-weight: 600;
+    font-size: 2em;
+    text-align: left;
+    max-width: 8em;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 2em;
+    padding-left: 5em;
+    margin-top: -1em;
+  }
+
   @media (max-width: 425px) {
+
+    footer nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
     div span {
       display: none;
     }
 
     .logo-footer {
-      width: 60%;
+      width: 3em;
     }
+
+  h1 {
+    font-size: 1em;
+    text-align: left;
+    max-width: 8em;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 2em;
+    padding-left: 1em;
+  }
+  }
+
+  @media (min-width: 425px) and (max-width: 768px) {
+    footer nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+   
+    .logo-footer {
+   width: 4em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 2em;
+    margin-top: -1em;
+  }
   }
 
   @media (min-width: 768px) {
@@ -101,11 +167,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-    }
-
-    .logo-footer {
-      height: auto;
-      width: 70%;
     }
 
     .icon {
