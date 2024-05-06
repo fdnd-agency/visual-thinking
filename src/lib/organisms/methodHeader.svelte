@@ -25,7 +25,7 @@
         </li>
         <li>
         {#if method.pdf}
-          <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="method-pdf-download">Download</a>
+          <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download</a>
         {/if}
       </li>
       
@@ -83,7 +83,7 @@
     text-underline-offset: 0.5rem;
   }
 
-  .method-pdf-download {
+  .vt-standard-button {
 	  color: white;
 	  font-family: var(--vtPrimaryFont);
 	  background-color: var(--vtDarkBlue);
@@ -92,7 +92,7 @@
 	  margin-left: 1em;
 	}
   
-	.method-pdf-download:hover {
+	.vt-standard-button:hover {
 	  color: var(--vtDarkBlue);
 	  background-color: rgb(188, 188, 188);
 	}
