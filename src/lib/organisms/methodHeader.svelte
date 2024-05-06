@@ -12,24 +12,22 @@
   <nav>
     <ul>
         <li>
-          <a href="/tekenmethodes/{method.slug}">
-            <h2>Beschrijving</h2>
+          <a href="/tekenmethodes/{method.slug}">Beschrijving
           </a>
         </li>
         <li>
-          <a href="/tekenmethodes/{method.slug}/stappenplan">
-            <h2>Stappenplan</h2>
+          <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan
           </a>
         </li>
         <li>
-          <a href="/tekenmethodes/{method.slug}/voorbeelden">
-            <h2 class="bottom">Voorbeelden</h2>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden
           </a>
         </li>
-
+        <li>
         {#if method.pdf}
-          <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="button-pdf">Download</a>
+          <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="method-pdf-download">Download</a>
         {/if}
+      </li>
       
     </ul>
   </nav>
@@ -56,7 +54,7 @@
     transition: transform 0.3s ease;
     padding:0;
     margin: 0 1rem;
-    gap:1.5rem;
+    gap: 1.5rem;
   }
 
 
@@ -64,6 +62,7 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
+    color: var(--vtSec-DarkBlue);
   }
 
   nav ul {
@@ -84,23 +83,16 @@
     text-underline-offset: 0.5rem;
   }
 
-  h2 {
-    color: var(--vtSec-DarkBlue);
-    font-size: 20px;
-    font-weight: 100;
-  }
-
-  .button-pdf {
+  .method-pdf-download {
 	  color: white;
 	  font-family: var(--vtPrimaryFont);
 	  background-color: var(--vtDarkBlue);
-    padding: 0.5em 0.4em ;
-	  border-radius: 0.2em;
+    padding: 1em 0.5em;
+	  border-radius: 2em;
 	  margin-left: 1em;
-    margin-bottom: 0.5em;
 	}
   
-	.button-pdf:hover {
+	.method-pdf-download:hover {
 	  color: var(--vtDarkBlue);
 	  background-color: rgb(188, 188, 188);
 	}
