@@ -9,7 +9,7 @@
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
-    <div>
+    <div class="icons-nav">
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
@@ -41,7 +41,6 @@
   footer nav {
     background-color: var(--vtGrey-10);
     font-family: var(--vtPrimaryFont);
-    padding: 10px;
     text-align: center;
   }
 
@@ -89,7 +88,6 @@
 
   .logo-footer {
     padding-top: 1em;
-    width: 5em;
   }
 
   h1 {
@@ -104,7 +102,6 @@
   .footer-content {
     display: flex;
     gap: 2em;
-    padding-left: 5em;
     margin-top: -1em;
   }
 
@@ -122,7 +119,8 @@
     }
 
     .logo-footer {
-      width: 3em;
+      width: 2.5em;
+      margin-top: -1em;
     }
 
   h1 {
@@ -135,6 +133,7 @@
     display: flex;
     gap: 2em;
     padding-left: 1em;
+    padding-top: 1em;
   }
   }
 
@@ -147,8 +146,9 @@
     }
    
     .logo-footer {
-   width: 4em;
-  }
+    width: 3.5em;
+    margin-top: -1em;
+    }
 
   h1 {
     font-size: 1.5em;
@@ -159,6 +159,7 @@
     display: flex;
     gap: 2em;
     margin-top: -1em;
+    padding-top: 1em;
   }
   }
 
@@ -172,6 +173,43 @@
     .icon {
       width: 30px;
       height: 30px;
+    }
+
+    .footer-content {
+      padding-left: 5em;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1000px){
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .footer-content {
+      margin-left: -3em;
+      padding-left: 4em;
+    }
+
+    .logo-footer {
+      width: 3.5em;
+      margin-top: -0.8em;
+    }
+
+    .icons-nav {
+      padding-right: -3em;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .logo-footer {
+      width: 4.8em;
+      margin-top: -0.8em;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1200px){
+    .footer-content {
+      margin-left: -2em;
     }
   }
 </style>
