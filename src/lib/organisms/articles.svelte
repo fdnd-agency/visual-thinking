@@ -24,15 +24,15 @@
 
   a {
     text-decoration: none;
-    border: 1px solid transparent; 
-    transition:.25s
+    border-bottom: 0.3em solid transparent;
+    padding: 0.3em;
+    margin: -0.3em;
   }
 
   a:hover,
   a:focus-visible {
-    border-color:var(--vtDarkBlue);
-    outline:none;
-    background:var(--vtDarkBlue-10);
+    border-bottom: 0.3em solid var(--vtDarkBlue);
+    background-color: var(--vtGrey-10);
   }
 
   article {

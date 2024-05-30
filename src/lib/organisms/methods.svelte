@@ -71,13 +71,16 @@
     height: auto;
   }
 
-  .methods-focus-state:hover,
-  .methods-focus-state:hover h3 {
-    border: 1em solid #f9f8f8;
-    border-bottom: 0.2em solid #feb51e;
-    background-color: #f9f8f8;
-    /* background: no-repeat; */
-  }
+  .methods-focus-state {
+  border-bottom: 0.3em solid transparent;
+  padding: 0.8em;
+  margin: -0.8em;
+}
+
+.methods-focus-state:hover {
+  border-bottom: 0.3em solid var(--vtYellow);
+  background-color: var(--vtGrey-10);
+}
 
   @media screen and (min-width: 36em) {
     .grid {
