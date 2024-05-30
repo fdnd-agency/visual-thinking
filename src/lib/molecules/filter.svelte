@@ -80,16 +80,16 @@
       display: flex;
       white-space: nowrap;
       padding: 10px;
-      border-bottom: 0.3em solid transparent;
+      border: 1px solid transparent;
       align-items: center;
+      transition: 0.25s;
   }
 
   li a:hover,
   li a:focus-visible,
   li a.active {
+      border-color: var(--vtGrey);
       background: var(--vtGrey-10);
-      border-bottom: 0.3em solid #feb51e;
-      transition: 0.05s;
   }
 
   @media screen and (min-width: 36em) {
