@@ -7,6 +7,7 @@
   --vtYellow: #feb51e;
   --vtRed: #f96c4f;
   --vtWhite: #ffffff;
+  --vtBlack: #000000;
 
   /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
@@ -39,6 +40,7 @@
   --vtGrey-80: #c0beb9;
   --vtGrey-50: #e0dedc;
   --vtGrey-10: #f9f8f8;
+  --vtGrey-5: #f9f9f9;
 
   /* Visual Thinking: Secondary colors,
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
