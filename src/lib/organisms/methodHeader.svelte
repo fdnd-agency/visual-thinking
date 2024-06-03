@@ -32,7 +32,8 @@
 
 <style>
   header {
-    margin:0 -1rem 1rem;
+    margin:0 -1rem;
+    margin-top: -0.3em;
     background-color: var(--vtGrey-10);
   }
 
