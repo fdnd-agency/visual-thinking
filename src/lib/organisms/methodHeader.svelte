@@ -10,20 +10,17 @@
   <nav>
     <ul>
         <li>
-          <a href="/tekenmethodes/{method.slug}">
-            <h2>Beschrijving</h2>
+          <a href="/tekenmethodes/{method.slug}">Beschrijving
           </a>
         </li>
         <li>
-          <a href="/tekenmethodes/{method.slug}/stappenplan">
-            <h2>Stappenplan</h2>
+          <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan
           </a>
         </li>
         <li>
-          <a href="/tekenmethodes/{method.slug}/voorbeelden">
-            <h2 class="bottom">Voorbeelden</h2>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden
           </a>
-        </li>
+        </li> 
 
         {#if method.pdf}
         <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download</a>
@@ -62,6 +59,7 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
+    color: var(--vtSec-DarkBlue);
   }
 
   nav ul {
@@ -80,12 +78,6 @@
     text-decoration: underline;
     text-decoration-thickness: 0.2rem;
     text-underline-offset: 0.5rem;
-  }
-
-  h2 {
-    color: var(--vtSec-DarkBlue);
-    font-size: 20px;
-    font-weight: 100;
   }
 
   .vt-standard-button {
