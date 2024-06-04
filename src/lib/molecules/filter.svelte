@@ -71,6 +71,14 @@
     display: flex;
     align-items: center;
     margin: 5px 0;
+    padding: 0.3em;
+    border-bottom: 0.3em solid transparent;
+  }
+
+  label:hover, label:focus-visible, label:active {
+    background: var(--vtGrey-10);
+    border-bottom: 0.3em solid #feb51e;
+    transition: 0.05s;
   }
 
   section input[type="checkbox"] {
@@ -97,6 +105,10 @@
     height: 20px;
     animation: spin 1s linear infinite;
   }
+
+  /* .filter-focus-hover {
+    border-bottom: 0.3em solid red;
+  } */
 
   @keyframes spin {
     0% {
