@@ -14,11 +14,14 @@
 <MethodHeader {data} />
 
 <section class="section-wrapper">
-  <img src={data.method?.template?.url} alt="template_image" loading="lazy" />
+  {#each data.methods as method}
+    <img src={method?.template?.url} alt="template_image" loading="lazy" />
 
   <p>
-    {@html data.method?.description.html}
+    {@html method?.description.html}
   </p>
+  {/each}
+ 
 </section>
 
 
@@ -48,7 +51,5 @@
       justify-content: center;
     }
   }
-
- 
 
 </style>
