@@ -80,10 +80,46 @@ body {
 }
 
 blockquote {
-  color: var(--vtYellow);
+  font-weight: 800;
   font-family: var(--vtPrimaryFont);
-  margin: 0 0 1rem;
-  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: #625c51;
+}
+
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #625c51;
+}
+
+blockquote:before,
+blockquote:after {
+  position: absolute;
+  color: var(--vtYellow);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote:before {
+  content: "“";
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote:after {
+  content: "”";
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
+.cite {
+  font-family: var(--vtSecondaryFont);
+  color: #625c51;
 }
 
 .link {
@@ -127,8 +163,8 @@ img {
 }
 
 ul {
-  align-self:flex-start;
-  scrollbar-width:none;
+  align-self: flex-start;
+  scrollbar-width: none;
 }
 
 ul::-webkit-scrollbar {
@@ -152,28 +188,28 @@ main {
 
 /* rich text data styling*/
 .rich-text img {
-  height:auto;
+  height: auto;
 }
 
 /* svg icons */
 svg.icon {
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 svg.icon path {
-  fill:var(--vtDarkBlue)
+  fill: var(--vtDarkBlue);
 }
 svg.icon path.background {
-  fill:var(--vtGrey-50)
+  fill: var(--vtGrey-50);
 }
 
 /* hexagon stuff (work in progress) */
 .hexagons header {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .hexagons h1 {
-  max-width:24rem;
+  max-width: 24rem;
 }
 .hexagons p {
   text-align: center;
@@ -181,6 +217,6 @@ svg.icon path.background {
 
 @media (width > 70em) {
   .hexagons p {
-    max-width:12rem;
+    max-width: 12rem;
   }
 }

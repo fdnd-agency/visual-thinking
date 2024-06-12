@@ -11,3 +11,5 @@
 <Breadcrumb titel="Artikelen" bgc="var(--vtDarkBlue)" />
 <Introduction data={page}/>
 <Articles data={articles}/>
+
+
