@@ -86,6 +86,11 @@ blockquote {
   font-style: italic;
 }
 
+.link {
+  text-decoration: underline;
+  text-decoration-color:var(--vtDarkBlue);
+}
+
 h1,
 h2,
 h3 {
