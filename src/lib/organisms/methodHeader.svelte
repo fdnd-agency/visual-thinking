@@ -24,7 +24,7 @@
         </li> 
 
         {#if method.pdf}
-        <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download</a>
+        <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download PDF</a>
         {/if}
       
     </ul>
@@ -67,6 +67,7 @@
   nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
   }
 
   nav li {
@@ -86,12 +87,13 @@
 	  color: white;
 	  font-family: var(--vtPrimaryFont);
 	  background-color: var(--vtDarkBlue);
-    padding: 1em 0.5em;
+    padding: 0.5em 0.5em;
 	  border-radius: 2em;
 	  margin-left: 1em;
+    font-size: 1em;
 	}
   
-	:hover .vt-standard-button {
+	:hover.vt-standard-button {
 	  color: var(--vtDarkBlue);
 	  background-color: rgb(188, 188, 188);
 	}
