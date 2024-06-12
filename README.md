@@ -5,7 +5,7 @@
 
 ## Beschrijving 
 
-Ik heb 10 weken lang aan deze website gewerkt, waar ik mijn best heb gedaan om een goed eindresultaat te kunnen opleveren. En dat is een website zonder HTML-fouten en goed presterend, toegankelijk voor iedereen.
+Ik heb 20 weken lang aan deze website gewerkt, waar ik mijn best heb gedaan om een goed eindresultaat te kunnen opleveren. En dat is een website zonder HTML-fouten en goed presterend, toegankelijk voor iedereen.
 
 ## 🔒 Licentie
 
