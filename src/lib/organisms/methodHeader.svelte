@@ -1,6 +1,7 @@
 <script>
   export let data;
-  const method = data.method
+  const method = data.methods[0]
+  console.log(data);
 </script>
 
 <header>
@@ -10,23 +11,20 @@
   <nav>
     <ul>
         <li>
-          <a href="/tekenmethodes/{method.slug}">
-            <h2>Beschrijving</h2>
+          <a href="/tekenmethodes/{method.slug}">Beschrijving
           </a>
         </li>
         <li>
-          <a href="/tekenmethodes/{method.slug}/stappenplan">
-            <h2>Stappenplan</h2>
+          <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan
           </a>
         </li>
         <li>
-          <a href="/tekenmethodes/{method.slug}/voorbeelden">
-            <h2 class="bottom">Voorbeelden</h2>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden
           </a>
-        </li>
+        </li> 
 
         {#if method.pdf}
-          <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="button-pdf">Download</a>
+        <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download</a>
         {/if}
       
     </ul>
@@ -35,7 +33,8 @@
 
 <style>
   header {
-    margin:0 -1rem 1rem;
+    margin:0 -1rem;
+    margin-top: -0.3em;
     background-color: var(--vtGrey-10);
   }
 
@@ -62,6 +61,7 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
+    color: var(--vtSec-DarkBlue);
   }
 
   nav ul {
@@ -82,23 +82,16 @@
     text-underline-offset: 0.5rem;
   }
 
-  h2 {
-    color: var(--vtSec-DarkBlue);
-    font-size: 20px;
-    font-weight: 100;
-  }
-
-  .button-pdf {
+  .vt-standard-button {
 	  color: white;
 	  font-family: var(--vtPrimaryFont);
 	  background-color: var(--vtDarkBlue);
-    padding: 0.5em 0.4em ;
-	  border-radius: 0.2em;
+    padding: 1em 0.5em;
+	  border-radius: 2em;
 	  margin-left: 1em;
-    margin-bottom: 0.5em;
 	}
   
-	:hover .button-pdf {
+	:hover .vt-standard-button {
 	  color: var(--vtDarkBlue);
 	  background-color: rgb(188, 188, 188);
 	}

@@ -6,26 +6,28 @@
   <h2>Alle methodes ({data.length})</h2>
   {#if data && data.length > 0}
     {#each data as method, index}
-      <article class="methods-container" data-index={index}>
-        <a href="/tekenmethodes/{method.slug}">
-          {#if method.template && method.template.url}
-            <picture>
+      <div class="methods-focus-state">
+        <article class="methods-container" data-index={index}>
+          <a href="/tekenmethodes/{method.slug}">
+            {#if method.template && method.template.url}
+              <picture>
+                <img
+                  src={method.template.url.replace(":webp", ":png")}
+                  alt={"Voorbeeld van " + method.title}
+                  class={method.categories[0].title.replaceAll(" ", "-")}
+                />
+              </picture>
+            {:else}
               <img
-                src={method.template.url.replace(":webp", ":png")}
-                alt={"Voorbeeld van " + method.title}
                 class={method.categories[0].title.replaceAll(" ", "-")}
+                src="/placeholder.webp"
+                alt="Placeholder"
               />
-            </picture>
-          {:else}
-            <img
-              class={method.categories[0].title.replaceAll(" ", "-")}
-              src="/placeholder.webp"
-              alt="Placeholder"
-            />
-          {/if}
-          <h3>{method.title}</h3>
-        </a>
-      </article>
+            {/if}
+          </a>
+        </article>
+        <h3>{method.title}</h3>
+      </div>
     {/each}
   {/if}
 </section>
@@ -39,7 +41,7 @@
   }
 
   h2 {
-    grid-column: 1 / -1
+    grid-column: 1 / -1;
   }
 
   h3 {
@@ -48,8 +50,7 @@
     font-size: 19px;
     font-weight: 400;
     margin: 0;
-    width:100%;
-    
+    width: 100%;
   }
 
   a {
@@ -65,15 +66,19 @@
     border: 1px solid #ccc;
   }
 
-  article:hover,
-  article:focus-visible {
-    border-color: var(--vtYellow);
-    outline: none;
-  }
-
   article img {
     width: 100%;
     height: auto;
+  }
+
+  .methods-focus-state {
+    border-bottom: 0.3em solid transparent;
+    padding: 0.8em;
+    margin: -0.8em;
+  }
+  .methods-focus-state:hover {
+    border-bottom: 0.3em solid var(--vtYellow);
+    background-color: var(--vtGrey-10);
   }
 
   @media screen and (min-width: 36em) {

@@ -1,7 +1,7 @@
 export default function methodDescriptionQuery(gql, slug) {
     return gql`
       query VisualThinking {
-        method(where: { slug: "${slug}" }) {
+        methods(where: { slug: "${slug}" }) {
           title
           slug
           id
