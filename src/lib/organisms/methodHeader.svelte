@@ -1,6 +1,7 @@
 <script>
   export let data;
-  const method = data.method
+  const method = data.methods[0]
+  console.log(data);
 </script>
 
 <header>
