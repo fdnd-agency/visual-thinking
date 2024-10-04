@@ -6,7 +6,7 @@
   {#each data as article}
   <a href="/artikelen/{article.slug}">
     <article>
-      <img src={article.visual.url} alt="{article.title}" width="300px" height="200" />
+      <img src={article.visual.url} alt="{article.title}" width="200px" height="200" />
       <h2>{article.title}</h2>
     </article>
   </a>
@@ -37,7 +37,7 @@
   }
 
   article {
-    padding: 1rem;
+    padding:3rem;
     display:flex;
     flex-direction:column;
   }
@@ -68,7 +68,7 @@
   /* DESKTOP - STYLING */
   @media screen and (min-width: 60em) {
     .grid {
-      grid-template-columns: repeat(3, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 </style>
