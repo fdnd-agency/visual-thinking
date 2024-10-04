@@ -25,7 +25,6 @@
 </section>
 
 
-
 <style>
 
   /* Section's & wrapper styling */
@@ -35,6 +34,7 @@
     gap: 1rem;
     padding-bottom: 20px;
     margin-bottom: 1.5rem;
+    padding-right: 1rem;
   }
 
   section img {
@@ -43,6 +43,7 @@
 
   p {
     margin-top: -1rem;
+    margin-left: 2rem;
   }
 
   @media (min-width: 43.5em) {
