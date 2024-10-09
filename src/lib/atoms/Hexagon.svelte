@@ -1,15 +1,19 @@
 <script>
-  export let text = "Default tet";
+  export let text = "Default text";
   export let bgColor = "--vtGrey-50";
   export let color = "#000";
-  // export let size = "10rem";
-  
+
+  // If href is given, the hexagon will be clickable
   export let href = null;
+
+  // Image expects an object with a src and alt property
   export let img = null;
 </script>
 
+<!-- Check if it's a clickable hexagon or not. If not, render a <div> instead of an <a> -->
 {#if href}
   <a {href} style="--bg: var({bgColor}); --color: {color}" class="hover">
+    <!-- Check if an image was given. If it was, use the image as the hexagon's content rather than the text -->
     {#if img}
       <img src={img.src} alt={img.alt} />
     {:else}
