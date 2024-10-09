@@ -1,70 +1,75 @@
+<script>
+  import Hexagon from "../atoms/Hexagon.svelte";
+
+</script>
 <section>
   <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
   <ul>
     <li>
-      <a href="/"><span><img src="/images/man.svg" alt="man_image" /></span></a>
+      <Hexagon
+        img={{
+          src: "/images/man.svg",
+          alt: "Illustratie van een denkend persoon"
+        }}
+      />
     </li>
     <li>
-      <a href="/"><span><img src="/images/pencil.svg" alt="pencil_image" /></span></a>
+      <Hexagon
+        img={{
+          src: "/images/pencil.svg",
+          alt: "Illustratie van een potlood"
+        }}
+      />
     </li>
     <li>
-      <a href="/over" style="--bg:#3F439D" class="highlight"
-        ><span>Over Visual Thinking</span></a
-      >
+      <Hexagon
+        href="/over"
+        bgColor="--vtSec-DarkBlue"
+        color="#fff"
+        text="Over Visual Thinking"
+      />
     </li>
     <li>
-      <a href="/tekenmethodes" style="--bg:#feb51e" class="highlight"
-        ><span>Ontdek de Visual Thinking methodes</span></a
-      >
+      <Hexagon
+        href="/tekenmethodes"
+        bgColor="--vtYellow"
+        color="#fff"
+        text="Ontdek de Visual Thinking methodes"
+      />
     </li>
     <li>
-      <a href="/artikelen" style="--bg:#e0dedc"><span>Artikelen</span></a>
+      <Hexagon
+        href="/artikelen"
+        text="Artikelen"
+      />
     </li>
     <li>
-      <a href="/kennisclips" style="--bg:#67c5d1" class="highlight"
-        ><span>Kennisclips</span></a
-      >
+      <Hexagon
+        href="/kennisclips"
+        bgColor="--vtLightBlue"
+        color="#fff"
+        text="Kennisclips"
+      />
     </li>
     <li>
-      <a href="/minicursussen" style="--bg:#f96c4f" class="highlight"
-        ><span>Minicursussen</span></a
-      >
+      <Hexagon
+        href="/minicursussen"
+        bgColor="--vtRed"
+        color="#fff"
+        text="Minicursussen"
+      />
     </li>
     <li>
-      <a href="/tekenruimte" style="--bg:#e0dedc"><span>Tekenruimte</span></a>
+      <Hexagon
+        href="/tekenruimte"
+        text="Tekenruimte"
+      />
     </li>
   </ul>
 </section>
 
 
 <style>
-  ul li a {
-    /* --bg: #e0dedc; */
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--bg);
-    /*   aspect-ratio: 1 / 1; */
-    display: grid;
-    text-decoration: none;
-    color: inherit;
-    padding: 2rem 0;
-    text-align: center;
-    font-size: 1.25em;
-    height: 100%;
-    transition:.25s;
-  }
-
-  ul li a.highlight {
-    color: #fff;
-  }
-
-  ul li a span {
-    place-self: center;
-  }
-
-  /* ul li a:hover{
-    transform: scale(1.1);
-  } */
-
   ul {
     --gap: 1rem;
     --size: 10em;
@@ -104,10 +109,10 @@
     transform: translateX(calc(var(--size) * var(--tx) * -0.1));
   }
 
-  ul li:nth-of-type(1) img {
+  /* ul li:nth-of-type(1) img {
     width: 150px;
     height: auto;
-  }
+  } */
 
   ul li:nth-of-type(2) {
     grid-column-start: 2;
@@ -115,17 +120,13 @@
     transform: translateX(calc(var(--size) * var(--tx) * 0.1));
   }
 
-  ul li:nth-of-type(2) img {
+  /* ul li:nth-of-type(2) img {
     width: 50px;
     height: auto;
-  }
+  } */
 
   ul li:nth-of-type(3) {
     transform: translateX(calc(var(--size) * var(--tx)));
-  }
-
-  ul li a:nth-of-type(3) {
-    background-color: #3f439d;
   }
 
   ul li:nth-of-type(4) {
@@ -309,17 +310,6 @@
       --tx: 0.55;
       --ch: 0.71;
       /* --rc:2; */
-    }
-
-    /* Hover effect voor de li -items  */
-    ul li a:hover {
-      transform: scale(1.1);
-    }
-
-    /* zodat de img <li> geen hover effect krijgen */
-    ul li:nth-of-type(1):not(:hover),
-    ul li:nth-of-type(2):not(:hover) {
-      pointer-events: none;
     }
   }
 </style>
