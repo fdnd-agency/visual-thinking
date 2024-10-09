@@ -93,7 +93,7 @@
 
     align-items: stretch;
     gap: var(--gap);
-    margin-bottom:5rem;
+    margin-bottom: 5rem;
   }
 
   ul li {
