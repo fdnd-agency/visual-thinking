@@ -1,5 +1,5 @@
 <script>
-  import Hexagon from "../atoms/Hexagon.svelte";
+  import Hexagon from "$lib/atoms/Hexagon.svelte";
 
 </script>
 <section>
