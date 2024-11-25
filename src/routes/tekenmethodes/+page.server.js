@@ -11,7 +11,7 @@ export async function load({ url }) {
           : filter = ''
 
   let query = gql`
-    query Methods() {
+    query Methods {
       page(where: { id: "clv89bh0vn4z007unrv85gsw1" }) {
         title
         content {
