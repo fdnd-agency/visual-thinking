@@ -221,6 +221,8 @@ svg.icon path.background {
   }
 }
 
+/* LIQUID ACID THEME */
+
 .liquid-acid-theme {
     filter:url('#noise');
     position: absolute;
