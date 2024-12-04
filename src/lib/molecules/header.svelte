@@ -16,9 +16,9 @@
       <li><a href="/kennisclips" class:active={activeRoute == "/kennisclips"}>Kennisclips</a></li>
       <li><a href="/artikelen" class:active={activeRoute == "/artikelen"}>Artikelen</a></li>
       <li><a href="/tekenruimte" class:active={activeRoute == "/tekenruimte"}>Tekenruimte</a></li>
-      <li><button class="themeSwitcher">red pill</button></li>
     </ul>
   </nav>
+  <button class="themeSwitcher">red pill</button>
 </header>
 
 
@@ -138,6 +138,14 @@
   ul li:nth-child(6) a:focus-visible,
   ul li:nth-child(6) a.active {
     --state-color: var(--vtGrey);
+  }
+
+  /* THEME SWITCHING */
+  button.themeSwitcher {
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    z-index:1;
   }
 
   @media (min-width: 80em) {

@@ -221,12 +221,3 @@ svg.icon path.background {
   }
 }
 
-/* LIQUID ACID THEME */
-
-.liquid-acid-theme {
-    filter:url('#noise');
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-}
