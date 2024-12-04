@@ -10,7 +10,7 @@
 
 <Header />
 
-<div class="liquid-acid-theme">
+<div class="wrapper liquid-acid-theme">
 <main><slot /></main>
 
 <svg viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">

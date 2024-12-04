@@ -16,6 +16,7 @@
       <li><a href="/kennisclips" class:active={activeRoute == "/kennisclips"}>Kennisclips</a></li>
       <li><a href="/artikelen" class:active={activeRoute == "/artikelen"}>Artikelen</a></li>
       <li><a href="/tekenruimte" class:active={activeRoute == "/tekenruimte"}>Tekenruimte</a></li>
+      <li><button class="themeSwitcher">red pill</button></li>
     </ul>
   </nav>
 </header>
