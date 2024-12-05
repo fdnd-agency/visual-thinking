@@ -3,9 +3,16 @@
     import Header from "$lib/molecules/header.svelte";
     import Footer from "$lib/molecules/footer.svelte";
 
+
+    let documentHeight;
+    
     onMount(() => {
-        console.log('De component is gemonteerd');
-        console.log('De hoogte van de box:', box.clientHeight);
+        // console.log('De hoogte van de box:', window.innerHeight);
+
+        documentHeight = document.documentElement.scrollHeight;
+
+            // Log de documenthoogte
+         console.log('De totale documenthoogte is:', documentHeight);
     });
 
     export let x = 0.0;
@@ -14,6 +21,13 @@
     let box;
     
     function scrollOffset(){
+        let scrollTop = box.scrollTop
+        let boxHeight = box.clientHeight
+
+        console.log('scrolltop:' + scrollTop)
+
+        console.log(documentHeight)
+
         x = 0.000001 * box.scrollTop
         // boxHeight = box.clientHeight
 
