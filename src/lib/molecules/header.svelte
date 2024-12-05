@@ -43,6 +43,10 @@
 
 
 <style>
+  header {
+    background-color: white;
+    z-index: 999;
+  }
   a {
     --background:var(--vtYellow);
     color: var(--vtDarkBlue);

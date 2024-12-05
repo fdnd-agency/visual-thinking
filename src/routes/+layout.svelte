@@ -60,50 +60,54 @@
 </div>
 
 <style>
+    main {
+        background-color: white;
+    }
     /* LIQUID ACID THEME */
-    /* @property --x {
-        syntax: '<number>';
-        inherit: false;
-        initial-value: 0.0;
-    } */
 
-    @media (prefers-reduced-motion: no-preference) { 
-        .liquid-acid-theme {
-            filter: url('#noise');
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow-y: auto;
-            /* filter: blur(calc(10px * var(--x))); */
-            /* background-color: blue; */
+    @supports (animation-timeline: view()) {
+        @media (prefers-reduced-motion: no-preference) { 
+            .liquid-acid-theme {
+                filter: url('#noise');
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                /* filter: blur(calc(10px * var(--x))); */
+                /* background-color: blue; */
 
-            scroll-timeline: --squareTimeline y;
-            scroll-timeline: --squareTimeline vertical;
-            animation-name: rotateAnimation;
-            animation-duration: 1ms;
-            animation-timeline: --squareTimeline;
-        }
-
-        @keyframes rotateAnimation {
-            0% {
-                transform: rotate(0deg);
+                scroll-timeline: --squareTimeline y;
+                scroll-timeline: --squareTimeline vertical;
+                animation-name: rotateAnimation, blurAnimation;
+                animation-duration: 1ms;
+                animation-timing-function: ease-out;
+                animation-timeline: --squareTimeline;            
             }
 
-            50% {
-                transform: rotate(10deg);
-            }
+            @keyframes rotateAnimation {
+                0% {
+                    transform: rotate(0deg);
+                    background-color: white;
+                    box-shadow: inset 0px 0px 10px 10px white;
+                    scale: 1;
+                    transform-origin: top;
+                }
 
-            60% {
-                transform: rotate(-10deg);
-            }
-        }
+                50% {
+                    transform:rotate(40deg) ;
+                }
 
-        @keyframes colorChanceX {
-            0% {
-                
-            }
-            100% {
-                
+                60% {
+                    transform: rotate(-40deg);
+                }
+
+                100% {
+                    transform-origin: bottom;
+                    transform: rotate(0deg);
+                    background-color: black;
+                    box-shadow: inset 0px 0px 10px 20px white;
+                    scale: 0.1;
+                }
             }
         }
     }
