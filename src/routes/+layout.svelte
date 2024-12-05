@@ -91,9 +91,10 @@
                 radial-gradient(circle at 50% 55%, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 100%),
                 repeating-conic-gradient(
                     from var(--angle, 0deg) at 50% 55%, 					 
-                    deeppink 0deg,
+                    orange 0deg,
                     dodgerblue,
-                    deeppink 30deg
+                    deeppink,
+                    orange 60deg
                 );
                 background-size: cover, cover;
                 background-position: center, center;
