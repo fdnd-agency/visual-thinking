@@ -72,12 +72,17 @@
   box-sizing: border-box;
 }
 
+@property --c {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: red;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: var(--vtSecondaryFont);
-  background-color: black;
 }
 
 blockquote {

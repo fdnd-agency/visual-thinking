@@ -41,15 +41,21 @@
 </script>
 <Header />
 
-<div bind:this={box} on:scroll={scrollOffset} class="wrapper liquid-acid-theme" style="--x: {x} --a:{a}">
+<div  class="wrapper " style="--x: {x} --a:{a}">
 <main>
-    <slot/>
+    <div bind:this={box} on:scroll={scrollOffset} class="liquid-acid-theme">
+        <slot/>
+    </div>
 </main>
-
+</div>
 <svg  width="0" height="0" viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">
     <defs>
         <filter id="noise">
             <feTurbulence  type="fractalNoise" id="turbulence" baseFrequency="{x}" numOctaves="1" result="noise" seed="0"/>
+            <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="300" />
+        </filter>
+        <filter id="noise-background">
+            <feTurbulence  type="fractalNoise" id="turbulence" baseFrequency="0.0" numOctaves="2" result="noise" seed="0"/>
             <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="300" />
         </filter>
     </defs>
@@ -57,17 +63,57 @@
 
 
 <Footer />
-</div>
+
 
 <style>
     main {
         background-color: white;
+    }
+
+    @property --angle {
+        syntax:"<angle>";
+        inherits:false;
+        initial-value:0deg;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: calc(100vh - 104.5px);
+        animation: draaien 10s infinite linear;
+
+        scroll-timeline: scrollTimeline vertical;
+        animation: draaien 10s linear infinite;
+
+        @supports (animation-timeline: view()) {
+            @media (prefers-reduced-motion: no-preference) { 
+                background-color: black;
+                background: 
+                radial-gradient(circle at 50% 55%, rgba(0,0,0,1) 8%, rgba(0,0,0,0) 100%),
+                repeating-conic-gradient(
+                    from var(--angle, 0deg) at 50% 55%, 					 
+                    deeppink 0deg,
+                    dodgerblue,
+                    deeppink 30deg
+                );
+                background-size: cover, cover;
+                background-position: center, center;
+                box-shadow: inset 0px 0px 1000px 100px #000;
+            }
+        }
+    }
+
+
+    @keyframes draaien {
+        0%   { --angle:0deg; }
+        100% { --angle:360deg; }
     }
     /* LIQUID ACID THEME */
 
     @supports (animation-timeline: view()) {
         @media (prefers-reduced-motion: no-preference) { 
             .liquid-acid-theme {
+                margin: 0;
+                left: 0;
                 filter: url('#noise');
                 position: absolute;
                 width: 100%;
@@ -78,23 +124,23 @@
 
                 scroll-timeline: --squareTimeline y;
                 scroll-timeline: --squareTimeline vertical;
-                animation-name: rotateAnimation, blurAnimation;
+                animation-name: rotateAnimation, draaien;
                 animation-duration: 1ms;
                 animation-timing-function: ease-out;
-                animation-timeline: --squareTimeline;            
+                animation-timeline: --squareTimeline;  
             }
 
             @keyframes rotateAnimation {
                 0% {
+                    --angle:0deg; 
                     transform: rotate(0deg);
                     background-color: white;
-                    box-shadow: inset 0px 0px 10px 10px white;
                     scale: 1;
-                    transform-origin: top;
+                    transform-origin: center;
                 }
 
                 50% {
-                    transform:rotate(40deg) ;
+                    transform: rotate(40deg) ;
                 }
 
                 60% {
@@ -102,12 +148,14 @@
                 }
 
                 100% {
-                    transform-origin: bottom;
+                    --angle:360deg;
                     transform: rotate(0deg);
-                    background-color: black;
-                    box-shadow: inset 0px 0px 10px 20px white;
+                    /* background-color: black; */
+                    background-color: white;
                     scale: 0.1;
+                    
                 }
+
             }
         }
     }
