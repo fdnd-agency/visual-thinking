@@ -8,6 +8,8 @@
   export let data;
 
   const {page, methods} = data;
+
+  // let data
 </script>
 
 <Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
