@@ -10,25 +10,9 @@
         documentHeight = document.documentElement.scrollHeight;
         console.log('De totale documenthoogte is:', documentHeight);
 
-        // POPOVER MENU
-        let wrapper = document.querySelector('.wrapper')
-        let popoverMenu = document.querySelector('.popover-menu')
-        let buttonRed = document.querySelector('.red')
-        let buttonBlue = document.querySelector('.blue')
-
-        buttonRed.addEventListener('click', normalTheme)
-        buttonBlue.addEventListener('click', liquidTheme)
-
-        function normalTheme() {
-            console.log('normal werkt')
-            wrapper.classList.remove('liquid-acid-theme')
-            popoverMenu.classList.toggle('hi')
-        }
-
-        function liquidTheme() {
-            console.log('liquid werkt')
-            wrapper.classList.add('liquid-acid-theme')
-        }
+        window.addEventListener('scroll', () => {
+            document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+        }, false);
 
     });
 
@@ -55,14 +39,6 @@
         }
     }
 </script>
-
-<div class="popover-menu">
-    <h2>Choose</h2>
-    <nav>
-        <button class="red">red</button>
-        <button class="blue">blue</button> 
-    </nav>
-</div>
 <Header />
 
 <div bind:this={box} on:scroll={scrollOffset} class="wrapper liquid-acid-theme" style="--x: {x} --a:{a}">
@@ -84,23 +60,6 @@
 </div>
 
 <style>
-    
-    /* POPOVER MENU */
-    @supports (animation-timeline: view()) {
-        .popover-menu {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            color: white;
-            z-index: 99;
-        }        
-    }    
-
     /* LIQUID ACID THEME */
     /* @property --x {
         syntax: '<number>';
