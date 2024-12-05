@@ -46,7 +46,7 @@
     <slot/>
 </main>
 
-<svg viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">
+<svg  width="0" height="0" viewBox="0 0 1728 852" fill="none" preserveAspectRatio="xMidYMin slice">
     <defs>
         <filter id="noise">
             <feTurbulence  type="fractalNoise" id="turbulence" baseFrequency="{x}" numOctaves="1" result="noise" seed="0"/>
@@ -66,22 +66,45 @@
         inherit: false;
         initial-value: 0.0;
     } */
-    .liquid-acid-theme {
-        filter: url('#noise');
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow-y: auto;
-        /* filter: blur(calc(10px * var(--x))); */
-        /* background-color: blue; */
-    }
 
-    @keyframes colorChanceX {
-        0% {
-            
+    @media (prefers-reduced-motion: no-preference) { 
+        .liquid-acid-theme {
+            filter: url('#noise');
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            /* filter: blur(calc(10px * var(--x))); */
+            /* background-color: blue; */
+
+            scroll-timeline: --squareTimeline y;
+            scroll-timeline: --squareTimeline vertical;
+            animation-name: rotateAnimation;
+            animation-duration: 1ms;
+            animation-timeline: --squareTimeline;
         }
-        100% {
-            
+
+        @keyframes rotateAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            60% {
+                transform: rotate(-10deg);
+            }
+        }
+
+        @keyframes colorChanceX {
+            0% {
+                
+            }
+            100% {
+                
+            }
         }
     }
 
