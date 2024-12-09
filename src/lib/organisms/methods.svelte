@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin: 1rem 0;
+    margin: 1rem 6rem;
   }
 
   h2 {
