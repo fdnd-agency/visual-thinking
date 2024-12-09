@@ -7,7 +7,7 @@
 <section class="grid">
   <h2>Alle methodes ({data.length})</h2>
   {#if data && data.length > 0}
-    {#each data as method, index}
+    {#each data as method}
       <Method {method} />
     {/each}
   {/if}

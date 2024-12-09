@@ -15,13 +15,17 @@
 
 <section class="section-wrapper">
   {#each data.methods as method}
-    <img src={method?.template?.url} alt="template_image" loading="lazy" />
+    <img
+      style="--transition-name: {method.slug}"
+      src={method.template.url.replace(":webp", ":png")}
+      alt={"Voorbeeld van " + method.title}
+    />
 
   <p>
     {@html method?.description.html}
   </p>
+
   {/each}
- 
 </section>
 
 
@@ -38,7 +42,8 @@
   }
 
   section img {
-    border: 1px solid var(--vtDarkBlue);
+    /* border: 1px solid var(--vtDarkBlue); */
+    view-transition-name: var(--transition-name);
   }
 
   p {

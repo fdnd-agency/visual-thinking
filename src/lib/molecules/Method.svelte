@@ -6,20 +6,16 @@
   <article class="methods-container">
     <a href="/tekenmethodes/{method.slug}">
       {#if method.template && method.template.url}
-        <picture loading="lazy">
-          <source
-            srcset={method.template.url.replace(":webp", ":avif")}
-            type="image/avif"
-          />
-          <source srcset={method.template.url} type="image/webp" />
-          <img
-            src={method.template.url.replace(":webp", ":png")}
-            alt={"Voorbeeld van " + method.title}
-          />
-        </picture>
+        <img
+          loading="lazy"
+          style="--transition-name: {method.slug}"
+          src={method.template.url.replace(":webp", ":png")}
+          alt={"Voorbeeld van " + method.title}
+        />
       {:else}
         <img
-          class={method.categories[0].title.replaceAll(" ", "-")}
+          loading="lazy"
+          style="--transition-name: {method.slug}"
           src="/placeholder.webp"
           alt="Placeholder"
         />
@@ -55,6 +51,7 @@
   article img {
     width: 100%;
     height: auto;
+    view-transition-name: var(--transition-name);
   }
 
   .methods-focus-state {
