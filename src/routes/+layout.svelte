@@ -31,6 +31,10 @@
 
 <Footer />
 
-
+<div class="svg-animation"></div>
 
 <!-- <div bind:this="{pageTransition}" class="page-transition" style="--page-transition-clr: {x};"></div> -->
+
+<style>
+
+</style>

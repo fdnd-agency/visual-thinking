@@ -327,3 +327,15 @@ svg.icon path.background {
     transition: all 0s;
   }
 }
+
+
+.svg-animation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  background-image: url('animation_infinite.svg');
+  background-size: cover;
+
+}
