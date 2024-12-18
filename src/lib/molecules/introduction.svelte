@@ -2,10 +2,12 @@
   export let data;
 
   const {title, content} = data
+
+  let newTitle = title.replace(/a/g, 'A');
 </script>
 
 <header>
-  <h1>{title}</h1>
+  <h1>{newTitle}</h1>
     
   {@html content.html}
 </header>
