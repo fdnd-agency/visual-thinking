@@ -2,6 +2,8 @@
   import Method from "../molecules/Method.svelte";
 
   export let data;
+
+  console.log(data);
 </script>
 
 <section class="grid">

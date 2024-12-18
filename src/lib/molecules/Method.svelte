@@ -1,4 +1,6 @@
 <script>
+  import MethodsFlower from "../atoms/MethodsFlower.svelte";
+
   export let method;
 </script>
 
@@ -22,6 +24,7 @@
       {/if}
     </a>
   </article>
+  <MethodsFlower />
   <h3>{method.title}</h3>
 </div>
 
@@ -58,6 +61,7 @@
     border-bottom: 0.3em solid transparent;
     padding: 0.8em;
     margin: -0.8em;
+    position: relative;
   }
   .methods-focus-state:hover {
     border-bottom: 0.3em solid var(--vtYellow);
