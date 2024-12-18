@@ -6,6 +6,7 @@
 </script>
 
 <header>
+  <img class="background" src="images/header-bg2.png" alt="header background">
   <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Visual Thinking Logo" /></a>
 
   <nav>
@@ -22,6 +23,10 @@
 
 
 <style>
+  img.background {
+    position: absolute;
+  }
+
   a {
     --background:var(--vtYellow);
     color: var(--vtDarkBlue);
