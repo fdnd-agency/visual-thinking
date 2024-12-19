@@ -9,7 +9,7 @@
 <header>
   <h1>{newTitle}</h1>
     
-  {@html content.html}
+  <!-- {@html content.html} -->
 </header>
 
 <style>
@@ -26,7 +26,7 @@
           width: 75%;
       }
       h1 {
-          font-size: 3.157rem;
+          font-size: 3.8rem;
           text-align: center;
       }
   }
