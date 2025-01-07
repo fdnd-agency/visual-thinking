@@ -152,10 +152,13 @@ h3 {
 }
 
 a {
-  color: var(--vtYellow);
+  color: #3B50BA;
   text-decoration: none;
-  color: black;
   margin-bottom: 5px;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
 img {
