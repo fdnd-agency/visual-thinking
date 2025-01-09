@@ -78,7 +78,7 @@
     place-self: center;
   }
 
-  @media (width > 35rem) {
+  @media (width > 36rem) {
     ul {
       --rc: 2;
       --cc: 2;
@@ -95,7 +95,7 @@
 
       --cc: 4;
       --rc: 2;
-      margin-top: -28vh;
+      /* margin-top: 2em; */
     }
     
     ul li a:hover {

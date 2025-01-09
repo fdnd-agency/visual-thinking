@@ -246,7 +246,6 @@
 
       --cc: 4;
       --rc: 2;
-      margin-top: -60vh;
     }
 
     ul li:nth-of-type(1) {
