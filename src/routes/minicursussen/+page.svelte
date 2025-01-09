@@ -10,7 +10,7 @@
 
 <Breadcrumb titel="Minicursussen" bgc="var(--vtRed)" />
 
-<div class="hexagons">
+<div class="hexagons minicourse">
   <Introduction data={page}/>
   <MiniCourses data={miniCourses} />
 </div>

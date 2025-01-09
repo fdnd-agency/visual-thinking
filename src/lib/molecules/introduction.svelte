@@ -21,20 +21,30 @@
       font-size: 1.7rem;
   }
   @media screen and (min-width: 36em) {
+
+    header {
+      width: 75%;
+    }
+
+    h1 {
+      font-size: 3.157rem;
+      text-align: center;
+    }
+
+    /* Hexagons positionering */
     :global(main) {
       position: relative;
     }
-    header {
-      width: 75%;
-      /* background-color: blue; */
+
+    :global(.hexagons header) {
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
     }
-    h1 {
-      font-size: 3.157rem;
-      text-align: center;
+
+    :global(.minicourse header) {
+      top: 1.2rem; /* Breadcrum height */
     }
   }
 </style>
