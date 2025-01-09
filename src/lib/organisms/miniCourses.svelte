@@ -97,7 +97,7 @@
       --rc: 2;
       margin-top: -28vh;
     }
-     
+    
     ul li a:hover {
       transform: scale(1.1);
     }
