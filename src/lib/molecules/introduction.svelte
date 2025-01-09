@@ -21,7 +21,6 @@
       font-size: 1.7rem;
   }
   @media screen and (min-width: 36em) {
-
     header {
       width: 75%;
     }
@@ -30,7 +29,9 @@
       font-size: 3.157rem;
       text-align: center;
     }
+  }
 
+  @media screen and (min-width: 70em) {
     /* Hexagons positionering */
     :global(main) {
       position: relative;

@@ -85,7 +85,7 @@
     }
   }
 
-  @media (width > 60em) {
+  @media (width > 70em) {
     ul {
       --gap: 2rem;
       --size: 14em;
