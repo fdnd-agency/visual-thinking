@@ -4,9 +4,9 @@
       <img
         src="/images/visual-thinking-hbo-logo.svg"
         class="logo-footer"
-        alt="Visual thinking logo"
+        alt=""
       />
-      <h1>Visual Thinking in het hbo</h1>
+      <h2>Visual Thinking in het hbo</h2>
     </a>
 
     <div class="icons-nav">
@@ -90,7 +90,7 @@
     padding-top: 1em;
   }
 
-  h1 {
+  h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
     font-weight: 600;
@@ -124,7 +124,7 @@
       margin-top: -1em;
     }
 
-    h1 {
+    h2 {
       font-size: 1em;
       text-align: left;
       max-width: 8em;
@@ -152,7 +152,7 @@
       margin-top: -1em;
     }
 
-    h1 {
+    h2 {
       font-size: 1.5em;
       text-align: left;
     }
@@ -184,7 +184,7 @@
   }
 
   @media (min-width: 768px) and (max-width: 1000px) {
-    h1 {
+    h2 {
       font-size: 1.5em;
     }
 
