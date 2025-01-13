@@ -10,7 +10,7 @@
   const {page, methods} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--vtYellow)" />
 <Introduction data={page}/>
 
 <Filter {data} />

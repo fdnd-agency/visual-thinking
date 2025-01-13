@@ -75,7 +75,9 @@
     border-bottom: 0.3em solid transparent;
   }
 
-  label:hover, label:focus-visible, label:active {
+  label:hover, 
+  label:focus-visible, 
+  label:active {
     background: var(--vtGrey-10);
     border-bottom: 0.3em solid #feb51e;
     transition: 0.05s;
