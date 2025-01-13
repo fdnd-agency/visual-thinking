@@ -2,16 +2,16 @@
   export let data;
 </script>
 
-<div class="grid">
+<section class="grid">
   {#each data as article}
   <a href="/artikelen/{article.slug}">
     <article>
-      <img src={article.visual.url} alt="{article.title}" width="200px" height="200" />
+      <img src={article.visual.url} alt="{article.title}" width="200" height="200" />
       <h2>{article.title}</h2>
     </article>
   </a>
   {/each}
-</div>
+</section>
 
 <style>
   .grid {
