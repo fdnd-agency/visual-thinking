@@ -2,14 +2,14 @@
   export let data;
 </script>
 
-<div class="steps">
+<section>
     <!-- Loop through each method -->
     {#each data.methods as method, methodIndex}
       <!-- Loop through each step in the method -->
       {#each method.steps as step, stepIndex}
-        <details class="accordion-item" open={methodIndex === 0 && stepIndex === 0}>
+        <details class="step" open={methodIndex === 0 && stepIndex === 0}>
           <summary class="step-title">{step.title}</summary>
-          <div class="accordion-content">
+          <div class="step-content">
             <!-- Check if visual content exists -->
             {#if step.visual[0]}
               <img src={step.visual[0].url} alt="image_voorbeeld" />
@@ -17,7 +17,7 @@
             <!-- Check if description is HTML or plain text -->
             {#if typeof step.description === "object"}
               <!-- i used {@html} for injecting HTML content without the html tags -->
-             {@html step.description.html}
+              {@html step.description.html}
             {:else}
               <!-- text description -->
               <p>{step.description}</p>
@@ -26,11 +26,11 @@
         </details>
       {/each}
     {/each}
-</div>
+</section>
   
   
 <style>
-  .accordion-item {
+  .step {
     margin-bottom: 5px;
     width: 100%;
     overflow: hidden;
@@ -52,7 +52,7 @@
     color: black;
   }
 
-  .accordion-content {
+  .step-content {
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -60,7 +60,7 @@
     margin-top: 5px;
   }
 
-  .accordion-content img {
+  .step-content img {
     width: 100%;
     height: 100%;
   }
