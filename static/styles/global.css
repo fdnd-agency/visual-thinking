@@ -174,6 +174,21 @@ main {
   padding: 0 1rem;
 }
 
+.vt-standard-button {
+  color: var(--vtWhite);
+  font-family: var(--vtPrimaryFont);
+  background-color: var(--vtDarkBlue);
+  padding: 0.5em 0.5em;
+  border-radius: 2em;
+  margin-left: 1em;
+  font-size: 1em;
+}
+
+:hover.vt-standard-button {
+  color: var(--vtDarkBlue);
+  background-color: rgb(188, 188, 188);
+}
+
 /* accessibility */
 .sr-only {
   clip: rect(0 0 0 0);

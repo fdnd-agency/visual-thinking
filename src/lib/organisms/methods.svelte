@@ -7,7 +7,7 @@
   {#if data && data.length > 0}
     {#each data as method, index}
       <div class="methods-focus-state">
-        <article class="methods-container" data-index={index}>
+        <article class="methods-container">
           <a href="/tekenmethodes/{method.slug}">
             {#if method.template && method.template.url}
               <picture>
@@ -45,9 +45,8 @@
   }
 
   h3 {
-    font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
-    font-size: 19px;
+    font-size: 1rem;
     font-weight: 400;
     margin: 0;
     width: 100%;
@@ -55,14 +54,13 @@
 
   a {
     text-decoration: none;
-    color: black;
-    margin-bottom: 5px;
+    color: var(--vtBlack);
+    margin-bottom: 0.25rem;
   }
 
   article {
     display: flex;
     flex-direction: column;
-    transition: 0.25s;
     border: 1px solid #ccc;
   }
 
@@ -76,6 +74,7 @@
     padding: 0.8em;
     margin: -0.8em;
   }
+  
   .methods-focus-state:hover {
     border-bottom: 0.3em solid var(--vtYellow);
     background-color: var(--vtGrey-10);

@@ -109,21 +109,11 @@
     transform: translateX(calc(var(--size) * var(--tx) * -0.1));
   }
 
-  /* ul li:nth-of-type(1) img {
-    width: 150px;
-    height: auto;
-  } */
-
   ul li:nth-of-type(2) {
     grid-column-start: 2;
     grid-row-start: 3;
     transform: translateX(calc(var(--size) * var(--tx) * 0.1));
   }
-
-  /* ul li:nth-of-type(2) img {
-    width: 50px;
-    height: auto;
-  } */
 
   ul li:nth-of-type(3) {
     transform: translateX(calc(var(--size) * var(--tx)));
@@ -242,9 +232,6 @@
       --gap: 1rem;
       --size: 14em;
 
-      /* --tx:.55; */
-      /* --ch:.71; */
-
       --cc: 4;
       --rc: 2;
       margin-top: -60vh;
@@ -309,7 +296,6 @@
       --size: 13em;
       --tx: 0.55;
       --ch: 0.71;
-      /* --rc:2; */
     }
   }
 </style>
