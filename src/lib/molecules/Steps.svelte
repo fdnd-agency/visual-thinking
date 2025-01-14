@@ -1,10 +1,10 @@
 <script>
-  export let data;
+  export let methodData;
 </script>
 
 <section>
     <!-- Loop through each method -->
-    {#each data.methods as method, methodIndex}
+    {#each methodData.methods as method, methodIndex}
       <!-- Loop through each step in the method -->
       {#each method.steps as step, stepIndex}
         <details class="step" open={methodIndex === 0 && stepIndex === 0}>
@@ -31,7 +31,7 @@
   
 <style>
   .step {
-    margin-bottom: 5px;
+    margin-bottom: 0.25rem;
     width: 100%;
     overflow: hidden;
   }
@@ -42,7 +42,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
     color: var(--vtWhite);
-    padding: 10px;
+    padding: 0.5rem;
     cursor: pointer;
     user-select: none;
   }
@@ -53,11 +53,11 @@
   }
 
   .step-content {
-    padding: 10px;
+    padding: 0.5rem;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-top: 5px;
+    margin-top: 0.25rem;
   }
 
   .step-content img {

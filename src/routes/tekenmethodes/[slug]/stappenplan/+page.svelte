@@ -15,7 +15,7 @@
   <div class="sticky">
     <StappenplanTags {data} />
   </div>
-  <Steps {data} />
+  <Steps methodData={data} />
 </section>
 
 <style>
