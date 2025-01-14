@@ -12,7 +12,7 @@
 
 <!-- Check if it's a clickable hexagon or not. If not, render a <div> instead of an <a> -->
 {#if href}
-  <a {href} style="--bg: var({bgColor}); --color: {color}" class="hover">
+  <a {href} style="--background-color: var({bgColor}); --color: {color}" class="hover">
     <!-- Check if an image was given. If it was, use the image as the hexagon's content rather than the text -->
     {#if img}
       <img src={img.src} alt={img.alt} />
@@ -21,7 +21,7 @@
     {/if}
   </a>
 {:else}
-  <div style="--bg: var({bgColor}); --color: {color}">
+  <div style="--background-color: var({bgColor}); --color: {color}">
     {#if img}
       <img src={img.src} alt={img.alt} />
     {:else}
@@ -34,7 +34,7 @@
   a,
   div {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--bg);
+    background: var(--background-color);
     display: grid;
     align-items: center;
     justify-items: center;
