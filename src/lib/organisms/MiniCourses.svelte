@@ -31,7 +31,7 @@
     --gap: 3rem;
     --size: 12em;
 
-    --tx: 0.365;
+    --translateX: 0.365;
     --ch: 0.74;
 
     --cc: 1;
@@ -60,17 +60,17 @@
     --background-color: var(--vtRed);
   }
 
-    ul li:nth-of-type(2) {
-      --background-color: var(--vtLightBlue);
-    }
+  ul li:nth-of-type(2) {
+    --background-color: var(--vtLightBlue);
+  }
 
-    ul li:nth-of-type(3) {
-      --background-color: var(--vtYellow);
-    }
+  ul li:nth-of-type(3) {
+    --background-color: var(--vtYellow);
+  }
 
-    ul li:nth-of-type(4) {
-      --background-color: var(--vtDarkBlue);
-    }
+  ul li:nth-of-type(4) {
+    --background-color: var(--vtDarkBlue);
+  }
 
   @media (width > 35rem) {
     ul {
@@ -84,7 +84,7 @@
       --gap: 2rem;
       --size: 14em;
 
-      --tx: 0.55;
+      --translateX: 0.55;
       --ch: 0.71;
 
       --cc: 4;
@@ -95,13 +95,13 @@
     ul li:nth-of-type(1) {
       grid-column-start: 1;
       grid-row-start: 1;
-      transform: translateX(calc(var(--size) * var(--tx)));
+      transform: translateX(calc(var(--size) * var(--translateX)));
     }
 
     ul li:nth-of-type(2) {
       grid-column-start: 4;
       grid-row-start: 1;
-      transform: translateX(calc(var(--size) * var(--tx) * -1));
+      transform: translateX(calc(var(--size) * var(--translateX) * -1));
     }
 
     ul li:nth-of-type(3) {
