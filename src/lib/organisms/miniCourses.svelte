@@ -35,12 +35,12 @@
     --column-height: 0.74;
 
     --column-count: 1;
-    --rc: 4;
+    --row-count: 4;
 
     display: grid;
     grid-template-columns: repeat(var(--column-count), var(--size));
     grid-template-rows: repeat(
-      var(--rc),
+      var(--row-count),
       calc(var(--size) * var(--column-height) + var(--gap) * 1)
     );
     justify-content: center;
@@ -74,7 +74,7 @@
 
   @media (width > 35rem) {
     ul {
-      --rc: 2;
+      --row-count: 2;
       --column-count: 2;
     }
   }
@@ -88,7 +88,7 @@
       --column-height: 0.71;
 
       --column-count: 4;
-      --rc: 2;
+      --row-count: 2;
       margin-top: -28vh;
     }
 
