@@ -107,13 +107,12 @@
     ul li:nth-of-type(3) {
       grid-column-start: 2;
       grid-row-start: 2;
-      transform: translateX(0);
+
     }
 
     ul li:nth-of-type(4) {
       grid-column-start: 3;
       grid-row-start: 2;
-      transform: translateX(0);
     }
   }
 </style>
