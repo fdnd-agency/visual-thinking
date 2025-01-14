@@ -1,4 +1,6 @@
 <script>
+  import Hexagon from "$lib/atoms/Hexagon.svelte";
+
   export let data;
 </script>
 
@@ -7,7 +9,14 @@
   <ul>
     {#if data && data.length > 0}
       {#each data as course, index}
-        <li><a href="/minicursussen/{course.slug}"><span>{course.title}</span></a></li>
+        <li>
+          <Hexagon
+            href="/minicursussen/{course.slug}"
+            backgroundColor="var(--background-color)"
+            color="#fff"
+            text="{course.title}"
+          />
+        </li>
       {/each}
     {/if}
   </ul>
@@ -47,36 +56,21 @@
     height: calc(var(--size) * 1.1);
   }
 
-  ul li a {
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--vtRed);
-    display: grid;
-    text-decoration: none;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    font-size: 1.25em;
-    font-weight: bold;
-    height: 100%;
-    font-family: var(--vtPrimaryFont);
-    transition:.25s;
+  ul li {
+    --background-color: var(--vtRed);
   }
 
-    ul li:nth-of-type(2) a {
-      background: var(--vtLightBlue);
+    ul li:nth-of-type(2) {
+      --background-color: var(--vtLightBlue);
     }
 
-    ul li:nth-of-type(3) a {
-      background: var(--vtYellow);
+    ul li:nth-of-type(3) {
+      --background-color: var(--vtYellow);
     }
 
-    ul li:nth-of-type(4) a {
-      background: var(--vtDarkBlue);
+    ul li:nth-of-type(4) {
+      --background-color: var(--vtDarkBlue);
     }
-
-  ul li a span {
-    place-self: center;
-  }
 
   @media (width > 35rem) {
     ul {
@@ -96,10 +90,6 @@
       --cc: 4;
       --rc: 2;
       margin-top: -28vh;
-    }
-    
-    ul li a:hover {
-      transform: scale(1.1);
     }
 
     ul li:nth-of-type(1) {
