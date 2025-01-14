@@ -3,7 +3,7 @@
 </script>
 
 <section>
-  <h2 class="sr-only">Kies hier een minicursus</h2>
+  <h2 class="screenreader-only">Kies hier een minicursus</h2>
   <ul>
     {#if data && data.length > 0}
       {#each data as course, index}

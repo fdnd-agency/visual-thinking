@@ -17,7 +17,7 @@
 <Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
 
 <section>
-  <h1 class="sr-only">Alle kennisclips</h1>
+  <h1 class="screenreader-only">Alle kennisclips</h1>
   <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
       <img

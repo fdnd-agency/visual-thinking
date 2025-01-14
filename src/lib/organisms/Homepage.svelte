@@ -3,7 +3,7 @@
 
 </script>
 <section>
-  <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
+  <h2 class="screenreader-only">Visual Thinking Onderwerpen</h2>
   <ul>
     <li>
       <Hexagon
