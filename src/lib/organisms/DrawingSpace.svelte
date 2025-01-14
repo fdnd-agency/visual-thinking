@@ -93,14 +93,14 @@
 
 <Breadcrumb titel= "Tekenruimte" bgc="var(--vtGrey)" />
 
-<header class="sr-only">
+<header class="screenreader-only">
   <h1>Teken hier!</h1>
   <p class="disclaimer"><span class="attention">Let op:</span> deze functie is momenteel in een experimentele fase</p>
 </header>
     
 <section>
   <header id="toolbar">
-    <h2 class="sr-only">Tekentools</h2>
+    <h2 class="screenreader-only">Tekentools</h2>
 
     <form>
       <label for="stroke">Kleur</label>

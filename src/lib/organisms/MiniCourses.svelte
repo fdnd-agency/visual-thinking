@@ -1,13 +1,22 @@
 <script>
+  import Hexagon from "$lib/atoms/Hexagon.svelte";
+
   export let data;
 </script>
 
 <section>
-  <h2 class="sr-only">Kies hier een minicursus</h2>
+  <h2 class="screenreader-only">Kies hier een minicursus</h2>
   <ul>
     {#if data && data.length > 0}
       {#each data as course, index}
-        <li><a href="/minicursussen/{course.slug}"><span>{course.title}</span></a></li>
+        <li>
+          <Hexagon
+            href="/minicursussen/{course.slug}"
+            backgroundColor="var(--background-color)"
+            color="#fff"
+            text="{course.title}"
+          />
+        </li>
       {/each}
     {/if}
   </ul>
@@ -22,17 +31,17 @@
     --gap: 3rem;
     --size: 12em;
 
-    --tx: 0.365;
-    --ch: 0.74;
+    --translateX: 0.365;
+    --column-height: 0.74;
 
-    --cc: 1;
-    --rc: 4;
+    --column-count: 1;
+    --row-count: 4;
 
     display: grid;
-    grid-template-columns: repeat(var(--cc), var(--size));
+    grid-template-columns: repeat(var(--column-count), var(--size));
     grid-template-rows: repeat(
-      var(--rc),
-      calc(var(--size) * var(--ch) + var(--gap) * 1)
+      var(--row-count),
+      calc(var(--size) * var(--column-height) + var(--gap) * 1)
     );
     justify-content: center;
     list-style: none;
@@ -47,41 +56,26 @@
     height: calc(var(--size) * 1.1);
   }
 
-  ul li a {
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--vtRed);
-    display: grid;
-    text-decoration: none;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    font-size: 1.25em;
-    font-weight: bold;
-    height: 100%;
-    font-family: var(--vtPrimaryFont);
-    transition:.25s;
+  ul li {
+    --background-color: var(--vtRed);
   }
 
-    ul li:nth-of-type(2) a {
-      background: var(--vtLightBlue);
-    }
+  ul li:nth-of-type(2) {
+    --background-color: var(--vtLightBlue);
+  }
 
-    ul li:nth-of-type(3) a {
-      background: var(--vtYellow);
-    }
+  ul li:nth-of-type(3) {
+    --background-color: var(--vtYellow);
+  }
 
-    ul li:nth-of-type(4) a {
-      background: var(--vtDarkBlue);
-    }
-
-  ul li a span {
-    place-self: center;
+  ul li:nth-of-type(4) {
+    --background-color: var(--vtDarkBlue);
   }
 
   @media (width > 35rem) {
     ul {
-      --rc: 2;
-      --cc: 2;
+      --row-count: 2;
+      --column-count: 2;
     }
   }
 
@@ -90,28 +84,24 @@
       --gap: 2rem;
       --size: 14em;
 
-      --tx: 0.55;
-      --ch: 0.71;
+      --translateX: 0.55;
+      --column-height: 0.71;
 
-      --cc: 4;
-      --rc: 2;
+      --column-count: 4;
+      --row-count: 2;
       margin-top: -28vh;
-    }
-    
-    ul li a:hover {
-      transform: scale(1.1);
     }
 
     ul li:nth-of-type(1) {
       grid-column-start: 1;
       grid-row-start: 1;
-      transform: translateX(calc(var(--size) * var(--tx)));
+      transform: translateX(calc(var(--size) * var(--translateX)));
     }
 
     ul li:nth-of-type(2) {
       grid-column-start: 4;
       grid-row-start: 1;
-      transform: translateX(calc(var(--size) * var(--tx) * -1));
+      transform: translateX(calc(var(--size) * var(--translateX) * -1));
     }
 
     ul li:nth-of-type(3) {
