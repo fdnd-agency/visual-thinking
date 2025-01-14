@@ -78,12 +78,12 @@
     --column-height: 0.74;
 
     --column-count: 2;
-    --rc: 6;
+    --row-column: 6;
 
     display: grid;
     grid-template-columns: repeat(var(--column-count), var(--size));
     grid-template-rows: repeat(
-      var(--rc),
+      var(--row-column),
       calc(var(--size) * var(--column-height) + var(--gap) * 1)
     );
     justify-content: center;
@@ -169,7 +169,7 @@
       --column-height: 0.71;
 
       --column-count: 3;
-      --rc: 4;
+      --row-column: 4;
     }
 
     ul li:nth-of-type(1) {
@@ -232,7 +232,7 @@
       --size: 14em;
 
       --column-count: 4;
-      --rc: 2;
+      --row-column: 2;
       margin-top: -60vh;
     }
 
