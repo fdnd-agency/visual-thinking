@@ -1,11 +1,11 @@
 <script>
-  export let data;
+  export let methods;
 </script>
 
 <section class="grid">
-  <h2>Alle methodes ({data.length})</h2>
-  {#if data && data.length > 0}
-    {#each data as method, index}
+  <h2>Alle methodes ({methods.length})</h2>
+  {#if methods && methods.length > 0}
+    {#each methods as method}
       <div class="methods-focus-state">
         <article class="methods-container">
           <a href="/tekenmethodes/{method.slug}">
@@ -70,23 +70,23 @@
   }
 
   .methods-focus-state {
-    border-bottom: 0.3em solid transparent;
-    padding: 0.8em;
-    margin: -0.8em;
+    border-bottom: 0.3rem solid transparent;
+    padding: 0.8rem;
+    margin: -0.8rem;
   }
-  
+
   .methods-focus-state:hover {
-    border-bottom: 0.3em solid var(--vtYellow);
+    border-bottom: 0.3rem solid var(--vtYellow);
     background-color: var(--vtGrey-10);
   }
 
-  @media screen and (min-width: 36em) {
+  @media screen and (min-width: 36rem) {
     .grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media screen and (min-width: 60em) {
+  @media screen and (min-width: 60rem) {
     .grid {
       grid-template-columns: repeat(3, 1fr);
     }

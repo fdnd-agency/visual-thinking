@@ -42,5 +42,3 @@ export async function load({ url }) {
   const data = await hygraph.request(query, { categories });
   return data;
 }
-
-  
