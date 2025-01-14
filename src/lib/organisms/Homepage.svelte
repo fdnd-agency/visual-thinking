@@ -75,7 +75,7 @@
     --size: 10em;
 
     --translateX: 0.265;
-    --ch: 0.74;
+    --column-height: 0.74;
 
     --cc: 2;
     --rc: 6;
@@ -84,7 +84,7 @@
     grid-template-columns: repeat(var(--cc), var(--size));
     grid-template-rows: repeat(
       var(--rc),
-      calc(var(--size) * var(--ch) + var(--gap) * 1)
+      calc(var(--size) * var(--column-height) + var(--gap) * 1)
     );
     justify-content: center;
     list-style: none;
@@ -165,7 +165,7 @@
     ul {
       --gap: 1.2rem;
       --translateX: 0.275;
-      --ch: 0.725;
+      --column-height: 0.725;
     }
   }
 
@@ -177,7 +177,7 @@
       --size: 12em;
 
       --translateX: 0.55;
-      --ch: 0.71;
+      --column-height: 0.71;
 
       --cc: 3;
       --rc: 4;
@@ -305,7 +305,7 @@
       --gap: 1.3rem;
       --size: 13em;
       --translateX: 0.55;
-      --ch: 0.71;
+      --column-height: 0.71;
     }
   }
 </style>
