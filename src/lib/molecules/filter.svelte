@@ -1,10 +1,10 @@
 <script>
   import { page } from "$app/stores";
 
-  export let data;
+  export let categories;
 
   let filter = $page.url.searchParams.getAll("categorie") || [];
-  let isLoading = false;
+  $: isLoading = false;
 
   function applyFilter() {
     return function (event) {
@@ -16,6 +16,7 @@
       url.searchParams.delete("categorie");
       categorie.forEach((slug) => url.searchParams.append("categorie", slug));
 
+      // Redirect to new URL, giving the loading spinner time to show
       setTimeout(() => {
         window.location = url;
       }, 1000);
@@ -27,7 +28,7 @@
   <h2 id="methodes">Filter op categorie</h2>
 
   <form method="GET" action="/tekenmethodes#methodes" on:submit={applyFilter()}>
-    {#each data.categories as category}
+    {#each categories as category}
       <label for={category.slug}>
         <input
           type="checkbox"
@@ -40,6 +41,7 @@
         {category.title}
       </label>
     {/each}
+    <!-- Toon loading spinner tijdens loading state -->
     {#if isLoading}
       <div class="loading-spinner"></div>
     {:else}
@@ -103,14 +105,10 @@
     border: 4px solid var(--vtGrey-50);
     border-top: 4px solid var(--vtYellow);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     animation: spin 1s linear infinite;
   }
-
-  /* .filter-focus-hover {
-    border-bottom: 0.3em solid red;
-  } */
 
   @keyframes spin {
     0% {
