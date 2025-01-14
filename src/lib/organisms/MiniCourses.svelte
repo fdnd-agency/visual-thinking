@@ -32,7 +32,7 @@
     --size: 12em;
 
     --translateX: 0.365;
-    --ch: 0.74;
+    --column-height: 0.74;
 
     --cc: 1;
     --rc: 4;
@@ -41,7 +41,7 @@
     grid-template-columns: repeat(var(--cc), var(--size));
     grid-template-rows: repeat(
       var(--rc),
-      calc(var(--size) * var(--ch) + var(--gap) * 1)
+      calc(var(--size) * var(--column-height) + var(--gap) * 1)
     );
     justify-content: center;
     list-style: none;
@@ -85,7 +85,7 @@
       --size: 14em;
 
       --translateX: 0.55;
-      --ch: 0.71;
+      --column-height: 0.71;
 
       --cc: 4;
       --rc: 2;
