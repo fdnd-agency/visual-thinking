@@ -34,11 +34,11 @@
     --translateX: 0.365;
     --column-height: 0.74;
 
-    --cc: 1;
+    --column-count: 1;
     --rc: 4;
 
     display: grid;
-    grid-template-columns: repeat(var(--cc), var(--size));
+    grid-template-columns: repeat(var(--column-count), var(--size));
     grid-template-rows: repeat(
       var(--rc),
       calc(var(--size) * var(--column-height) + var(--gap) * 1)
@@ -75,7 +75,7 @@
   @media (width > 35rem) {
     ul {
       --rc: 2;
-      --cc: 2;
+      --column-count: 2;
     }
   }
 
@@ -87,7 +87,7 @@
       --translateX: 0.55;
       --column-height: 0.71;
 
-      --cc: 4;
+      --column-count: 4;
       --rc: 2;
       margin-top: -28vh;
     }
