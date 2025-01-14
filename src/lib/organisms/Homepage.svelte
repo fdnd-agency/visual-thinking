@@ -175,8 +175,6 @@
     ul li:nth-of-type(1) {
       grid-column-start: 1;
       grid-row-start: 3;
-      --background-color: #e0dedc;
-
       transform: translateX(0);
     }
 
@@ -184,7 +182,6 @@
       grid-column-start: 3;
       grid-row-start: 3;
       transform: translateX(0);
-      --background-color: #e0dedc;
     }
 
     ul li:nth-of-type(3) {
@@ -196,7 +193,6 @@
     ul li:nth-of-type(4) {
       grid-column-start: 2;
       grid-row-start: 3;
-
       transform: translateX(0);
     }
 
@@ -239,8 +235,6 @@
     ul li:nth-of-type(1) {
       grid-column-start: 1;
       grid-row-start: 1;
-      --background-color: #e0dedc;
-
       transform: translateX(0);
     }
 
@@ -248,7 +242,6 @@
       grid-column-start: 4;
       grid-row-start: 1;
       transform: translateX(0);
-      --background-color: #e0dedc;
     }
 
     ul li:nth-of-type(3) {
