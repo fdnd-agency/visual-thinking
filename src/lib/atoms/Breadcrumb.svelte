@@ -1,10 +1,10 @@
 <script>
   export let titel;
   export let url;
-  export let backgroundColor;
+  export let bgc;
 </script>
 
-<div class="breadcrumb" style="--background-color:{backgroundColor}">
+<div class="breadcrumb" style="--bgc:{bgc}">
   {#if url}
     <a href="{url}">{titel}</a>
   {:else}
@@ -13,8 +13,8 @@
 </div>
 <style>
   div {
-    background-color: var(--background-color);
-    margin: 0 -1rem;
+    background-color: var(--bgc);
+    margin:0 -1rem;
   }
   /* MOBILE - STYLING */
   a, span {
