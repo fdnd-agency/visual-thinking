@@ -16,17 +16,18 @@
       <li>
         <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden </a>
       </li>
-
-      {#if method.pdf}
-        <a
-          href={method.pdf.url}
-          download="{method.slug}.pdf"
-          target="blank"
-          class="vt-standard-button">Download PDF</a
-        >
-      {/if}
     </ul>
+    {#if method.pdf}
+    <a
+      href={method.pdf.url}
+      download="{method.slug}.pdf"
+      target="blank"
+      class="vt-standard-button">
+      Download PDF
+    </a>
+  {/if}
   </nav>
+
 </header>
 
 <style>
@@ -47,50 +48,34 @@
   ul {
     justify-content: flex-start;
     overflow-y: hidden;
-    transition: transform 0.3s ease;
     padding: 0;
     margin: 0 1rem;
     gap: 2rem;
   }
 
-  a {
+  ul li a {
     text-decoration: none;
     list-style: none;
     cursor: pointer;
     color: var(--vtSec-DarkBlue);
   }
 
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   nav ul {
     display: flex;
     list-style: none;
     align-items: center;
+    align-self: center;
   }
 
   nav li {
     text-transform: uppercase;
     font-family: var(--vtPrimaryFont);
-  }
-
-  li a[href^="/tekenmethodes/{method.slug}"] {
-    font-weight: 800;
-    text-decoration: underline;
-    text-decoration-thickness: 0.2rem;
-    text-underline-offset: 0.5rem;
-  }
-
-  .vt-standard-button {
-    color: white;
-    font-family: var(--vtPrimaryFont);
-    background-color: var(--vtDarkBlue);
-    padding: 0.5rem 0.5rem;
-    border-radius: 2rem;
-    margin-left: 1rem;
-    font-size: 1rem;
-  }
-
-  :hover.vt-standard-button {
-    color: var(--vtDarkBlue);
-    background-color: rgb(188, 188, 188);
   }
 
   @media (min-width: 31rem) {
@@ -114,24 +99,27 @@
     }
   }
 
-  @media (min-width: 74rem) {
+  @media (min-width: 80rem) {
     header {
       display: flex;
       flex-direction: row;
       align-items: center;
     }
 
+    nav {
+      margin-top: 0.75rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
       justify-content: center;
-      margin-top: 0.75rem;
     }
 
     h1 {
       margin-top: auto;
       text-align: start;
-      max-width: 800px;
+      max-width: 40rem;
       font-size: 3.157rem;
     }
   }

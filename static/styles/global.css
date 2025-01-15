@@ -180,6 +180,22 @@ main {
   padding: 0 1rem;
 }
 
+/* PDF button methods header */
+.vt-standard-button {
+  color: var(--vtWhite);
+  font-family: var(--vtPrimaryFont);
+  background-color: var(--vtDarkBlue);
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+:hover.vt-standard-button {
+  color: var(--vtDarkBlue);
+  background-color: rgb(188, 188, 188);
+}
+
 /* a11y */
 .screenreader-only {
   clip: rect(0 0 0 0);
