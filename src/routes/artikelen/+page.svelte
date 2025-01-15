@@ -10,6 +10,6 @@
 
 <Breadcrumb titel="Artikelen" backgroundColor="var(--vtDarkBlue)" />
 <Introduction data={page}/>
-<Articles data={articles}/>
+<Articles {articles}/>
 
 
