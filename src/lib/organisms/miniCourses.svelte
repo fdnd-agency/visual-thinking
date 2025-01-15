@@ -1,14 +1,14 @@
 <script>
   import Hexagon from "$lib/atoms/Hexagon.svelte";
 
-  export let data;
+  export let miniCourses;
 </script>
 
 <section>
   <h2 class="screenreader-only">Kies hier een minicursus</h2>
   <ul>
-    {#if data && data.length > 0}
-      {#each data as course, index}
+    {#if miniCourses && miniCourses.length > 0}
+      {#each miniCourses as course, index}
         <li>
           <Hexagon
             href="/minicursussen/{course.slug}"
@@ -24,7 +24,7 @@
 
 <style>
   section {
-    padding:0 0 8rem;
+    padding: 0 0 8rem;
   }
 
   ul {
