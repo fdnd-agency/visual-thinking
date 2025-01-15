@@ -1,12 +1,12 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
-  import TagsPlan from "$lib/molecules/tagsPlan.svelte";
+  import StepsTags from "$lib/molecules/StepsTags.svelte";
   import Steps from "$lib/molecules/steps.svelte";
 
   export let data;
-  // Extract the steps into a seperate variable so we can give these to the steps component
-  const steps = data.methods[0].steps;
+  // Extract the relevant values into a seperate variables so we can give these selectively to their components
+  const { steps, categories, material, duration } = data.methods[0];
 </script>
 
 <Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
@@ -15,7 +15,7 @@
 
 <section class="grid">
   <div class="sticky">
-    <TagsPlan {data} />
+    <StepsTags {categories} {duration} materials={material} />
   </div>
   <Steps {steps} />
 </section>

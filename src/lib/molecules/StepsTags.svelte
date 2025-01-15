@@ -1,5 +1,8 @@
 <script>
-  export let data;
+  export let categories;
+  export let materials;
+  export let duration;
+
   // Functie om underscores te verwijderen en de eerste letter van het eerste woord hoofdletter te maken
   function formatMaterial(material) {
     // Verwijder underscores
@@ -30,11 +33,9 @@
       />
     </svg>
     <div class="span-box">
-      {#each data.methods as method}
-        {#each method.categories as category}
+        {#each categories as category}
           <p>{category.title}</p>
         {/each}
-      {/each}
     </div>
   </li>
   <!-- Materials Section -->
@@ -64,7 +65,7 @@
       />
     </svg>
 
-    {#each data.methods[0].material as material}
+    {#each materials as material}
       <div class="span-box">
         <p>{formatMaterial(material)}</p>
       </div>
@@ -93,11 +94,9 @@
       />
     </svg>
 
-    {#each data.methods as method}
       <div class="span-box">
-        <p>{method.duration}</p>
+        <p>{duration}</p>
       </div>
-    {/each}
   </li>
   <!-- Author Section -->
   <li class="tags-group">
