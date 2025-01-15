@@ -5,6 +5,8 @@
   import Steps from "$lib/molecules/steps.svelte";
 
   export let data;
+  // Extract the steps into a seperate variable so we can give these to the steps component
+  const steps = data.methods[0].steps;
 </script>
 
 <Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
@@ -15,7 +17,7 @@
   <div class="sticky">
     <TagsPlan {data} />
   </div>
-  <Steps {data} />
+  <Steps {steps} />
 </section>
 
 <style>
