@@ -1,6 +1,6 @@
 <script>
   import IconAuthor from "../atoms/icons/IconAuthor.svelte";
-import IconCategories from "../atoms/icons/IconCategories.svelte";
+  import IconCategories from "../atoms/icons/IconCategories.svelte";
   import IconDuration from "../atoms/icons/IconDuration.svelte";
   import IconMaterials from "../atoms/icons/IconMaterials.svelte";
 
@@ -59,14 +59,12 @@ import IconCategories from "../atoms/icons/IconCategories.svelte";
   .tags-container {
     display: flex;
     flex-direction: column;
-
     padding: 0;
   }
 
   .tags-group {
     display: flex;
-
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
   }
 
   .span-box {
@@ -86,11 +84,11 @@ import IconCategories from "../atoms/icons/IconCategories.svelte";
     max-width: fit-content;
   }
 
-  svg {
+  .tags-container :global(svg) {
     flex-shrink: 0;
   }
 
-  @media (min-width: 1186px) {
+  @media (min-width: 58rem) {
     .tags-container {
       position: -webkit-sticky; /* Voor Safari */
       position: sticky;
