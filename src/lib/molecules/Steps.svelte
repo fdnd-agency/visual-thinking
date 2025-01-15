@@ -1,15 +1,16 @@
 <script>
-  export let data;
+  export let MethodData;
+  const { methods } = MethodData;
 </script>
 
-<div class="steps">
+<section>
     <!-- Loop through each method -->
-    {#each data.methods as method, methodIndex}
+    {#each methods as method, methodIndex}
       <!-- Loop through each step in the method -->
       {#each method.steps as step, stepIndex}
-        <details class="accordion-item" open={methodIndex === 0 && stepIndex === 0}>
+        <details class="step" open={methodIndex === 0 && stepIndex === 0}>
           <summary class="step-title">{step.title}</summary>
-          <div class="accordion-content">
+          <div class="step-content">
             <!-- Check if visual content exists -->
             {#if step.visual[0]}
               <img src={step.visual[0].url} alt="image_voorbeeld" />
@@ -17,7 +18,7 @@
             <!-- Check if description is HTML or plain text -->
             {#if typeof step.description === "object"}
               <!-- i used {@html} for injecting HTML content without the html tags -->
-             {@html step.description.html}
+              {@html step.description.html}
             {:else}
               <!-- text description -->
               <p>{step.description}</p>
@@ -26,12 +27,12 @@
         </details>
       {/each}
     {/each}
-</div>
+</section>
   
   
 <style>
-  .accordion-item {
-    margin-bottom: 5px;
+  .step {
+    margin-bottom: 0.25rem;
     width: 100%;
     overflow: hidden;
   }
@@ -42,7 +43,7 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
     color: var(--vtWhite);
-    padding: 10px;
+    padding: 0.5rem;
     cursor: pointer;
     user-select: none;
   }
@@ -52,15 +53,15 @@
     color: black;
   }
 
-  .accordion-content {
-    padding: 10px;
-    background-color: #fff;
+  .step-content {
+    padding: 0.5rem;
+    background-color: var(--vtWhite);
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-top: 5px;
+    margin-top: 0.25rem;
   }
 
-  .accordion-content img {
+  .step-content img {
     width: 100%;
     height: 100%;
   }
