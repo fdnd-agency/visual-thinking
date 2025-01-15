@@ -1,17 +1,17 @@
 <script>
-  export let data;
+  export let page;
 
-  const {title, content} = data
+  const {title, content} = page;
 </script>
 
-<header>
+<section>
   <h1>{title}</h1>
     
   {@html content.html}
-</header>
+</section>
 
 <style>
-  header {
+  section {
       max-width: 40rem;
       margin: 0 auto 2rem;
   }
@@ -19,8 +19,8 @@
   h1 {
       font-size: 1.7rem;
   }
-  @media screen and (min-width: 36em) {
-      header {
+  @media screen and (min-width: 36rem) {
+      section {
           width: 75%;
       }
       h1 {

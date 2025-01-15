@@ -11,7 +11,7 @@
 </script>
 
 <Breadcrumb titel="Tekenmethodes" backgroundColor="var(--vtYellow)" />
-<Introduction data={page} />
+<Introduction {page} />
 
 <Filter {categories} />
 <Methods {methods} />

@@ -8,4 +8,4 @@
 </script>
 
 <Breadcrumb titel="Over" backgroundColor="var(--vtSec-DarkBlue)" />
-<Introduction data={page}/>
+<Introduction {page}/>

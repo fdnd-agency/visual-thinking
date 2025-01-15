@@ -9,7 +9,7 @@
 </script>
 
 <Breadcrumb titel="Artikelen" backgroundColor="var(--vtDarkBlue)" />
-<Introduction data={page}/>
+<Introduction {page}/>
 <Articles {articles}/>
 
 
