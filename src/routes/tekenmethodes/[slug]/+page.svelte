@@ -3,6 +3,8 @@
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
 
   export let data;
+  // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
+  const { title, slug, pdf } = data.methods[0];
 </script>
 
 <Breadcrumb
@@ -11,7 +13,7 @@
   backgroundColor="var(--vtYellow)"
 />
 
-<MethodHeader {data} />
+<MethodHeader {title} {slug} {pdf} />
 
 <section class="section-wrapper">
   {#each data.methods as method}

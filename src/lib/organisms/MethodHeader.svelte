@@ -1,26 +1,27 @@
 <script>
-  export let data;
-  const method = data.methods[0];
+  export let title;
+  export let slug;
+  export let pdf;
 </script>
 
 <header>
-  <h1>{method.title}</h1>
+  <h1>{title}</h1>
   <nav>
     <ul>
       <li>
-        <a href="/tekenmethodes/{method.slug}">Beschrijving </a>
+        <a href="/tekenmethodes/{slug}">Beschrijving </a>
       </li>
       <li>
-        <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan </a>
+        <a href="/tekenmethodes/{slug}/stappenplan">Stappenplan </a>
       </li>
       <li>
-        <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden </a>
+        <a href="/tekenmethodes/{slug}/voorbeelden">Voorbeelden </a>
       </li>
     </ul>
-    {#if method.pdf}
+    {#if pdf}
     <a
-      href={method.pdf.url}
-      download="{method.slug}.pdf"
+      href={pdf.url}
+      download="{slug}.pdf"
       target="blank"
       class="vt-standard-button">
       Download PDF

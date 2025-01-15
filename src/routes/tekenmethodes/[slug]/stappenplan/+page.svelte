@@ -6,12 +6,12 @@
 
   export let data;
   // Extract the relevant values into a seperate variables so we can give these selectively to their components
-  const { steps, categories, material, duration } = data.methods[0];
+  const { steps, categories, material, duration, title, slug, pdf } = data.methods[0];
 </script>
 
 <Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
 
-<MethodHeader {data} />
+<MethodHeader {title} {slug} {pdf} />
 
 <section class="grid">
   <div class="sticky">
