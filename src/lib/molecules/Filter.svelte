@@ -3,6 +3,7 @@
 
   export let categories;
 
+  // Read all categorie query parameters from the URL and store them in an array
   let filter = $page.url.searchParams.getAll("categorie") || [];
   $: isLoading = false;
 
@@ -11,10 +12,10 @@
       event.preventDefault();
       isLoading = true; // Start loading animation
       const formData = new FormData(event.target);
-      const categorie = formData.getAll("categorie");
+      const categorie = formData.getAll("categorie"); // Get all checked categories
       const url = new URL(window.location);
-      url.searchParams.delete("categorie");
-      categorie.forEach((slug) => url.searchParams.append("categorie", slug));
+      url.searchParams.delete("categorie"); // Remove all categorie query parameters from previous URL
+      categorie.forEach((slug) => url.searchParams.append("categorie", slug)); // Add all checked categories to create new URL
 
       // Redirect to new URL, giving the loading spinner time to show
       setTimeout(() => {
