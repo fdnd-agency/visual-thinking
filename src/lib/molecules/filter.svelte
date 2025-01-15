@@ -26,7 +26,7 @@
 </script>
 
 <section>
-  <h2 id="methodes">Filter op categorie</h2>
+  <h2>Filter op categorie</h2>
 
   <form method="GET" action="/tekenmethodes#methodes" on:submit={applyFilter()}>
     {#each categories as category}
@@ -53,9 +53,6 @@
 <style>
   h2 {
     font-size: 1rem;
-  }
-
-  #methodes {
     padding: 1rem;
     background-color: var(--vtGrey-5);
     border-radius: 8px;
