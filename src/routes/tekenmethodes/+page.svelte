@@ -14,4 +14,4 @@
 <Introduction data={page}/>
 
 <Filter {categories} />
-<Methods data={methods}/>
+<Methods {methods}/>
