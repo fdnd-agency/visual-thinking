@@ -1,5 +1,6 @@
 <script>
   export let methods;
+  console.log(methods);
 </script>
 
 <section class="grid">
@@ -11,6 +12,8 @@
           <a href="/tekenmethodes/{method.slug}">
             {#if method.template && method.template.url}
               <picture>
+                <source srcset={method.template.url.replace(":webp", ":avif")} />
+                <source srcset={method.template.url} />
                 <img
                   src={method.template.url.replace(":webp", ":png")}
                   alt={"Voorbeeld van " + method.title}
