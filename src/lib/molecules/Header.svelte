@@ -1,12 +1,13 @@
 <script>
   import { page } from "$app/stores";
 
+  // Used for the active state for the menu links
   let activeRoute;
-  $: activeRoute = $page.route.id;
+  $: activeRoute = $page.route.id; // 
 </script>
 
 <header>
-  <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Visual Thinking Logo" /></a>
+  <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Home" /></a>
 
   <nav>
     <ul>
@@ -39,7 +40,7 @@
     top: 1rem;
     left: 1rem;
     z-index: 1;
-    transition: .25s
+    transition: .25s;
   }
 
   a.logo:hover,
@@ -50,7 +51,7 @@
   }
 
   a.logo img {
-    width: 3rem
+    width: 3rem;
   }
 
   nav {
@@ -86,7 +87,7 @@
     font-family: var(--vtPrimaryFont);
     font-weight: 700;
     padding: 1rem;
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem;
     align-items: center;
     gap: 4vw;
     overflow-x: auto;
@@ -139,16 +140,16 @@
     --state-color: var(--vtGrey);
   }
 
-  @media (min-width: 80em) {
+  @media (min-width: 80rem) {
     a.logo {
       position: absolute;
       z-index: 1;
-      left: calc(50% - 40px);
+      left: calc(50% - 2rem);
       top: .5rem;
     }
 
     a.logo img {
-      width: 4rem
+      width: 4rem;
     }
 
     nav {
@@ -162,7 +163,7 @@
     }
 
     ul {
-      --spacing-logo:6rem;
+      --spacing-logo: 6rem;
       justify-content: center;
     }
 
