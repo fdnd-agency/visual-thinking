@@ -6,7 +6,7 @@
   const {title, visual, intro, content} = data.article
 </script>
 
-<Breadcrumb titel="Overzicht" url="/artikelen" bgc="var(--vtDarkBlue)" />
+<Breadcrumb titel="Overzicht" url="/artikelen" backgroundColor="var(--vtDarkBlue)" />
 
 <header>
   <div>

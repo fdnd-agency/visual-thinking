@@ -5,7 +5,7 @@
   export let data;
 </script>
 
-<Breadcrumb titel="Minicursussen" bgc="var(--vtRed)" />
+<Breadcrumb titel="Minicursussen" backgroundColor="var(--vtRed)" />
 
 <div>
   <header>

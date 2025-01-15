@@ -25,7 +25,7 @@
   });
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
 <MethodHeader {data} />
 
 <section class="images-buttons">

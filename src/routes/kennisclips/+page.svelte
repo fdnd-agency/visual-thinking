@@ -5,4 +5,4 @@ export let data
 </script>
 
 
-<KnowledgeClips data={data}/>
+<KnowledgeClips {data}/>
