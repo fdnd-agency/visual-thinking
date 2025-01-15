@@ -8,7 +8,7 @@
   const {page, articles} = data
 </script>
 
-<Breadcrumb titel="Artikelen" backgroundColor="var(--vtDarkBlue)" />
+<Breadcrumb titel="Artikelen" bgc="var(--vtDarkBlue)" />
 <Introduction data={page}/>
 <Articles data={articles}/>
 

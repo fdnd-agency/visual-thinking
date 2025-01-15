@@ -1,7 +1,7 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
-  import StappenplanTags from "../../../../lib/molecules/StappenplanTags.svelte";
+  import TagsPlan from "$lib/molecules/tagsPlan.svelte";
   import Steps from "$lib/molecules/steps.svelte";
 
   export let data;
@@ -13,9 +13,9 @@
 
 <section class="grid">
   <div class="sticky">
-    <StappenplanTags {data} />
+    <TagsPlan {data} />
   </div>
-  <Steps methodData={data} />
+  <Steps {data} />
 </section>
 
 <style>
