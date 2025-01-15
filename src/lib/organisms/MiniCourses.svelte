@@ -29,7 +29,7 @@
 
   ul {
     --gap: 3rem;
-    --size: 12em;
+    --size: 12rem;
 
     --translateX: 0.365;
     --column-height: 0.74;
@@ -79,10 +79,10 @@
     }
   }
 
-  @media (width > 60em) {
+  @media (width > 60rem) {
     ul {
       --gap: 2rem;
-      --size: 14em;
+      --size: 14rem;
 
       --translateX: 0.55;
       --column-height: 0.71;

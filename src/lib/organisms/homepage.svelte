@@ -150,7 +150,7 @@
   }
 
   /* tablet mini */
-  @media (width > 40em) {
+  @media (width > 40rem) {
     ul {
       --gap: 1.2rem;
       --translateX: 0.275;
@@ -160,10 +160,10 @@
 
   /* tablet groot */
 
-  @media (width > 44em) {
+  @media (width > 44rem) {
     ul {
       --gap: 1.4rem;
-      --size: 12em;
+      --size: 12rem;
 
       --translateX: 0.55;
       --column-height: 0.71;
@@ -222,10 +222,10 @@
   }
 
   /* Desktop */
-  @media (width > 70em) {
+  @media (width > 70rem) {
     ul {
       --gap: 1rem;
-      --size: 14em;
+      --size: 14rem;
 
       --column-count: 4;
       --row-column: 2;
@@ -282,10 +282,10 @@
     }
   }
 
-  @media (width > 68em) {
+  @media (width > 68rem) {
     ul {
       --gap: 1.3rem;
-      --size: 13em;
+      --size: 13rem;
       --translateX: 0.55;
       --column-height: 0.71;
     }
