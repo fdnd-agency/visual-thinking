@@ -3,7 +3,7 @@
 
   let index = 0;
 
-  export let data;
+  export let clips;
 
   const nextButton = () => {
     index = index + 1;
@@ -30,7 +30,7 @@
     <iframe
       class="youtubelink"
       title="kennisclips"
-      src={data.categories[index].youTubeLink}
+      src={clips[index].youTubeLink}
     ></iframe>
 
     <button on:click={nextButton}>
@@ -43,8 +43,8 @@
   </section>
 
   <section class="text-container">
-    <h2>{data.categories[index].title}</h2>
-    <p>{@html data.categories[index].content.html}</p>
+    <h2>{clips[index].title}</h2>
+    <p>{@html clips[index].content.html}</p>
   </section>
 </main>
 
@@ -65,7 +65,7 @@
     margin: 0 auto;
     max-width: 700px;
     text-transform: none;
-    padding-bottom: 3em;
+    padding-bottom: 3rem;
   }
 
   /* clips */
@@ -73,7 +73,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3.3em 0;
+    padding: 3.3rem 0;
     margin:0 -1rem;
     background-color: var(--vtGrey-10);
   }
@@ -82,7 +82,7 @@
   button {
     background-color: transparent;
     border: transparent;
-    padding: 2em;
+    padding: 2rem;
   }
 
   .right-arrow {
@@ -104,10 +104,10 @@
   }
 
   /* desktop */
-  @media screen and (min-width: 1120px) {
+  @media screen and (min-width: 56rem) {
     .youtubelink {
-      width: 884px;
-      height: 497px;
+      width: 44.2rem;
+      height: 24.85rem;
     }
   }
 </style>
