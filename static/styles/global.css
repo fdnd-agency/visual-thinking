@@ -1,0 +1,222 @@
+:root {
+  /* Visual Thinking: Primary Colors:
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
+    */
+  --vtDarkBlue: #090940;
+  --vtLightBlue: #67c5d1;
+  --vtYellow: #feb51e;
+  --vtRed: #f96c4f;
+  --vtWhite: #ffffff;
+  --vtBlack: #000000;
+
+  /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
+    */
+  --vtDarkBlue-80: #3a3a66;
+  --vtDarkBlue-50: #6b6b8c;
+  --vtDarkBlue-30: #9d9db3;
+  --vtDarkBlue-10: #ceced9;
+
+  --vtLightBlue-80: #85d1da;
+  --vtLightBlue-50: #a4dce3;
+  --vtLightBlue-30: #c2e8ed;
+  --vtLightBlue-10: #e1f3f6;
+
+  --vtYellow-80: #fec44b;
+  --vtYellow-50: #fed378;
+  --vtYellow-30: #ffe1a5;
+  --vtYellow-10: #fff0d2;
+
+  --vtRed-80: #fa8972;
+  --vtRed-50: #fba795;
+  --vtRed-30: #fdc4b9;
+  --vtRed-10: #fee2dc;
+
+  /* Visual Thinking: Grijstinten:
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik!
+     Word vaak gebruikt voor backgrounds en borders. 
+    */
+  --vtGrey: #cecece;
+  --vtGrey-80: #c0beb9;
+  --vtGrey-50: #e0dedc;
+  --vtGrey-10: #f9f8f8;
+  --vtGrey-5: #f9f9f9;
+
+  /* Visual Thinking: Secondary colors,
+    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
+    Word gebruikt als steunkleuren bv: kleurcoderen van categorieën
+    */
+
+  --vtSec-Red: #af1301;
+  --vtSec-Red-30: #fbc5b4;
+  --vtSec-Green: #169861;
+  --vtSec-Green-30: #63c09f;
+  --vtSec-LightBlue: #4fbbc2;
+  --vtSec-DarkBlue: #31439c;
+  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
+  --vtSec-Brown: #8b3a00;
+  --vtSec-Orange: #fe6f07;
+
+  /* Visual Thinking: Fonts,
+    */
+
+  --vtPrimaryFont: "rigid-square", sans-serif;
+  --vtSecondaryFont: "yrsa", serif;
+
+  /* fonts */
+  font-size: 20px;
+  --SecFont: 1.7rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: var(--vtSecondaryFont);
+}
+
+blockquote {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: #625c51;
+}
+
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #625c51;
+}
+
+blockquote:before,
+blockquote:after {
+  position: absolute;
+  color: var(--vtYellow);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote:before {
+  content: "“";
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote:after {
+  content: "”";
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
+.cite {
+  font-family: var(--vtSecondaryFont);
+  color: #625c51;
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color:var(--vtDarkBlue);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--vtPrimaryFont);
+}
+
+p {
+  font-family: var(--vtSecondaryFont);
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3.157rem;
+  color: var(--vtDarkBlue);
+}
+
+h2 {
+  font-size: 2.369rem;
+}
+
+h3 {
+  font-size: 1.0777rem;
+}
+
+a {
+  color: var(--vtYellow);
+  text-decoration: none;
+  color: black;
+  margin-bottom: 5px;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  align-self: flex-start;
+  scrollbar-width: none;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+/* a11y */
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* rich text data styling*/
+.rich-text img {
+  height: auto;
+}
+
+/* svg icons */
+svg.icon {
+  margin-right: 0.25rem;
+}
+svg.icon path {
+  fill: var(--vtDarkBlue);
+}
+svg.icon path.background {
+  fill: var(--vtGrey-50);
+}
+
+/* hexagon stuff (work in progress) */
+.hexagons header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hexagons h1 {
+  max-width: 24rem;
+}
+.hexagons p {
+  text-align: center;
+}
+
+@media (width > 70em) {
+  .hexagons p {
+    max-width: 12rem;
+  }
+}
