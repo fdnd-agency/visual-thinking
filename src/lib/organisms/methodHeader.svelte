@@ -1,39 +1,38 @@
 <script>
   export let data;
-  const method = data.methods[0]
-  console.log(data);
+  const method = data.methods[0];
 </script>
 
 <header>
-
   <h1>{method.title}</h1>
 
   <nav>
     <ul>
-        <li>
-          <a href="/tekenmethodes/{method.slug}">Beschrijving
-          </a>
-        </li>
-        <li>
-          <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan
-          </a>
-        </li>
-        <li>
-          <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden
-          </a>
-        </li> 
+      <li>
+        <a href="/tekenmethodes/{method.slug}">Beschrijving</a>
+      </li>
+      <li>
+        <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan</a>
+      </li>
+      <li>
+        <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden</a>
+      </li>
 
-        {#if method.pdf}
-        <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download PDF</a>
-        {/if}
-      
     </ul>
   </nav>
+  {#if method.pdf}
+    <a
+      href={method.pdf.url}
+      download="{method.slug}.pdf"
+      target="blank"
+      class="vt-standard-button">Download PDF</a
+    >
+  {/if}
 </header>
 
 <style>
   header {
-    margin:0 -1rem;
+    margin: 0 -1rem;
     margin-top: -0.3em;
     background-color: var(--vtGrey-10);
   }
@@ -47,15 +46,12 @@
   }
 
   ul {
-    transform: translateY(0);
     justify-content: flex-start;
     overflow-y: hidden;
-    transition: transform 0.3s ease;
-    padding:0;
+    padding: 0;
     margin: 0 1rem;
-    gap:1.5rem;
+    gap: 2rem;
   }
-
 
   a {
     text-decoration: none;
@@ -71,7 +67,6 @@
   }
 
   nav li {
-    padding-right: 10px;
     text-transform: uppercase;
     font-family: var(--vtPrimaryFont);
   }
@@ -83,28 +78,9 @@
     text-underline-offset: 0.5rem;
   }
 
-  .vt-standard-button {
-	  color: white;
-	  font-family: var(--vtPrimaryFont);
-	  background-color: var(--vtDarkBlue);
-    padding: 0.5em 0.5em;
-	  border-radius: 2em;
-	  margin-left: 1em;
-    font-size: 1em;
-	}
-  
-	:hover.vt-standard-button {
-	  color: var(--vtDarkBlue);
-	  background-color: rgb(188, 188, 188);
-	}
-  
   @media (min-width: 31em) {
     h1 {
       padding-top: 2rem;
-    }
-
-    ul {
-      transform: translateY(0);
     }
 
     header {
@@ -118,15 +94,15 @@
       text-align: center;
       padding: 1rem 0;
     }
+    
     ul {
       justify-content: center;
     }
-
   }
 
   @media (min-width: 74em) {
     header {
-      display:flex;
+      display: flex;
       flex-direction: row;
       align-items: center;
     }
@@ -145,6 +121,4 @@
       font-size: 3.157rem;
     }
   }
-
-  
 </style>

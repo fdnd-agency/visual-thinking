@@ -107,7 +107,6 @@
     ul li:nth-of-type(3) {
       grid-column-start: 2;
       grid-row-start: 2;
-
     }
 
     ul li:nth-of-type(4) {

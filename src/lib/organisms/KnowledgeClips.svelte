@@ -14,7 +14,7 @@
   };
 </script>
 
-<Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--vtSec-LightBlue)" />
 
 <section>
   <h1 class="screenreader-only">Alle kennisclips</h1>
@@ -23,8 +23,7 @@
       <img
         class="left-arrow"
         src="./images/arrows.svg"
-        alt="Knop met pijl naar vorige video"
-        loading="lazy"
+        alt="Naar vorige video"
       />
     </button>
 
@@ -34,24 +33,21 @@
       src={data.categories[index].youTubeLink}
     ></iframe>
 
-    <button on:click={nextButton} aria-label="Volgende Video">
+    <button on:click={nextButton}>
       <img
         class="right-arrow"
         src="./images/arrows.svg"
-        alt="Knop met pijl naar volgende video"
-        loading="lazy"
+        alt="Naar volgende video"
       />
     </button>
-  </div>
+  </section>
 
-  <div class="text-container">
+  <section class="text-container">
     <h2>{data.categories[index].title}</h2>
     <p>{@html data.categories[index].content.html}</p>
-  </div>
-</section>
+  </section>
 
 <style>
-
   /* Header styling */
   h2 {
     font-size: 3.157rem;

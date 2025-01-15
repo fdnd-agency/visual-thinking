@@ -25,7 +25,7 @@
       <Hexagon
         href="/over"
         backgroundColor="--vtSec-DarkBlue"
-        color="#fff"
+        color="--vtWhite"
         text="Over Visual Thinking"
       />
     </li>
@@ -33,7 +33,7 @@
       <Hexagon
         href="/tekenmethodes"
         backgroundColor="--vtYellow"
-        color="#fff"
+        color="--vtWhite"
         text="Ontdek de Visual Thinking methodes"
       />
     </li>
@@ -47,7 +47,7 @@
       <Hexagon
         href="/kennisclips"
         backgroundColor="--vtLightBlue"
-        color="#fff"
+        color="--vtWhite"
         text="Kennisclips"
       />
     </li>
@@ -55,7 +55,7 @@
       <Hexagon
         href="/minicursussen"
         backgroundColor="--vtRed"
-        color="#fff"
+        color="--vtWhite"
         text="Minicursussen"
       />
     </li>

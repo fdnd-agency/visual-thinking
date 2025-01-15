@@ -4,16 +4,16 @@
       <img
         src="/images/visual-thinking-hbo-logo.svg"
         class="logo-footer"
-        alt="Visual thinking logo"
+        alt=""
       />
-      <h1>Visual Thinking in het hbo</h1>
+      <h2>Visual Thinking in het hbo</h2>
     </a>
 
     <div class="icons-nav">
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <img src="/images/instagram.svg" alt="instagram" class="icon" />
+            <img src="/images/instagram.svg" alt="Instagram" class="icon" />
             <span>Instagram</span>
           </a>
         </li>
@@ -21,13 +21,13 @@
           <a
             href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa"
           >
-            <img src="/images/youtube.svg" alt="youtube" class="icon" />
+            <img src="/images/youtube.svg" alt="Youtube" class="icon" />
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <img src="/images/linkedin.svg" alt="linkedIn" class="icon" />
+            <img src="/images/linkedin.svg" alt="LinkedIn" class="icon" />
             <span>LinkedIn</span>
           </a>
         </li>
@@ -90,7 +90,7 @@
     padding-top: 1em;
   }
 
-  h1 {
+  h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
     font-weight: 600;
@@ -124,7 +124,7 @@
       margin-top: -1em;
     }
 
-    h1 {
+    h2 {
       font-size: 1em;
       text-align: left;
       max-width: 8em;
@@ -152,7 +152,7 @@
       margin-top: -1em;
     }
 
-    h1 {
+    h2 {
       font-size: 1.5em;
       text-align: left;
     }
@@ -184,7 +184,7 @@
   }
 
   @media (min-width: 768px) and (max-width: 1000px) {
-    h1 {
+    h2 {
       font-size: 1.5em;
     }
 

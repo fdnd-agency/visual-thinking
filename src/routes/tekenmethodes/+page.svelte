@@ -6,12 +6,11 @@
   import Methods from "$lib/organisms/methods.svelte";
 
   export let data;
-
-  const {page, methods} = data;
+  const {page, methods, categories} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--vtYellow)" />
 <Introduction data={page}/>
 
-<Filter {data} />
-<Methods data={methods}/>
+<Filter {categories} />
+<Methods {methods}/>

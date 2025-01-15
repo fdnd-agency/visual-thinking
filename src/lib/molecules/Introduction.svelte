@@ -19,6 +19,7 @@
   h1 {
       font-size: 1.7rem;
   }
+  
   @media screen and (min-width: 36em) {
       header {
           width: 75%;

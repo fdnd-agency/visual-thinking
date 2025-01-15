@@ -28,15 +28,15 @@
     text-decoration: none;
     cursor: pointer;
     font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
-    padding:.25rem;
+    padding: .25rem;
   }
 
   a.logo {
     --background:var(--vtDarkBlue);
-    padding:1rem .25rem 0;
-    margin-top:-.75rem;
-    position:absolute;
-    top:1rem;
+    padding: 1rem .25rem 0;
+    margin-top: -.75rem;
+    position: absolute;
+    top: 1rem;
     left:1rem;
     z-index:1;
     transition:.25s
@@ -50,7 +50,7 @@
   }
 
   a.logo img {
-    width:60px
+    width: 60px
   }
 
   nav {
@@ -148,7 +148,7 @@
     }
 
     a.logo img {
-      width:80px
+      width:80px;
     }
 
     nav {
