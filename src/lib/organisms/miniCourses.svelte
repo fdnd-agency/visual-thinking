@@ -13,7 +13,7 @@
           <Hexagon
             href="/minicursussen/{course.slug}"
             backgroundColor="var(--background-color)"
-            color="#fff"
+            color="--vtWhite"
             text="{course.title}"
           />
         </li>
