@@ -33,10 +33,6 @@
 
   @media screen and (min-width: 70em) {
     /* Hexagons positionering */
-    :global(main) {
-      position: relative;
-    }
-
     :global(.hexagons header) {
       position: absolute;
       left: 0;

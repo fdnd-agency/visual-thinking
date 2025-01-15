@@ -34,7 +34,7 @@
 
   /* Visual Thinking: Grijstinten:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik!
-     Word vaak gebruikt voor backgrounds en borders. 
+    Word vaak gebruikt voor backgrounds en borders. 
     */
   --vtGrey: #cecece;
   --vtGrey-80: #c0beb9;
@@ -172,6 +172,7 @@ ul::-webkit-scrollbar {
 }
 
 main {
+  position: relative;
   padding: 0 1rem;
 }
 
