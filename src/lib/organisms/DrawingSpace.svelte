@@ -91,7 +91,7 @@
   });
 </script>
 
-<Breadcrumb titel= "Tekenruimte" bgc="var(--vtGrey)" />
+<Breadcrumb titel= "Tekenruimte" backgroundColor="var(--vtGrey)" />
 
 <header class="screenreader-only">
   <h1>Teken hier!</h1>

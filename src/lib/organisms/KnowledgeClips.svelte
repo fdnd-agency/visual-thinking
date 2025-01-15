@@ -14,7 +14,7 @@
   };
 </script>
 
-<Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--vtSec-LightBlue)" />
 
 <section>
   <h1 class="screenreader-only">Alle kennisclips</h1>
