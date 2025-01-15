@@ -1,34 +1,28 @@
 <script>
   export let methods;
-  console.log(methods);
 </script>
 
 <section class="grid">
   <h2>Alle methodes ({methods.length})</h2>
   {#if methods && methods.length > 0}
     {#each methods as method, index}
-      <div class="methods-focus-state">
-        <article class="methods-container">
-          <a href="/tekenmethodes/{method.slug}">
-            {#if method.template && method.template.url}
-              <picture>
-                <source srcset={method.template.url.replace(":webp", ":avif")} />
-                <source srcset={method.template.url} />
-                <img
-                  src={method.template.url.replace(":webp", ":png")}
-                  alt={"Voorbeeld van " + method.title}
-                />
-              </picture>
-            {:else}
+      <article class="methods-container">
+        <a href="/tekenmethodes/{method.slug}">
+          {#if method.template && method.template.url}
+            <picture>
+              <source srcset={method.template.url.replace(":webp", ":avif")} />
+              <source srcset={method.template.url} />
               <img
-                src="/placeholder.webp"
-                alt="Placeholder"
+                src={method.template.url.replace(":webp", ":png")}
+                alt={"Voorbeeld van " + method.title}
               />
-            {/if}
-          </a>
-        </article>
+            </picture>
+          {:else}
+            <img src="/placeholder.webp" alt="Placeholder" />
+          {/if}
+        </a>
         <h3>{method.title}</h3>
-      </div>
+      </article>
     {/each}
   {/if}
 </section>
@@ -57,27 +51,25 @@
   a {
     text-decoration: none;
     color: var(--vtBlack);
-    margin-bottom: 0.25rem;
   }
 
   article {
     display: flex;
     flex-direction: column;
-    transition: 0.25s;
-    border: 1px solid #ccc;
+    transition: 0.1s;
+    padding: 0.8rem;
+    padding-bottom: 0.25rem;
+    margin: -0.8rem;
+    border-bottom: 0.3rem solid transparent;
   }
 
   article img {
+    border: 1px solid #ccc;
     width: 100%;
     height: auto;
   }
 
-  .methods-focus-state {
-    border-bottom: 0.3rem solid transparent;
-    padding: 0.8rem;
-    margin: -0.8rem;
-  }
-  .methods-focus-state:hover {
+  article:hover {
     border-bottom: 0.3rem solid var(--vtYellow);
     background-color: var(--vtGrey-10);
   }
