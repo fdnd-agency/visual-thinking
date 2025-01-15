@@ -55,7 +55,7 @@
       <Hexagon
         href="/minicursussen"
         backgroundColor="--vtRed"
-        color="#fff"
+        color="--vtWhite"
         text="Minicursussen"
       />
     </li>
