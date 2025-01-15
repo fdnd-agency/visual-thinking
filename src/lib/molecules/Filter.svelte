@@ -1,10 +1,10 @@
 <script>
   import { page } from "$app/stores";
 
-  export let data;
+  export let categories;
 
   let filter = $page.url.searchParams.getAll("categorie") || [];
-  let isLoading = false;
+  $: isLoading = false;
 
   function applyFilter() {
     return function (event) {
@@ -16,6 +16,7 @@
       url.searchParams.delete("categorie");
       categorie.forEach((slug) => url.searchParams.append("categorie", slug));
 
+      // Redirect to new URL, giving the loading spinner time to show
       setTimeout(() => {
         window.location = url;
       }, 1000);
@@ -27,7 +28,7 @@
   <h2 id="methodes">Filter op categorie</h2>
 
   <form method="GET" action="/tekenmethodes#methodes" on:submit={applyFilter()}>
-    {#each data.categories as category}
+    {#each categories as category}
       <label for={category.slug}>
         <input
           type="checkbox"
@@ -50,11 +51,11 @@
 
 <style>
   h2 {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   #methodes {
-    padding: 20px;
+    padding: 1rem;
     background-color: var(--vtGrey-5);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -63,32 +64,34 @@
   section form {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.5rem;
     align-items: center;
   }
 
   label {
     display: flex;
     align-items: center;
-    margin: 5px 0;
-    padding: 0.3em;
-    border-bottom: 0.3em solid transparent;
+    margin: 0.25rem 0;
+    padding: 0.3rem;
+    border-bottom: 0.3rem solid transparent;
   }
 
-  label:hover, label:focus-visible, label:active {
+  label:hover, 
+  label:focus-visible, 
+  label:active {
     background: var(--vtGrey-10);
-    border-bottom: 0.3em solid #feb51e;
+    border-bottom: 0.3rem solid var(--vtYellow);
     transition: 0.05s;
   }
 
   section input[type="checkbox"] {
-    margin-right: 8px;
+    margin-right: 0.4rem;
   }
 
   section button {
     background-color: var(--vtYellow);
     border: none;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -101,14 +104,10 @@
     border: 4px solid var(--vtGrey-50);
     border-top: 4px solid var(--vtYellow);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     animation: spin 1s linear infinite;
   }
-
-  /* .filter-focus-hover {
-    border-bottom: 0.3em solid red;
-  } */
 
   @keyframes spin {
     0% {
