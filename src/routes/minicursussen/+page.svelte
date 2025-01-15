@@ -12,6 +12,6 @@
 
 <div class="hexagons">
   <Introduction data={page}/>
-  <MiniCourses data={miniCourses} />
+  <MiniCourses {miniCourses} />
 </div>
 

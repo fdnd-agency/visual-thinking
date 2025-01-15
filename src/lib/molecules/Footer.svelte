@@ -9,7 +9,7 @@
       <h2>Visual Thinking in het hbo</h2>
     </a>
 
-    <div class="icons-nav">
+    <div class="socials">
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
@@ -56,7 +56,7 @@
     text-align: center;
     list-style-type: none;
     transition: 0.25s;
-    margin: 0 10px;
+    margin: 0 0.5rem;
   }
 
   div a {
@@ -67,18 +67,18 @@
   }
 
   span {
-    margin-left: 5px;
-    font-size: 14px;
+    margin-left: 0.25rem;
     color: #555;
   }
 
+  span, 
   div p {
-    font-size: 14px;
+    font-size: 0.7rem;
   }
 
   .icon {
-    width: 26px;
-    height: 26px;
+    width: 1.3rem;
+    height: 1.3rem;
     margin: 0 2px 0 0;
   }
 
@@ -87,26 +87,26 @@
   }
 
   .logo-footer {
-    padding-top: 1em;
+    padding-top: 1rem;
   }
 
   h2 {
     font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
     font-weight: 600;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: left;
-    max-width: 8em;
+    max-width: 8rem;
   }
 
   .footer-content {
     display: flex;
-    gap: 2em;
-    padding-left: 5em;
-    margin-top: -1em;
+    gap: 2rem;
+    padding-left: 5rem;
+    margin-top: -1rem;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 21rem) {
 
     footer nav {
       align-items: center;
@@ -120,25 +120,25 @@
     }
 
     .logo-footer {
-      width: 2.5em;
-      margin-top: -1em;
+      width: 2.5rem;
+      margin-top: -1rem;
     }
 
     h2 {
-      font-size: 1em;
+      font-size: 1rem;
       text-align: left;
-      max-width: 8em;
+      max-width: 8rem;
     }
 
     .footer-content {
       display: flex;
-      gap: 2em;
-      padding-left: 1em;
-      padding-top: 1em;
+      gap: 2rem;
+      padding-left: 1rem;
+      padding-top: 1rem;
     }
   }
 
-  @media (min-width: 425px) and (max-width: 768px) {
+  @media (min-width: 21rem) and (max-width: 38rem) {
 
     footer nav {
       align-items: center;
@@ -148,24 +148,24 @@
     }
 
     .logo-footer {
-      width: 3.5em;
-      margin-top: -1em;
+      width: 3.5rem;
+      margin-top: -1rem;
     }
 
     h2 {
-      font-size: 1.5em;
+      font-size: 1.5rem;
       text-align: left;
     }
 
     .footer-content {
       display: flex;
-      gap: 2em;
-      margin-top: -1em;
-      padding-top: 1em;
+      gap: 2rem;
+      margin-top: -1rem;
+      padding-top: 1rem;
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 38rem) {
     footer nav {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -173,46 +173,46 @@
     }
 
     .icon {
-      width: 30px;
-      height: 30px;
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
     .footer-content {
-      padding-left: 5em;
+      padding-left: 5rem;
     }
 
   }
 
-  @media (min-width: 768px) and (max-width: 1000px) {
+  @media (min-width: 38rem) and (max-width: 50rem) {
     h2 {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
 
     .footer-content {
-      margin-left: -3em;
-      padding-left: 4em;
+      margin-left: -3rem;
+      padding-left: 4rem;
     }
 
     .logo-footer {
-      width: 3.5em;
-      margin-top: -0.8em;
+      width: 3.5rem;
+      margin-top: -0.8rem;
     }
     
-    .icons-nav {
-      padding-right: -3em;
+    .socials {
+      padding-right: -3rem;
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 50rem) {
     .logo-footer {
-      width: 4.8em;
-      margin-top: -0.8em;
+      width: 4.8rem;
+      margin-top: -0.8rem;
     }
   }
 
-  @media (min-width: 1000px) and (max-width: 1200px){
+  @media (min-width: 50rem) and (max-width: 60rem){
     .footer-content {
-      margin-left: -2em;
+      margin-left: -2rem;
     }
   }
 </style>

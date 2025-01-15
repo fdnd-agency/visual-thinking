@@ -54,7 +54,6 @@
   }
 
   h2 {
-    font-family: var(--vtPrimaryFont);
     color: var(--vtDarkBlue);
     font-size: 1rem;
     margin-bottom: 0;
