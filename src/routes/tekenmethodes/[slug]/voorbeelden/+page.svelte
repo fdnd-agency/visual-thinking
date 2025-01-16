@@ -4,6 +4,8 @@
   import { onMount } from "svelte";
 
   export let data;
+  // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
+  const { title, slug, pdf } = data.methods[0];
 
   onMount(() => {
     const carrousel = document.querySelector("#js-carrousel .carrousel");
@@ -25,8 +27,8 @@
   });
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
-<MethodHeader {data} />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
+<MethodHeader {title} {slug} {pdf} />
 
 <section class="images-buttons">
   <div class="js-disable">

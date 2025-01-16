@@ -1,7 +1,8 @@
 :root {
-  /* Visual Thinking: Primary Colors:
+  /* 
+    Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
+  */
   --vtDarkBlue: #090940;
   --vtLightBlue: #67c5d1;
   --vtYellow: #feb51e;
@@ -9,9 +10,10 @@
   --vtWhite: #ffffff;
   --vtBlack: #000000;
 
-  /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
+  /* 
+    Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
+  */
   --vtDarkBlue-80: #3a3a66;
   --vtDarkBlue-50: #6b6b8c;
   --vtDarkBlue-30: #9d9db3;
@@ -32,9 +34,10 @@
   --vtRed-30: #fdc4b9;
   --vtRed-10: #fee2dc;
 
-  /* Visual Thinking: Grijstinten:
+  /* 
+    Visual Thinking: Grijstinten:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik!
-     Word vaak gebruikt voor backgrounds en borders. 
+    Wordt vaak gebruikt voor backgrounds en borders. 
     */
   --vtGrey: #cecece;
   --vtGrey-80: #c0beb9;
@@ -42,34 +45,37 @@
   --vtGrey-10: #f9f8f8;
   --vtGrey-5: #f9f9f9;
 
-  /* Visual Thinking: Secondary colors,
+  --vtDarkGrey: #625c51; /* <-- Deze kleur is voor de blockquote (hoort niet bij de huisstijl?)*/
+
+  /* 
+    Visual Thinking: Secondary colors,
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    Word gebruikt als steunkleuren bv: kleurcoderen van categorieën
-    */
+    Wordt gebruikt als steunkleuren bv: kleurcoderen van categorieën
+  */
 
   --vtSec-Red: #af1301;
   --vtSec-Red-30: #fbc5b4;
   --vtSec-Green: #169861;
   --vtSec-Green-30: #63c09f;
   --vtSec-LightBlue: #4fbbc2;
-  --vtSec-DarkBlue: #31439c;
-  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
+  --vtSec-DarkBlue: #31439c;  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
   --vtSec-Brown: #8b3a00;
   --vtSec-Orange: #fe6f07;
 
   --link-color: #3B50BA; /*<-- referantie naar --vtSec-DarkBlue, maar is door de WCAG test gekomen*/
 
-  /* Visual Thinking: Fonts,
-    */
-
+  /* 
+    Visual Thinking: Fonts
+  */
   --vtPrimaryFont: "rigid-square", sans-serif;
   --vtSecondaryFont: "yrsa", serif;
 
-  /* fonts */
+  /* Fonts */
   font-size: 20px;
   --SecFont: 1.7rem;
 }
 
+/* Basis styling */
 * {
   box-sizing: border-box;
 }
@@ -81,63 +87,10 @@ body {
   font-family: var(--vtSecondaryFont);
 }
 
-blockquote {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  position: relative;
-  color: #625c51;
-}
-
-.minicursus-quotes {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #625c51;
-}
-
-blockquote:before,
-blockquote:after {
-  position: absolute;
-  color: var(--vtYellow);
-  font-size: 6rem;
-  width: 4rem;
-  height: 4rem;
-}
-
-blockquote:before {
-  content: "“";
-  left: -5rem;
-  top: -3rem;
-}
-
-blockquote:after {
-  content: "”";
-  right: -5rem;
-  bottom: -0.4rem;
-}
-
-.cite {
-  font-family: var(--vtSecondaryFont);
-  color: #625c51;
-}
-
-.link {
-  text-decoration: underline;
-  text-decoration-color:var(--vtDarkBlue);
-}
-
 h1,
 h2,
 h3 {
   font-family: var(--vtPrimaryFont);
-}
-
-p {
-  font-family: var(--vtSecondaryFont);
-  line-height: 1.5;
 }
 
 h1 {
@@ -153,10 +106,15 @@ h3 {
   font-size: 1.0777rem;
 }
 
+p {
+  font-family: var(--vtSecondaryFont);
+  line-height: 1.5;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
-  margin-bottom: 5px;
+   margin-bottom: 0.25rem;
 }
 
 a:hover, a:focus {
@@ -181,19 +139,78 @@ ul::-webkit-scrollbar {
   display: none;
 }
 
+blockquote {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: var(--vtDarkGrey);
+}
+
+blockquote::before,
+blockquote::after {
+  position: absolute;
+  color: var(--vtYellow);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote::before {
+  content: "“";
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote::after {
+  content: "”";
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
 main {
   padding: 0 1rem;
 }
 
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--vtDarkGrey);
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: var(--vtDarkBlue);
+}
+
+/* PDF button methods header */
+.vt-standard-button {
+  color: var(--vtWhite);
+  font-family: var(--vtPrimaryFont);
+  background-color: var(--vtDarkBlue);
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+:hover.vt-standard-button {
+  color: var(--vtDarkBlue);
+  background-color: rgb(188, 188, 188);
+}
+
 /* a11y */
-.sr-only {
+.screenreader-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
+  width: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
 /* rich text data styling*/
@@ -212,8 +229,8 @@ svg.icon path.background {
   fill: var(--vtGrey-50);
 }
 
-/* hexagon stuff (work in progress) */
-.hexagons header {
+/* MARK: Hexagon stuff (work in progress) */
+.hexagons section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,7 +242,7 @@ svg.icon path.background {
   text-align: center;
 }
 
-@media (width > 70em) {
+@media (width > 70rem) {
   .hexagons p {
     max-width: 12rem;
   }
