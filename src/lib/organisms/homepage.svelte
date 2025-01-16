@@ -7,6 +7,7 @@
   <ul>
     <li>
       <Hexagon
+        class="hide-on-mobile"
         img={{
           src: "/images/man.svg",
           alt: "Illustratie van een denkend persoon"
@@ -15,6 +16,7 @@
     </li>
     <li>
       <Hexagon
+        class="hide-on-mobile"
         img={{
           src: "/images/pencil.svg",
           alt: "Illustratie van een potlood"

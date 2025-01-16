@@ -58,7 +58,7 @@
   --vtSec-Green: #169861;
   --vtSec-Green-30: #63c09f;
   --vtSec-LightBlue: #4fbbc2;
-  --vtSec-DarkBlue: #31439c;  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
+  --vtSec-DarkBlue: #31439c; /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
   --vtSec-Brown: #8b3a00;
   --vtSec-Orange: #fe6f07;
 
@@ -245,5 +245,22 @@ svg.icon path.background {
 @media (width > 70rem) {
   .hexagons p {
     max-width: 12rem;
+  }
+}
+
+@media (width < 44rem) {
+  /* Fix for horizontal scrolling on mobile */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  /* Utility class for hiding elements on mobile */
+  .hide-on-mobile {
+    display: none !important;
   }
 }
