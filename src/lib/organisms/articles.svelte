@@ -21,11 +21,11 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: stretch;
     padding: 2rem 0;
     gap: 0.5rem;
-    max-width: var(--page-max-width);
+    max-width: var(--grid-max-width);
     margin: auto;
   }
 

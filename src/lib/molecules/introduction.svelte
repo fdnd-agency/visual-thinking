@@ -12,7 +12,7 @@
 
 <style>
   section {
-    max-width: var(--page-max-width);
+    max-width: var(--text-max-width);
     margin: 0 auto 2rem auto;
   }
 

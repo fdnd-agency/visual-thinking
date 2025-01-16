@@ -75,7 +75,8 @@
   --SecFont: 1.7rem;
 
   /* Max width of page contents */
-  --page-max-width: 40rem;
+  --text-max-width: 40rem;
+  --grid-max-width: 60rem;
 }
 
 /* Basis styling */

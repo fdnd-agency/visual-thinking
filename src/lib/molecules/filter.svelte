@@ -52,7 +52,7 @@
 
 <style>
   section {
-    max-width: 40rem;
+    max-width: var(--grid-max-width);
     margin: auto;
     margin-bottom: 2rem;
   }
