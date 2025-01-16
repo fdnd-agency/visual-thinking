@@ -45,6 +45,8 @@
   --vtGrey-10: #f9f8f8;
   --vtGrey-5: #f9f9f9;
 
+  --vtDarkGrey: #625c51; /* <-- Deze kleur is voor de blockquote (hoort niet bij de huisstijl?)*/
+
   /* 
     Visual Thinking: Secondary colors,
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
@@ -56,15 +58,13 @@
   --vtSec-Green: #169861;
   --vtSec-Green-30: #63c09f;
   --vtSec-LightBlue: #4fbbc2;
-  --vtSec-DarkBlue: #31439c;
-  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
+  --vtSec-DarkBlue: #31439c;  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
   --vtSec-Brown: #8b3a00;
   --vtSec-Orange: #fe6f07;
 
   /* 
-    Visual Thinking: Fonts,
+    Visual Thinking: Fonts
   */
-
   --vtPrimaryFont: "rigid-square", sans-serif;
   --vtSecondaryFont: "yrsa", serif;
 
@@ -73,6 +73,7 @@
   --SecFont: 1.7rem;
 }
 
+/* Basis styling */
 * {
   box-sizing: border-box;
 }
@@ -82,54 +83,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: var(--vtSecondaryFont);
-}
-
-blockquote {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  position: relative;
-  color: #625c51;
-}
-
-.minicursus-quotes {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #625c51;
-}
-
-blockquote::before,
-blockquote::after {
-  position: absolute;
-  color: var(--vtYellow);
-  font-size: 6rem;
-  width: 4rem;
-  height: 4rem;
-}
-
-blockquote::before {
-  content: "“";
-  left: -5rem;
-  top: -3rem;
-}
-
-blockquote::after {
-  content: "”";
-  right: -5rem;
-  bottom: -0.4rem;
-}
-
-.cite {
-  font-family: var(--vtSecondaryFont);
-  color: #625c51;
-}
-
-.link {
-  text-decoration: underline;
-  text-decoration-color: var(--vtDarkBlue);
 }
 
 h1,
@@ -176,8 +129,51 @@ ul::-webkit-scrollbar {
   display: none;
 }
 
+blockquote {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: var(--vtDarkGrey);
+}
+
+blockquote::before,
+blockquote::after {
+  position: absolute;
+  color: var(--vtYellow);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote::before {
+  content: "“";
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote::after {
+  content: "”";
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
 main {
   padding: 0 1rem;
+}
+
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--vtDarkGrey);
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: var(--vtDarkBlue);
 }
 
 /* PDF button methods header */
@@ -201,10 +197,10 @@ main {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
+  width: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
 /* rich text data styling*/
@@ -223,8 +219,8 @@ svg.icon path.background {
   fill: var(--vtGrey-50);
 }
 
-/* hexagon stuff (work in progress) */
-.hexagons header {
+/* MARK: Hexagon stuff (work in progress) */
+.hexagons section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,7 +232,7 @@ svg.icon path.background {
   text-align: center;
 }
 
-@media (width > 70em) {
+@media (width > 70rem) {
   .hexagons p {
     max-width: 12rem;
   }
