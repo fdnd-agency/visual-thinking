@@ -10,8 +10,7 @@
 
 <Breadcrumb titel="Minicursussen" backgroundColor="var(--vtRed)" />
 
-<div class="hexagons">
-  <Introduction {page}/>
-  <MiniCourses {miniCourses} />
+<div class="hexagons minicourse">
+  <Introduction data={page}/>
+  <MiniCourses data={miniCourses} />
 </div>
-
