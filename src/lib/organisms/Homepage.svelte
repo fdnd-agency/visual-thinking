@@ -226,12 +226,13 @@
   /* Desktop */
   @media (width > 70rem) {
     ul {
-      --gap: 1rem;
-      --size: 14rem;
-
+      --gap: 1.3rem;
+      --size: 13rem;
+      
       --column-count: 4;
       --row-column: 2;
-      margin-top: -60vh;
+      --translateX: 0.55;
+      --column-height: 0.71;
     }
 
     ul li:nth-of-type(1) {
@@ -282,14 +283,7 @@
       grid-row-start: 3;
       transform: translateX(0);
     }
-  }
 
-  @media (width > 68rem) {
-    ul {
-      --gap: 1.3rem;
-      --size: 13rem;
-      --translateX: 0.55;
-      --column-height: 0.71;
-    }
+   
   }
 </style>

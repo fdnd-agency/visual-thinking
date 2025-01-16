@@ -8,7 +8,7 @@
 </script>
 
 <div class="hexagons">
-  <Introduction {page}/>
+  <Introduction {page} class="hexagons"/>
   <Homepage />
 </div>
 
