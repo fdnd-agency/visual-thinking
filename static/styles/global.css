@@ -62,6 +62,8 @@
   --vtSec-Brown: #8b3a00;
   --vtSec-Orange: #fe6f07;
 
+  --link-color: #3B50BA; /*<-- referantie naar --vtSec-DarkBlue, maar is door de WCAG test gekomen*/
+
   /* 
     Visual Thinking: Fonts
   */
@@ -110,10 +112,18 @@ p {
 }
 
 a {
-  color: var(--vtYellow);
+  color: var(--link-color);
   text-decoration: none;
-  color: black;
-  margin-bottom: 0.25rem;
+   margin-bottom: 0.25rem;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+footer a:hover, 
+footer a:focus {
+  text-decoration: none;
 }
 
 img {
