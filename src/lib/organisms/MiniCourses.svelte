@@ -72,14 +72,14 @@
     --background-color: var(--vtDarkBlue);
   }
 
-  @media (width > 36rem) {
+  @media (width > 35rem) {
     ul {
       --row-count: 2;
       --column-count: 2;
     }
   }
 
-  @media (width > 70rem) {
+  @media (width > 60rem) {
     ul {
       --gap: 2rem;
       --size: 14rem;
@@ -87,12 +87,9 @@
       --translateX: 0.55;
       --column-height: 0.71;
 
-      --cc: 4;
-      --rc: 2;
-      
       --column-count: 4;
       --row-count: 2;
-      margin-top: calc(1.2rem + 3.157rem); /* breadcrumheight + h1 height */
+      margin-top: -28vh;
     }
 
     ul li:nth-of-type(1) {

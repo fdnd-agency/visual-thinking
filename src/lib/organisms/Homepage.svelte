@@ -228,7 +228,7 @@
     ul {
       --gap: 1rem;
       --size: 14rem;
-      
+
       --column-count: 4;
       --row-column: 2;
       margin-top: -60vh;
@@ -288,7 +288,6 @@
     ul {
       --gap: 1.3rem;
       --size: 13rem;
-
       --translateX: 0.55;
       --column-height: 0.71;
     }

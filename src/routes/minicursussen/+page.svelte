@@ -8,10 +8,9 @@
   const {page, miniCourses} = data;
 </script>
 
-<Breadcrumb titel="Minicursussen" bgc="var(--vtRed)" />
+<Breadcrumb titel="Minicursussen" backgroundColor="var(--vtRed)" />
 
 <div class="hexagons minicourse">
   <Introduction data={page}/>
   <MiniCourses data={miniCourses} />
 </div>
-
