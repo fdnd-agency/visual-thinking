@@ -30,9 +30,10 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1.5rem;
     margin: 1rem 0;
+    max-width: 40rem;
   }
 
   h2 {
@@ -71,17 +72,5 @@
   article:hover {
     border-bottom: 0.3rem solid var(--vtYellow);
     background-color: var(--vtGrey-10);
-  }
-
-  @media screen and (min-width: 36rem) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media screen and (min-width: 60rem) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 </style>
