@@ -48,6 +48,8 @@
     font-weight: 400;
     margin: 0;
     width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   a {
