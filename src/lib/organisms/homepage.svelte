@@ -48,7 +48,7 @@
     color: inherit;
     padding: 2rem 0;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     height: 100%;
     transition:.25s;
   }
@@ -67,7 +67,7 @@
 
   ul {
     --gap: 1rem;
-    --size: 10em;
+    --size: 10rem;
 
     --tx: 0.265;
     --ch: 0.74;
@@ -160,7 +160,7 @@
   }
 
   /* tablet mini */
-  @media (width > 40em) {
+  @media (width > 40rem) {
     ul {
       --gap: 1.2rem;
       --tx: 0.275;
@@ -170,10 +170,10 @@
 
   /* tablet groot */
 
-  @media (width > 44em) {
+  @media (width > 44rem) {
     ul {
       --gap: 1.4rem;
-      --size: 12em;
+      --size: 12rem;
 
       --tx: 0.55;
       --ch: 0.71;
@@ -236,10 +236,10 @@
   }
 
   /* desktop */
-  @media (width > 70em) {
+  @media (width > 70rem) {
     ul {
       --gap: 1rem;
-      --size: 14em;
+      --size: 14rem;
 
       /* --tx:.55; */
       /* --ch:.71; */
@@ -301,10 +301,10 @@
     }
   }
 
-  @media (width > 68em) {
+  @media (width > 68rem) {
     ul {
       --gap: 1.3rem;
-      --size: 13em;
+      --size: 13rem;
       --tx: 0.55;
       --ch: 0.71;
       /* --rc:2; */

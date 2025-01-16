@@ -20,7 +20,7 @@
   h1 {
       font-size: 1.7rem;
   }
-  @media screen and (min-width: 36em) {
+  @media screen and (min-width: 36rem) {
     header {
       width: 75%;
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  @media screen and (min-width: 70em) {
+  @media screen and (min-width: 70rem) {
     /* Hexagons positionering */
     :global(.hexagons header) {
       position: absolute;

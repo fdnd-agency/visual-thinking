@@ -55,7 +55,7 @@
     color: #fff;
     padding: 2rem 0;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: bold;
     height: 100%;
     font-family: var(--vtPrimaryFont);
@@ -85,17 +85,17 @@
     }
   }
 
-  @media (width > 70em) {
+  @media (width > 70rem) {
     ul {
       --gap: 2rem;
-      --size: 14em;
+      --size: 14rem;
 
       --tx: 0.55;
       --ch: 0.71;
 
       --cc: 4;
       --rc: 2;
-      margin-top: calc(1.2rem + 3.157em); /* breadcrumheight + h1 height */
+      margin-top: calc(1.2rem + 3.157rem); /* breadcrumheight + h1 height */
     }
     
     ul li a:hover {
