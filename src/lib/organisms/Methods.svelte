@@ -20,8 +20,8 @@
           {:else}
             <img src="/placeholder.webp" alt="Placeholder" />
           {/if}
+          <h3>{method.title}</h3>
         </a>
-        <h3>{method.title}</h3>
       </article>
     {/each}
   {/if}
@@ -51,14 +51,13 @@
   a {
     text-decoration: none;
     color: var(--vtBlack);
+    padding: 0.8rem 0.8rem 0.25rem 0.8rem;
   }
 
   article {
     display: flex;
     flex-direction: column;
     transition: 0.1s;
-    padding: 0.8rem;
-    padding-bottom: 0.25rem;
     margin: -0.8rem;
     border-bottom: 0.3rem solid transparent;
   }
