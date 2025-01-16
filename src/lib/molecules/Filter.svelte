@@ -51,6 +51,12 @@
 </section>
 
 <style>
+  section {
+    max-width: 40rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
   h2 {
     font-size: 1rem;
     padding: 1rem;

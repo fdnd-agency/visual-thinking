@@ -25,6 +25,8 @@
     justify-items: stretch;
     padding: 2rem 0;
     gap: 0.5rem;
+    max-width: var(--page-max-width);
+    margin: auto;
   }
 
   a {

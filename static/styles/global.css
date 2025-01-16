@@ -73,6 +73,9 @@
   /* Fonts */
   font-size: 20px;
   --SecFont: 1.7rem;
+
+  /* Max width of page contents */
+  --page-max-width: 40rem;
 }
 
 /* Basis styling */
