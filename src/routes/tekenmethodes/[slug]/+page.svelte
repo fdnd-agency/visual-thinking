@@ -1,33 +1,31 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
+  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
   import MethodHeader from "$lib/organisms/methodHeader.svelte";
 
   export let data;
+  // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
+  const { title, slug, pdf } = data.methods[0];
 </script>
 
 <Breadcrumb
   titel="Overzicht"
   url="/tekenmethodes"
-  bgc="var(--vtYellow)"
+  backgroundColor="var(--vtYellow)"
 />
 
-<MethodHeader {data} />
+<MethodHeader {title} {slug} {pdf} />
 
 <section class="section-wrapper">
   {#each data.methods as method}
     <img src={method?.template?.url} alt="template_image" loading="lazy" />
-
-  <p>
-    {@html method?.description.html}
-  </p>
+    <p>
+      {@html method?.description.html}
+    </p>
   {/each}
- 
 </section>
 
-
 <style>
-
-  /* Section's & wrapper styling */
+  /* Sections & wrapper styling */
   section {
     display: grid;
     grid-template-columns: 1fr;
@@ -52,5 +50,4 @@
       justify-content: center;
     }
   }
-
 </style>

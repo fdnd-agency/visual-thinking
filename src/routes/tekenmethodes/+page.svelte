@@ -7,11 +7,11 @@
 
   export let data;
 
-  const {page, methods} = data;
+  const {page, methods, categories} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
-<Introduction data={page}/>
+<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--vtYellow)" />
+<Introduction {page} />
 
-<Filter {data} />
-<Methods data={methods}/>
+<Filter {categories} />
+<Methods {methods} />
