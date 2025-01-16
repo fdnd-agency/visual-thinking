@@ -72,14 +72,14 @@
     --background-color: var(--vtDarkBlue);
   }
 
-  @media (width > 35rem) {
+  @media (width > 36rem) {
     ul {
       --row-count: 2;
       --column-count: 2;
     }
   }
 
-  @media (width > 60rem) {
+  @media (width > 70rem) {
     ul {
       --gap: 2rem;
       --size: 14rem;
@@ -87,9 +87,12 @@
       --translateX: 0.55;
       --column-height: 0.71;
 
+      --cc: 4;
+      --rc: 2;
+      
       --column-count: 4;
       --row-count: 2;
-      margin-top: -28vh;
+      margin-top: calc(1.2rem + 3.157rem); /* breadcrumheight + h1 height */
     }
 
     ul li:nth-of-type(1) {
@@ -113,6 +116,6 @@
     ul li:nth-of-type(4) {
       grid-column-start: 3;
       grid-row-start: 2;
-    }
+    } 
   }
 </style>

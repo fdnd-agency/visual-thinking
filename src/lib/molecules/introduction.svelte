@@ -2,9 +2,13 @@
   export let page;
 
   const {title, content} = page;
+
+  // Give the ability to pass classes to children
+  let className = "";
+  export { className as class };
 </script>
 
-<section>
+<section class={className}>
   <h1>{title}</h1>
     
   {@html content.html}
@@ -30,15 +34,15 @@
   }
 
   @media screen and (min-width: 70rem) {
-    /* Hexagons positionering */
-    :global(.hexagons header) {
+      /* Hexagons positionering */
+    .hexagons {
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
     }
 
-    :global(.minicourse header) {
+    .minicourse {
       top: 1.2rem; /* Breadcrum height */
     }
   }

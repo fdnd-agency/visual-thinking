@@ -116,6 +116,6 @@
     ul li:nth-of-type(4) {
       grid-column-start: 3;
       grid-row-start: 2;
-    }
+    } 
   }
 </style>
