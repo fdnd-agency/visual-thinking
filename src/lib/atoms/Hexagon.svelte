@@ -9,8 +9,9 @@
   // Image expects an object with a src and alt property
   export let img = null;
 
-  // Give the ability to hide hexagons on mobile
-  export let hideOnMobile = false;
+  // Give the ability to pass classes to children
+  let className = "";
+  export { className as class };
 </script>
 
 <!-- Check if it's a clickable hexagon or not. If not, render a <div> instead of an <a> -->
@@ -18,7 +19,7 @@
   <a
     {href}
     style="--background-color: var({backgroundColor}); --color: var({color})"
-    class={`hover ${hideOnMobile ? "hide-on-mobile" : ""}`}
+    class={`hover ${className}`}
   >
     <!-- Check if an image was given. If it was, use the image as the hexagon's content rather than the text -->
     {#if img}
@@ -30,7 +31,7 @@
 {:else}
   <div
     style="--background-color: var({backgroundColor}); --color: var({color})"
-    class={hideOnMobile ? "hide-on-mobile" : ""}
+    class={className}
   >
     {#if img}
       <img src={img.src} alt={img.alt} />
@@ -69,11 +70,5 @@
 
   .hover:hover {
     transform: scale(1.05);
-  }
-
-  @media (width < 44rem) {
-    .hide-on-mobile {
-      display: none;
-    }
   }
 </style>

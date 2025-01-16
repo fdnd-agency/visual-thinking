@@ -238,13 +238,19 @@ svg.icon path.background {
   }
 }
 
-/* Fix for horizontal scrolling on mobile */
 @media (width < 44rem) {
+  /* Fix for horizontal scrolling on mobile */
   html,
   body {
     overflow-x: hidden;
   }
+
   body {
     width: 100%;
+  }
+
+  /* Utility class for hiding elements on mobile */
+  .hide-on-mobile {
+    display: none !important;
   }
 }
