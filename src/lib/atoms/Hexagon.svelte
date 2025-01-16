@@ -8,11 +8,18 @@
 
   // Image expects an object with a src and alt property
   export let img = null;
+
+  // Give the ability to hide hexagons on mobile
+  export let hideOnMobile = false;
 </script>
 
 <!-- Check if it's a clickable hexagon or not. If not, render a <div> instead of an <a> -->
 {#if href}
-  <a {href} style="--background-color: var({backgroundColor}); --color: var({color})" class="hover">
+  <a
+    {href}
+    style="--background-color: var({backgroundColor}); --color: var({color})"
+    class={`hover ${hideOnMobile ? "hide-on-mobile" : ""}`}
+  >
     <!-- Check if an image was given. If it was, use the image as the hexagon's content rather than the text -->
     {#if img}
       <img src={img.src} alt={img.alt} />
@@ -21,7 +28,10 @@
     {/if}
   </a>
 {:else}
-  <div style="--background-color: var({backgroundColor}); --color: var({color})">
+  <div
+    style="--background-color: var({backgroundColor}); --color: var({color})"
+    class={hideOnMobile ? "hide-on-mobile" : ""}
+  >
     {#if img}
       <img src={img.src} alt={img.alt} />
     {:else}
@@ -33,7 +43,7 @@
 <style>
   a,
   div {
-     /* Clip path in the shape of a hexagon */
+    /* Clip path in the shape of a hexagon */
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: var(--background-color);
     display: grid;
@@ -59,5 +69,11 @@
 
   .hover:hover {
     transform: scale(1.05);
+  }
+
+  @media (width < 44rem) {
+    .hide-on-mobile {
+      display: none;
+    }
   }
 </style>
