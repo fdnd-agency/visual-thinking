@@ -21,10 +21,12 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: stretch;
     padding: 2rem 0;
     gap: 0.5rem;
+    max-width: var(--grid-max-width);
+    margin: auto;
   }
 
   a {
@@ -42,7 +44,7 @@
   }
 
   article {
-    padding: 3rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -61,18 +63,5 @@
     text-wrap: balance;
   }
 
-  /* TABLET - STYLING */
-  @media screen and (min-width: 36rem) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-      margin: 2rem auto;
-    }
-  }
-
-  /* DESKTOP - STYLING */
-  @media screen and (min-width: 60rem) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+ 
 </style>

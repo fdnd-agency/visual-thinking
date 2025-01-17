@@ -10,18 +10,18 @@
 
 <section class={className}>
   <h1>{title}</h1>
-    
+
   {@html content.html}
 </section>
 
 <style>
   section {
-      max-width: 40rem;
-      margin: 0 auto 2rem;
+    max-width: var(--text-max-width);
+    margin: 0 auto 2rem auto;
   }
 
   h1 {
-      font-size: 1.7rem;
+    font-size: 1.7rem;
   }
   @media screen and (min-width: 36rem) {
     section {
