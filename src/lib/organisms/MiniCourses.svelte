@@ -69,7 +69,7 @@
   }
 
   ul li:nth-of-type(4) {
-    --background-color: var(--vtDarkBlue);
+    --background-color: var(--vtSec-DarkBlue);
   }
 
   @media (width > 36rem) {

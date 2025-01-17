@@ -47,18 +47,18 @@
     </li>
     <li>
       <Hexagon
-        href="/kennisclips"
-        backgroundColor="--vtLightBlue"
-        color="--vtWhite"
-        text="Kennisclips"
-      />
-    </li>
-    <li>
-      <Hexagon
         href="/minicursussen"
         backgroundColor="--vtRed"
         color="--vtWhite"
         text="Minicursussen"
+      />
+    </li>
+    <li>
+      <Hexagon
+        href="/kennisclips"
+        backgroundColor="--vtLightBlue"
+        color="--vtWhite"
+        text="Kennisclips"
       />
     </li>
     <li>
@@ -266,13 +266,13 @@
       transform: translateX(0);
     }
 
-    ul li:nth-of-type(6) {
+    ul li:nth-of-type(7) {
       grid-column-start: 3;
       grid-row-start: 3;
       transform: translateX(0);
     }
 
-    ul li:nth-of-type(7) {
+    ul li:nth-of-type(6) {
       grid-column-start: 2;
       grid-row-start: 3;
       transform: translateX(0);
@@ -283,7 +283,5 @@
       grid-row-start: 3;
       transform: translateX(0);
     }
-
-   
   }
 </style>

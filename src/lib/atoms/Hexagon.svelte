@@ -68,7 +68,9 @@
     text-align: center;
   }
 
-  .hover:hover {
+  .hover:hover,
+  .hover:focus-visible {
     transform: scale(1.05);
+    outline: unset;
   }
 </style>
