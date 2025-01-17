@@ -4,7 +4,7 @@
       <img
         src="/images/visual-thinking-hbo-logo-footer.svg"
         class="logo-footer"
-        alt=""
+        alt="Home"
       />
     </a>
 
@@ -41,7 +41,7 @@
     background-color: var(--vtGrey-10);
     font-family: var(--vtPrimaryFont);
     text-align: center;
-    padding: 2rem 0 2rem 1rem;
+    padding: 1rem 0 2rem 1rem;
   }
 
   div ul {
@@ -143,13 +143,10 @@
 
   @media (min-width: 50rem) {
     footer nav {
-      padding: 2rem 0 2rem 5rem;
+      padding: 1rem 0 2rem 5rem;
     }
     .logo-footer {
       height: 5.7rem;
     }
-  }
-
-  @media (min-width: 50rem) and (max-width: 60rem){
   }
 </style>
