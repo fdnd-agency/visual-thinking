@@ -114,10 +114,10 @@ p {
 a {
   color: var(--link-color);
   text-decoration: none;
-   margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
-a:hover, a:focus {
+a:hover, a:focus-visible {
   text-decoration: underline;
 }
 

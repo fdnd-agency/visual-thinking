@@ -1,12 +1,11 @@
 <footer>
   <nav>
-    <a href="/" class="footer-content">
+    <a href="/">
       <img
-        src="/images/visual-thinking-hbo-logo.svg"
+        src="/images/visual-thinking-hbo-logo-footer.svg"
         class="logo-footer"
         alt=""
       />
-      <h2>Visual Thinking in het hbo</h2>
     </a>
 
     <div class="socials">
@@ -42,6 +41,7 @@
     background-color: var(--vtGrey-10);
     font-family: var(--vtPrimaryFont);
     text-align: center;
+    padding: 2rem 0 2rem 1rem;
   }
 
   div ul {
@@ -59,12 +59,21 @@
     margin: 0 0.5rem;
   }
 
+  li:hover {
+    transform: scale(1.1);
+  }
+
+  a {
+    width: fit-content;
+  }
+
   div a {
     display: flex;
     text-decoration: none;
     color: var(--vtDarkBlue);
     align-items: center;
   }
+
 
   span {
     margin-left: 0.25rem;
@@ -82,29 +91,7 @@
     margin: 0 2px 0 0;
   }
 
-  li:hover {
-    transform: scale(1.1);
-  }
 
-  .logo-footer {
-    padding-top: 1rem;
-  }
-
-  h2 {
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
-    font-weight: 600;
-    font-size: 2rem;
-    text-align: left;
-    max-width: 8rem;
-  }
-
-  .footer-content {
-    display: flex;
-    gap: 2rem;
-    padding-left: 5rem;
-    margin-top: -1rem;
-  }
 
   @media (max-width: 21rem) {
 
@@ -118,28 +105,9 @@
     div span {
       display: none;
     }
-
-    .logo-footer {
-      width: 2.5rem;
-      margin-top: -1rem;
-    }
-
-    h2 {
-      font-size: 1rem;
-      text-align: left;
-      max-width: 8rem;
-    }
-
-    .footer-content {
-      display: flex;
-      gap: 2rem;
-      padding-left: 1rem;
-      padding-top: 1rem;
-    }
   }
 
-  @media (min-width: 21rem) and (max-width: 38rem) {
-
+  @media (min-width: 21rem) and (max-width: 44rem) {
     footer nav {
       align-items: center;
       display: flex;
@@ -148,71 +116,40 @@
     }
 
     .logo-footer {
-      width: 3.5rem;
-      margin-top: -1rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      text-align: left;
-    }
-
-    .footer-content {
-      display: flex;
-      gap: 2rem;
-      margin-top: -1rem;
-      padding-top: 1rem;
+      height: 3rem;
     }
   }
 
-  @media (min-width: 38rem) {
+  @media (min-width: 44rem) {
+
     footer nav {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
     }
 
+
     .icon {
       width: 1.5rem;
       height: 1.5rem;
     }
-
-    .footer-content {
-      padding-left: 5rem;
-    }
-
   }
 
-  @media (min-width: 38rem) and (max-width: 50rem) {
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    .footer-content {
-      margin-left: -3rem;
-      padding-left: 4rem;
-    }
-
-    .logo-footer {
-      width: 3.5rem;
-      margin-top: -0.8rem;
-    }
-    
+  @media (min-width: 38rem) and (max-width: 50rem) {    
     .socials {
       padding-right: -3rem;
     }
   }
 
   @media (min-width: 50rem) {
+    footer nav {
+      padding: 2rem 0 2rem 5rem;
+    }
     .logo-footer {
-      width: 4.8rem;
-      margin-top: -0.8rem;
+      height: 5.7rem;
     }
   }
 
   @media (min-width: 50rem) and (max-width: 60rem){
-    .footer-content {
-      margin-left: -2rem;
-    }
   }
 </style>
