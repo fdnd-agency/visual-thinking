@@ -114,16 +114,11 @@ p {
 a {
   color: var(--link-color);
   text-decoration: none;
-   margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
-a:hover, a:focus {
+a:hover, a:focus-visible {
   text-decoration: underline;
-}
-
-footer a:hover, 
-footer a:focus {
-  text-decoration: none;
 }
 
 img {
@@ -185,6 +180,17 @@ main {
 .link {
   text-decoration: underline;
   text-decoration-color: var(--vtDarkBlue);
+}
+
+/* Sticky footer */
+body > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
 
 /* PDF button methods header */
