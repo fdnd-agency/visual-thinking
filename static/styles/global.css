@@ -121,11 +121,6 @@ a:hover, a:focus-visible {
   text-decoration: underline;
 }
 
-footer a:hover, 
-footer a:focus {
-  text-decoration: none;
-}
-
 img {
   max-width: 100%;
 }
@@ -185,6 +180,17 @@ main {
 .link {
   text-decoration: underline;
   text-decoration-color: var(--vtDarkBlue);
+}
+
+/* Sticky footer */
+body > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
 
 /* PDF button methods header */
