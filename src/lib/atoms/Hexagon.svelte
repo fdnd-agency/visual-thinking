@@ -2,10 +2,8 @@
   export let text = "Default text";
   export let bgColor = "--vtGrey-50";
   export let color = "#000";
-
   // If href is given, the hexagon will be clickable
   export let href = null;
-
   // Image expects an object with a src and alt property
   export let img = null;
 </script>
