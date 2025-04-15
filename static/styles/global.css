@@ -2,64 +2,68 @@
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
     */
-  --vtDarkBlue: #090940;
-  --vtLightBlue: #67c5d1;
-  --vtYellow: #feb51e;
-  --vtRed: #f96c4f;
-  --vtWhite: #ffffff;
-  --vtBlack: #000000;
+  --vtDarkBlue: hsl(240, 75%, 14%);
+  --vtLightBlue: hsl(187, 54%, 61%);
+  --vtYellow: hsl(40, 99%, 56%);
+  --vtRed: hsl(10, 93%, 64%);
+  --vtWhite: hsl(0, 0%, 100%);
+  --vtBlack: hsl(0, 0%, 0%);
 
   /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
     */
-  --vtDarkBlue-80: #3a3a66;
-  --vtDarkBlue-50: #6b6b8c;
-  --vtDarkBlue-30: #9d9db3;
-  --vtDarkBlue-10: #ceced9;
+  --vtDarkBlue-80: hsl(240, 28%, 31%);
+  --vtDarkBlue-50: hsl(240, 13%, 48%);
+  --vtDarkBlue-30: hsl(240, 13%, 66%);
+  --vtDarkBlue-10: hsl(240, 13%, 83%);
 
-  --vtLightBlue-80: #85d1da;
-  --vtLightBlue-50: #a4dce3;
-  --vtLightBlue-30: #c2e8ed;
-  --vtLightBlue-10: #e1f3f6;
+  --vtLightBlue-80: hsl(186, 53%, 69%);
+  --vtLightBlue-50: hsl(187, 53%, 77%);
+  --vtLightBlue-30: hsl(187, 54%, 85%);
+  --vtLightBlue-10: hsl(189, 54%, 92%);
 
-  --vtYellow-80: #fec44b;
-  --vtYellow-50: #fed378;
-  --vtYellow-30: #ffe1a5;
-  --vtYellow-10: #fff0d2;
+  --vtYellow-80: hsl(41, 99%, 65%);
+  --vtYellow-50: hsl(41, 99%, 73%);
+  --vtYellow-30: hsl(40, 100%, 82%);
+  --vtYellow-10: hsl(40, 100%, 91%);
 
-  --vtRed-80: #fa8972;
-  --vtRed-50: #fba795;
-  --vtRed-30: #fdc4b9;
-  --vtRed-10: #fee2dc;
+  --vtRed-80: hsl(10, 93%, 71%);
+  --vtRed-50: hsl(11, 93%, 78%);
+  --vtRed-30: hsl(10, 94%, 86%);
+  --vtRed-10: hsl(11, 94%, 93%);
 
   /* Visual Thinking: Grijstinten:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik!
      Word vaak gebruikt voor backgrounds en borders. 
     */
-  --vtGrey: #cecece;
-  --vtGrey-80: #c0beb9;
-  --vtGrey-50: #e0dedc;
-  --vtGrey-10: #f9f8f8;
-  --vtGrey-5: #f9f9f9;
+  --vtGrey: hsl(0, 0%, 81%);
+  --vtGrey-80: hsl(43, 5%, 74%);
+  --vtGrey-50: hsl(30, 6%, 87%);
+  --vtGrey-10: hsl(0, 8%, 97%);
+  --vtGrey-5: hsl(0, 0%, 98%);
 
   /* Visual Thinking: Secondary colors,
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
     Word gebruikt als steunkleuren bv: kleurcoderen van categorieën
     */
 
-  --vtSec-Red: #af1301;
-  --vtSec-Red-30: #fbc5b4;
-  --vtSec-Green: #169861;
-  --vtSec-Green-30: #63c09f;
-  --vtSec-LightBlue: #4fbbc2;
-  --vtSec-DarkBlue: #31439c;
+  --vtSec-Red: hsl(6, 99%, 35%);
+  --vtSec-Red-30: hsl(14, 90%, 85%);
+  --vtSec-Green: hsl(155, 75%, 34%);
+  --vtSec-Green-30: hsl(159, 42%, 57%);
+  --vtSec-LightBlue: hsl(184, 49%, 54%);
+  --vtSec-DarkBlue: hsl(230, 52%, 40%);
   /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
-  --vtSec-Brown: #8b3a00;
-  --vtSec-Orange: #fe6f07;
+  --vtSec-Brown: hsl(25, 100%, 27%);
+  --vtSec-Orange: hsl(25, 99%, 51%);
+
+
+  /* Font colurs */
+  --blockquote-colour:hsl(39, 9%, 35%);
+
 
   /* Visual Thinking: Fonts,
     */
-
   --vtPrimaryFont: "rigid-square", sans-serif;
   --vtSecondaryFont: "yrsa", serif;
 
@@ -85,7 +89,7 @@ blockquote {
   font-size: 1.2rem;
   line-height: 1.5;
   position: relative;
-  color: #625c51;
+  color: var(--blockquote-colour);
 }
 
 .minicursus-quotes {
@@ -93,7 +97,7 @@ blockquote {
   font-family: var(--vtPrimaryFont);
   font-size: 1.2rem;
   line-height: 1.5;
-  color: #625c51;
+  color: var(--blockquote-colour);
 }
 
 blockquote:before,
@@ -119,7 +123,7 @@ blockquote:after {
 
 .cite {
   font-family: var(--vtSecondaryFont);
-  color: #625c51;
+  color: var(--blockquote-colour);
 }
 
 .link {
