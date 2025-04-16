@@ -1,9 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import Introduction from "$lib/molecules/introduction.svelte";
-  import Filter from "$lib/molecules/filter.svelte";
-
-  import Methods from "$lib/organisms/methods.svelte";
+  import {Breadcrumb, Introduction, Filter, Methods} from "$lib/index.js";
 
   export let data;
 

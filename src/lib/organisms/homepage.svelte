@@ -1,7 +1,7 @@
 <script>
-  import Hexagon from "$lib/atoms/Hexagon.svelte";
-
+  import {Hexagon} from "$lib/index.js";
 </script>
+
 <section>
   <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
   <ul>
