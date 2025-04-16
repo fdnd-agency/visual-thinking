@@ -51,9 +51,9 @@
     scale:1.1
   }
 
-  a.logo img {
+  /* a.logo img {
     width:60px
-  }
+  } */
 
   nav {
     --horizontal-spacing:1rem;
@@ -149,9 +149,9 @@
       top:.5rem;
     }
 
-    a.logo img {
+    /* a.logo img {
       width:80px
-    }
+    } */
 
     nav {
       --horizontal-spacing:10vw;

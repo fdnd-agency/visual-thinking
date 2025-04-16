@@ -7,16 +7,13 @@
   <ul>
     <li>
       <Hexagon>
-        <Icons slot="img" name="man" alt="Illustratie van een denkend persoon" />
+        <Icons name="man" alt="Illustratie van een denkend persoon" />
       </Hexagon>
     </li>
     <li>
-      <Hexagon
-        img={{
-          src: "/images/pencil.svg",
-          alt: "Illustratie van een potlood"
-        }}
-      />
+      <Hexagon>
+        <Icons name="pencil" alt="Illustratie van een potlood" />
+      </Hexagon>
     </li>
     <li>
       <Hexagon
