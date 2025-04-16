@@ -1,11 +1,12 @@
+<script>
+  import { Icons } from "$lib/index.js";
+  const dimension = 'width="26" height="26"';
+
+</script>
 <footer>
   <nav>
     <a href="/" class="footer-content">
-      <img
-        src="/images/visual-thinking-hbo-logo.svg"
-        class="logo-footer"
-        alt="Visual thinking logo"
-      />
+      <Icons name="VisualThinkingLogoFooter" {dimension}/>
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
@@ -13,21 +14,19 @@
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <img src="/images/instagram.svg" alt="instagram" class="icon" />
+            <Icons name="instagram" {dimension}/>
             <span>Instagram</span>
           </a>
         </li>
         <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa"
-          >
-            <img src="/images/youtube.svg" alt="youtube" class="icon" />
+          <a href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
+            <Icons name="youtube" {dimension}/>
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <img src="/images/linkedin.svg" alt="linkedIn" class="icon" />
+            <Icons name="linkedin" {dimension}/>
             <span>LinkedIn</span>
           </a>
         </li>

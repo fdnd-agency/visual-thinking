@@ -1,17 +1,15 @@
 <script>
-  import {Hexagon} from "$lib/index.js";
+  import {Hexagon, Icons} from "$lib/index.js";
+  import { name } from "../atoms/Icons.svelte";
 </script>
 
 <section>
   <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
   <ul>
     <li>
-      <Hexagon
-        img={{
-          src: "/images/man.svg",
-          alt: "Illustratie van een denkend persoon"
-        }}
-      />
+      <Hexagon>
+        <Icons slot="img" name="man" alt="Illustratie van een denkend persoon" />
+      </Hexagon>
     </li>
     <li>
       <Hexagon

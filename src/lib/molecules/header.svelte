@@ -1,12 +1,15 @@
 <script>
   import { page } from "$app/stores";
+  import Icons from "../atoms/Icons.svelte";
 
   let activeRoute;
   $: activeRoute = $page.route.id;
 </script>
 
 <header>
-  <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Visual Thinking Logo" /></a>
+  <a href="/" class="logo">
+    <Icons name="VisualThinkingLogo" />
+  </a>
 
   <nav>
     <ul>
