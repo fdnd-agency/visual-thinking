@@ -1,5 +1,5 @@
 <script>
-  import Hexagon from "$lib/index.js";
+  import {Hexagon} from "$lib/index.js";
 </script>
 
 <section>

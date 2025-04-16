@@ -1,6 +1,5 @@
 <script>
-  import {Introduction} from "$lib/index.js";
-  import Homepage from "../lib/organisms/homepage.svelte";
+  import {Introduction, Homepage} from "$lib/index.js";
 
   export let data
 
