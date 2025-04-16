@@ -5,10 +5,8 @@
 </script>
 
 <header>
-
   <h1>{method.title}</h1>
-
-  <nav>
+  <section>
     <ul>
         <li>
           <a href="/tekenmethodes/{method.slug}">Beschrijving
@@ -26,9 +24,8 @@
         {#if method.pdf}
         <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download PDF</a>
         {/if}
-      
     </ul>
-  </nav>
+  </section>
 </header>
 
 <style>
@@ -64,13 +61,13 @@
     color: var(--vtSec-DarkBlue);
   }
 
-  nav ul {
+  section ul {
     display: flex;
     list-style: none;
     align-items: center;
   }
 
-  nav li {
+  section li {
     padding-right: 10px;
     text-transform: uppercase;
     font-family: var(--vtPrimaryFont);
@@ -131,7 +128,7 @@
       align-items: center;
     }
 
-    nav ul {
+    section ul {
       display: flex;
       list-style: none;
       justify-content: center;
@@ -145,6 +142,4 @@
       font-size: 3.157rem;
     }
   }
-
-  
 </style>

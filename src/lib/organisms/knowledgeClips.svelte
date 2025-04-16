@@ -1,21 +1,16 @@
 <script>
   import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-
   let index = 0;
-
   export let data;
-
   const nextButton = () => {
     index = index + 1;
   };
-
   const previousButton = () => {
     index = index - 1;
   };
 </script>
 
 <Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
-
 <section>
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">
@@ -24,23 +19,21 @@
         class="left-arrow"
         src="./images/arrows.svg"
         alt="Knop met pijl naar vorige video"
-        loading="lazy"
-      />
+        loading="lazy"/>
     </button>
 
     <iframe
       class="youtubelink"
       title="kennisclips"
-      src={data.categories[index].youTubeLink}
-    ></iframe>
+      src={data.categories[index].youTubeLink}>
+    </iframe>
 
     <button on:click={nextButton} aria-label="Volgende Video">
       <img
         class="right-arrow"
         src="./images/arrows.svg"
         alt="Knop met pijl naar volgende video"
-        loading="lazy"
-      />
+        loading="lazy"/>
     </button>
   </div>
 
@@ -51,7 +44,6 @@
 </section>
 
 <style>
-
   /* Header styling */
   h2 {
     font-size: 3.157rem;
@@ -59,7 +51,7 @@
     color: var(--vtDarkBlue);
     text-align: center;
   }
-
+  
   /* Kennisclip teksten */
   p {
     line-height: 1.5rem;
