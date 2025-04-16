@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores";
-  import Icons from "../atoms/Icons.svelte";
+  import Icons from "$lib/index.js";
 
   let activeRoute;
   $: activeRoute = $page.route.id;
@@ -22,7 +22,6 @@
     </ul>
   </nav>
 </header>
-
 
 <style>
   a {
@@ -176,7 +175,5 @@
     li:nth-of-type(4) {
       margin-left: var(--spacing-logo);
     }
-
-    
   }
 </style>

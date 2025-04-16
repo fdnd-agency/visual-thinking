@@ -1,12 +1,11 @@
 <script>
   export let data;
-  
+
   const {title, content} = data
 </script>
 
 <header>
   <h1>{title}</h1>
-    
   {@html content.html}
 </header>
 

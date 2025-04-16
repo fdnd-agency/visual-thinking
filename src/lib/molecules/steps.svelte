@@ -28,7 +28,6 @@
     {/each}
 </div>
   
-  
 <style>
   .accordion-item {
     margin-bottom: 5px;

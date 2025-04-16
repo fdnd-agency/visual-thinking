@@ -1,6 +1,5 @@
 <script>
   import {Hexagon, Icons} from "$lib/index.js";
-  import { name } from "../atoms/Icons.svelte";
 </script>
 
 <section>
@@ -71,13 +70,10 @@
   ul {
     --gap: 1rem;
     --size: 10em;
-
     --tx: 0.265;
     --ch: 0.74;
-
     --cc: 2;
     --rc: 6;
-
     display: grid;
     grid-template-columns: repeat(var(--cc), var(--size));
     grid-template-rows: repeat(
@@ -107,21 +103,11 @@
     transform: translateX(calc(var(--size) * var(--tx) * -0.1));
   }
 
-  /* ul li:nth-of-type(1) img {
-    width: 150px;
-    height: auto;
-  } */
-
   ul li:nth-of-type(2) {
     grid-column-start: 2;
     grid-row-start: 3;
     transform: translateX(calc(var(--size) * var(--tx) * 0.1));
   }
-
-  /* ul li:nth-of-type(2) img {
-    width: 50px;
-    height: auto;
-  } */
 
   ul li:nth-of-type(3) {
     transform: translateX(calc(var(--size) * var(--tx)));
@@ -166,9 +152,8 @@
       --ch: 0.725;
     }
   }
-
+  
   /* tablet groot */
-
   @media (width > 44em) {
     ul {
       --gap: 1.4rem;
@@ -239,10 +224,6 @@
     ul {
       --gap: 1rem;
       --size: 14em;
-
-      /* --tx:.55; */
-      /* --ch:.71; */
-
       --cc: 4;
       --rc: 2;
       margin-top: -60vh;
@@ -252,7 +233,6 @@
       grid-column-start: 1;
       grid-row-start: 1;
       --bg: #e0dedc;
-
       transform: translateX(0);
     }
 

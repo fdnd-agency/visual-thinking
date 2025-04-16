@@ -1,8 +1,7 @@
 <script>
   import { page } from "$app/stores";
-  
   export let data;
-
+  
   let filter = $page.url.searchParams.getAll("categorie") || [];
   let isLoading = false;
 

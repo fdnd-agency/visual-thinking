@@ -11,11 +11,13 @@
     <span>{titel}</span>
   {/if}
 </div>
+
 <style>
   div {
     background-color: var(--bgc);
     margin:0 -1rem;
   }
+
   /* MOBILE - STYLING */
   a, span {
     text-transform: uppercase;
@@ -35,5 +37,4 @@
   a:hover {
     text-decoration: underline;
   }
-
 </style>
