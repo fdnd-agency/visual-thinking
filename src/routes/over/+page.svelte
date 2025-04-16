@@ -1,7 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import Introduction from "$lib/molecules/introduction.svelte";
-
+  import {Breadcrumb, Introduction} from "$lib/index.js";
   export let data;
 
   const {page} = data
