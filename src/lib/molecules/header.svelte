@@ -1,14 +1,15 @@
 <script>
   import { page } from "$app/stores";
-  import {Icons} from "$lib/index.js";
+  import { Icons } from "$lib/index.js";
 
+  const iconSize = 80;
   let activeRoute;
   $: activeRoute = $page.route.id;
 </script>
 
 <header>
   <a href="/" class="logo">
-    <Icons name="VisualThinkingLogo" />
+    <Icons name="VisualThinkingLogo" width={iconSize} height={iconSize}/>
   </a>
 
   <nav>
