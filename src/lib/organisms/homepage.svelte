@@ -6,14 +6,20 @@
   <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
   <ul>
     <li>
-      <Hexagon>
-        <Icons name="man" alt="Illustratie van een denkend persoon" />
-      </Hexagon>
+      <Hexagon
+        img={{
+          src: "/images/man.png",
+          alt: "Illustratie van een denkend persoon"
+        }}
+      />
     </li>
     <li>
-      <Hexagon>
-        <Icons name="pencil" alt="Illustratie van een potlood" />
-      </Hexagon>
+      <Hexagon
+        img={{
+          src: "/images/pencil.png",
+          alt: "Illustratie van een potlood"
+        }}
+      />
     </li>
     <li>
       <Hexagon
