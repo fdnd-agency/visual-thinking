@@ -38,20 +38,22 @@
     justify-items: center;
     text-decoration: none;
     color: var(--color);
-    padding: 2rem 0;
+    padding: 2rem;
     font-size: 1.25em;
     height: 100%;
+    width: 100%;
     transition: 0.15s;
   }
 
   img {
-    width: auto;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
   }
 
   span {
     text-align: center;
+    display: inline-block;
   }
 
   .hover:hover {
