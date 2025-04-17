@@ -4,12 +4,14 @@
 
 <section>
   <h2 class="sr-only">Kies hier een minicursus</h2>
-  <ul>
-    {#if data && data.length > 0}
-      {#each data as course, index}
-        <li><a href="/minicursussen/{course.slug}"><span>{course.title}</span></a></li>
-      {/each}
-    {/if}
+    <ul>
+      {#if data && data.length > 0}
+        {#each data as course, index}
+          <li>
+            <a href="/minicursussen/{course.slug}"><span>{course.title}</span></a>
+          </li>
+        {/each}
+      {/if}
   </ul>
 </section>
 
@@ -21,13 +23,10 @@
   ul {
     --gap: 3rem;
     --size: 12em;
-
     --tx: 0.365;
     --ch: 0.74;
-
     --cc: 1;
     --rc: 4;
-
     display: grid;
     grid-template-columns: repeat(var(--cc), var(--size));
     grid-template-rows: repeat(
@@ -89,10 +88,8 @@
     ul {
       --gap: 2rem;
       --size: 14em;
-
       --tx: 0.55;
       --ch: 0.71;
-
       --cc: 4;
       --rc: 2;
       margin-top: -28vh;

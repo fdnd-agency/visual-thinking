@@ -1,5 +1,6 @@
 <footer>
-  <nav>
+  <section>
+    
     <a href="/" class="footer-content">
       <img
         src="/images/visual-thinking-hbo-logo.svg"
@@ -9,7 +10,7 @@
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
-    <div class="icons-nav">
+    <div class="icons-footer">
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
@@ -19,8 +20,7 @@
         </li>
         <li>
           <a
-            href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa"
-          >
+            href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
             <img src="/images/youtube.svg" alt="youtube" class="icon" />
             <span>Youtube</span>
           </a>
@@ -34,11 +34,12 @@
       </ul>
       <p>© Charley Muhren, 2024</p>
     </div>
-  </nav>
+
+  </section>
 </footer>
 
 <style>
-  footer nav {
+  footer section {
     background-color: var(--vtGrey-10);
     font-family: var(--vtPrimaryFont);
     text-align: center;
@@ -66,14 +67,14 @@
     align-items: center;
   }
 
+  div p {
+    font-size: 14px;
+  }
+
   span {
     margin-left: 5px;
     font-size: 14px;
     color: #555;
-  }
-
-  div p {
-    font-size: 14px;
   }
 
   .icon {
@@ -108,7 +109,7 @@
 
   @media (max-width: 425px) {
 
-    footer nav {
+    footer section {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
@@ -140,7 +141,7 @@
 
   @media (min-width: 425px) and (max-width: 768px) {
 
-    footer nav {
+    footer section {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
@@ -166,7 +167,7 @@
   }
 
   @media (min-width: 768px) {
-    footer nav {
+    footer section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
@@ -198,7 +199,7 @@
       margin-top: -0.8em;
     }
     
-    .icons-nav {
+    .icons-footer {
       padding-right: -3em;
     }
   }

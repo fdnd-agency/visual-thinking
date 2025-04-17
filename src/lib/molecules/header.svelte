@@ -1,13 +1,11 @@
 <script>
   import { page } from "$app/stores";
-
   let activeRoute;
   $: activeRoute = $page.route.id;
 </script>
 
 <header>
   <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Visual Thinking Logo" /></a>
-
   <nav>
     <ul>
       <li><a href="/tekenmethodes" class:active={activeRoute == "/tekenmethodes"}>Tekenmethodes</a></li>
@@ -19,7 +17,6 @@
     </ul>
   </nav>
 </header>
-
 
 <style>
   a {
@@ -173,7 +170,5 @@
     li:nth-of-type(4) {
       margin-left: var(--spacing-logo);
     }
-
-    
   }
 </style>
