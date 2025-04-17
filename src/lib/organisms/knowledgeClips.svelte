@@ -1,6 +1,8 @@
 <script>
   import { Breadcrumb, Icons } from "$lib/index.js";
 
+  const ArrowSize = 50;
+
   let index = 0;
   export let data;
   const nextButton = () => {
@@ -9,6 +11,7 @@
   const previousButton = () => {
     index = index - 1;
   };
+
 </script>
 
 <Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
@@ -16,7 +19,7 @@
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
-      <Icons name="arrow"/>
+      <Icons name="arrow-right" width={ArrowSize} height={ArrowSize}/>
     </button>
 
     <iframe
@@ -26,8 +29,7 @@
     </iframe>
 
     <button on:click={nextButton} aria-label="Volgende Video">
-      <!-- this one should be right, make icon for that -->
-      <Icons name="arrow"/>
+      <Icons name="arrow-left" width={ArrowSize} height={ArrowSize}/>
     </button>
   </div>
 
@@ -71,6 +73,7 @@
     background-color: transparent;
     border: transparent;
     padding: 2em;
+    cursor: pointer;
   }
 
   /* .right-arrow {
