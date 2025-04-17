@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores";
-  import Icons from "$lib/index.js";
+  import {Icons} from "$lib/index.js";
 
   let activeRoute;
   $: activeRoute = $page.route.id;
