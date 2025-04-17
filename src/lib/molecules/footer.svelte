@@ -1,13 +1,14 @@
 <script>
   import { Icons } from "$lib/index.js";
-  const iconsize = 26;
+  const iconSize = 26;
+  const logoSize = 80;
 
 </script>
 <footer>
   <section>
     
     <a href="/" class="footer-content">
-      <Icons name="VisualThinkingLogo" />
+      <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
@@ -15,19 +16,19 @@
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <Icons name="instagram" width={iconsize} height={iconsize}/>
+            <Icons name="instagram" width={iconSize} height={iconSize}/>
             <span>Instagram</span>
           </a>
         </li>
         <li>
           <a href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
-            <Icons name="youtube" width={iconsize} height={iconsize}/>
+            <Icons name="youtube" width={iconSize} height={iconSize}/>
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <Icons name="linkedin" width={iconsize} height={iconsize}/>
+            <Icons name="linkedin" width={iconSize} height={iconSize}/>
             <span>LinkedIn</span>
           </a>
         </li>
@@ -134,11 +135,6 @@
       justify-content: center;
     }
 
-    /* .logo-footer {
-      width: 3.5em;
-      margin-top: -1em;
-    } */
-
     h1 {
       font-size: 1.5em;
       text-align: left;
@@ -159,11 +155,6 @@
       align-items: center;
     }
 
-    /* .icon {
-      width: 30px;
-      height: 30px;
-    } */
-
     .footer-content {
       padding-left: 5em;
     }
@@ -179,22 +170,10 @@
       margin-left: -3em;
       padding-left: 4em;
     }
-
-    /* .logo-footer {
-      width: 3.5em;
-      margin-top: -0.8em;
-    } */
     
     .icons-footer {
       padding-right: -3em;
     }
-  }
-
-  @media (min-width: 1000px) {
-    /* .logo-footer {
-      width: 4.8em;
-      margin-top: -0.8em;
-    } */
   }
 
   @media (min-width: 1000px) and (max-width: 1200px){
