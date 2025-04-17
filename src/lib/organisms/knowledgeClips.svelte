@@ -1,7 +1,7 @@
 <script>
   import { Breadcrumb, Icons } from "$lib/index.js";
 
-  const ArrowSize = 50;
+  const iconSize = 50;
 
   let index = 0;
   export let data;
@@ -19,7 +19,7 @@
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
-      <Icons name="arrow-right" width={ArrowSize} height={ArrowSize}/>
+      <Icons name="arrow-right" width={iconSize} height={iconSize}/>
     </button>
 
     <iframe
@@ -29,7 +29,7 @@
     </iframe>
 
     <button on:click={nextButton} aria-label="Volgende Video">
-      <Icons name="arrow-left" width={ArrowSize} height={ArrowSize}/>
+      <Icons name="arrow-left" width={iconSize} height={iconSize}/>
     </button>
   </div>
 
@@ -75,16 +75,6 @@
     padding: 2em;
     cursor: pointer;
   }
-
-  /* .right-arrow {
-    cursor: pointer;
-    border: none;
-  } */
-
-  /* .left-arrow {
-    cursor: pointer;
-    transform: rotate(180deg);
-  } */
 
   /* responsive clips */
   iframe {

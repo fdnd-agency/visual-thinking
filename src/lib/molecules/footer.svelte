@@ -1,13 +1,14 @@
 <script>
   import { Icons } from "$lib/index.js";
-  const dimension = 'width="26" height="26"';
+  const iconsize = 26;
+  const sizeLogo = 50;
 
 </script>
 <footer>
   <section>
     
     <a href="/" class="footer-content">
-      <Icons name="VisualThinkingLogoFooter" {dimension}/>
+      <Icons name="VisualThinkingLogo" width={sizeLogo} height={sizeLogo}/>
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
@@ -15,19 +16,19 @@
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <Icons name="instagram" {dimension}/>
+            <Icons name="instagram" width={iconsize} height={iconsize}/>
             <span>Instagram</span>
           </a>
         </li>
         <li>
           <a href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
-            <Icons name="youtube" {dimension}/>
+            <Icons name="youtube" width={iconsize} height={iconsize}/>
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <Icons name="linkedin" {dimension}/>
+            <Icons name="linkedin" width={iconsize} height={iconsize}/>
             <span>LinkedIn</span>
           </a>
         </li>
