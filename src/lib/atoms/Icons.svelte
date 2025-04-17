@@ -1,8 +1,8 @@
 <script>
   export let name;
   export let colour;  
-  export let width;
-  export let height;
+  export let width = ""; 
+  export let height = "";
 </script>
 
 {#if name == "Research"}
@@ -96,7 +96,7 @@
   <path d="M31.6812 5.15977C31.6812 5.15977 31.3687 2.81563 30.4062 1.78633C29.1875 0.431641 27.825 0.425 27.2 0.345312C22.725 -1.78814e-07 16.0063 0 16.0063 0H15.9937C15.9937 0 9.275 -1.78814e-07 4.8 0.345312C4.175 0.425 2.8125 0.431641 1.59375 1.78633C0.63125 2.81563 0.325 5.15977 0.325 5.15977C0.325 5.15977 0 7.91562 0 10.6648V13.2414C0 15.9906 0.31875 18.7465 0.31875 18.7465C0.31875 18.7465 0.63125 21.0906 1.5875 22.1199C2.80625 23.4746 4.40625 23.4281 5.11875 23.5742C7.68125 23.8332 16 23.9129 16 23.9129C16 23.9129 22.725 23.8996 27.2 23.5609C27.825 23.4813 29.1875 23.4746 30.4062 22.1199C31.3687 21.0906 31.6812 18.7465 31.6812 18.7465C31.6812 18.7465 32 15.9973 32 13.2414V10.6648C32 7.91562 31.6812 5.15977 31.6812 5.15977ZM12.6938 16.3691V6.81328L21.3375 11.6078L12.6938 16.3691Z" fill="black"/>
 </svg>
 {:else if name == "VisualThinkingLogo"}
-<svg width={width} height={height} viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width=80 height=80 viewBox="0 0 44 42" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g clip-path="url(#clip0_1_3)">
   <path d="M14.8406 29.3592V37.5795L22.0247 41.6897L29.2088 37.5795V29.3592L22.0247 25.2435L14.8406 29.3592Z" fill="#FEB51E" stroke="white" stroke-miterlimit="10"/>
   <path d="M29.3626 4.42591V12.6463L36.5467 16.7564L43.7254 12.6463V4.42591L36.5467 0.315735L29.3626 4.42591Z" fill="#FEB51E" stroke="white" stroke-miterlimit="10"/>
@@ -112,7 +112,7 @@
   </g>
   <defs>
   <clipPath id="clip0_1_3">
-  <rect width={width} height={height} fill="white"/>
+  <rect width=80 height=80 fill="white"/>
   </clipPath>
   </defs>
 </svg>

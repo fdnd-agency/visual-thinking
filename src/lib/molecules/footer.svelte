@@ -1,14 +1,13 @@
 <script>
   import { Icons } from "$lib/index.js";
   const iconsize = 26;
-  const sizeLogo = 50;
 
 </script>
 <footer>
   <section>
     
     <a href="/" class="footer-content">
-      <Icons name="VisualThinkingLogo" width={sizeLogo} height={sizeLogo}/>
+      <Icons name="VisualThinkingLogo" />
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
@@ -78,19 +77,9 @@
     color: #555;
   }
 
-  /* .icon {
-    width: 26px;
-    height: 26px;
-    margin: 0 2px 0 0;
-  } */
-
   li:hover {
     transform: scale(1.1);
   }
-
-  /* .logo-footer {
-    padding-top: 1em;
-  } */
 
   h1 {
     font-family: var(--vtPrimaryFont);
@@ -103,9 +92,10 @@
 
   .footer-content {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     padding-left: 5em;
     margin-top: -1em;
+    align-items: center;
   }
 
   @media (max-width: 425px) {
@@ -120,11 +110,6 @@
     div span {
       display: none;
     }
-
-    /* .logo-footer {
-      width: 2.5em;
-      margin-top: -1em;
-    } */
 
     h1 {
       font-size: 1em;
