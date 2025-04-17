@@ -1,7 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
-  import MethodHeader from "$lib/organisms/methodHeader.svelte";
-
+  import {Breadcrumb, MethodHeader} from "$lib/index.js"
   export let data;
 </script>
 

@@ -1,5 +1,6 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import {Breadcrumb} from "$lib/index.js";
+
   let index = 0;
   export let data;
   const nextButton = () => {

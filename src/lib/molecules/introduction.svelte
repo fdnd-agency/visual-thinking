@@ -1,5 +1,6 @@
 <script>
   export let data;
+
   const {title, content} = data
 </script>
 

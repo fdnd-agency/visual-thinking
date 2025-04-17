@@ -1,5 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import {Breadcrumb} from "$lib/index.js";
 
   export let data;
 

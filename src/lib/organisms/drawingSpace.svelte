@@ -1,5 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
+  import {Breadcrumb} from "$lib/index.js"
   import { onMount } from "svelte";
 
   // Voer code uit na het renderen van de component
