@@ -91,7 +91,7 @@
   });
 </script>
 
-<Breadcrumb titel= "Tekenruimte" bgc="var(--vtGrey)" />
+<Breadcrumb titel= "Tekenruimte" bgc="var(--color-septenary)" />
 
 <header class="sr-only">
   <h1>Teken hier!</h1>
@@ -134,11 +134,11 @@
   }
 
   p span.attention {
-    color: var(--vtYellow);
+    color: var(--color-quinary);
   }
 
   section {
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
     justify-items: center;
     width: 100vw;
     margin:0 -1rem;
@@ -147,7 +147,7 @@
   section header {
     font-weight: 800;
     padding: .25em 1rem;
-    background-color: var(--vtGrey-50);
+    background-color: var(--color-septenary-50);
     height:3rem;
   }
 
@@ -160,7 +160,7 @@
 
   .drawing-board {
     border: none;
-    background-color: var(--vtGrey-10);
+    background-color: var(--color-septenary-10);
     box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.1);
     height: calc(100vh - 3rem);
     cursor: pointer;
@@ -192,14 +192,14 @@
     padding: 4px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    color: var(--vtWhite);
-    background:var(--vtDarkBlue);
+    color: var(--color-primary);
+    background:var(--color-tertiary);
     font-family: inherit;
     font-weight: bold;
   }
 
   button:hover {
-    color: var(--vtDarkBlue);
-    background:var(--vtGrey-10)
+    color: var(--color-tertiary);
+    background:var(--color-septenary-10)
   }  
 </style>

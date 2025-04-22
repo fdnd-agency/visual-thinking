@@ -42,15 +42,15 @@
   /* Header styling */
   h2 {
     font-size: 3.157rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     text-align: center;
   }
   
   /* Kennisclip teksten */
   p {
     line-height: 1.5rem;
-    font-family: var(--vtSecondaryFont);
+    font-family: var(--font-family-secondary);
     margin: 0 auto;
     max-width: 700px;
     text-transform: none;
@@ -64,7 +64,7 @@
     align-items: center;
     padding: 3.3em 0;
     margin:0 -1rem;
-    background-color: var(--vtGrey-10);
+    background-color: var(--color-septenary-10);
   }
 
   /* buttons */
