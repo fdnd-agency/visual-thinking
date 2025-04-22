@@ -152,7 +152,7 @@ blockquote:after {
   font-size: 6rem;
   width: 4rem;
   height: 4rem;
-  content: "";
+  content: "\"";
 }
 
 .cite {

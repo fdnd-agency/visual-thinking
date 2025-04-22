@@ -1,5 +1,6 @@
 <script>
-  import {Breadcrumb} from "$lib/index.js";
+  import { Breadcrumb, Icons } from "$lib/index.js";
+  const iconSize = 50;
 
   let index = 0;
   export let data;
@@ -9,6 +10,7 @@
   const previousButton = () => {
     index = index - 1;
   };
+
 </script>
 
 <Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
@@ -16,11 +18,7 @@
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
-      <img
-        class="left-arrow"
-        src="./images/arrows.svg"
-        alt="Knop met pijl naar vorige video"
-        loading="lazy"/>
+      <Icons name="arrowRight" width={iconSize} height={iconSize}/>
     </button>
 
     <iframe
@@ -30,11 +28,7 @@
     </iframe>
 
     <button on:click={nextButton} aria-label="Volgende Video">
-      <img
-        class="right-arrow"
-        src="./images/arrows.svg"
-        alt="Knop met pijl naar volgende video"
-        loading="lazy"/>
+      <Icons name="arrowLeft" width={iconSize} height={iconSize}/>
     </button>
   </div>
 
@@ -78,16 +72,7 @@
     background-color: transparent;
     border: transparent;
     padding: 2em;
-  }
-
-  .right-arrow {
     cursor: pointer;
-    border: none;
-  }
-
-  .left-arrow {
-    cursor: pointer;
-    transform: rotate(180deg);
   }
 
   /* responsive clips */

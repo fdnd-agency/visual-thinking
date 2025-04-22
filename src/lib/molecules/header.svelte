@@ -1,11 +1,18 @@
 <script>
   import { page } from "$app/stores";
+  import { Icons } from "$lib/index.js";
+
+  const logoSize = 80;
+
   let activeRoute;
   $: activeRoute = $page.route.id;
 </script>
 
 <header>
-  <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Visual Thinking Logo" /></a>
+  <a href="/" class="logo">
+    <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
+  </a>
+
   <nav>
     <ul>
       <li><a href="/tekenmethodes" class:active={activeRoute == "/tekenmethodes"}>Tekenmethodes</a></li>
@@ -46,9 +53,9 @@
     scale:1.1
   }
 
-  a.logo img {
+  /* a.logo img {
     width:60px
-  }
+  } */
 
   nav {
     --horizontal-spacing:1rem;
@@ -144,9 +151,9 @@
       top:.5rem;
     }
 
-    a.logo img {
+    /* a.logo img {
       width:80px
-    }
+    } */
 
     nav {
       --horizontal-spacing:10vw;

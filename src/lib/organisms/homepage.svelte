@@ -1,5 +1,5 @@
 <script>
-  import {Hexagon} from "$lib/index.js";
+  import { Hexagon } from "$lib/index.js";
 </script>
 
 <section>
@@ -8,7 +8,7 @@
     <li>
       <Hexagon
         img={{
-          src: "/images/man.svg",
+          src: "/images/man.png",
           alt: "Illustratie van een denkend persoon"
         }}
       />
@@ -16,7 +16,7 @@
     <li>
       <Hexagon
         img={{
-          src: "/images/pencil.svg",
+          src: "/images/pencil.png",
           alt: "Illustratie van een potlood"
         }}
       />
