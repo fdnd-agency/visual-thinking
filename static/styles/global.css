@@ -62,8 +62,7 @@
   --blockquote-colour:hsl(39, 9%, 35%);
 
 
-  /* Visual Thinking: Fonts,
-    */
+  /* Visual Thinking: Fonts,*/
   --vtPrimaryFont: "rigid-square", sans-serif;
   --vtSecondaryFont: "yrsa", serif;
 
@@ -76,70 +75,29 @@
   box-sizing: border-box;
 }
 
+/* Body with segments */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  height: 100dvh;
   font-family: var(--vtSecondaryFont);
 }
 
-blockquote {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  position: relative;
-  color: var(--blockquote-colour);
+main {
+  padding: 0 1rem;
 }
 
-.minicursus-quotes {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: var(--blockquote-colour);
-}
-
-blockquote:before,
-blockquote:after {
-  position: absolute;
-  color: var(--vtYellow);
-  font-size: 6rem;
-  width: 4rem;
-  height: 4rem;
-}
-
-blockquote:before {
-  content: "“";
-  left: -5rem;
-  top: -3rem;
-}
-
-blockquote:after {
-  content: "”";
-  right: -5rem;
-  bottom: -0.4rem;
-}
-
-.cite {
+/** Typography **/
+p {
   font-family: var(--vtSecondaryFont);
-  color: var(--blockquote-colour);
-}
-
-.link {
-  text-decoration: underline;
-  text-decoration-color:var(--vtDarkBlue);
+  line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--vtPrimaryFont);
-}
-
-p {
-  font-family: var(--vtSecondaryFont);
-  line-height: 1.5;
 }
 
 h1 {
@@ -155,6 +113,7 @@ h3 {
   font-size: 1.0777rem;
 }
 
+/** Hyperlinks + quotes **/
 a {
   color: var(--vtYellow);
   text-decoration: none;
@@ -162,10 +121,63 @@ a {
   margin-bottom: 5px;
 }
 
+.link {
+  text-decoration: underline;
+  text-decoration-color:var(--vtDarkBlue);
+}
+
+blockquote {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: var(--blockquote-colour);
+}
+
+blockquote:before {
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote:after {
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
+blockquote:before,
+blockquote:after {
+  position: absolute;
+  color: var(--vtYellow);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+  content: "";
+}
+
+.cite {
+  font-family: var(--vtSecondaryFont);
+  color: var(--blockquote-colour);
+}
+
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--vtPrimaryFont);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--blockquote-colour);
+}
+
+/* Images with styling */
 img {
   max-width: 100%;
 }
 
+.rich-text img {
+  height: auto;
+}
+
+/* Lists */
 ul {
   align-self: flex-start;
   scrollbar-width: none;
@@ -173,10 +185,6 @@ ul {
 
 ul::-webkit-scrollbar {
   display: none;
-}
-
-main {
-  padding: 0 1rem;
 }
 
 /* a11y */
@@ -190,12 +198,7 @@ main {
   width: 1px;
 }
 
-/* rich text data styling*/
-.rich-text img {
-  height: auto;
-}
-
-/* svg icons */
+/* SVG Icons */
 svg.icon {
   margin-right: 0.25rem;
 }
@@ -206,17 +209,19 @@ svg.icon path.background {
   fill: var(--vtGrey-50);
 }
 
-/* hexagon stuff (work in progress) */
+/* Hexagon styling */
+.hexagons p {
+  text-align: center;
+}
+
+.hexagons h1 {
+  max-width: 24rem;
+}
+
 .hexagons header {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.hexagons h1 {
-  max-width: 24rem;
-}
-.hexagons p {
-  text-align: center;
 }
 
 @media (width > 70em) {
