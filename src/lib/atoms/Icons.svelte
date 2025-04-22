@@ -31,8 +31,6 @@
   </defs>
 </svg>
   
-
-  
 {:else if name === "arrowLeft"}
 <svg width={width} height={height} viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M22.4326 1.26055e-06L27.8884 7.83584e-07L36.8516 15.3505L27.8884 30.701L22.4326 30.701L31.3957 15.3505L22.4326 1.26055e-06Z" fill="#090940"/>

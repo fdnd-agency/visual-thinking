@@ -1,13 +1,12 @@
 <script>
   export let text = "Default text";
-  export let bgColor = "--vtGrey-50";
-  export let color = "#000";
+  export let bgColor = "--color-septenary-50";
   export let href = null;
   export let img = null;
 </script>
 
 {#if href}
-  <a {href} style="--bg: var({bgColor}); --color: {color}" class="hover">
+  <a {href} style="--bg: var({bgColor});" class="hover">
 
     {#if img}
       <img src={img.src} alt={img.alt} />
@@ -16,7 +15,7 @@
     {/if}
   </a>
 {:else}
-  <div style="--bg: var({bgColor}); --color: {color}">
+  <div style="--bg: var({bgColor});">
     {#if img}
       <img src={img.src} alt={img.alt} />
     {:else}
@@ -34,7 +33,7 @@
     align-items: center;
     justify-items: center;
     text-decoration: none;
-    color: var(--color);
+    color: var(--text-color);
     padding: 2rem;
     font-size: 1.25em;
     height: 100%;
