@@ -19,7 +19,7 @@
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">
     <button on:click={previousButton} aria-label="Vorige Video">
-      <Icons name="arrow-right" width={iconSize} height={iconSize}/>
+      <Icons name="arrowRight" width={iconSize} height={iconSize}/>
     </button>
 
     <iframe
@@ -29,7 +29,7 @@
     </iframe>
 
     <button on:click={nextButton} aria-label="Volgende Video">
-      <Icons name="arrow-left" width={iconSize} height={iconSize}/>
+      <Icons name="arrowLeft" width={iconSize} height={iconSize}/>
     </button>
   </div>
 
