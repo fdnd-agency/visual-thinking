@@ -1,6 +1,5 @@
 <script>
   import { Breadcrumb, Icons } from "$lib/index.js";
-
   const iconSize = 50;
 
   let index = 0;

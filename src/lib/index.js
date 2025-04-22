@@ -15,4 +15,3 @@ export { default as Steps } from "./molecules/steps.svelte";
 export { default as TagsPlan } from "./molecules/tagsPlan.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
 
-
