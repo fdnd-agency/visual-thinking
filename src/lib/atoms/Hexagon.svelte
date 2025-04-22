@@ -1,7 +1,7 @@
 <script>
   export let text = "Default text";
   export let bgColor = "--color-septenary-50";
-  export let color = "var(--color-primary)";
+  export let color = "--color-primary";
 
   // If href is given, the hexagon will be clickable
   export let href = null;
@@ -35,6 +35,7 @@
   div {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: var(--bg);
+    color: var(--color);
     display: grid;
     align-items: center;
     justify-items: center;
