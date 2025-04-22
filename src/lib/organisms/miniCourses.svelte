@@ -62,7 +62,7 @@
   }
 
     ul li:nth-of-type(2) a {
-      background: var(--color-quaternary-50);
+      background: var(--color-quaternary-60);
     }
 
     ul li:nth-of-type(3) a {

@@ -27,7 +27,7 @@
 
 <style>
   a {
-    --background:var(--color-quinary:);
+    --background:var(--color-quinary);
     color: var(--color-tertiary);
     text-decoration: none;
     cursor: pointer;
