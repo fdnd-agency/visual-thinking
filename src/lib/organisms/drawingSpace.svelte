@@ -161,10 +161,10 @@
   .drawing-board {
     border: none;
     background-color: var(--vtGrey-10);
-    cursor: pointer;
     box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.1);
     height: calc(100vh - 3rem);
-    cursor: url('/images/pencil.svg'), auto;
+    cursor: pointer;
+    cursor: url('/images/pencil-cursor.svg'), auto;
   }
 
   label {
