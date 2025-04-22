@@ -54,7 +54,7 @@
 
   #methodes {
     padding: 20px;
-    background-color: var(--color-septenary-5);
+    background-color: var(--color-septenary-20);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -97,7 +97,7 @@
   }
 
   .loading-spinner {
-    border: 4px solid var(--color-septenary-50);
+    border: 4px solid var(--color-septenary-60);
     border-top: 4px solid var(--color-quinary);
     border-radius: 50%;
     width: 20px;

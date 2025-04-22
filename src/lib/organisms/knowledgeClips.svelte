@@ -64,7 +64,7 @@
     align-items: center;
     padding: 3.3em 0;
     margin:0 -1rem;
-    background-color: var(--color-septenary-10);
+    background-color: var(--color-septenary-40);
   }
 
   /* buttons */

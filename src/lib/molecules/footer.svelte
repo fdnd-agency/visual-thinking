@@ -41,7 +41,7 @@
 
 <style>
   footer section {
-    background-color: var(--color-septenary-10);
+    background-color: var(--color-septenary-40);
     font-family: var(--font-family-primary);
     text-align: center;
   }

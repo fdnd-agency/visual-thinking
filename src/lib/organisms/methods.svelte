@@ -76,7 +76,7 @@
   }
   .methods-focus-state:hover {
     border-bottom: 0.3em solid var(--color-quinary);
-    background-color: var(--color-septenary-10);
+    background-color: var(--color-septenary-20);
   }
 
   @media screen and (min-width: 36em) {

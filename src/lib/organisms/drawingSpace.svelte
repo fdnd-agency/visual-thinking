@@ -147,7 +147,7 @@
   section header {
     font-weight: 800;
     padding: .25em 1rem;
-    background-color: var(--color-septenary-50);
+    background-color: var(--color-septenary-60);
     height:3rem;
   }
 
@@ -160,7 +160,7 @@
 
   .drawing-board {
     border: none;
-    background-color: var(--color-septenary-10);
+    background-color: var(--color-septenary-40);
     box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.1);
     height: calc(100vh - 3rem);
     cursor: pointer;
@@ -200,6 +200,6 @@
 
   button:hover {
     color: var(--color-tertiary);
-    background:var(--color-septenary-10)
+    background:var(--color-septenary-40)
   }  
 </style>

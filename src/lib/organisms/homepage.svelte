@@ -24,7 +24,7 @@
     <li>
       <Hexagon
         href="/over"
-        bgColor="--color-tertiary-90"
+        bgColor="--color-tertiary-80"
         color="--color-primary"
         text="Over Visual Thinking"
       />

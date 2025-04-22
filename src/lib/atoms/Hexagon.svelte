@@ -1,6 +1,6 @@
 <script>
   export let text = "Default text";
-  export let bgColor = "--color-septenary-50";
+  export let bgColor = "--color-septenary-60";
   export let color = "--color-primary";
 
   // If href is given, the hexagon will be clickable

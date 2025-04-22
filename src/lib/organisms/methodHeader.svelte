@@ -32,7 +32,7 @@
   header {
     margin:0 -1rem;
     margin-top: -0.3em;
-    background-color: var(--color-septenary-10);
+    background-color: var(--color-septenary-20);
   }
 
   h1 {
@@ -58,7 +58,7 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
-    color: var(--color-tertiary-90);
+    color: var(--color-tertiary-80);
   }
 
   section ul {

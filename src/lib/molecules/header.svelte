@@ -95,7 +95,7 @@
   ul li a:hover,
   ul li a:focus-visible,
   ul li a.active {
-    --state-color: var(--color-tertiary-90);
+    --state-color: var(--color-tertiary-80);
     text-decoration: underline;
     text-decoration-color:var(--state-color);
     text-underline-offset: 5px;
@@ -111,7 +111,7 @@
   li:nth-child(2) a:hover,
   ul li:nth-child(2) a:focus-visible,
   ul li:nth-child(2) a.active {
-    --state-color: var(--color-tertiary-90);
+    --state-color: var(--color-tertiary-80);
   }
 
   li:nth-child(3) a:hover,

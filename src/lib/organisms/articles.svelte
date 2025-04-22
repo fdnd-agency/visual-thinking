@@ -33,7 +33,7 @@
   a:hover,
   a:focus-visible {
     border-bottom: 0.3em solid var(--color-tertiary);
-    background-color: var(--color-septenary-10);
+    background-color: var(--color-septenary-40);
   }
 
   article {
