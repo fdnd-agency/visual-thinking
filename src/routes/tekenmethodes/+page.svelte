@@ -6,7 +6,7 @@
   const {page, methods} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Tekenmethodes" bgc="var(--color-quinary)" />
 <Introduction data={page}/>
 
 <Filter {data} />

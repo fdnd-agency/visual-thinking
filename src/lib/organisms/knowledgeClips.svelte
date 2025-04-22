@@ -13,7 +13,7 @@
 
 </script>
 
-<Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
+<Breadcrumb titel="Kennisclips" bgc="var(--color-quaternary-80)" />
 <section>
   <h1 class="sr-only">Alle kennisclips</h1>
   <div class="clips-container">

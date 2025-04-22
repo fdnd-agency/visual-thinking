@@ -6,7 +6,7 @@
   const {page, articles} = data
 </script>
 
-<Breadcrumb titel="Artikelen" bgc="var(--vtDarkBlue)" />
+<Breadcrumb titel="Artikelen" bgc="var(--color-tertiary-90)" />
 <Introduction data={page}/>
 <Articles data={articles}/>
 

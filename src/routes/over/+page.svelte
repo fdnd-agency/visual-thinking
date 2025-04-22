@@ -5,5 +5,5 @@
   const {page} = data
 </script>
 
-<Breadcrumb titel="Over" bgc="var(--vtSec-DarkBlue)" />
+<Breadcrumb titel="Over" bgc="var(--color-tertiary-90)" />
 <Introduction data={page}/>

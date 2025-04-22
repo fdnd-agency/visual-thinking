@@ -35,11 +35,11 @@
   div {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: var(--bg);
+    color: var(--color);
     display: grid;
     align-items: center;
     justify-items: center;
     text-decoration: none;
-    color: var(--color-primary);
     padding: 2rem;
     font-size: 1.25em;
     height: 100%;
