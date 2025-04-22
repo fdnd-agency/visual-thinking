@@ -31,14 +31,14 @@
   </defs>
 </svg>
   
-{:else if name === "arrowLeft"}
+{:else if name === "arrowRight"}
 <svg width={width} height={height} viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M22.4326 1.26055e-06L27.8884 7.83584e-07L36.8516 15.3505L27.8884 30.701L22.4326 30.701L31.3957 15.3505L22.4326 1.26055e-06Z" fill="#090940"/>
   <path d="M11.7158 1.26055e-06L17.1716 7.83584e-07L26.1348 15.3505L17.1716 30.701L11.7158 30.701L20.6789 15.3505L11.7158 1.26055e-06Z" fill="#090940"/>
   <path d="M0.998974 1.26055e-06L6.45481 7.83584e-07L15.418 15.3505L6.45481 30.701L0.998977 30.701L9.96213 15.3505L0.998974 1.26055e-06Z" fill="#090940"/>
 </svg>
 
-{:else if name === "arrowRight"}
+{:else if name === "arrowLeft"}
 <svg width={width} height={height} viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M14.5674 0L9.11157 0L0.148438 15.3505L9.11157 30.701L14.5674 30.701L5.60427 15.3505L14.5674 0Z" fill="#090940"/>
   <path d="M25.2842 0L19.8284 0L10.8652 15.3505L19.8284 30.701L25.2842 30.701L16.3211 15.3505L25.2842 0Z" fill="#090940"/>
