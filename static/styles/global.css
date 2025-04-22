@@ -3,6 +3,7 @@
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
     */
   --color-primary: hsl(0, 0%, 100%);
+  
   --color-secondary: hsl(0, 0%, 0%);
 
   --color-tertiary: hsl(240, 75%, 14%);

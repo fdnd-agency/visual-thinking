@@ -32,8 +32,8 @@
 
   a:hover,
   a:focus-visible {
-    border-bottom: 0.3em solid var(--vtDarkBlue);
-    background-color: var(--vtGrey-10);
+    border-bottom: 0.3em solid var(--color-tertiary);
+    background-color: var(--color-septenary-10);
   }
 
   article {
@@ -43,14 +43,14 @@
   }
 
   img {
-    border: 1px solid var(--vtDarkBlue);
+    border: 1px solid var(--color-tertiary);
     object-fit: cover;
     width:100%;
   }  
 
   h2 {
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     font-size: 1em;
     margin-bottom: 0;
     font-weight: normal;
