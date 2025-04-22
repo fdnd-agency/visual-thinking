@@ -54,7 +54,7 @@
 
   #methodes {
     padding: 20px;
-    background-color: var(--vtGrey-5);
+    background-color: var(--color-septenary-20);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -75,8 +75,8 @@
   }
 
   label:hover, label:focus-visible, label:active {
-    background: var(--vtGrey-10);
-    border-bottom: 0.3em solid #feb51e;
+    background: var(--color-septenary-10);
+    border-bottom: 0.3em solid var(--color-quinary);
     transition: 0.05s;
   }
 
@@ -85,7 +85,7 @@
   }
 
   section button {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -93,12 +93,12 @@
   }
 
   section button:hover {
-    background-color: var(--vtYellow-80);
+    background-color: var(--color-quinary-80);
   }
 
   .loading-spinner {
-    border: 4px solid var(--vtGrey-50);
-    border-top: 4px solid var(--vtYellow);
+    border: 4px solid var(--color-septenary-60);
+    border-top: 4px solid var(--color-quinary);
     border-radius: 50%;
     width: 20px;
     height: 20px;

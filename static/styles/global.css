@@ -1,74 +1,74 @@
 :root {
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
-  --vtDarkBlue: hsl(240, 75%, 14%);
-  --vtLightBlue: hsl(187, 54%, 61%);
-  --vtYellow: hsl(40, 99%, 56%);
-  --vtRed: hsl(10, 93%, 64%);
-  --vtWhite: hsl(0, 0%, 100%);
-  --vtBlack: hsl(0, 0%, 0%);
+  */
 
-  /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
-  --vtDarkBlue-80: hsl(240, 28%, 31%);
-  --vtDarkBlue-50: hsl(240, 13%, 48%);
-  --vtDarkBlue-30: hsl(240, 13%, 66%);
-  --vtDarkBlue-10: hsl(240, 13%, 83%);
+  --color-primary: hsl(0, 0%, 100%);
+  --color-secondary: hsl(0, 0%, 0%);
 
-  --vtLightBlue-80: hsl(186, 53%, 69%);
-  --vtLightBlue-50: hsl(187, 53%, 77%);
-  --vtLightBlue-30: hsl(187, 54%, 85%);
-  --vtLightBlue-10: hsl(189, 54%, 92%);
+  --color-tertiary-hue: 240;
+  --color-tertiary-saturation: 75%;
+  --color-tertiary-lightness: 15%;
+  --color-tertiary: hsl(var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness));
+  --color-tertiary-80: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 20%), calc(var(--color-tertiary-lightness) + 20%));
+  --color-tertiary-60: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 40%), calc(var(--color-tertiary-lightness) + 40%));
+  --color-tertiary-40: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 60%), calc(var(--color-tertiary-lightness) + 60%));
+  --color-tertiary-20: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 80%), calc(var(--color-tertiary-lightness) + 80%));
 
-  --vtYellow-80: hsl(41, 99%, 65%);
-  --vtYellow-50: hsl(41, 99%, 73%);
-  --vtYellow-30: hsl(40, 100%, 82%);
-  --vtYellow-10: hsl(40, 100%, 91%);
+  --color-quaternary-hue: 185;
+  --color-quaternary-saturation: 55%;
+  --color-quaternary-lightness: 60%;
+  --color-quaternary: hsl(var(--color-quaternary-hue), var(--color-quaternary-saturation), var(--color-quaternary-lightness));
+  --color-quaternary-80: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 20%), calc(var(--color-quaternary-lightness) + 20%));
+  --color-quaternary-60: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 40%), calc(var(--color-quaternary-lightness) + 40%));
+  --color-quaternary-40: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 60%), calc(var(--color-quaternary-lightness) + 60%));
+  --color-quaternary-20: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 80%), calc(var(--color-quaternary-lightness) + 80%));
 
-  --vtRed-80: hsl(10, 93%, 71%);
-  --vtRed-50: hsl(11, 93%, 78%);
-  --vtRed-30: hsl(10, 94%, 86%);
-  --vtRed-10: hsl(11, 94%, 93%);
+  --color-quinary-hue: 40;
+  --color-quinary-saturation: 100%;
+  --color-quinary-lightness: 55%;
+  --color-quinary: hsl(var(--color-quinary-hue), var(--color-quinary-saturation), var(--color-quinary-lightness));
+  --color-quinary-80: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 20%), calc(var(--color-quinary-lightness) + 20%));
+  --color-quinary-60: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 40%), calc(var(--color-quinary-lightness) + 40%));
+  --color-quinary-40: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 60%), calc(var(--color-quinary-lightness) + 60%));
+  --color-quinary-20: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 80%), calc(var(--color-quinary-lightness) + 80%));
 
-  /* Visual Thinking: Grijstinten:
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik!
-     Word vaak gebruikt voor backgrounds en borders. 
-    */
-  --vtGrey: hsl(0, 0%, 81%);
-  --vtGrey-80: hsl(43, 5%, 74%);
-  --vtGrey-50: hsl(30, 6%, 87%);
-  --vtGrey-10: hsl(0, 8%, 97%);
-  --vtGrey-5: hsl(0, 0%, 98%);
+  --color-senary-hue: 10;
+  --color-senary-saturation: 95%;
+  --color-senary-lightness: 70%;
+  --color-senary: hsl(var(--color-senary-hue), var(--color-senary-saturation), var(--color-senary-lightness));
+  --color-senary-80: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 20%), calc(var(--color-senary-lightness) + 20%));
+  --color-senary-60: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 40%), calc(var(--color-senary-lightness) + 40%));
+  --color-senary-40: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 60%), calc(var(--color-senary-lightness) + 60%));
+  --color-senary-20: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 80%), calc(var(--color-senary-lightness) + 80%));
 
-  /* Visual Thinking: Secondary colors,
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    Word gebruikt als steunkleuren bv: kleurcoderen van categorieën
-    */
+  --color-septenary-hue: 39;
+  --color-septenary-saturation: 9%; 
+  --color-septenary-lightness: 35%;
+  --color-septenary: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), var(--color-septenary-lightness)); /* #625c51 */
+  --color-septenary-80: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 20%)); /* #c0beb9 */
+  --color-septenary-60: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 40%)); /* #e0dedc */
+  --color-septenary-40: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 55%)); /* #f9f8f8 */
 
-  --vtSec-Red: hsl(6, 99%, 35%);
-  --vtSec-Red-30: hsl(14, 90%, 85%);
-  --vtSec-Green: hsl(155, 75%, 34%);
-  --vtSec-Green-30: hsl(159, 42%, 57%);
-  --vtSec-LightBlue: hsl(184, 49%, 54%);
-  --vtSec-DarkBlue: hsl(230, 52%, 40%);
-  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
-  --vtSec-Brown: hsl(25, 100%, 27%);
-  --vtSec-Orange: hsl(25, 99%, 51%);
-
-
-  /* Font colurs */
-  --blockquote-colour:hsl(39, 9%, 35%);
+  /* font colors */
+  --color-blockquotes:hsl(39, 9%, 35%);
+  --font-color: hsl(0, 0%, 0%);
 
 
   /* Visual Thinking: Fonts,*/
-  --vtPrimaryFont: "rigid-square", sans-serif;
-  --vtSecondaryFont: "yrsa", serif;
+  --font-family-primary: "rigid-square", sans-serif;
+  --font-family-secondary: "yrsa", serif;
 
   /* fonts */
-  font-size: 20px;
-  --SecFont: 1.7rem;
+  font-size: 1.25rem;
+  --font-size-secondary: 1.7rem;
+
+  /* screen sizes */
+  --screen-dimension-xs: 320px;
+  --screen-dimension-s: 768px;
+  --screen-dimension-m: 1024px;
+  --screen-dimension-l: 1440px;
+  --screen-dimension-xl: 2560px;
 }
 
 * {
@@ -81,7 +81,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   height: 100dvh;
-  font-family: var(--vtSecondaryFont);
+  font-family: var(--font-family-secondary);
 }
 
 main {
@@ -90,19 +90,19 @@ main {
 
 /** Typography **/
 p {
-  font-family: var(--vtSecondaryFont);
+  font-family: var(--font-family-secondary);
   line-height: 1.5;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--vtPrimaryFont);
+  font-family: var(--font-family-primary);
 }
 
 h1 {
   font-size: 3.157rem;
-  color: var(--vtDarkBlue);
+  color: var(--color-tertiary);
 }
 
 h2 {
@@ -110,25 +110,25 @@ h2 {
 }
 
 h3 {
-  font-size: 1.0777rem;
+  font-size: 1.1rem;
 }
 
 /** Hyperlinks + quotes **/
 a {
-  color: var(--vtYellow);
+  color: var(--color-quinary);
   text-decoration: none;
-  color: black;
+  color: var(--color-secondary);
   margin-bottom: 5px;
 }
 
 .link {
   text-decoration: underline;
-  text-decoration-color:var(--vtDarkBlue);
+  text-decoration-color:var(--color-tertiary);
 }
 
 blockquote {
   font-weight: 800;
-  font-family: var(--vtPrimaryFont);
+  font-family: var(--font-family-primary);
   font-size: 1.2rem;
   line-height: 1.5;
   position: relative;
@@ -148,7 +148,7 @@ blockquote:after {
 blockquote:before,
 blockquote:after {
   position: absolute;
-  color: var(--vtYellow);
+  color: var(--color-quinary);
   font-size: 6rem;
   width: 4rem;
   height: 4rem;
@@ -156,13 +156,13 @@ blockquote:after {
 }
 
 .cite {
-  font-family: var(--vtSecondaryFont);
+  font-family: var(--font-family-secondary);
   color: var(--blockquote-colour);
 }
 
 .minicursus-quotes {
   font-weight: 800;
-  font-family: var(--vtPrimaryFont);
+  font-family: var(--font-family-primary);
   font-size: 1.2rem;
   line-height: 1.5;
   color: var(--blockquote-colour);
@@ -203,10 +203,10 @@ svg.icon {
   margin-right: 0.25rem;
 }
 svg.icon path {
-  fill: var(--vtDarkBlue);
+  fill: var(--color-tertiary);
 }
 svg.icon path.background {
-  fill: var(--vtGrey-50);
+  fill: var(--color-septenary-60);
 }
 
 /* Hexagon styling */

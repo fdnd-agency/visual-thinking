@@ -48,29 +48,29 @@
 
   ul li a {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--vtRed);
+    background: var(--color-senary);
     display: grid;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-primary);
     padding: 2rem 0;
     text-align: center;
     font-size: 1.25em;
     font-weight: bold;
     height: 100%;
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
     transition:.25s;
   }
 
     ul li:nth-of-type(2) a {
-      background: var(--vtLightBlue);
+      background: var(--color-quaternary-60);
     }
 
     ul li:nth-of-type(3) a {
-      background: var(--vtYellow);
+      background: var(--color-quinary);
     }
 
     ul li:nth-of-type(4) a {
-      background: var(--vtDarkBlue);
+      background: var(--color-tertiary);
     }
 
   ul li a span {

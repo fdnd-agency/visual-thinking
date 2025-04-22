@@ -32,14 +32,14 @@
   header {
     margin:0 -1rem;
     margin-top: -0.3em;
-    background-color: var(--vtGrey-10);
+    background-color: var(--color-septenary-20);
   }
 
   h1 {
     font-size: 1.7rem;
     padding-top: 1rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     margin: 0 1rem;
   }
 
@@ -58,7 +58,7 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
-    color: var(--vtSec-DarkBlue);
+    color: var(--color-tertiary-80);
   }
 
   section ul {
@@ -70,7 +70,7 @@
   section li {
     padding-right: 10px;
     text-transform: uppercase;
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
   }
 
   li a[href^="/tekenmethodes/{method.slug}"] {
@@ -82,8 +82,8 @@
 
   .vt-standard-button {
 	  color: white;
-	  font-family: var(--vtPrimaryFont);
-	  background-color: var(--vtDarkBlue);
+	  font-family: var(--font-family-primary);
+	  background-color: var(--color-tertiary);
     padding: 0.5em 0.5em;
 	  border-radius: 2em;
 	  margin-left: 1em;
@@ -91,8 +91,8 @@
 	}
   
 	:hover.vt-standard-button {
-	  color: var(--vtDarkBlue);
-	  background-color: rgb(188, 188, 188);
+	  color: var(--color-tertiary);
+	  background-color: hsl(0, 0%, 74%);
 	}
   
   @media (min-width: 31em) {
