@@ -4,57 +4,51 @@
   */
 
   --color-primary: hsl(0, 0%, 100%);
-  
   --color-secondary: hsl(0, 0%, 0%);
 
-
-
-  --color-saturation-80: 80%;
-  --color-saturation-50: 50%;
-  --color-saturation-30: 30%;
-  --color-saturation-10: 10%;
-
-  --color-lightness-80: 80%;
-  --color-lightness-50: 50%;
-  --color-lightness-30: 30%;
-  --color-lightness-10: 10%;
-
-
-
   --color-tertiary-hue: 240;
-  --color-tertiary: hsl((--color-tertiary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
-  --color-tertiary-80: hsl(var(--color-tertiary-hue), var(--color-saturation-80), var(--color-lightness-30));
-  --color-tertiary-50: hsl(var(--color-tertiary-hue), var(--color-saturation-50), var(--color-lightness-50));
-  --color-tertiary-30: hsl(var(--color-tertiary-hue), var(--color-saturation-30), var(--color-lightness-50));
-  --color-tertiary-10: hsl(var(--color-tertiary-hue), var(--color-saturation-10), var(--color-lightness-80));
+  --color-tertiary-saturation: 75%;
+  --color-tertiary-lightness: 15%;
+  --color-tertiary: hsl(var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness));
+  --color-tertiary-80: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 20%), calc(var(--color-tertiary-lightness) + 20%));
+  --color-tertiary-60: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 40%), calc(var(--color-tertiary-lightness) + 40%));
+  --color-tertiary-40: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 60%), calc(var(--color-tertiary-lightness) + 60%));
+  --color-tertiary-20: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 80%), calc(var(--color-tertiary-lightness) + 80%));
 
-  --color-quaternary-hue: 187;
-  --color-quaternary: hsl((--color-quaternary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
-  --color-quaternary-80: hsl(var(--color-quaternary-hue), var(--color-saturation-80), var(--color-lightness-30));
-  --color-quaternary-50: hsl(var(--color-quaternary-hue), var(--color-saturation-50), var(--color-lightness-50));
-  --color-quaternary-30: hsl(var(--color-quaternary-hue), var(--color-saturation-30), var(--color-lightness-50));
-  --color-quaternary-10: hsl(var(--color-quaternary-hue), var(--color-saturation-10), var(--color-lightness-80));
+  --color-quaternary-hue: 185;
+  --color-quaternary-saturation: 55%;
+  --color-quaternary-lightness: 60%;
+  --color-quaternary: hsl(var(--color-quaternary-hue), var(--color-quaternary-saturation), var(--color-quaternary-lightness));
+  --color-quaternary-80: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 20%), calc(var(--color-quaternary-lightness) + 20%));
+  --color-quaternary-60: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 40%), calc(var(--color-quaternary-lightness) + 40%));
+  --color-quaternary-40: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 60%), calc(var(--color-quaternary-lightness) + 60%));
+  --color-quaternary-20: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 80%), calc(var(--color-quaternary-lightness) + 80%));
 
-  --color-quinary-hue: 41;
-  --color-quinary: hsl((--color-quinary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
-  --color-quinary-80: hsl(var(--color-quinary-hue), var(--color-saturation-80), var(--color-lightness-30));
-  --color-quinary-50: hsl(var(--color-quinary-hue), var(--color-saturation-50), var(--color-lightness-50));
-  --color-quinary-30: hsl(var(--color-quinary-hue), var(--color-saturation-30), var(--color-lightness-50));
-  --color-quinary-10: hsl(var(--color-quinary-hue), var(--color-saturation-10), var(--color-lightness-80));
+  --color-quinary-hue: 40;
+  --color-quinary-saturation: 100%;
+  --color-quinary-lightness: 55%;
+  --color-quinary: hsl(var(--color-quinary-hue), var(--color-quinary-saturation), var(--color-quinary-lightness));
+  --color-quinary-80: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 20%), calc(var(--color-quinary-lightness) + 20%));
+  --color-quinary-60: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 40%), calc(var(--color-quinary-lightness) + 40%));
+  --color-quinary-40: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 60%), calc(var(--color-quinary-lightness) + 60%));
+  --color-quinary-20: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 80%), calc(var(--color-quinary-lightness) + 80%));
 
   --color-senary-hue: 10;
-  --color-senary: hsl((--color-senary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
-  --color-senary-80: hsl(var(--color-senary-hue), var(--color-saturation-80), var(--color-lightness-30));
-  --color-senary-50: hsl(var(--color-senary-hue), var(--color-saturation-50), var(--color-lightness-50));
-  --color-senary-30: hsl(var(--color-senary-hue), var(--color-saturation-30), var(--color-lightness-50));
-  --color-senary-10: hsl(var(--color-senary-hue), var(--color-saturation-10), var(--color-lightness-80));
+  --color-senary-saturation: 95%;
+  --color-senary-lightness: 70%;
+  --color-senary: hsl(var(--color-senary-hue), var(--color-senary-saturation), var(--color-senary-lightness));
+  --color-senary-80: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 20%), calc(var(--color-senary-lightness) + 20%));
+  --color-senary-60: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 40%), calc(var(--color-senary-lightness) + 40%));
+  --color-senary-40: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 60%), calc(var(--color-senary-lightness) + 60%));
+  --color-senary-20: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 80%), calc(var(--color-senary-lightness) + 80%));
 
-  --color-septenary: hsl(0, 0%, 81%);
-  --color-septenary-80: hsl(43, 5%, 74%);
-  --color-septenary-50: hsl(30, 6%, 87%);
-  --color-septenary-10: hsl(0, 8%, 97%);
-  --color-septenary-5: hsl(0, 0%, 98%);
-
+  --color-septenary-hue: 39;
+  --color-septenary-saturation: 9%; 
+  --color-septenary-lightness: 35%;
+  --color-septenary: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), var(--color-septenary-lightness)); /* #625c51 */
+  --color-septenary-80: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 20%)); /* #c0beb9 */
+  --color-septenary-60: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 40%)); /* #e0dedc */
+  --color-septenary-40: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 55%)); /* #f9f8f8 */
 
   /* font colors */
   --color-blockquotes:hsl(39, 9%, 35%);
@@ -212,7 +206,7 @@ svg.icon path {
   fill: var(--color-tertiary);
 }
 svg.icon path.background {
-  fill: var(--color-septenary-50);
+  fill: var(--color-septenary-60);
 }
 
 /* Hexagon styling */
