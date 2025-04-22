@@ -2,9 +2,11 @@
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
   */
-  
+
   --color-primary: hsl(0, 0%, 100%);
   --color-secondary: hsl(0, 0%, 0%);
+
+
 
   --color-saturation-80: 80%;
   --color-saturation-50: 50%;
@@ -15,6 +17,8 @@
   --color-lightness-50: 50%;
   --color-lightness-30: 30%;
   --color-lightness-10: 10%;
+
+
 
   --color-tertiary-hue: 240;
   --color-tertiary: hsl((--color-tertiary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
@@ -30,14 +34,14 @@
   --color-quaternary-30: hsl(var(--color-quaternary-hue), var(--color-saturation-30), var(--color-lightness-50));
   --color-quaternary-10: hsl(var(--color-quaternary-hue), var(--color-saturation-10), var(--color-lightness-80));
 
-  --color-quinary-hue: 187;
+  --color-quinary-hue: 41;
   --color-quinary: hsl((--color-quinary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
   --color-quinary-80: hsl(var(--color-quinary-hue), var(--color-saturation-80), var(--color-lightness-30));
   --color-quinary-50: hsl(var(--color-quinary-hue), var(--color-saturation-50), var(--color-lightness-50));
   --color-quinary-30: hsl(var(--color-quinary-hue), var(--color-saturation-30), var(--color-lightness-50));
   --color-quinary-10: hsl(var(--color-quinary-hue), var(--color-saturation-10), var(--color-lightness-80));
 
-  --color-senary-hue: 187;
+  --color-senary-hue: 10;
   --color-senary: hsl((--color-senary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
   --color-senary-80: hsl(var(--color-senary-hue), var(--color-saturation-80), var(--color-lightness-30));
   --color-senary-50: hsl(var(--color-senary-hue), var(--color-saturation-50), var(--color-lightness-50));
