@@ -1,34 +1,48 @@
 :root {
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
+  */
+  
   --color-primary: hsl(0, 0%, 100%);
   --color-secondary: hsl(0, 0%, 0%);
 
-  --color-tertiary: hsl(240, 75%, 14%);
-  --color-tertiary-90: hsl(230, 52%, 40%);
-  --color-tertiary-80: hsl(240, 28%, 31%);
-  --color-tertiary-50: hsl(240, 13%, 48%);
-  --color-tertiary-30: hsl(240, 13%, 66%);
-  --color-tertiary-10: hsl(240, 13%, 83%);
+  --color-saturation-80: 80%;
+  --color-saturation-50: 50%;
+  --color-saturation-30: 30%;
+  --color-saturation-10: 10%;
 
-  --color-quaternary: hsl(187, 54%, 61%);
-  --color-quaternary-80: hsl(186, 53%, 69%);
-  --color-quaternary-50: hsl(187, 53%, 77%);
-  --color-quaternary-30: hsl(187, 54%, 85%);
-  --color-quaternary-10: hsl(189, 54%, 92%);
+  --color-lightness-80: 80%;
+  --color-lightness-50: 50%;
+  --color-lightness-30: 30%;
+  --color-lightness-10: 10%;
 
-  --color-quinary: hsl(40, 99%, 56%);
-  --color-quinary-80: hsl(41, 99%, 65%);
-  --color-quinary-50: hsl(41, 99%, 73%);
-  --color-quinary-30: hsl(40, 100%, 82%);
-  --color-quinary-10: hsl(40, 100%, 91%);
+  --color-tertiary-hue: 240;
+  --color-tertiary: hsl((--color-tertiary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
+  --color-tertiary-80: hsl(var(--color-tertiary-hue), var(--color-saturation-80), var(--color-lightness-30));
+  --color-tertiary-50: hsl(var(--color-tertiary-hue), var(--color-saturation-50), var(--color-lightness-50));
+  --color-tertiary-30: hsl(var(--color-tertiary-hue), var(--color-saturation-30), var(--color-lightness-50));
+  --color-tertiary-10: hsl(var(--color-tertiary-hue), var(--color-saturation-10), var(--color-lightness-80));
 
-  --color-senary: hsl(10, 93%, 64%);
-  --color-senary-80: hsl(10, 93%, 71%);
-  --color-senary-50: hsl(11, 93%, 78%);
-  --color-senary-30: hsl(10, 94%, 86%);
-  --color-senary-10: hsl(11, 94%, 93%);
+  --color-quaternary-hue: 187;
+  --color-quaternary: hsl((--color-quaternary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
+  --color-quaternary-80: hsl(var(--color-quaternary-hue), var(--color-saturation-80), var(--color-lightness-30));
+  --color-quaternary-50: hsl(var(--color-quaternary-hue), var(--color-saturation-50), var(--color-lightness-50));
+  --color-quaternary-30: hsl(var(--color-quaternary-hue), var(--color-saturation-30), var(--color-lightness-50));
+  --color-quaternary-10: hsl(var(--color-quaternary-hue), var(--color-saturation-10), var(--color-lightness-80));
+
+  --color-quinary-hue: 187;
+  --color-quinary: hsl((--color-quinary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
+  --color-quinary-80: hsl(var(--color-quinary-hue), var(--color-saturation-80), var(--color-lightness-30));
+  --color-quinary-50: hsl(var(--color-quinary-hue), var(--color-saturation-50), var(--color-lightness-50));
+  --color-quinary-30: hsl(var(--color-quinary-hue), var(--color-saturation-30), var(--color-lightness-50));
+  --color-quinary-10: hsl(var(--color-quinary-hue), var(--color-saturation-10), var(--color-lightness-80));
+
+  --color-senary-hue: 187;
+  --color-senary: hsl((--color-senary-hue), var(--color-saturation-80)%, var(--color-lightness-10));
+  --color-senary-80: hsl(var(--color-senary-hue), var(--color-saturation-80), var(--color-lightness-30));
+  --color-senary-50: hsl(var(--color-senary-hue), var(--color-saturation-50), var(--color-lightness-50));
+  --color-senary-30: hsl(var(--color-senary-hue), var(--color-saturation-30), var(--color-lightness-50));
+  --color-senary-10: hsl(var(--color-senary-hue), var(--color-saturation-10), var(--color-lightness-80));
 
   --color-septenary: hsl(0, 0%, 81%);
   --color-septenary-80: hsl(43, 5%, 74%);
