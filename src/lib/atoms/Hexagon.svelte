@@ -1,7 +1,7 @@
 <script>
   export let text = "Default text";
   export let bgColor = "--color-septenary-50";
-  export let color = "--color-primary";
+  export let color = "var(--color-primary)";
 
   // If href is given, the hexagon will be clickable
   export let href = null;
@@ -39,7 +39,6 @@
     align-items: center;
     justify-items: center;
     text-decoration: none;
-    color: var(--color-primary);
     padding: 2rem;
     font-size: 1.25em;
     height: 100%;

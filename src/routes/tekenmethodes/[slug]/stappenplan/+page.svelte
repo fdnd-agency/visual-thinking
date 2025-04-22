@@ -3,7 +3,7 @@
   export let data;
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--color-quinary)" />
 
 <MethodHeader {data} />
 
@@ -36,6 +36,5 @@
       grid-template-columns: 1fr 1fr;
       max-width: 80%;
     }
-
   }
 </style>

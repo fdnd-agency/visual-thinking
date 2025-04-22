@@ -75,7 +75,7 @@
   }
 
   label:hover, label:focus-visible, label:active {
-    background: var(--vtGrey-10);
+    background: var(--color-septenary-10);
     border-bottom: 0.3em solid var(--color-quinary);
     transition: 0.05s;
   }
