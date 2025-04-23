@@ -1,28 +1,31 @@
 <script>
-  export let methods;
+  export let data;
 </script>
 
 <section class="grid">
-  <h2>Alle methodes ({methods.length})</h2>
-  {#if methods && methods.length > 0}
-    {#each methods as method, index}
-      <article class="methods-container">
-        <a href="/tekenmethodes/{method.slug}">
-          {#if method.template && method.template.url}
-            <picture>
-              <source srcset={method.template.url.replace(":webp", ":avif")} />
-              <source srcset={method.template.url} />
+  <h2>Alle methodes ({data.length})</h2>
+  {#if data && data.length > 0}
+    {#each data as method, index}
+      <div class="methods-focus-state">
+        <article class="methods-container" data-index={index}>
+          <a href="/tekenmethodes/{method.slug}">
+            {#if method.template && method.template.url}
+              <picture>
+                <img
+                  src={method.template.url.replace(":webp", ":png")}
+                  alt={"Voorbeeld van " + method.title}
+                  class={method.categories[0].title.replaceAll(" ", "-")}/>
+              </picture>
+            {:else}
               <img
-                src={method.template.url.replace(":webp", ":png")}
-                alt={"Voorbeeld van " + method.title}
-              />
-            </picture>
-          {:else}
-            <img src="/placeholder.webp" alt="Placeholder" />
-          {/if}
-          <h3>{method.title}</h3>
-        </a>
-      </article>
+                class={method.categories[0].title.replaceAll(" ", "-")}
+                src="/placeholder.webp"
+                alt="Placeholder"/>
+            {/if}
+          </a>
+        </article>
+        <h3>{method.title}</h3>
+      </div>
     {/each}
   {/if}
 </section>
@@ -30,11 +33,9 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 1rem 0;
-    max-width: var(--grid-max-width);
-    margin: auto;
   }
 
   h2 {
@@ -42,38 +43,51 @@
   }
 
   h3 {
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
-    font-size: 1rem;
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
+    font-size: 19px;
     font-weight: 400;
     margin: 0;
     width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   a {
     text-decoration: none;
-    color: var(--vtBlack);
-    padding: 0.8rem 0.8rem 0.25rem 0.8rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
   }
 
   article {
     display: flex;
     flex-direction: column;
-    transition: 0.1s;
-    margin: -0.8rem;
-    border-bottom: 0.3rem solid transparent;
+    transition: 0.25s;
+    border: 1px solid hsl(0, 0%, 80%);
   }
 
   article img {
-    border: 1px solid #ccc;
     width: 100%;
     height: auto;
   }
 
-  article:hover {
-    border-bottom: 0.3rem solid var(--vtYellow);
-    background-color: var(--vtGrey-10);
+  .methods-focus-state {
+    border-bottom: 0.3em solid transparent;
+    padding: 0.8em;
+    margin: -0.8em;
+  }
+  .methods-focus-state:hover {
+    border-bottom: 0.3em solid var(--color-quinary);
+    background-color: var(--color-septenary-20);
+  }
+
+  @media screen and (min-width: 36em) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>
