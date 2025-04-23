@@ -14,15 +14,13 @@
                 <img
                   src={method.template.url.replace(":webp", ":png")}
                   alt={"Voorbeeld van " + method.title}
-                  class={method.categories[0].title.replaceAll(" ", "-")}
-                />
+                  class={method.categories[0].title.replaceAll(" ", "-")}/>
               </picture>
             {:else}
               <img
                 class={method.categories[0].title.replaceAll(" ", "-")}
                 src="/placeholder.webp"
-                alt="Placeholder"
-              />
+                alt="Placeholder"/>
             {/if}
           </a>
         </article>
@@ -45,8 +43,8 @@
   }
 
   h3 {
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     font-size: 19px;
     font-weight: 400;
     margin: 0;
@@ -55,7 +53,7 @@
 
   a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     margin-bottom: 5px;
   }
 
@@ -63,7 +61,7 @@
     display: flex;
     flex-direction: column;
     transition: 0.25s;
-    border: 1px solid #ccc;
+    border: 1px solid hsl(0, 0%, 80%);
   }
 
   article img {
@@ -77,8 +75,8 @@
     margin: -0.8em;
   }
   .methods-focus-state:hover {
-    border-bottom: 0.3em solid var(--vtYellow);
-    background-color: var(--vtGrey-10);
+    border-bottom: 0.3em solid var(--color-quinary);
+    background-color: var(--color-septenary-20);
   }
 
   @media screen and (min-width: 36em) {

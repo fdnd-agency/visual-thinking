@@ -1,12 +1,12 @@
 <script>
-    import Header from "$lib/molecules/header.svelte";
-    import Footer from "$lib/molecules/footer.svelte";
-    
+    import { Header, Footer } from "$lib/index.js";   
 </script>
 
 <Header />
 
-<main><slot /></main>
+<main>
+    <slot />
+</main>
 
 <Footer />
 

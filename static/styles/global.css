@@ -1,146 +1,108 @@
 :root {
   /* Visual Thinking: Primary Colors:
     Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
-  --vtDarkBlue: #090940;
-  --vtLightBlue: #67c5d1;
-  --vtYellow: #feb51e;
-  --vtRed: #f96c4f;
-  --vtWhite: #ffffff;
-  --vtBlack: #000000;
+  */
 
-  /* Visual Thinking: Primary Colors Lichtere versies, ongeveer 80%, 50%, 30% en 10% opacity van de originele kleuren ^
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    */
-  --vtDarkBlue-80: #3a3a66;
-  --vtDarkBlue-50: #6b6b8c;
-  --vtDarkBlue-30: #9d9db3;
-  --vtDarkBlue-10: #ceced9;
+  --color-primary: hsl(0, 0%, 100%);
+  --color-secondary: hsl(0, 0%, 0%);
 
-  --vtLightBlue-80: #85d1da;
-  --vtLightBlue-50: #a4dce3;
-  --vtLightBlue-30: #c2e8ed;
-  --vtLightBlue-10: #e1f3f6;
+  --color-tertiary-hue: 240;
+  --color-tertiary-saturation: 75%;
+  --color-tertiary-lightness: 15%;
+  --color-tertiary: hsl(var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness));
+  --color-tertiary-80: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 20%), calc(var(--color-tertiary-lightness) + 20%));
+  --color-tertiary-60: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 40%), calc(var(--color-tertiary-lightness) + 40%));
+  --color-tertiary-40: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 60%), calc(var(--color-tertiary-lightness) + 60%));
+  --color-tertiary-20: hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) - 80%), calc(var(--color-tertiary-lightness) + 80%));
 
-  --vtYellow-80: #fec44b;
-  --vtYellow-50: #fed378;
-  --vtYellow-30: #ffe1a5;
-  --vtYellow-10: #fff0d2;
+  --color-quaternary-hue: 185;
+  --color-quaternary-saturation: 55%;
+  --color-quaternary-lightness: 60%;
+  --color-quaternary: hsl(var(--color-quaternary-hue), var(--color-quaternary-saturation), var(--color-quaternary-lightness));
+  --color-quaternary-80: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 20%), calc(var(--color-quaternary-lightness) + 20%));
+  --color-quaternary-60: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 40%), calc(var(--color-quaternary-lightness) + 40%));
+  --color-quaternary-40: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 60%), calc(var(--color-quaternary-lightness) + 60%));
+  --color-quaternary-20: hsl(var(--color-quaternary-hue), calc(var(--color-quaternary-saturation) - 80%), calc(var(--color-quaternary-lightness) + 80%));
 
-  --vtRed-80: #fa8972;
-  --vtRed-50: #fba795;
-  --vtRed-30: #fdc4b9;
-  --vtRed-10: #fee2dc;
+  --color-quinary-hue: 40;
+  --color-quinary-saturation: 100%;
+  --color-quinary-lightness: 55%;
+  --color-quinary: hsl(var(--color-quinary-hue), var(--color-quinary-saturation), var(--color-quinary-lightness));
+  --color-quinary-80: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 20%), calc(var(--color-quinary-lightness) + 20%));
+  --color-quinary-60: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 40%), calc(var(--color-quinary-lightness) + 40%));
+  --color-quinary-40: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 60%), calc(var(--color-quinary-lightness) + 60%));
+  --color-quinary-20: hsl(var(--color-quinary-hue), calc(var(--color-quinary-saturation) - 80%), calc(var(--color-quinary-lightness) + 80%));
 
-  /* Visual Thinking: Grijstinten:
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik!
-     Word vaak gebruikt voor backgrounds en borders. 
-    */
-  --vtGrey: #cecece;
-  --vtGrey-80: #c0beb9;
-  --vtGrey-50: #e0dedc;
-  --vtGrey-10: #f9f8f8;
-  --vtGrey-5: #f9f9f9;
+  --color-senary-hue: 10;
+  --color-senary-saturation: 95%;
+  --color-senary-lightness: 70%;
+  --color-senary: hsl(var(--color-senary-hue), var(--color-senary-saturation), var(--color-senary-lightness));
+  --color-senary-80: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 20%), calc(var(--color-senary-lightness) + 20%));
+  --color-senary-60: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 40%), calc(var(--color-senary-lightness) + 40%));
+  --color-senary-40: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 60%), calc(var(--color-senary-lightness) + 60%));
+  --color-senary-20: hsl(var(--color-senary-hue), calc(var(--color-senary-saturation) - 80%), calc(var(--color-senary-lightness) + 80%));
 
-  /* Visual Thinking: Secondary colors,
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-    Word gebruikt als steunkleuren bv: kleurcoderen van categorieën
-    */
+  --color-septenary-hue: 39;
+  --color-septenary-saturation: 9%; 
+  --color-septenary-lightness: 35%;
+  --color-septenary: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), var(--color-septenary-lightness)); /* #625c51 */
+  --color-septenary-80: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 20%)); /* #c0beb9 */
+  --color-septenary-60: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 40%)); /* #e0dedc */
+  --color-septenary-40: hsl(var(--color-septenary-hue), var(--color-septenary-saturation), calc(var(--color-septenary-lightness) + 55%)); /* #f9f8f8 */
 
-  --vtSec-Red: #af1301;
-  --vtSec-Red-30: #fbc5b4;
-  --vtSec-Green: #169861;
-  --vtSec-Green-30: #63c09f;
-  --vtSec-LightBlue: #4fbbc2;
-  --vtSec-DarkBlue: #31439c;
-  /* <--- deze kleur is de blauwe balk van de tekenmethodes detailpagina */
-  --vtSec-Brown: #8b3a00;
-  --vtSec-Orange: #fe6f07;
+  /* font colors */
+  --color-blockquotes:hsl(39, 9%, 35%);
+  --font-color: hsl(0, 0%, 0%);
 
-  /* Visual Thinking: Fonts,
-    */
 
-  --vtPrimaryFont: "rigid-square", sans-serif;
-  --vtSecondaryFont: "yrsa", serif;
+  /* Visual Thinking: Fonts,*/
+  --font-family-primary: "rigid-square", sans-serif;
+  --font-family-secondary: "yrsa", serif;
 
   /* fonts */
-  font-size: 20px;
-  --SecFont: 1.7rem;
+  font-size: 1.25rem;
+  --font-size-secondary: 1.7rem;
+
+  /* screen sizes */
+  --screen-dimension-xs: 320px;
+  --screen-dimension-s: 768px;
+  --screen-dimension-m: 1024px;
+  --screen-dimension-l: 1440px;
+  --screen-dimension-xl: 2560px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* Body with segments */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: var(--vtSecondaryFont);
+  height: 100dvh;
+  font-family: var(--font-family-secondary);
 }
 
-blockquote {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
+main {
+  padding: 0 1rem;
+}
+
+/** Typography **/
+p {
+  font-family: var(--font-family-secondary);
   line-height: 1.5;
-  position: relative;
-  color: #625c51;
-}
-
-.minicursus-quotes {
-  font-weight: 800;
-  font-family: var(--vtPrimaryFont);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #625c51;
-}
-
-blockquote:before,
-blockquote:after {
-  position: absolute;
-  color: var(--vtYellow);
-  font-size: 6rem;
-  width: 4rem;
-  height: 4rem;
-}
-
-blockquote:before {
-  content: "“";
-  left: -5rem;
-  top: -3rem;
-}
-
-blockquote:after {
-  content: "”";
-  right: -5rem;
-  bottom: -0.4rem;
-}
-
-.cite {
-  font-family: var(--vtSecondaryFont);
-  color: #625c51;
-}
-
-.link {
-  text-decoration: underline;
-  text-decoration-color:var(--vtDarkBlue);
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--vtPrimaryFont);
-}
-
-p {
-  font-family: var(--vtSecondaryFont);
-  line-height: 1.5;
+  font-family: var(--font-family-primary);
 }
 
 h1 {
   font-size: 3.157rem;
-  color: var(--vtDarkBlue);
+  color: var(--color-tertiary);
 }
 
 h2 {
@@ -148,20 +110,74 @@ h2 {
 }
 
 h3 {
-  font-size: 1.0777rem;
+  font-size: 1.1rem;
 }
 
+/** Hyperlinks + quotes **/
 a {
-  color: var(--vtYellow);
+  color: var(--color-quinary);
   text-decoration: none;
-  color: black;
+  color: var(--color-secondary);
   margin-bottom: 5px;
 }
 
+.link {
+  text-decoration: underline;
+  text-decoration-color:var(--color-tertiary);
+}
+
+blockquote {
+  font-weight: 800;
+  font-family: var(--font-family-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: var(--blockquote-colour);
+}
+
+blockquote:before {
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote:after {
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
+blockquote:before,
+blockquote:after {
+  position: absolute;
+  color: var(--color-quinary);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+  content: "\"";
+}
+
+.cite {
+  font-family: var(--font-family-secondary);
+  color: var(--blockquote-colour);
+}
+
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--font-family-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--blockquote-colour);
+}
+
+/* Images with styling */
 img {
   max-width: 100%;
 }
 
+.rich-text img {
+  height: auto;
+}
+
+/* Lists */
 ul {
   align-self: flex-start;
   scrollbar-width: none;
@@ -169,10 +185,6 @@ ul {
 
 ul::-webkit-scrollbar {
   display: none;
-}
-
-main {
-  padding: 0 1rem;
 }
 
 /* a11y */
@@ -186,33 +198,30 @@ main {
   width: 1px;
 }
 
-/* rich text data styling*/
-.rich-text img {
-  height: auto;
-}
-
-/* svg icons */
+/* SVG Icons */
 svg.icon {
   margin-right: 0.25rem;
 }
 svg.icon path {
-  fill: var(--vtDarkBlue);
+  fill: var(--color-tertiary);
 }
 svg.icon path.background {
-  fill: var(--vtGrey-50);
+  fill: var(--color-septenary-60);
 }
 
-/* hexagon stuff (work in progress) */
+/* Hexagon styling */
+.hexagons p {
+  text-align: center;
+}
+
+.hexagons h1 {
+  max-width: 24rem;
+}
+
 .hexagons header {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.hexagons h1 {
-  max-width: 24rem;
-}
-.hexagons p {
-  text-align: center;
 }
 
 @media (width > 70em) {

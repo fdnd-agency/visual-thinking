@@ -4,12 +4,14 @@
 
 <section>
   <h2 class="sr-only">Kies hier een minicursus</h2>
-  <ul>
-    {#if data && data.length > 0}
-      {#each data as course, index}
-        <li><a href="/minicursussen/{course.slug}"><span>{course.title}</span></a></li>
-      {/each}
-    {/if}
+    <ul>
+      {#if data && data.length > 0}
+        {#each data as course, index}
+          <li>
+            <a href="/minicursussen/{course.slug}"><span>{course.title}</span></a>
+          </li>
+        {/each}
+      {/if}
   </ul>
 </section>
 
@@ -21,13 +23,10 @@
   ul {
     --gap: 3rem;
     --size: 12em;
-
     --tx: 0.365;
     --ch: 0.74;
-
     --cc: 1;
     --rc: 4;
-
     display: grid;
     grid-template-columns: repeat(var(--cc), var(--size));
     grid-template-rows: repeat(
@@ -49,29 +48,29 @@
 
   ul li a {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: var(--vtRed);
+    background: var(--color-senary);
     display: grid;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-primary);
     padding: 2rem 0;
     text-align: center;
     font-size: 1.25em;
     font-weight: bold;
     height: 100%;
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
     transition:.25s;
   }
 
     ul li:nth-of-type(2) a {
-      background: var(--vtLightBlue);
+      background: var(--color-quaternary-60);
     }
 
     ul li:nth-of-type(3) a {
-      background: var(--vtYellow);
+      background: var(--color-quinary);
     }
 
     ul li:nth-of-type(4) a {
-      background: var(--vtDarkBlue);
+      background: var(--color-tertiary);
     }
 
   ul li a span {
@@ -89,10 +88,8 @@
     ul {
       --gap: 2rem;
       --size: 14em;
-
       --tx: 0.55;
       --ch: 0.71;
-
       --cc: 4;
       --rc: 2;
       margin-top: -28vh;

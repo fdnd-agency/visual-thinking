@@ -1,46 +1,48 @@
+<script>
+  import { Icons } from "$lib/index.js";
+  const iconSize = 26;
+  const logoSize = 80;
+
+</script>
 <footer>
-  <nav>
+  <section>
+    
     <a href="/" class="footer-content">
-      <img
-        src="/images/visual-thinking-hbo-logo.svg"
-        class="logo-footer"
-        alt="Visual thinking logo"
-      />
+      <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
       <h1>Visual Thinking in het hbo</h1>
     </a>
 
-    <div class="icons-nav">
+    <div class="icons-footer">
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <img src="/images/instagram.svg" alt="instagram" class="icon" />
+            <Icons name="instagram" width={iconSize} height={iconSize}/>
             <span>Instagram</span>
           </a>
         </li>
         <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa"
-          >
-            <img src="/images/youtube.svg" alt="youtube" class="icon" />
+          <a href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
+            <Icons name="youtube" width={iconSize} height={iconSize}/>
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <img src="/images/linkedin.svg" alt="linkedIn" class="icon" />
+            <Icons name="linkedin" width={iconSize} height={iconSize}/>
             <span>LinkedIn</span>
           </a>
         </li>
       </ul>
       <p>© Charley Muhren, 2024</p>
     </div>
-  </nav>
+
+  </section>
 </footer>
 
 <style>
-  footer nav {
-    background-color: var(--vtGrey-10);
-    font-family: var(--vtPrimaryFont);
+  footer section {
+    background-color: var(--color-septenary-40);
+    font-family: var(--font-family-primary);
     text-align: center;
   }
 
@@ -62,37 +64,27 @@
   div a {
     display: flex;
     text-decoration: none;
-    color: var(--vtDarkBlue);
+    color: var(--color-tertiary);
     align-items: center;
-  }
-
-  span {
-    margin-left: 5px;
-    font-size: 14px;
-    color: #555;
   }
 
   div p {
     font-size: 14px;
   }
 
-  .icon {
-    width: 26px;
-    height: 26px;
-    margin: 0 2px 0 0;
+  span {
+    margin-left: 5px;
+    font-size: 14px;
+    color: var(--blockquote-color);
   }
 
   li:hover {
     transform: scale(1.1);
   }
 
-  .logo-footer {
-    padding-top: 1em;
-  }
-
   h1 {
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     font-weight: 600;
     font-size: 2em;
     text-align: left;
@@ -101,14 +93,15 @@
 
   .footer-content {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     padding-left: 5em;
     margin-top: -1em;
+    align-items: center;
   }
 
   @media (max-width: 425px) {
 
-    footer nav {
+    footer section {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
@@ -117,11 +110,6 @@
 
     div span {
       display: none;
-    }
-
-    .logo-footer {
-      width: 2.5em;
-      margin-top: -1em;
     }
 
     h1 {
@@ -140,16 +128,11 @@
 
   @media (min-width: 425px) and (max-width: 768px) {
 
-    footer nav {
+    footer section {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-    }
-
-    .logo-footer {
-      width: 3.5em;
-      margin-top: -1em;
     }
 
     h1 {
@@ -166,15 +149,10 @@
   }
 
   @media (min-width: 768px) {
-    footer nav {
+    footer section {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-    }
-
-    .icon {
-      width: 30px;
-      height: 30px;
     }
 
     .footer-content {
@@ -192,21 +170,9 @@
       margin-left: -3em;
       padding-left: 4em;
     }
-
-    .logo-footer {
-      width: 3.5em;
-      margin-top: -0.8em;
-    }
     
-    .icons-nav {
+    .icons-footer {
       padding-right: -3em;
-    }
-  }
-
-  @media (min-width: 1000px) {
-    .logo-footer {
-      width: 4.8em;
-      margin-top: -0.8em;
     }
   }
 

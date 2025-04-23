@@ -1,14 +1,12 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
-  import MethodHeader from "$lib/organisms/methodHeader.svelte";
-
+  import {Breadcrumb, MethodHeader} from "$lib/index.js"
   export let data;
 </script>
 
 <Breadcrumb
   titel="Overzicht"
   url="/tekenmethodes"
-  bgc="var(--vtYellow)"
+  bgc="var(--color-quinary)"
 />
 
 <MethodHeader {data} />
@@ -38,7 +36,7 @@
   }
 
   section img {
-    border: 1px solid var(--vtDarkBlue);
+    border: 1px solid var(--color-tertiary-90);
   }
 
   p {

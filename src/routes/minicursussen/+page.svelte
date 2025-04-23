@@ -1,14 +1,11 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import Introduction from "$lib/molecules/introduction.svelte";
-  import MiniCourses from "$lib/organisms/miniCourses.svelte";
-  
+  import {Breadcrumb, Introduction, MiniCourses} from "$lib/index.js";
   export let data;
 
   const {page, miniCourses} = data;
 </script>
 
-<Breadcrumb titel="Minicursussen" bgc="var(--vtRed)" />
+<Breadcrumb titel="Minicursussen" bgc="var(--color-senary)" />
 
 <div class="hexagons">
   <Introduction data={page}/>

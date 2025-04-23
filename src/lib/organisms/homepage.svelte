@@ -1,14 +1,14 @@
 <script>
-  import Hexagon from "$lib/atoms/Hexagon.svelte";
-
+  import { Hexagon } from "$lib/index.js";
 </script>
+
 <section>
   <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
   <ul>
     <li>
       <Hexagon
         img={{
-          src: "/images/man.svg",
+          src: "/images/man.png",
           alt: "Illustratie van een denkend persoon"
         }}
       />
@@ -16,7 +16,7 @@
     <li>
       <Hexagon
         img={{
-          src: "/images/pencil.svg",
+          src: "/images/pencil.png",
           alt: "Illustratie van een potlood"
         }}
       />
@@ -24,16 +24,16 @@
     <li>
       <Hexagon
         href="/over"
-        bgColor="--vtSec-DarkBlue"
-        color="#fff"
+        bgColor="--color-tertiary-80"
+        color="--color-primary"
         text="Over Visual Thinking"
       />
     </li>
     <li>
       <Hexagon
         href="/tekenmethodes"
-        bgColor="--vtYellow"
-        color="#fff"
+        bgColor="--color-quinary"
+        color="--color-primary"
         text="Ontdek de Visual Thinking methodes"
       />
     </li>
@@ -46,16 +46,16 @@
     <li>
       <Hexagon
         href="/kennisclips"
-        bgColor="--vtLightBlue"
-        color="#fff"
+        bgColor="--color-quaternary"
+        color="--color-primary"
         text="Kennisclips"
       />
     </li>
     <li>
       <Hexagon
         href="/minicursussen"
-        bgColor="--vtRed"
-        color="#fff"
+        bgColor="--color-senary"
+        color="--color-primary"
         text="Minicursussen"
       />
     </li>
@@ -73,13 +73,10 @@
   ul {
     --gap: 1rem;
     --size: 10em;
-
     --tx: 0.265;
     --ch: 0.74;
-
     --cc: 2;
     --rc: 6;
-
     display: grid;
     grid-template-columns: repeat(var(--cc), var(--size));
     grid-template-rows: repeat(
@@ -109,21 +106,11 @@
     transform: translateX(calc(var(--size) * var(--tx) * -0.1));
   }
 
-  /* ul li:nth-of-type(1) img {
-    width: 150px;
-    height: auto;
-  } */
-
   ul li:nth-of-type(2) {
     grid-column-start: 2;
     grid-row-start: 3;
     transform: translateX(calc(var(--size) * var(--tx) * 0.1));
   }
-
-  /* ul li:nth-of-type(2) img {
-    width: 50px;
-    height: auto;
-  } */
 
   ul li:nth-of-type(3) {
     transform: translateX(calc(var(--size) * var(--tx)));
@@ -168,9 +155,8 @@
       --ch: 0.725;
     }
   }
-
+  
   /* tablet groot */
-
   @media (width > 44em) {
     ul {
       --gap: 1.4rem;
@@ -241,10 +227,6 @@
     ul {
       --gap: 1rem;
       --size: 14em;
-
-      /* --tx:.55; */
-      /* --ch:.71; */
-
       --cc: 4;
       --rc: 2;
       margin-top: -60vh;
@@ -254,7 +236,6 @@
       grid-column-start: 1;
       grid-row-start: 1;
       --bg: #e0dedc;
-
       transform: translateX(0);
     }
 

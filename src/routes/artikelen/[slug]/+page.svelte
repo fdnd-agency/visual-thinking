@@ -1,12 +1,12 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import {Breadcrumb} from "$lib/index.js";
 
   export let data;
 
   const {title, visual, intro, content} = data.article
 </script>
 
-<Breadcrumb titel="Overzicht" url="/artikelen" bgc="var(--vtDarkBlue)" />
+<Breadcrumb titel="Overzicht" url="/artikelen" bgc="var(--color-tertiary-90)" />
 
 <header>
   <div>
@@ -44,8 +44,8 @@
   }
   header h1 {
     font-size: 2.5rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary-90);
     margin-left: 0em;
     margin-top: 1rem;
     text-wrap: balance;
@@ -59,7 +59,7 @@
     
   }
   header > ul li {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
   }
   header > ul li a {
     text-decoration: none;
@@ -68,9 +68,9 @@
   }
   header p {
     font-size: 1rem;
-    font-family: var(--vtSecondaryFont);
+    font-family: var(--font-family-secondary);
     line-height: 1.5rem;
-    color: var(--vtDarkBlue);
+    color: var(--color-tertiary-90);
     margin:0;
   }
 
@@ -78,23 +78,20 @@
     font-weight: bold;
   }
 
-
-  
-
   /* tablet */
   @media (min-width: 50em) {
     header {
       display:grid;
       grid-template-columns: 20rem 10fr;
       gap:0 2rem;
-      background-color: var(--vtGrey-10);
+      background-color: var(--color-septenary-10);
       padding:2rem 0 0;
       margin: 0 -1rem 2rem;
     }
     header > div {
       padding:0 2rem;
       align-self:flex-end;
-      border-right:1px solid var(--vtGrey);
+      border-right:1px solid var(--color-septenary);
       text-align:right;
       flex-shrink:0;
     }
@@ -104,7 +101,7 @@
     header > div p * {
       font-weight: bold;
       display:block;
-      color: var(--vtDarkBlue)
+      color: var(--color-tertiary-90)
     }
     header h1 {
       align-self:flex-end;

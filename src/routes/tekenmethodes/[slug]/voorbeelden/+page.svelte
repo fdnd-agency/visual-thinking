@@ -1,8 +1,7 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/methodHeader.svelte";
+  import {Breadcrumb, MethodHeader} from "$lib/index.js";
+  
   import { onMount } from "svelte";
-
   export let data;
 
   onMount(() => {
@@ -25,7 +24,7 @@
   });
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--color-quinary)" />
 <MethodHeader {data} />
 
 <section class="images-buttons">
@@ -125,13 +124,13 @@
   }
 
   .icon-button:hover {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
     transition: 0.2s;
   }
 
   .carousel-btn {
     border-radius: 23px;
-    border: 1px solid var(--vtYellow);
+    border: 1px solid var(--color-quinary);
     cursor: pointer;
   }
 
@@ -161,19 +160,18 @@
     font-size: 2.5rem;
     margin-top: 4em;
     margin-bottom: 4em;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary-90);
   }
 
   /* Scrollbar */
   #scrollbar::-webkit-scrollbar {
     width: 10px;
-    /* height: 7px; */
-    background-color: var(--vtGrey-50);
+    background-color: var(--color-septenary-50);
   }
 
   #scrollbar::-webkit-scrollbar-thumb {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
     background-image: -webkit-linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.2) 25%,

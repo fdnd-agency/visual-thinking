@@ -1,8 +1,6 @@
 <script>
-import KnowledgeClips from "$lib/organisms/knowledgeClips.svelte";
-
+import {KnowledgeClips} from "$lib/index.js";
 export let data
 </script>
-
 
 <KnowledgeClips data={data}/>

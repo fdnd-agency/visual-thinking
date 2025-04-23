@@ -1,13 +1,9 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/methodHeader.svelte";
-  import TagsPlan from "$lib/molecules/tagsPlan.svelte";
-  import Steps from "$lib/molecules/steps.svelte";
-
+  import {Breadcrumb, MethodHeader, TagsPlan, Steps} from "$lib/index.js";
   export let data;
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" bgc="var(--color-quinary)" />
 
 <MethodHeader {data} />
 
@@ -40,6 +36,5 @@
       grid-template-columns: 1fr 1fr;
       max-width: 80%;
     }
-
   }
 </style>

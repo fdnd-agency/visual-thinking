@@ -28,7 +28,6 @@
     {/each}
 </div>
   
-  
 <style>
   .accordion-item {
     margin-bottom: 5px;
@@ -37,25 +36,25 @@
   }
 
   .step-title {
-    font-family: var(--vtPrimaryFont);
-    background-color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    background-color: var(--color-tertiary);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
-    color: var(--vtWhite);
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);;
+    color: var(--color-primary);
     padding: 10px;
     cursor: pointer;
     user-select: none;
   }
 
   .step-title:hover {
-    background-color: var(--vtYellow-80);
-    color: black;
+    background-color: var(--color-quinary-80);
+    color: var(--font-color);
   }
 
   .accordion-content {
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-septenary);
     border-radius: 8px;
     margin-top: 5px;
   }
