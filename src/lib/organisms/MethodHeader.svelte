@@ -1,87 +1,107 @@
 <script>
-  export let title;
-  export let slug;
-  export let pdf;
+  export let data;
+  const method = data.methods[0]
+  console.log(data);
 </script>
 
 <header>
-  <h1>{title}</h1>
-  <nav>
+  <h1>{method.title}</h1>
+  <section>
     <ul>
-      <li>
-        <a href="/tekenmethodes/{slug}">Beschrijving </a>
-      </li>
-      <li>
-        <a href="/tekenmethodes/{slug}/stappenplan">Stappenplan </a>
-      </li>
-      <li>
-        <a href="/tekenmethodes/{slug}/voorbeelden">Voorbeelden </a>
-      </li>
-    </ul>
-    {#if pdf}
-    <a
-      href={pdf.url}
-      download="{slug}.pdf"
-      target="blank"
-      class="vt-standard-button">
-      Download PDF
-    </a>
-  {/if}
-  </nav>
+        <li>
+          <a href="/tekenmethodes/{method.slug}">Beschrijving
+          </a>
+        </li>
+        <li>
+          <a href="/tekenmethodes/{method.slug}/stappenplan">Stappenplan
+          </a>
+        </li>
+        <li>
+          <a href="/tekenmethodes/{method.slug}/voorbeelden">Voorbeelden
+          </a>
+        </li> 
 
+        {#if method.pdf}
+        <a href="{method.pdf.url}" download="{method.slug}.pdf" target="blank" class="vt-standard-button">Download PDF</a>
+        {/if}
+    </ul>
+  </section>
 </header>
 
 <style>
   header {
-    margin: 0 -1rem;
-    margin-top: -0.3rem;
-    background-color: var(--vtGrey-10);
+    margin:0 -1rem;
+    margin-top: -0.3em;
+    background-color: var(--color-septenary-20);
   }
 
   h1 {
     font-size: 1.7rem;
     padding-top: 1rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     margin: 0 1rem;
   }
 
   ul {
+    transform: translateY(0);
     justify-content: flex-start;
     overflow-y: hidden;
-    padding: 0;
+    transition: transform 0.3s ease;
+    padding:0;
     margin: 0 1rem;
-    gap: 2rem;
+    gap:1.5rem;
   }
 
-  ul li a {
+
+  a {
     text-decoration: none;
     list-style: none;
     cursor: pointer;
-    color: var(--vtSec-DarkBlue);
+    color: var(--color-tertiary-80);
   }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav ul {
+  section ul {
     display: flex;
     list-style: none;
     align-items: center;
-    align-self: center;
   }
 
-  nav li {
+  section li {
+    padding-right: 10px;
     text-transform: uppercase;
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
   }
 
-  @media (min-width: 31rem) {
+  li a[href^="/tekenmethodes/{method.slug}"] {
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.5rem;
+  }
+
+  .vt-standard-button {
+	  color: white;
+	  font-family: var(--font-family-primary);
+	  background-color: var(--color-tertiary);
+    padding: 0.5em 0.5em;
+	  border-radius: 2em;
+	  margin-left: 1em;
+    font-size: 1em;
+	}
+  
+	:hover.vt-standard-button {
+	  color: var(--color-tertiary);
+	  background-color: hsl(0, 0%, 74%);
+	}
+  
+  @media (min-width: 31em) {
     h1 {
       padding-top: 2rem;
+    }
+
+    ul {
+      transform: translateY(0);
     }
 
     header {
@@ -89,7 +109,7 @@
     }
   }
 
-  @media (min-width: 45rem) {
+  @media (min-width: 45em) {
     h1 {
       font-size: 3.157rem;
       text-align: center;
@@ -98,29 +118,27 @@
     ul {
       justify-content: center;
     }
+
   }
 
-  @media (min-width: 80rem) {
+  @media (min-width: 74em) {
     header {
-      display: flex;
+      display:flex;
       flex-direction: row;
       align-items: center;
     }
 
-    nav {
-      margin-top: 0.75rem;
-    }
-
-    nav ul {
+    section ul {
       display: flex;
       list-style: none;
       justify-content: center;
+      margin-top: 0.75rem;
     }
 
     h1 {
       margin-top: auto;
       text-align: start;
-      max-width: 40rem;
+      max-width: 800px;
       font-size: 3.157rem;
     }
   }
