@@ -1,11 +1,9 @@
 <script>
-  import { slide } from "svelte/transition";
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-
+  import {Breadcrumb} from "$lib/index.js";
   export let data;
 </script>
 
-<Breadcrumb titel="Minicursussen" backgroundColor="var(--vtRed)" />
+<Breadcrumb titel="Minicursussen" bgc="var(--color-senary)" />
 
 <div>
   <header>
@@ -50,7 +48,18 @@
     line-height: 1.5;
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid var(--vtDarkBlue);
+    border: 1px solid var(--color-tertiary-90);
+  }
+
+  .slide-content {
+    text-align: left;
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    margin: 1rem auto; /* Center image */
+    max-width: 100%;
   }
 
   .slide-content {
