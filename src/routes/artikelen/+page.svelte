@@ -1,5 +1,5 @@
 <script>
-  import {Articles, Breadcrumb, Introduction} from "$lib/index.js";
+  import { Articles, Breadcrumb, Introduction } from "$lib/index.js";
 
   export let data;
 
