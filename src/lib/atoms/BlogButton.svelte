@@ -13,17 +13,17 @@
 
   a {
     font-size: 14px;
-    background-color: var(--vtDarkBlue);
-    color: var(--vtWhite);
-    font-family: var(--vtPrimaryFont);
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    font-family: var(--font-family-primary);
     display: inline-block; 
-    padding: 10px 20px; 
+    padding: 10px 20px;
     text-decoration: none; 
     border-radius: 5px;
     transition: background-color 0.3s ease; 
   }
 
   a:hover {
-    background-color: var(--vtRed);
+    background-color: var(--color-senary);
   }
 </style>
