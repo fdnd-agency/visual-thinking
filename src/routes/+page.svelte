@@ -1,5 +1,5 @@
 <script>
-  import {Introduction, Homepage} from "$lib/index.js";
+  import { Introduction, Homepage } from "$lib/index.js";
 
   export let data
 
