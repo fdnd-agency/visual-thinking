@@ -1,5 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte"
+  import { Breadcrumb } from "$lib/index.js"
   import { onMount } from "svelte";
 
   // Voer code uit na het renderen van de component
@@ -91,16 +91,16 @@
   });
 </script>
 
-<Breadcrumb titel= "Tekenruimte" backgroundColor="var(--vtGrey)" />
+<Breadcrumb titel= "Tekenruimte" bgc="var(--color-septenary)" />
 
-<header class="screenreader-only">
+<header class="sr-only">
   <h1>Teken hier!</h1>
   <p class="disclaimer"><span class="attention">Let op:</span> deze functie is momenteel in een experimentele fase</p>
 </header>
     
 <section>
   <header id="toolbar">
-    <h2 class="screenreader-only">Tekentools</h2>
+    <h2 class="sr-only">Tekentools</h2>
 
     <form>
       <label for="stroke">Kleur</label>
@@ -134,11 +134,11 @@
   }
 
   p span.attention {
-    color: var(--vtYellow);
+    color: var(--color-quinary);
   }
 
   section {
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
     justify-items: center;
     width: 100vw;
     margin:0 -1rem;
@@ -147,7 +147,7 @@
   section header {
     font-weight: 800;
     padding: .25em 1rem;
-    background-color: var(--vtGrey-50);
+    background-color: var(--color-septenary-60);
     height:3rem;
   }
 
@@ -160,11 +160,11 @@
 
   .drawing-board {
     border: none;
-    background-color: var(--vtGrey-10);
-    cursor: pointer;
+    background-color: var(--color-septenary-40);
     box-shadow: inset 0 0 15px 3px rgba(0,0,0,0.1);
     height: calc(100vh - 3rem);
-    cursor: url('/images/pencil.svg'), auto;
+    cursor: pointer;
+    cursor: url('/images/pencil-cursor.svg'), auto;
   }
 
   label {
@@ -192,14 +192,14 @@
     padding: 4px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    color: var(--vtWhite);
-    background:var(--vtDarkBlue);
+    color: var(--color-primary);
+    background:var(--color-tertiary);
     font-family: inherit;
     font-weight: bold;
   }
 
   button:hover {
-    color: var(--vtDarkBlue);
-    background:var(--vtGrey-10)
+    color: var(--color-tertiary);
+    background:var(--color-septenary-40)
   }  
 </style>
