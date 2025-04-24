@@ -1,13 +1,17 @@
 <script>
   import { page } from "$app/stores";
+  import { Icons } from "$lib/index.js";
 
+  const logoSize = 80;
   // Used for the active state for the menu links
   let activeRoute;
   $: activeRoute = $page.route.id; // 
 </script>
 
 <header>
-  <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Home" /></a>
+  <a href="/" class="logo">
+    <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
+  </a>
 
   <nav>
     <ul>
@@ -48,10 +52,6 @@
     background: none;
     outline: none;
     scale: 1.1
-  }
-
-  a.logo img {
-    width: 3rem;
   }
 
   nav {
@@ -146,10 +146,6 @@
       z-index: 1;
       left: calc(50% - 2rem);
       top: .5rem;
-    }
-
-    a.logo img {
-      width: 4rem;
     }
 
     nav {

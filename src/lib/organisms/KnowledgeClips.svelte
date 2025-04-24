@@ -1,6 +1,7 @@
 <script>
-  import { Breadcrumb } from "$lib/index.js";
+  import { Breadcrumb, Icons } from "$lib/index.js";
 
+  const iconSize = 50;
   let index = 0;
 
   export let clips;
@@ -20,11 +21,7 @@
   <h1 class="screenreader-only">Alle kennisclips</h1>
   <section class="clips-container">
     <button on:click={previousButton}>
-      <img
-        class="left-arrow"
-        src="./images/arrows.svg"
-        alt="Naar vorige video"
-      />
+      <Icons name="arrowLeft" width={iconSize} height={iconSize}/>
     </button>
 
     <iframe
@@ -34,11 +31,7 @@
     ></iframe>
 
     <button on:click={nextButton}>
-      <img
-        class="right-arrow"
-        src="./images/arrows.svg"
-        alt="Naar volgende video"
-      />
+      <Icons name="arrowRight" width={iconSize} height={iconSize}/>
     </button>
   </section>
 
@@ -84,17 +77,7 @@
     border: transparent;
     padding: 2rem;
   }
-
-  .right-arrow {
-    cursor: pointer;
-    border: none;
-  }
-
-  .left-arrow {
-    cursor: pointer;
-    transform: rotate(180deg);
-  }
-
+  
   /* responsive clips */
   iframe {
     aspect-ratio: 16 / 9;

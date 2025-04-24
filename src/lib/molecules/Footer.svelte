@@ -1,32 +1,34 @@
+<script>
+  import { Icons } from "$lib/index.js";
+
+  const iconSize = 26;
+  const logoSize = 80;
+</script>
+
 <footer>
   <nav>
-    <a href="/">
-      <img
-        src="/images/visual-thinking-hbo-logo-footer.svg"
-        class="logo-footer"
-        alt="Home"
-      />
+    <a href="/" class="footer-content">
+      <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
+      <h1>Visual Thinking in het hbo</h1>
     </a>
 
     <div class="socials">
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <img src="/images/instagram.svg" alt="Instagram" class="icon" />
+            <Icons name="instagram" width={iconSize} height={iconSize}/>
             <span>Instagram</span>
           </a>
         </li>
         <li>
-          <a
-            href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa"
-          >
-            <img src="/images/youtube.svg" alt="YouTube" class="icon" />
+          <a href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
+            <Icons name="youtube" width={iconSize} height={iconSize}/>
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <img src="/images/linkedin.svg" alt="LinkedIn" class="icon" />
+            <Icons name="linkedin" width={iconSize} height={iconSize}/>
             <span>LinkedIn</span>
           </a>
         </li>
@@ -85,14 +87,6 @@
     font-size: 0.7rem;
   }
 
-  .icon {
-    width: 1.3rem;
-    height: 1.3rem;
-    margin: 0 2px 0 0;
-  }
-
-
-
   @media (max-width: 21rem) {
 
     footer nav {
@@ -114,10 +108,6 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    .logo-footer {
-      height: 3rem;
-    }
   }
 
   @media (min-width: 44rem) {
@@ -126,12 +116,6 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
-    }
-
-
-    .icon {
-      width: 1.5rem;
-      height: 1.5rem;
     }
   }
 
@@ -144,9 +128,6 @@
   @media (min-width: 50rem) {
     footer nav {
       padding: 1rem 0 2rem 5rem;
-    }
-    .logo-footer {
-      height: 5.7rem;
     }
   }
 </style>
