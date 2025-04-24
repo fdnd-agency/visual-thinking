@@ -1,7 +1,7 @@
 # Handover (23/09/24 - 31/01/25)
 
 ## Wat is de huidige status van het project?
-De website is als goed als af. Alle pagina's die nodig zijn staan live. Er zijn nog een aantal bugs aanwezig en sommige pagina's moeten nog een makeover krijgen (minicursus pagina's)
+De website is als goed als af. Alle pagina's die nodig zijn staan live. Er zijn nog een aantal bugs aanwezig en sommige pagina's moeten nog een makeover krijgen (minicurssus pagina's)
 
 ## Wat zijn de belangrijkste features die al werken?
 Bijna de hele website is af

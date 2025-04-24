@@ -1,6 +1,6 @@
 # Contributing
 ## Pull request:
-Zorg ervoor dat de pullrequest wordt gemaakt in de layout dat automatisch is gegenereerd bij het opstellen van een pullrequest.
+Zorg ervoor dat de pullrequest word gemaakt in de layout dat automatisch is gegenereerd bij het opstellen van een pullrequest.
 
 ## Code conventions:
 Alle code conventies zijn ook te vinden in het [projectboard](https://github.com/orgs/fdnd-agency/projects/7/views/3) in de kolom 'Other'.
