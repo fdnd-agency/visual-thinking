@@ -1,5 +1,5 @@
 <script>
-import KnowledgeClips from "$lib/organisms/KnowledgeClips.svelte";
+import { KnowledgeClips } from "$lib/index.js";
 
 export let data
 const clips = data.categories;

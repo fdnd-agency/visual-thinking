@@ -1,9 +1,5 @@
 <script>
-  import IconAuthor from "../atoms/icons/IconAuthor.svelte";
-  import IconCategories from "../atoms/icons/IconCategories.svelte";
-  import IconDuration from "../atoms/icons/IconDuration.svelte";
-  import IconMaterials from "../atoms/icons/IconMaterials.svelte";
-
+  import { IconAuthor, IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
   export let categories;
   export let materials;
   export let duration;

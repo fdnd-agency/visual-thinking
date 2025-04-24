@@ -1,5 +1,5 @@
 <script>
-  import Hexagon from "$lib/atoms/Hexagon.svelte";
+  import { Hexagon } from "$lib/index.js";
 
   export let miniCourses;
 </script>
