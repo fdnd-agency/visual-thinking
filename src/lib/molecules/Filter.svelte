@@ -1,23 +1,21 @@
 <script>
   import { page } from "$app/stores";
 
-  export let categories;
+  export let data;
 
-  // Read all categorie query parameters from the URL and store them in an array
   let filter = $page.url.searchParams.getAll("categorie") || [];
-  $: isLoading = false;
+  let isLoading = false;
 
   function applyFilter() {
     return function (event) {
       event.preventDefault();
       isLoading = true; // Start loading animation
       const formData = new FormData(event.target);
-      const categorie = formData.getAll("categorie"); // Get all checked categories
+      const categorie = formData.getAll("categorie");
       const url = new URL(window.location);
-      url.searchParams.delete("categorie"); // Remove all categorie query parameters from previous URL
-      categorie.forEach((slug) => url.searchParams.append("categorie", slug)); // Add all checked categories to create new URL
+      url.searchParams.delete("categorie");
+      categorie.forEach((slug) => url.searchParams.append("categorie", slug));
 
-      // Redirect to new URL, giving the loading spinner time to show
       setTimeout(() => {
         window.location = url;
       }, 1000);
@@ -26,10 +24,10 @@
 </script>
 
 <section>
-  <h2>Filter op categorie</h2>
+  <h2 id="methodes">Filter op categorie</h2>
 
   <form method="GET" action="/tekenmethodes#methodes" on:submit={applyFilter()}>
-    {#each categories as category}
+    {#each data.categories as category}
       <label for={category.slug}>
         <input
           type="checkbox"
@@ -51,15 +49,12 @@
 </section>
 
 <style>
-  section {
-    max-width: var(--grid-max-width);
-    margin: auto;
-    margin-bottom: 2rem;
+  h2 {
+    font-size: 1em;
   }
 
-  h2 {
-    font-size: 1rem;
-    padding: 1rem;
+  #methodes {
+    padding: 20px;
     background-color: var(--vtGrey-5);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -68,34 +63,32 @@
   section form {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 10px;
     align-items: center;
   }
 
   label {
     display: flex;
     align-items: center;
-    margin: 0.25rem 0;
-    padding: 0.3rem;
-    border-bottom: 0.3rem solid transparent;
+    margin: 5px 0;
+    padding: 0.3em;
+    border-bottom: 0.3em solid transparent;
   }
 
-  label:hover, 
-  label:focus-visible, 
-  label:active {
+  label:hover, label:focus-visible, label:active {
     background: var(--vtGrey-10);
-    border-bottom: 0.3rem solid var(--vtYellow);
+    border-bottom: 0.3em solid #feb51e;
     transition: 0.05s;
   }
 
   section input[type="checkbox"] {
-    margin-right: 0.4rem;
+    margin-right: 8px;
   }
 
   section button {
     background-color: var(--vtYellow);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -108,10 +101,14 @@
     border: 4px solid var(--vtGrey-50);
     border-top: 4px solid var(--vtYellow);
     border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
+    width: 20px;
+    height: 20px;
     animation: spin 1s linear infinite;
   }
+
+  /* .filter-focus-hover {
+    border-bottom: 0.3em solid red;
+  } */
 
   @keyframes spin {
     0% {

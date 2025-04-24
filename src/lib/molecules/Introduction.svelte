@@ -1,49 +1,31 @@
 <script>
-  export let page;
+  export let data;
 
-  const {title, content} = page;
-
-  // Give the ability to pass classes to children
-  let className = "";
-  export { className as class };
+  const {title, content} = data
 </script>
 
-<section class={className}>
+<header>
   <h1>{title}</h1>
-
+    
   {@html content.html}
-</section>
+</header>
 
 <style>
-  section {
-    max-width: var(--text-max-width);
-    margin: 0 auto 2rem auto;
+  header {
+      max-width: 40rem;
+      margin: 0 auto 2rem;
   }
 
   h1 {
-    font-size: 1.7rem;
+      font-size: 1.7rem;
   }
-  @media screen and (min-width: 36rem) {
-    section {
+  @media screen and (min-width: 36em) {
+      header {
           width: 75%;
       }
       h1 {
           font-size: 3.157rem;
           text-align: center;
       }
-  }
-
-  @media screen and (min-width: 70rem) {
-      /* Hexagons positionering */
-    .hexagons {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-    }
-
-    .minicourse {
-      top: 1.2rem; /* Breadcrum height */
-    }
   }
 </style>
