@@ -1,12 +1,12 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
 
   export let data;
 
   const {title, visual, intro, content} = data.article
 </script>
 
-<Breadcrumb titel="Overzicht" url="/artikelen" bgc="var(--vtDarkBlue)" />
+<Breadcrumb titel="Overzicht" url="/artikelen" backgroundColor="var(--vtDarkBlue)" />
 
 <header>
   <div>

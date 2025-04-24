@@ -1,9 +1,9 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
 
   let index = 0;
 
-  export let data;
+  export let clips;
 
   const nextButton = () => {
     index = index + 1;
@@ -14,41 +14,39 @@
   };
 </script>
 
-<Breadcrumb titel="Kennisclips" bgc="var(--vtSec-LightBlue)" />
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--vtSec-LightBlue)" />
 
-<section>
-  <h1 class="sr-only">Alle kennisclips</h1>
-  <div class="clips-container">
-    <button on:click={previousButton} aria-label="Vorige Video">
+<main>
+  <h1 class="screenreader-only">Alle kennisclips</h1>
+  <section class="clips-container">
+    <button on:click={previousButton}>
       <img
         class="left-arrow"
         src="./images/arrows.svg"
-        alt="Knop met pijl naar vorige video"
-        loading="lazy"
+        alt="Naar vorige video"
       />
     </button>
 
     <iframe
       class="youtubelink"
       title="kennisclips"
-      src={data.categories[index].youTubeLink}
+      src={clips[index].youTubeLink}
     ></iframe>
 
-    <button on:click={nextButton} aria-label="Volgende Video">
+    <button on:click={nextButton}>
       <img
         class="right-arrow"
         src="./images/arrows.svg"
-        alt="Knop met pijl naar volgende video"
-        loading="lazy"
+        alt="Naar volgende video"
       />
     </button>
-  </div>
+  </section>
 
-  <div class="text-container">
-    <h2>{data.categories[index].title}</h2>
-    <p>{@html data.categories[index].content.html}</p>
-  </div>
-</section>
+  <section class="text-container">
+    <h2>{clips[index].title}</h2>
+    <p>{@html clips[index].content.html}</p>
+  </section>
+</main>
 
 <style>
 
@@ -67,7 +65,7 @@
     margin: 0 auto;
     max-width: 700px;
     text-transform: none;
-    padding-bottom: 3em;
+    padding-bottom: 3rem;
   }
 
   /* clips */
@@ -75,7 +73,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3.3em 0;
+    padding: 3.3rem 0;
     margin:0 -1rem;
     background-color: var(--vtGrey-10);
   }
@@ -84,7 +82,7 @@
   button {
     background-color: transparent;
     border: transparent;
-    padding: 2em;
+    padding: 2rem;
   }
 
   .right-arrow {
@@ -106,10 +104,10 @@
   }
 
   /* desktop */
-  @media screen and (min-width: 1120px) {
+  @media screen and (min-width: 56rem) {
     .youtubelink {
-      width: 884px;
-      height: 497px;
+      width: 44.2rem;
+      height: 24.85rem;
     }
   }
 </style>

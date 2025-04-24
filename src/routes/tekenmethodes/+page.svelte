@@ -1,17 +1,17 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import Introduction from "$lib/molecules/introduction.svelte";
-  import Filter from "$lib/molecules/filter.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import Introduction from "$lib/molecules/Introduction.svelte";
+  import Filter from "$lib/molecules/Filter.svelte";
 
-  import Methods from "$lib/organisms/methods.svelte";
+  import Methods from "$lib/organisms/Methods.svelte";
 
   export let data;
 
-  const {page, methods} = data;
+  const {page, methods, categories} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" bgc="var(--vtYellow)" />
-<Introduction data={page}/>
+<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--vtYellow)" />
+<Introduction {page} />
 
-<Filter {data} />
-<Methods data={methods}/>
+<Filter {categories} />
+<Methods {methods} />

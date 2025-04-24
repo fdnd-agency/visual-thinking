@@ -1,11 +1,11 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import Introduction from "$lib/molecules/introduction.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import Introduction from "$lib/molecules/Introduction.svelte";
 
   export let data;
 
   const {page} = data
 </script>
 
-<Breadcrumb titel="Over" bgc="var(--vtSec-DarkBlue)" />
-<Introduction data={page}/>
+<Breadcrumb titel="Over" backgroundColor="var(--vtSec-DarkBlue)" />
+<Introduction {page}/>

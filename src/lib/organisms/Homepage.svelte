@@ -3,10 +3,11 @@
 
 </script>
 <section>
-  <h2 class="sr-only">Visual Thinking Onderwerpen</h2>
+  <h2 class="screenreader-only">Visual Thinking Onderwerpen</h2>
   <ul>
     <li>
       <Hexagon
+        class="hide-on-mobile"
         img={{
           src: "/images/man.svg",
           alt: "Illustratie van een denkend persoon"
@@ -15,6 +16,7 @@
     </li>
     <li>
       <Hexagon
+        class="hide-on-mobile"
         img={{
           src: "/images/pencil.svg",
           alt: "Illustratie van een potlood"
@@ -24,16 +26,16 @@
     <li>
       <Hexagon
         href="/over"
-        bgColor="--vtSec-DarkBlue"
-        color="#fff"
+        backgroundColor="--vtSec-DarkBlue"
+        color="--vtWhite"
         text="Over Visual Thinking"
       />
     </li>
     <li>
       <Hexagon
         href="/tekenmethodes"
-        bgColor="--vtYellow"
-        color="#fff"
+        backgroundColor="--vtYellow"
+        color="--vtWhite"
         text="Ontdek de Visual Thinking methodes"
       />
     </li>
@@ -45,18 +47,18 @@
     </li>
     <li>
       <Hexagon
-        href="/kennisclips"
-        bgColor="--vtLightBlue"
-        color="#fff"
-        text="Kennisclips"
+        href="/minicursussen"
+        backgroundColor="--vtRed"
+        color="--vtWhite"
+        text="Minicursussen"
       />
     </li>
     <li>
       <Hexagon
-        href="/minicursussen"
-        bgColor="--vtRed"
-        color="#fff"
-        text="Minicursussen"
+        href="/kennisclips"
+        backgroundColor="--vtLightBlue"
+        color="--vtWhite"
+        text="Kennisclips"
       />
     </li>
     <li>
@@ -72,19 +74,19 @@
 <style>
   ul {
     --gap: 1rem;
-    --size: 10em;
+    --size: 10rem;
 
-    --tx: 0.265;
-    --ch: 0.74;
+    --translateX: 0.265;
+    --column-height: 0.74;
 
-    --cc: 2;
-    --rc: 6;
+    --column-count: 2;
+    --row-column: 6;
 
     display: grid;
-    grid-template-columns: repeat(var(--cc), var(--size));
+    grid-template-columns: repeat(var(--column-count), var(--size));
     grid-template-rows: repeat(
-      var(--rc),
-      calc(var(--size) * var(--ch) + var(--gap) * 1)
+      var(--row-column),
+      calc(var(--size) * var(--column-height) + var(--gap) * 1)
     );
     justify-content: center;
     list-style: none;
@@ -102,92 +104,79 @@
   }
 
   /* mobile */
-
   ul li:nth-of-type(1) {
     grid-column-start: 1;
     grid-row-start: 2;
-    transform: translateX(calc(var(--size) * var(--tx) * -0.1));
+    transform: translateX(calc(var(--size) * var(--translateX) * -0.1));
   }
-
-  /* ul li:nth-of-type(1) img {
-    width: 150px;
-    height: auto;
-  } */
 
   ul li:nth-of-type(2) {
     grid-column-start: 2;
     grid-row-start: 3;
-    transform: translateX(calc(var(--size) * var(--tx) * 0.1));
+    transform: translateX(calc(var(--size) * var(--translateX) * 0.1));
   }
 
-  /* ul li:nth-of-type(2) img {
-    width: 50px;
-    height: auto;
-  } */
-
   ul li:nth-of-type(3) {
-    transform: translateX(calc(var(--size) * var(--tx)));
+    transform: translateX(calc(var(--size) * var(--translateX)));
   }
 
   ul li:nth-of-type(4) {
     grid-column-start: 2;
     grid-row-start: 2;
 
-    transform: translateX(calc(var(--size) * var(--tx) * -1));
+    transform: translateX(calc(var(--size) * var(--translateX) * -1));
   }
 
   ul li:nth-of-type(5) {
     grid-column-start: 1;
     grid-row-start: 5;
-    transform: translateX(calc(var(--size) * var(--tx)));
+    transform: translateX(calc(var(--size) * var(--translateX)));
   }
 
   ul li:nth-of-type(6) {
     grid-column-start: 2;
     grid-row-start: 4;
-    transform: translateX(calc(var(--size) * var(--tx) * -1));
+    transform: translateX(calc(var(--size) * var(--translateX) * -1));
   }
 
   ul li:nth-of-type(7) {
     grid-column-start: 1;
     grid-row-start: 3;
-    transform: translateX(calc(var(--size) * var(--tx)));
+    transform: translateX(calc(var(--size) * var(--translateX)));
   }
 
   ul li:nth-of-type(8) {
     grid-column-start: 2;
     grid-row-start: 6;
-    transform: translateX(calc(var(--size) * var(--tx) * -1));
+    transform: translateX(calc(var(--size) * var(--translateX) * -1));
   }
 
   /* tablet mini */
-  @media (width > 40em) {
+  @media (width > 40rem) {
     ul {
       --gap: 1.2rem;
-      --tx: 0.275;
-      --ch: 0.725;
+      --translateX: 0.275;
+      --column-height: 0.725;
     }
   }
 
   /* tablet groot */
 
-  @media (width > 44em) {
+  @media (width > 44rem) {
     ul {
       --gap: 1.4rem;
-      --size: 12em;
+      --size: 12rem;
 
-      --tx: 0.55;
-      --ch: 0.71;
+      --translateX: 0.55;
+      --column-height: 0.71;
 
-      --cc: 3;
-      --rc: 4;
+      --column-count: 3;
+      --row-column: 4;
     }
 
     ul li:nth-of-type(1) {
       grid-column-start: 1;
       grid-row-start: 3;
-      --bg: #e0dedc;
-
       transform: translateX(0);
     }
 
@@ -195,7 +184,6 @@
       grid-column-start: 3;
       grid-row-start: 3;
       transform: translateX(0);
-      --bg: #e0dedc;
     }
 
     ul li:nth-of-type(3) {
@@ -207,109 +195,93 @@
     ul li:nth-of-type(4) {
       grid-column-start: 2;
       grid-row-start: 3;
-
       transform: translateX(0);
     }
 
     ul li:nth-of-type(5) {
       grid-column-start: 1;
       grid-row-start: 4;
-      transform: translateX(calc(var(--size) * var(--tx)));
+      transform: translateX(calc(var(--size) * var(--translateX)));
     }
 
     ul li:nth-of-type(6) {
       grid-column-start: 1;
       grid-row-start: 2;
-      transform: translateX(calc(var(--size) * var(--tx)));
+      transform: translateX(calc(var(--size) * var(--translateX)));
     }
 
     ul li:nth-of-type(7) {
       grid-column-start: 3;
       grid-row-start: 2;
-      transform: translateX(calc(var(--size) * var(--tx) * -1));
+      transform: translateX(calc(var(--size) * var(--translateX) * -1));
     }
 
     ul li:nth-of-type(8) {
       grid-column-start: 3;
       grid-row-start: 4;
-      transform: translateX(calc(var(--size) * var(--tx) * -1));
+      transform: translateX(calc(var(--size) * var(--translateX) * -1));
     }
   }
 
-  /* desktop */
-  @media (width > 70em) {
-    ul {
-      --gap: 1rem;
-      --size: 14em;
-
-      /* --tx:.55; */
-      /* --ch:.71; */
-
-      --cc: 4;
-      --rc: 2;
-      margin-top: -60vh;
-    }
-
-    ul li:nth-of-type(1) {
-      grid-column-start: 1;
-      grid-row-start: 1;
-      --bg: #e0dedc;
-
-      transform: translateX(0);
-    }
-
-    ul li:nth-of-type(2) {
-      grid-column-start: 4;
-      grid-row-start: 1;
-      transform: translateX(0);
-      --bg: #e0dedc;
-    }
-
-    ul li:nth-of-type(3) {
-      grid-column-start: 1;
-      grid-row-start: 2;
-      transform: translateX(calc(var(--size) * var(--tx)));
-    }
-
-    ul li:nth-of-type(4) {
-      grid-column-start: 4;
-      grid-row-start: 2;
-
-      transform: translateX(calc(var(--size) * var(--tx) * -1));
-    }
-
-    ul li:nth-of-type(5) {
-      grid-column-start: 1;
-      grid-row-start: 3;
-      transform: translateX(0);
-    }
-
-    ul li:nth-of-type(6) {
-      grid-column-start: 3;
-      grid-row-start: 3;
-      transform: translateX(0);
-    }
-
-    ul li:nth-of-type(7) {
-      grid-column-start: 2;
-      grid-row-start: 3;
-      transform: translateX(0);
-    }
-
-    ul li:nth-of-type(8) {
-      grid-column-start: 4;
-      grid-row-start: 3;
-      transform: translateX(0);
-    }
-  }
-
-  @media (width > 68em) {
+  /* Desktop */
+  @media (width > 70rem) {
     ul {
       --gap: 1.3rem;
-      --size: 13em;
-      --tx: 0.55;
-      --ch: 0.71;
-      /* --rc:2; */
+      --size: 13rem;
+      
+      --column-count: 4;
+      --row-column: 2;
+      --translateX: 0.55;
+      --column-height: 0.71;
+    }
+
+    ul li:nth-of-type(1) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(2) {
+      grid-column-start: 4;
+      grid-row-start: 1;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(3) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      transform: translateX(calc(var(--size) * var(--translateX)));
+    }
+
+    ul li:nth-of-type(4) {
+      grid-column-start: 4;
+      grid-row-start: 2;
+
+      transform: translateX(calc(var(--size) * var(--translateX) * -1));
+    }
+
+    ul li:nth-of-type(5) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(7) {
+      grid-column-start: 3;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(6) {
+      grid-column-start: 2;
+      grid-row-start: 3;
+      transform: translateX(0);
+    }
+
+    ul li:nth-of-type(8) {
+      grid-column-start: 4;
+      grid-row-start: 3;
+      transform: translateX(0);
     }
   }
 </style>
