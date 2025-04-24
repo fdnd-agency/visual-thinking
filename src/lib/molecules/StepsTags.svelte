@@ -69,9 +69,9 @@
   }
 
   p {
-    background-color: var(--vtYellow-80);
-    color: var(--vtDarkBlue);
-    font-family: var(--vtPrimaryFont);
+    background-color: var(--color-quinary-80);
+    color: var(--color-tertiary);
+    font-family: var(--font-family-primary);
     font-size: 0.9rem;
     font-weight: 600;
     padding: 0.1rem 0.4rem;

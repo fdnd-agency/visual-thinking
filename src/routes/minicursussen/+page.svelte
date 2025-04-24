@@ -5,7 +5,7 @@
   const {page, miniCourses} = data;
 </script>
 
-<Breadcrumb titel="Minicursussen" backgroundColor="var(--vtRed)" />
+<Breadcrumb titel="Minicursussen" backgroundColor="var(--color-senary)" />
 
 <div class="hexagons minicourse">
   <Introduction {page} class="hexagons minicourse"/>

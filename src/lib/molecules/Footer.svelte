@@ -40,8 +40,8 @@
 
 <style>
   footer nav {
-    background-color: var(--vtGrey-10);
-    font-family: var(--vtPrimaryFont);
+    background-color: var(--color-septenary-40);
+    font-family: var(--font-family-primary);
     text-align: center;
     padding: 1rem 0 2rem 1rem;
   }
@@ -72,7 +72,7 @@
   div a {
     display: flex;
     text-decoration: none;
-    color: var(--vtDarkBlue);
+    color: var(--color-tertiary);
     align-items: center;
   }
 

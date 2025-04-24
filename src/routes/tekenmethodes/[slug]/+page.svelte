@@ -9,7 +9,7 @@
 <Breadcrumb
   titel="Overzicht"
   url="/tekenmethodes"
-  backgroundColor="var(--vtYellow)"
+  backgroundColor="var(--color-quinary)"
 />
 
 <MethodHeader {title} {slug} {pdf} />
@@ -35,7 +35,7 @@
   }
 
   section img {
-    border: 1px solid var(--vtDarkBlue);
+    border: 1px solid var(--color-tertiary);
   }
 
   p {

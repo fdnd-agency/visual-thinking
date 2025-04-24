@@ -6,7 +6,7 @@
   const { steps, categories, material, duration, title, slug, pdf } = data.methods[0];
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--color-quinary)" />
 
 <MethodHeader {title} {slug} {pdf} />
 
