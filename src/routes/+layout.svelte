@@ -1,6 +1,6 @@
 <script>
-    import Header from "$lib/molecules/header.svelte";
-    import Footer from "$lib/molecules/footer.svelte";
+    import Header from "$lib/molecules/Header.svelte";
+    import Footer from "$lib/molecules/Footer.svelte";
     
 </script>
 
