@@ -27,7 +27,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<<<<<<< HEAD
 ![Schermafbeelding 2025-01-22 143012](https://github.com/user-attachments/assets/8d685648-7539-4955-858c-a23bd77eccdc)
+=======
+
+![Page screenshot](https://github.com/user-attachments/assets/f7977b15-b28b-4f85-ae8f-d94299fcb297)
+>>>>>>> parent of 9b98ea6 (Update README.md (changed screenshot))
 
 A website made for Visual Thinking in het HBO: a platform housing articles and methods created by Charley Muhren to bring visual thinking into the classroom. For students and teachers alike.
 
@@ -35,8 +40,8 @@ A website made for Visual Thinking in het HBO: a platform housing articles and m
 
 ### Built With
 
-[![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)](https://svelte.dev/) <br>
-[![Hygraph CMS](https://img.shields.io/badge/Hygraph_CMS-101B42?style=for-the-badge&logo=graphql&logoColor=ffffff)](https://hygraph.com/)
+* [![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)](https://svelte.dev/)
+* [![Hygraph CMS](https://img.shields.io/badge/Hygraph_CMS-101B42?style=for-the-badge&logo=graphql&logoColor=ffffff)](https://hygraph.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
