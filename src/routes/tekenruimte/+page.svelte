@@ -1,5 +1,5 @@
 <script>
-  import DrawingSpace from "$lib/organisms/drawingSpace.svelte";
+  import DrawingSpace from "$lib/organisms/DrawingSpace.svelte";
 </script>
 
 <DrawingSpace />

@@ -1,6 +1,6 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/methodHeader.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import MethodHeader from "$lib/organisms/MethodHeader.svelte";
 
   export let data;
   // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader

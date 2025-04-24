@@ -1,7 +1,7 @@
 <script>
-  import Articles from "$lib/organisms/articles.svelte";
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import Introduction from "$lib/molecules/introduction.svelte";
+  import Articles from "$lib/organisms/Articles.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import Introduction from "$lib/molecules/Introduction.svelte";
 
   export let data;
 

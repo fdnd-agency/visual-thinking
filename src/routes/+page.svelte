@@ -1,6 +1,6 @@
 <script>
-  import Introduction from "$lib/molecules/introduction.svelte";
-  import Homepage from "$lib/organisms/homepage.svelte";
+  import Introduction from "$lib/molecules/Introduction.svelte";
+  import Homepage from "$lib/organisms/Homepage.svelte";
 
   export let data
 

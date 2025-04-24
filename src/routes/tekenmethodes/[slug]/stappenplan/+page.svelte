@@ -1,8 +1,8 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/methodHeader.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import MethodHeader from "$lib/organisms/MethodHeader.svelte";
   import StepsTags from "$lib/molecules/StepsTags.svelte";
-  import Steps from "$lib/molecules/steps.svelte";
+  import Steps from "$lib/molecules/Steps.svelte";
 
   export let data;
   // Extract the relevant values into a seperate variables so we can give these selectively to their components
