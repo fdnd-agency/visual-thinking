@@ -9,7 +9,7 @@
       <Hexagon
         class="hide-on-mobile"
         img={{
-          src: "/images/man.svg",
+          src: "/images/man.png",
           alt: "Illustratie van een denkend persoon"
         }}
       />
@@ -18,7 +18,7 @@
       <Hexagon
         class="hide-on-mobile"
         img={{
-          src: "/images/pencil.svg",
+          src: "/images/pencil.png",
           alt: "Illustratie van een potlood"
         }}
       />

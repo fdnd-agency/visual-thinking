@@ -52,7 +52,7 @@
     justify-items: center;
     text-decoration: none;
     color: var(--color);
-    padding: 2rem 0;
+    padding: 2rem;
     font-size: 1.25rem;
     height: 100%;
     transition: 0.15s;
