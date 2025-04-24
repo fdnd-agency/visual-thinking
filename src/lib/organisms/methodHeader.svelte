@@ -35,14 +35,14 @@
   header {
     margin: 0 -1rem;
     margin-top: -0.3rem;
-    background-color: var(--vtGrey-10);
+    background-color: var(--color-septenary-40);
   }
 
   h1 {
     font-size: 1.7rem;
     padding-top: 1rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     margin: 0 1rem;
   }
 
@@ -58,7 +58,7 @@
     text-decoration: none;
     list-style: none;
     cursor: pointer;
-    color: var(--vtSec-DarkBlue);
+    color: var(--color-tertiary-80);
   }
 
   nav {
@@ -76,7 +76,7 @@
 
   nav li {
     text-transform: uppercase;
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
   }
 
   @media (min-width: 31rem) {

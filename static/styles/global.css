@@ -69,29 +69,23 @@
   --screen-dimension-m: 1024px;
   --screen-dimension-l: 1440px;
   --screen-dimension-xl: 2560px;
+
+  /* grid-size */
+
+  --text-max-width: 40rem;
+  --grid-max-width: 60rem;
 }
+
 
 * {
   box-sizing: border-box;
 }
 
-/* Body with segments */
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  height: 100dvh;
   font-family: var(--font-family-secondary);
-}
-
-main {
-  padding: 0 1rem;
-}
-
-/** Typography **/
-p {
-  font-family: var(--font-family-secondary);
-  line-height: 1.5;
 }
 
 h1,
@@ -110,74 +104,28 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.0777rem;
 }
 
-/** Hyperlinks + quotes **/
-a {
-  color: var(--color-quinary);
-  text-decoration: none;
-  color: var(--color-secondary);
-  margin-bottom: 5px;
-}
-
-.link {
-  text-decoration: underline;
-  text-decoration-color:var(--color-tertiary);
-}
-
-blockquote {
-  font-weight: 800;
-  font-family: var(--font-family-primary);
-  font-size: 1.2rem;
-  line-height: 1.5;
-  position: relative;
-  color: var(--blockquote-colour);
-}
-
-blockquote:before {
-  left: -5rem;
-  top: -3rem;
-}
-
-blockquote:after {
-  right: -5rem;
-  bottom: -0.4rem;
-}
-
-blockquote:before,
-blockquote:after {
-  position: absolute;
-  color: var(--color-quinary);
-  font-size: 6rem;
-  width: 4rem;
-  height: 4rem;
-  content: "\"";
-}
-
-.cite {
+p {
   font-family: var(--font-family-secondary);
-  color: var(--blockquote-colour);
-}
-
-.minicursus-quotes {
-  font-weight: 800;
-  font-family: var(--font-family-primary);
-  font-size: 1.2rem;
   line-height: 1.5;
-  color: var(--blockquote-colour);
 }
 
-/* Images with styling */
+a {
+  color: var(--color-tertiary-80);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+a:hover, a:focus-visible {
+  text-decoration: underline;
+}
+
 img {
   max-width: 100%;
 }
 
-.rich-text img {
-  height: auto;
-}
-
-/* Lists */
 ul {
   align-self: flex-start;
   scrollbar-width: none;
@@ -187,18 +135,98 @@ ul::-webkit-scrollbar {
   display: none;
 }
 
+blockquote {
+  font-weight: 800;
+  font-family: var(--font-family-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  color: var(--color-septenary);
+}
+
+blockquote::before,
+blockquote::after {
+  position: absolute;
+  color: var(--color-quinary);
+  font-size: 6rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+blockquote::before {
+  content: "“";
+  left: -5rem;
+  top: -3rem;
+}
+
+blockquote::after {
+  content: "”";
+  right: -5rem;
+  bottom: -0.4rem;
+}
+
+main {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.minicursus-quotes {
+  font-weight: 800;
+  font-family: var(--font-family-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-septenary);
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-tertiary);
+}
+
+/* Sticky footer */
+body > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* PDF button methods header */
+.vt-standard-button {
+  color: var(--color-primary);
+  font-family: var(--font-family-primary);
+  background-color: var(--color-tertiary);
+  padding: 0.5rem 0.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+:hover.vt-standard-button {
+  color: var(--color-tertiary);
+  background-color: rgb(188, 188, 188);
+}
+
 /* a11y */
-.sr-only {
+.screenreader-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
+  width: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
-/* SVG Icons */
+/* rich text data styling*/
+.rich-text img {
+  height: auto;
+}
+
+/* svg icons */
 svg.icon {
   margin-right: 0.25rem;
 }
@@ -209,23 +237,38 @@ svg.icon path.background {
   fill: var(--color-septenary-60);
 }
 
-/* Hexagon styling */
-.hexagons p {
-  text-align: center;
-}
-
-.hexagons h1 {
-  max-width: 24rem;
-}
-
-.hexagons header {
+/* MARK: Hexagon stuff (work in progress) */
+.hexagons section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.hexagons h1 {
+  max-width: 24rem;
+}
+.hexagons p {
+  text-align: center;
+}
 
-@media (width > 70em) {
+@media (width > 70rem) {
   .hexagons p {
     max-width: 12rem;
+  }
+}
+
+@media (width < 44rem) {
+  /* Fix for horizontal scrolling on mobile */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  /* Utility class for hiding elements on mobile */
+  .hide-on-mobile {
+    display: none !important;
   }
 }
