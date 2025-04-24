@@ -10,6 +10,8 @@ export { default as IconDuration } from "./atoms/icons/IconDuration.svelte";
 export { default as IconMaterials } from "./atoms/icons/IconMaterials.svelte";
 export { default as Breadcrumb } from "./atoms/breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/hexagon.svelte";
+export { default as Icons } from "./atoms/Icons.svelte";
+
 
 // molecules
 export { default as Filter } from "./molecules/filter.svelte";
