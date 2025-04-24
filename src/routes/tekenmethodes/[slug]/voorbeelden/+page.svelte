@@ -1,6 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/MethodHeader.svelte";
+  import { Breadcrumb, MethodHeader } from "$lib/index.js";
   import { onMount } from "svelte";
 
   export let data;

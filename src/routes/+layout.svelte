@@ -1,7 +1,5 @@
 <script>
-    import Header from "$lib/molecules/Header.svelte";
-    import Footer from "$lib/molecules/Footer.svelte";
-    
+    import { Header, Footer } from "$lib/index.js";
 </script>
 
 <Header />

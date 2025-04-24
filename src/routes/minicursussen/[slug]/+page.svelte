@@ -1,6 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import { Breadcrumb } from "$lib/index.js";
 
   export let data;
 </script>
