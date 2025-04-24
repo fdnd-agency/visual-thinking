@@ -7,11 +7,9 @@
 
 <footer>
   <nav>
-    <a href="/" class="footer-content">
-      <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
-      <h1>Visual Thinking in het hbo</h1>
+    <a href="/">
+      <Icons name='VisualThinkingLogoFooter' />
     </a>
-
     <div class="socials">
       <ul>
         <li>
