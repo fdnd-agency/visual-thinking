@@ -1,5 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/breadcrumb.svelte";
+  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
 
   let index = 0;
 
