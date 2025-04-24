@@ -13,6 +13,9 @@ export { default as MethodHeader } from "./organisms/methodHeader.svelte";
 export { default as MiniCourses } from "./organisms/miniCourses.svelte";
 export { default as Steps } from "./molecules/steps.svelte";
 export { default as StepsTags } from "./molecules/StepsTags.svelte";
+export { default as MethodStepsQuery } from "./queries/method.js";
+export { default as MethodExamplesQuery } from "./queries/method.js";
+export { default as MethodDescriptionQuery } from "./queries/method.js";
 
 export { default as IconAuthor } from "./atoms/icons/IconAuthor.svelte";
 export { default as IconCategories } from "./atoms/icons/IconCategories.svelte";
