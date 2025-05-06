@@ -1,13 +1,17 @@
 <script>
   import { page } from "$app/stores";
+  import { Icons } from "$lib/index.js";
 
+  const logoSize = 80;
   // Used for the active state for the menu links
   let activeRoute;
   $: activeRoute = $page.route.id; // 
 </script>
 
 <header>
-  <a href="/" class="logo"><img src="/images/visual-thinking-hbo-logo.svg"  alt="Home" /></a>
+  <a href="/" class="logo">
+    <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
+  </a>
 
   <nav>
     <ul>
@@ -24,8 +28,8 @@
 
 <style>
   a {
-    --background: var(--vtYellow);
-    color: var(--vtDarkBlue);
+    --background: var(--color-quinary);
+    color: var(--color-tertiary);
     text-decoration: none;
     cursor: pointer;
     font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
@@ -33,7 +37,7 @@
   }
 
   a.logo {
-    --background: var(--vtDarkBlue);
+    --background: var(--color-tertiary);
     padding: 1rem .25rem 0;
     margin-top: -.75rem;
     position:absolute;
@@ -48,10 +52,6 @@
     background: none;
     outline: none;
     scale: 1.1
-  }
-
-  a.logo img {
-    width: 3rem;
   }
 
   nav {
@@ -84,7 +84,7 @@
     list-style-type: none;
     display: flex;
     color: transparent;
-    font-family: var(--vtPrimaryFont);
+    font-family: var(--font-family-primary);
     font-weight: 700;
     padding: 1rem;
     margin: 0 1rem;
@@ -97,7 +97,7 @@
   ul li a:hover,
   ul li a:focus-visible,
   ul li a.active {
-    --state-color: var(--vtSec-DarkBlue);
+    --state-color: var(--color-tertiary-80);
     text-decoration: underline;
     text-decoration-color: var(--state-color);
     text-underline-offset: 0.25rem;
@@ -107,37 +107,37 @@
   li:nth-child(1) a:hover,
   ul li:nth-child(1) a:focus-visible,
   ul li:nth-child(1) a.active {
-    --state-color: var(--vtYellow);
+    --state-color: var(--color-quinary);
   }
 
   li:nth-child(2) a:hover,
   ul li:nth-child(2) a:focus-visible,
   ul li:nth-child(2) a.active {
-    --state-color: var(--vtSec-DarkBlue);
+    --state-color: var(--color-tertiary-80);
   }
 
   li:nth-child(3) a:hover,
   ul li:nth-child(3) a:focus-visible,
   ul li:nth-child(3) a.active {
-    --state-color: var(--vtRed);
+    --state-color: var(--color-senary);
   }
 
   li:nth-child(4) a:hover,
   ul li:nth-child(4) a:focus-visible,
   ul li:nth-child(4) a.active {
-    --state-color: var(--vtSec-LightBlue);
+    --state-color: var(--color-quaternary);
   }
 
   li:nth-child(5) a:hover,
   ul li:nth-child(5) a:focus-visible,
   ul li:nth-child(5) a.active {
-    --state-color: var(--vtDarkBlue);
+    --state-color: var(--color-tertiary);
   }
 
   li:nth-child(6) a:hover,
   ul li:nth-child(6) a:focus-visible,
   ul li:nth-child(6) a.active {
-    --state-color: var(--vtGrey);
+    --state-color: var(--color-septenary);
   }
 
   @media (min-width: 80rem) {
@@ -146,10 +146,6 @@
       z-index: 1;
       left: calc(50% - 2rem);
       top: .5rem;
-    }
-
-    a.logo img {
-      width: 4rem;
     }
 
     nav {

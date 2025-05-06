@@ -1,14 +1,11 @@
 <script>
-  import Articles from "$lib/organisms/Articles.svelte";
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
-  import Introduction from "$lib/molecules/Introduction.svelte";
-
+  import { Articles, Breadcrumb, Introduction } from "$lib/index.js";
   export let data;
 
   const {page, articles} = data
 </script>
 
-<Breadcrumb titel="Artikelen" backgroundColor="var(--vtDarkBlue)" />
+<Breadcrumb titel="Artikelen" backgroundColor="var(--color-tertiary)" />
 <Introduction {page}/>
 <Articles {articles}/>
 

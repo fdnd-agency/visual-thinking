@@ -1,6 +1,5 @@
 <script>
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/MethodHeader.svelte";
+  import { Breadcrumb, MethodHeader } from "$lib/index.js";
 
   export let data;
   // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
@@ -10,7 +9,7 @@
 <Breadcrumb
   titel="Overzicht"
   url="/tekenmethodes"
-  backgroundColor="var(--vtYellow)"
+  backgroundColor="var(--color-quinary)"
 />
 
 <MethodHeader {title} {slug} {pdf} />
@@ -36,7 +35,7 @@
   }
 
   section img {
-    border: 1px solid var(--vtDarkBlue);
+    border: 1px solid var(--color-tertiary);
   }
 
   p {

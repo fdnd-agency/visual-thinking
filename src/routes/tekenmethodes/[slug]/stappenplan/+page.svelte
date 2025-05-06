@@ -1,15 +1,12 @@
 <script>
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/MethodHeader.svelte";
-  import StepsTags from "$lib/molecules/StepsTags.svelte";
-  import Steps from "$lib/molecules/Steps.svelte";
+  import { Breadcrumb, MethodHeader, StepsTags, Steps } from "$lib/index.js";
 
   export let data;
   // Extract the relevant values into a seperate variables so we can give these selectively to their components
   const { steps, categories, material, duration, title, slug, pdf } = data.methods[0];
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--color-quinary)" />
 
 <MethodHeader {title} {slug} {pdf} />
 
