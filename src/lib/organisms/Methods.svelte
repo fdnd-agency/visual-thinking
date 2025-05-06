@@ -54,7 +54,7 @@
 
   a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--font-color);
     padding: 0.8rem 0.8rem 0.25rem 0.8rem;
   }
 
