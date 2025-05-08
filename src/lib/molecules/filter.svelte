@@ -1,15 +1,23 @@
 <script>
-
   export let categories;
-
-
-
 </script>
 
-<ul>
+<fieldset>
+  <legend>Filter</legend>
   {#each categories as category}
-    <li>
-      {category.title}
-    </li>
+  <label for={category.slug}>  
+    <input type="checkbox" id="filter" name="filter" />
+    {category.title}
+  </label>
   {/each}
-</ul>
+</fieldset>
+
+<style>
+  fieldset label {
+    display: flex;
+    flex-direction: row;
+  }
+  fieldset label input[type="checkbox"] {
+    display: none;
+  }
+</style>
