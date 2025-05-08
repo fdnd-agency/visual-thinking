@@ -1,30 +1,24 @@
 <script>
   export let methods;
+  console.log(methods)
 </script>
 
-<section class="grid">
+<section>
   <h2>Alle methodes ({methods.length})</h2>
-  {#if methods && methods.length > 0}
-    {#each methods as method, index}
-      <article class="methods-container">
-        <a href="/tekenmethodes/{method.slug}">
-          {#if method.template && method.template.url}
+    <ul class="grid">
+      {#each methods as method}
+        <li>
+          <a href="/tekenmethodes/{method.slug}">
             <picture>
               <source srcset={method.template.url.replace(":webp", ":avif")} />
               <source srcset={method.template.url} />
-              <img
-                src={method.template.url.replace(":webp", ":png")}
-                alt={"Voorbeeld van " + method.title}
-              />
+              <img src={method.template.url.replace(":webp", ":png")} alt={"Voorbeeld van " + method.title} />
             </picture>
-          {:else}
-            <img src="/placeholder.webp" alt="Placeholder" />
-          {/if}
-          <h3>{method.title}</h3>
-        </a>
-      </article>
-    {/each}
-  {/if}
+            <h3>{method.title}</h3>
+          </a>
+      </li>
+      {/each}
+    </ul>
 </section>
 
 <style>
