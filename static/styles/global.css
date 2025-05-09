@@ -1,8 +1,16 @@
-:root {
-  /* Visual Thinking: Primary Colors:
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-  */
+@font-face {
+  font-family: "Shantell Sans";
+  src: url(/fonts/ShantellSans-Variable-Subset.ttf) format('truetype');
+  font-display: swap;
+} 
 
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter-Variable-Subset.ttf) format('truetype');
+  font-display: swap;
+} 
+
+:root {
   --color-primary: hsl(0, 0%, 100%);
   --color-secondary: hsl(0, 0%, 0%);
 
@@ -56,8 +64,8 @@
 
 
   /* Visual Thinking: Fonts,*/
-  --font-family-primary: "rigid-square", sans-serif;
-  --font-family-secondary: "yrsa", serif;
+  --font-family-primary: "Shantell Sans", sans-serif;
+  --font-family-secondary: "Inter", serif;
 
   /* fonts */
   font-size: 1.25rem;
