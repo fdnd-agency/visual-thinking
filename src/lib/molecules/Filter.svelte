@@ -15,26 +15,43 @@
 </fieldset>
 
 <style>
-
   fieldset {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: .5rem;
+    gap: 0.5rem;
   }
+
   fieldset label {
     display: flex;
-    flex-direction: row;
-    background-color: magenta;
-    padding: .5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
     border-radius: 1rem;
+    cursor: pointer;
   }
+
   fieldset label input[type="checkbox"] {
     display: none;
   }
-  
-  fieldset label input[type="checkbox"]:checked {
-    box-shadow: inset 2px 2px 3px rgb(0, 0, 0);
-    color: black;
-}
+
+  fieldset label input[type="checkbox"]:checked + p {
+    background-color: deeppink;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+  }
+
+  fieldset label p {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  fieldset label:hover p {
+    background-color: hotpink;
+    color: white;
+  }
 </style>
