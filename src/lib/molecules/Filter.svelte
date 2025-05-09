@@ -8,8 +8,12 @@
   {#each categories as category}
   <label for={category.slug}>
     <input type="checkbox" id={category.slug} name="filter" />
-    <p>{category.title}</p>
-    <Icons name='closeButton' />
+    <div>
+      <span>{category.title}</span>
+      <div class="close-button">
+        <Icons name='closeButton' />
+      </div>
+    </div>
   </label>
   {/each}
 </fieldset>
@@ -26,8 +30,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
-    border-radius: 1rem;
     cursor: pointer;
   }
 
@@ -35,22 +37,37 @@
     display: none;
   }
 
-  fieldset label input[type="checkbox"]:checked + p {
-    background-color: deeppink;
+  fieldset label input[type="checkbox"]:checked + div {
     color: white;
-    border-radius: 1rem;
-    padding: 0.5rem;
+
+    & .close-button {
+      display: flex;
+        align-items: center;    
+      }
   }
 
-  fieldset label p {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: 2px solid transparent;
+  fieldset label div {
+    background-color: tomato;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
     border-radius: 1rem;
-    transition: all 0.3s ease;
+    padding: 1rem;
+    height: 1em;
+
+    &.close-button {
+      padding: 0;
+    }
   }
 
-  fieldset label:hover p {
+  .close-button {
+    display: none;
+    height: fit-content;
+  }
+
+  fieldset label:hover div {
     background-color: hotpink;
     color: white;
   }
