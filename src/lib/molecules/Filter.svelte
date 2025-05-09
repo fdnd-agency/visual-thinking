@@ -1,13 +1,15 @@
 <script>
+  import { Icons } from '$lib/index.js';
   export let categories;
 </script>
 
 <fieldset>
   <legend>Filter</legend>
   {#each categories as category}
-  <label for={category.slug}>  
-    <input type="checkbox" id="filter" name="filter" />
-    {category.title}
+  <label for={category.slug}>
+    <input type="checkbox" id={category.slug} name="filter" />
+    <p>{category.title}</p>
+    <Icons name='closeButton' />
   </label>
   {/each}
 </fieldset>
