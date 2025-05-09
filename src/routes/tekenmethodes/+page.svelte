@@ -1,16 +1,11 @@
 <script>
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
-  import Introduction from "$lib/molecules/Introduction.svelte";
-  import Filter from "$lib/molecules/Filter.svelte";
-
-  import Methods from "$lib/organisms/Methods.svelte";
-
+  import { Breadcrumb, Introduction, Filter, Methods } from "$lib/index.js";
   export let data;
 
   const {page, methods, categories} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--vtYellow)" />
+<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--color-quinary)" />
 <Introduction {page} />
 
 <Filter {categories} />

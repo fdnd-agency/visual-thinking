@@ -42,8 +42,8 @@
   }
 
   h3 {
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
@@ -54,7 +54,7 @@
 
   a {
     text-decoration: none;
-    color: var(--vtBlack);
+    color: var(--font-color);
     padding: 0.8rem 0.8rem 0.25rem 0.8rem;
   }
 
@@ -73,7 +73,7 @@
   }
 
   article:hover {
-    border-bottom: 0.3rem solid var(--vtYellow);
-    background-color: var(--vtGrey-10);
+    border-bottom: 0.3rem solid var(--color-quinary);
+    background-color: var(--color-septenary-40);
   }
 </style>

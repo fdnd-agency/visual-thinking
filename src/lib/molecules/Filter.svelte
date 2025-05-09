@@ -60,7 +60,7 @@
   h2 {
     font-size: 1rem;
     padding: 1rem;
-    background-color: var(--vtGrey-5);
+    background-color: var(--color-septenary-40);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -83,8 +83,8 @@
   label:hover, 
   label:focus-visible, 
   label:active {
-    background: var(--vtGrey-10);
-    border-bottom: 0.3rem solid var(--vtYellow);
+    background: var(--color-septenary-40);
+    border-bottom: 0.3rem solid var(--color-quinary);
     transition: 0.05s;
   }
 
@@ -93,7 +93,7 @@
   }
 
   section button {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -101,12 +101,12 @@
   }
 
   section button:hover {
-    background-color: var(--vtYellow-80);
+    background-color: var(--color-quinary-80);
   }
 
   .loading-spinner {
-    border: 4px solid var(--vtGrey-50);
-    border-top: 4px solid var(--vtYellow);
+    border: 4px solid var(--color-septenary-40);
+    border-top: 4px solid var(--color-quinary);
     border-radius: 50%;
     width: 1rem;
     height: 1rem;

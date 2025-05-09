@@ -1,6 +1,7 @@
 <script>
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+  import { Breadcrumb, Icons } from "$lib/index.js";
 
+  const iconSize = 50;
   let index = 0;
 
   export let clips;
@@ -14,17 +15,13 @@
   };
 </script>
 
-<Breadcrumb titel="Kennisclips" backgroundColor="var(--vtSec-LightBlue)" />
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
 
 <main>
   <h1 class="screenreader-only">Alle kennisclips</h1>
   <section class="clips-container">
     <button on:click={previousButton}>
-      <img
-        class="left-arrow"
-        src="./images/arrows.svg"
-        alt="Naar vorige video"
-      />
+      <Icons name="arrowLeft" width={iconSize} height={iconSize}/>
     </button>
 
     <iframe
@@ -34,11 +31,7 @@
     ></iframe>
 
     <button on:click={nextButton}>
-      <img
-        class="right-arrow"
-        src="./images/arrows.svg"
-        alt="Naar volgende video"
-      />
+      <Icons name="arrowRight" width={iconSize} height={iconSize}/>
     </button>
   </section>
 
@@ -53,15 +46,15 @@
   /* Header styling */
   h2 {
     font-size: 3.157rem;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
     text-align: center;
   }
 
   /* Kennisclip teksten */
   p {
     line-height: 1.5rem;
-    font-family: var(--vtSecondaryFont);
+    font-family: var(--font-family-secondary);
     margin: 0 auto;
     max-width: 700px;
     text-transform: none;
@@ -75,7 +68,7 @@
     align-items: center;
     padding: 3.3rem 0;
     margin:0 -1rem;
-    background-color: var(--vtGrey-10);
+    background-color: var(--color-septenary-40);
   }
 
   /* buttons */
@@ -84,17 +77,7 @@
     border: transparent;
     padding: 2rem;
   }
-
-  .right-arrow {
-    cursor: pointer;
-    border: none;
-  }
-
-  .left-arrow {
-    cursor: pointer;
-    transform: rotate(180deg);
-  }
-
+  
   /* responsive clips */
   iframe {
     aspect-ratio: 16 / 9;

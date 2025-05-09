@@ -33,24 +33,24 @@
   }
 
   .step-title {
-    font-family: var(--vtPrimaryFont);
-    background-color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    background-color: var(--color-tertiary);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: var(--vtWhite);
+    color: var(--color-primary);
     padding: 0.5rem;
     cursor: pointer;
     user-select: none;
   }
 
   .step-title:hover {
-    background-color: var(--vtYellow-80);
+    background-color: var(--color-quinary-80);
     color: black;
   }
 
   .step-content {
     padding: 0.5rem;
-    background-color: var(--vtWhite);
+    background-color: var(--color-primary);
     border: 1px solid #ccc;
     border-radius: 8px;
     margin-top: 0.25rem;

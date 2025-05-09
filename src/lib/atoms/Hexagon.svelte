@@ -1,7 +1,7 @@
 <script>
   export let text = "Default text";
-  export let backgroundColor = "--vtGrey-50";
-  export let color = "--vtBlack";
+  export let backgroundColor = "--color-septenary-40";
+  export let color = "--font-color";
 
   // If href is given, the hexagon will be clickable
   export let href = null;
@@ -52,15 +52,15 @@
     justify-items: center;
     text-decoration: none;
     color: var(--color);
-    padding: 2rem 0;
+    padding: 2rem;
     font-size: 1.25rem;
     height: 100%;
     transition: 0.15s;
   }
 
   img {
-    width: auto;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
   }
 

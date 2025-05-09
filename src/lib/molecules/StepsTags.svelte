@@ -1,9 +1,5 @@
 <script>
-  import IconAuthor from "../atoms/icons/IconAuthor.svelte";
-  import IconCategories from "../atoms/icons/IconCategories.svelte";
-  import IconDuration from "../atoms/icons/IconDuration.svelte";
-  import IconMaterials from "../atoms/icons/IconMaterials.svelte";
-
+  import { IconAuthor, IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
   export let categories;
   export let materials;
   export let duration;
@@ -73,9 +69,9 @@
   }
 
   p {
-    background-color: var(--vtYellow-80);
-    color: var(--vtDarkBlue);
-    font-family: var(--vtPrimaryFont);
+    background-color: var(--color-quinary-80);
+    color: var(--color-tertiary);
+    font-family: var(--font-family-primary);
     font-size: 0.9rem;
     font-weight: 600;
     padding: 0.1rem 0.4rem;
