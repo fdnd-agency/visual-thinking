@@ -8,3 +8,4 @@
 <Breadcrumb titel="Tekenmethodes" backgroundColor="var(--color-quinary)" />
 <Introduction {page} />
 <Methods {methods} {categories}/>
+

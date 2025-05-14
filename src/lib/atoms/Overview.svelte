@@ -1,10 +1,7 @@
 <script>
-  import { Filter } from '$lib/index.js';
   export let methods;
-  export let categories;
 </script>
 
-<Filter {categories}/>
 <section class="grid">
   <h2>Alle methodes ({methods.length})</h2>
     <ul class="grid">
@@ -53,7 +50,7 @@
     text-decoration: none;
     color: var(--font-color);
     padding: 0.8rem 0.8rem 0.25rem 0.8rem;
-    display: block; /* Ensure anchor tags take up full width */
+    display: block; 
   }
 
   li {
@@ -62,7 +59,7 @@
     transition: 0.1s;
     margin: -0.8rem;
     border-bottom: 0.3rem solid transparent;
-    background-color: var(--color-background); /* Add background for better alignment */
+    background-color: var(--color-background); 
   }
 
   li img {
