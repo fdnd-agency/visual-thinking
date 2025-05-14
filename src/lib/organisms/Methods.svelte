@@ -1,7 +1,10 @@
 <script>
+  import { Filter } from '$lib/index.js';
   export let methods;
+  export let categories;
 </script>
 
+<Filter {categories}/>
 <section class="grid">
   <h2>Alle methodes ({methods.length})</h2>
     <ul class="grid">

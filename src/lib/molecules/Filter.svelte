@@ -43,10 +43,6 @@
     cursor: pointer;
   }
 
-  fieldset label input {
-    border: .2rem solid black;
-    border-radius: 1rem;
-  }
   fieldset label input[type="checkbox"] {
     display: none;
   }
@@ -72,47 +68,58 @@
     gap: .5rem;
     padding: 1rem;
     height: 1em;
-
+    border: .2rem solid black;
+    border-radius: 1rem;
   }
 
   fieldset label:nth-of-type(1) div {
     border-color: var(--button-color-1);
+    background-color: var(--button-color-1);
+
   }
 
   fieldset label:nth-of-type(2) div {
     border-color: var(--button-color-2);
+    background-color: var(--button-color-2);
+
   }
 
   fieldset label:nth-of-type(3) div {
     border-color: var(--button-color-3);
+    background-color: var(--button-color-3);
   }
 
   fieldset label:nth-of-type(4) div {
     border-color: var(--button-color-4);
+    background-color: var(--button-color-4);
   }
 
   fieldset label:nth-of-type(5) div {
     border-color: var(--button-color-5);
+    background-color: var(--button-color-5);
   }
 
   fieldset label:nth-of-type(6) div {
     border-color: var(--button-color-6);
+    background-color: var(--button-color-6);
   }
 
   fieldset label:nth-of-type(7) div {
     border-color: var(--button-color-7);
+    background-color: var(--button-color-7);
   }
 
   fieldset label:nth-of-type(8) div {
     border-color: var(--button-color-8);
+    background-color: var(--button-color-8);
   }
 
   .close-button {
-    display: none;
+    display: hidden;
     height: fit-content;
     padding: 0;
-    background: none;
-    
+    background-color: none;
+    border: none;
   }
 
 </style>
