@@ -1,19 +1,11 @@
 <script>
   export let methods;
-  export let checkboxes = [];
-
-  $: filteredMethods = checkboxes.length
-    ? methods.filter(method =>
-        method.categories?.some(cat => checkboxes.includes(cat.title))
-      )
-    : methods;
-    console.log(methods[0].categories)
 </script>
 
 <section class="grid">
-  <h2>Alle methodes ({filteredMethods.length})</h2>
+  <h2>Alle methodes ({methods.length})</h2>
     <ul class="grid">
-      {#each filteredMethods as method}
+      {#each methods as method}
         <li>
           <a href="/tekenmethodes/{method.slug}">
             <picture>

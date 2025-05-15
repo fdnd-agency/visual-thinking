@@ -2,7 +2,6 @@
   import { Icons } from '$lib/index.js';
   
   export let categories;
-  export let checkboxes = [];
 </script>
 
 <fieldset>
@@ -15,7 +14,6 @@
     id={category.slug}
     name="filter"
     value={category.title}
-    bind:group={checkboxes}
     />
 
     <div>
