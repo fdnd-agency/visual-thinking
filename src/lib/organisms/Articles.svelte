@@ -13,6 +13,7 @@
           height="200"
         />
         <h2>{article.title}</h2>
+        <p>hi</p>
       </article>
     </a>
   {/each}
@@ -63,5 +64,4 @@
     text-wrap: balance;
   }
 
- 
 </style>
