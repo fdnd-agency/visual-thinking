@@ -1,13 +1,23 @@
 <script>
   import { Icons } from '$lib/index.js';
+  
   export let categories;
+  export let checkboxes = [];
 </script>
 
 <fieldset>
   <legend>Filter</legend>
   {#each categories as category}
   <label for={category.slug}>
-    <input type="checkbox" id={category.slug} name="filter" />
+
+    <input 
+    type="checkbox"
+    id={category.slug}
+    name="filter"
+    value={category.title}
+    bind:group={checkboxes}
+    />
+
     <div>
       <span>{category.title}</span>
       <div class="close-button">
