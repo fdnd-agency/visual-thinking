@@ -3,7 +3,7 @@ import { hygraph } from "$lib/utils/hygraph.js";
 
 
 export async function load({ url }) {
-  const categories = url.searchParams.getAll('categorie')
+  const categories = url.searchParams.getAll('filter')
   let filter
 
   categories && categories.length > 0 
@@ -40,5 +40,6 @@ export async function load({ url }) {
   `
 
   const data = await hygraph.request(query, { categories });
+  console.log(data)
   return data;
 }

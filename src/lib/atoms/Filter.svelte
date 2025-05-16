@@ -4,30 +4,25 @@
   export let categories;
 </script>
 
-<fieldset>
+<form action="/tekenmethodes" method="get">
   <legend>Filter</legend>
   {#each categories as category}
   <label for={category.slug}>
+      {category.title}
+  </label>
 
-    <input 
+      <input 
     type="checkbox"
     id={category.slug}
     name="filter"
     value={category.title}
     />
-
-    <div>
-      <span>{category.title}</span>
-      <div class="close-button">
-        <Icons name='closeButton' color='#FFF'/>
-      </div>
-    </div>
-  </label>
   {/each}
-</fieldset>
+  <button type="submit" class="filter-button">toepassen</button>
+</form>
 
 <style>
-  fieldset {
+  form {
   --button-color-1:#0a7c52;
   --button-color-2:#314695;
   --button-color-3:#2b5e70;
@@ -44,18 +39,18 @@
     gap: 0.5rem;
   }
 
-  fieldset label {
+  form label {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
 
-  fieldset label input[type="checkbox"] {
+  form label input[type="checkbox"] {
     display: none;
   }
 
-  fieldset label input[type="checkbox"]:checked + div {
+  form label input[type="checkbox"]:checked + div {
     color: white;
     background-color: tomato;
 
@@ -66,7 +61,7 @@
       }
   }
 
-  fieldset label div {
+  form label div {
     background-color: white;
     color: black;
     display: flex;
@@ -80,44 +75,44 @@
     border-radius: 1rem;
   }
 
-  fieldset label:nth-of-type(1) div {
+  form label:nth-of-type(1) div {
     border-color: var(--button-color-1);
     background-color: var(--button-color-1);
 
   }
 
-  fieldset label:nth-of-type(2) div {
+  form label:nth-of-type(2) div {
     border-color: var(--button-color-2);
     background-color: var(--button-color-2);
 
   }
 
-  fieldset label:nth-of-type(3) div {
+  form label:nth-of-type(3) div {
     border-color: var(--button-color-3);
     background-color: var(--button-color-3);
   }
 
-  fieldset label:nth-of-type(4) div {
+  form label:nth-of-type(4) div {
     border-color: var(--button-color-4);
     background-color: var(--button-color-4);
   }
 
-  fieldset label:nth-of-type(5) div {
+  form label:nth-of-type(5) div {
     border-color: var(--button-color-5);
     background-color: var(--button-color-5);
   }
 
-  fieldset label:nth-of-type(6) div {
+  form label:nth-of-type(6) div {
     border-color: var(--button-color-6);
     background-color: var(--button-color-6);
   }
 
-  fieldset label:nth-of-type(7) div {
+  form label:nth-of-type(7) div {
     border-color: var(--button-color-7);
     background-color: var(--button-color-7);
   }
 
-  fieldset label:nth-of-type(8) div {
+  form label:nth-of-type(8) div {
     border-color: var(--button-color-8);
     background-color: var(--button-color-8);
   }
