@@ -7,6 +7,7 @@ export async function load({ url }) {
   let filter
 
   categories && categories.length > 0 
+  // This is where the data is being fetched and filtered throught Hygraph to get the right data. 
           ? filter = `, where: {categories_some: {slug_in: ${JSON.stringify(categories)}}}` 
           : filter = ''
 
