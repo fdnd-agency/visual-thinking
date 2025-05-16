@@ -1,11 +1,12 @@
 <script>
   import { page } from "$app/stores";
 
-  export let categories;
+  let { categories } = $props();
 
   // Read all categorie query parameters from the URL and store them in an array
   let filter = $page.url.searchParams.getAll("categorie") || [];
-  $: isLoading = false;
+  let isLoading = $state(false);
+  
 
   function applyFilter() {
     return function (event) {
@@ -28,7 +29,7 @@
 <section>
   <h2>Filter op categorie</h2>
 
-  <form method="GET" action="/tekenmethodes#methodes" on:submit={applyFilter()}>
+  <form method="GET" action="/tekenmethodes#methodes" onsubmit={applyFilter()}>
     {#each categories as category}
       <label for={category.slug}>
         <input
