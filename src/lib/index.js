@@ -11,6 +11,7 @@ export { default as IconMaterials } from "./atoms/icons/IconMaterials.svelte";
 export { default as Breadcrumb } from "./atoms/Breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/Hexagon.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
+export { default as LikeButton } from "./atoms/LikeButton.svelte";
 
 
 // molecules

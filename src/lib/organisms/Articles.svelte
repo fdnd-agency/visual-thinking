@@ -1,4 +1,6 @@
 <script>
+    import LikeButton from "../atoms/LikeButton.svelte";
+
   export let articles;
 </script>
 
@@ -13,7 +15,7 @@
           height="200"
         />
         <h2>{article.title}</h2>
-        <p>hi</p>
+        <LikeButton />
       </article>
     </a>
   {/each}
