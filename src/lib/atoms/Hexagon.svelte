@@ -1,17 +1,26 @@
 <script>
-  export let text = "Default text";
-  export let backgroundColor = "--color-septenary-40";
-  export let color = "--font-color";
-
-  // If href is given, the hexagon will be clickable
-  export let href = null;
-
-  // Image expects an object with a src and alt property
-  export let img = null;
 
   // Give the ability to pass classes to children
-  let className = "";
-  export { className as class };
+  /**
+   * @typedef {Object} Props
+   * @property {string} [text]
+   * @property {string} [backgroundColor]
+   * @property {string} [color]
+   * @property {any} [href] - If href is given, the hexagon will be clickable
+   * @property {any} [img] - Image expects an object with a src and alt property
+   * @property {string} [class]
+   */
+
+  /** @type {Props} */
+  let {
+    text = "Default text",
+    backgroundColor = "--color-septenary-40",
+    color = "--font-color",
+    href = null,
+    img = null,
+    class: className = ""
+  } = $props();
+  
 </script>
 
 <!-- Check if it's a clickable hexagon or not. If not, render a <div> instead of an <a> -->

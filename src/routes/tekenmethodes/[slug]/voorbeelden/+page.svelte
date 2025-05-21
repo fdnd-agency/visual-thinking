@@ -2,7 +2,7 @@
   import { Breadcrumb, MethodHeader } from "$lib/index.js";
   import { onMount } from "svelte";
 
-  export let data;
+  let { data } = $props();
   // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
   const { title, slug, pdf } = data.methods[0];
 

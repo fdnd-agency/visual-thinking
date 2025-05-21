@@ -1,11 +1,7 @@
 <script>
-  export let page;
-
+  let { page, class: className } = $props();
   const {title, content} = page;
 
-  // Give the ability to pass classes to children
-  let className = "";
-  export { className as class };
 </script>
 
 <section class={className}>
