@@ -153,6 +153,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-align-items: center;
+    align-items: center;
     -webkit-box-align: center;
     border: none;
   }

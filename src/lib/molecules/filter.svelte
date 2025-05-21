@@ -1,11 +1,12 @@
 <script>
   import { page } from "$app/stores";
+  
 
   let { categories } = $props();
 
   // Read all categorie query parameters from the URL and store them in an array
   let filter = $page.url.searchParams.getAll("categorie") || [];
-  let isLoading = $state(false);
+
   
 
   function applyFilter() {
