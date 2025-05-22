@@ -1,5 +1,5 @@
 <script>
-  export let steps;
+  let { steps } = $props();
 </script>
 
 <section>

@@ -1,7 +1,7 @@
 <script>
   import { Breadcrumb, MethodHeader, StepsTags, Steps } from "$lib/index.js";
 
-  export let data;
+  let { data } = $props();
   // Extract the relevant values into a seperate variables so we can give these selectively to their components
   const { steps, categories, material, duration, title, slug, pdf } = data.methods[0];
 </script>

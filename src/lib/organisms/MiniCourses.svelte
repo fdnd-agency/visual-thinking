@@ -1,7 +1,7 @@
 <script>
   import { Hexagon } from "$lib/index.js";
 
-  export let miniCourses;
+  let { miniCourses } = $props();
 </script>
 
 <section>

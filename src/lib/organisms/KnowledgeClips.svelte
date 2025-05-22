@@ -2,9 +2,9 @@
   import { Breadcrumb, Icons } from "$lib/index.js";
 
   const iconSize = 50;
-  let index = 0;
+  let index = $state(0);
 
-  export let clips;
+  let { clips } = $props();
 
   const nextButton = () => {
     index = index + 1;
@@ -20,7 +20,7 @@
 <main>
   <h1 class="screenreader-only">Alle kennisclips</h1>
   <section class="clips-container">
-    <button on:click={previousButton}>
+    <button onclick={previousButton}>
       <Icons name="arrowLeft" width={iconSize} height={iconSize}/>
     </button>
 
@@ -30,7 +30,7 @@
       src={clips[index].youTubeLink}
     ></iframe>
 
-    <button on:click={nextButton}>
+    <button onclick={nextButton}>
       <Icons name="arrowRight" width={iconSize} height={iconSize}/>
     </button>
   </section>

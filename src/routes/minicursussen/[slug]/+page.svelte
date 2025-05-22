@@ -2,7 +2,7 @@
   import { slide } from "svelte/transition";
   import { Breadcrumb } from "$lib/index.js";
 
-  export let data;
+  let { data } = $props();
 </script>
 
 <Breadcrumb titel="Minicursussen" backgroundColor="var(--color-senary)" />

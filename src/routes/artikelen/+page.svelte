@@ -1,6 +1,6 @@
 <script>
   import { Articles, Breadcrumb, Introduction } from "$lib/index.js";
-  export let data;
+  let { data } = $props();
 
   const {page, articles} = data
 </script>
