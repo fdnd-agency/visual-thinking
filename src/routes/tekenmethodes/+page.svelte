@@ -1,12 +1,11 @@
 <script>
-  import { Breadcrumb, Introduction, Filter, Methods } from "$lib/index.js";
+  import { Breadcrumb, Introduction, Methods } from "$lib/index.js";
   export let data;
 
-  const {page, methods, categories} = data;
+  const {page, categories} = data;
 </script>
 
 <Breadcrumb titel="Tekenmethodes" backgroundColor="var(--color-quinary)" />
 <Introduction {page} />
+<Methods methods={data.methods} {categories}/>
 
-<Filter {categories} />
-<Methods {methods} />

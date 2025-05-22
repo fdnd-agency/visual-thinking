@@ -4,27 +4,20 @@
 
 <section class="grid">
   <h2>Alle methodes ({methods.length})</h2>
-  {#if methods && methods.length > 0}
-    {#each methods as method, index}
-      <article class="methods-container">
-        <a href="/tekenmethodes/{method.slug}">
-          {#if method.template && method.template.url}
+    <ul class="grid">
+      {#each methods as method}
+        <li>
+          <a href="/tekenmethodes/{method.slug}">
             <picture>
-              <source srcset={method.template.url.replace(":webp", ":avif")} />
+              <source srcset={method.template.url.replace(":webp", ":avif")}/>
               <source srcset={method.template.url} />
-              <img
-                src={method.template.url.replace(":webp", ":png")}
-                alt={"Voorbeeld van " + method.title}
-              />
+              <img src={method.template.url.replace(":webp", ":png")} alt={"Voorbeeld van " + method.title} />
             </picture>
-          {:else}
-            <img src="/placeholder.webp" alt="Placeholder" />
-          {/if}
-          <h3>{method.title}</h3>
-        </a>
-      </article>
-    {/each}
-  {/if}
+            <h3>{method.title}</h3>
+          </a>
+        </li>
+      {/each}
+    </ul>
 </section>
 
 <style>
@@ -35,6 +28,7 @@
     margin: 1rem 0;
     max-width: var(--grid-max-width);
     margin: auto;
+    align-items: start; /* Ensure items align properly within the grid */
   }
 
   h2 {
@@ -56,23 +50,25 @@
     text-decoration: none;
     color: var(--font-color);
     padding: 0.8rem 0.8rem 0.25rem 0.8rem;
+    display: block; 
   }
 
-  article {
+  li {
     display: flex;
     flex-direction: column;
     transition: 0.1s;
     margin: -0.8rem;
     border-bottom: 0.3rem solid transparent;
+    background-color: var(--color-background); 
   }
 
-  article img {
+  li img {
     border: 1px solid #ccc;
     width: 100%;
     height: auto;
   }
 
-  article:hover {
+  li:hover {
     border-bottom: 0.3rem solid var(--color-quinary);
     background-color: var(--color-septenary-40);
   }
