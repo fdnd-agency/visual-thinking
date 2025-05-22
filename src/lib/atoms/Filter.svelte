@@ -11,6 +11,7 @@
   {#each categories as category}
   <label for={category.slug}>
       {category.title}
+      <Icons name=closeButton />
   </label>
 
 <!-- 
@@ -35,11 +36,29 @@
 </form>
 
 <style>
+
+  form label {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 1rem;
+
+    border: .4em solid var(--color-quinary);
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+
   input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--color-quinary);
+    background: var(--color-quinary);
+    margin: 0;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--color-quinary);
 }
 
 </style>
