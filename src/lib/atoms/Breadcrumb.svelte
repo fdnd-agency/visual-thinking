@@ -1,7 +1,5 @@
 <script>
-  export let titel;
-  export let url;
-  export let backgroundColor;
+  let { titel, url, backgroundColor } = $props();
 </script>
 
 <div class="breadcrumb" style="--background-color:{backgroundColor}">

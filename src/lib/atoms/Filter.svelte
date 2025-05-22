@@ -1,8 +1,8 @@
 <script>
   import { Icons } from '$lib/index.js';
-  export let categories;
+  let { categories } = $props();
 
- let form;
+ let form = $state();
 </script>
 
 <!--  bind:this={form} will create some kind of query selector :) -->
@@ -26,7 +26,7 @@
     id={category.slug}
     name="filter"
     value={category.slug}
-    on:change={() => {
+    onchange={() => {
       form.requestSubmit();
     }}
     />

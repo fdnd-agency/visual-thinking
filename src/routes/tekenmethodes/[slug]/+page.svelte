@@ -1,7 +1,7 @@
 <script>
   import { Breadcrumb, MethodHeader } from "$lib/index.js";
 
-  export let data;
+  let { data } = $props();
   // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
   const { title, slug, pdf } = data.methods[0];
 </script>

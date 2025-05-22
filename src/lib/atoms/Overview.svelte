@@ -1,5 +1,5 @@
 <script>
-  export let methods;
+  let { methods } = $props();
 </script>
 
 <section class="grid">
