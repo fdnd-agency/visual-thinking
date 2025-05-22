@@ -12,7 +12,7 @@ export { default as Breadcrumb } from "./atoms/Breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/Hexagon.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
 export { default as Overview } from "./atoms/Overview.svelte";
-export { default as Filter } from "./atoms/filter.svelte";
+export { default as Filter } from "./atoms/Filter.svelte";
 
 // molecules
 export { default as Footer } from "./molecules/Footer.svelte";
