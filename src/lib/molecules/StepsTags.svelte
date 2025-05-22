@@ -1,8 +1,6 @@
 <script>
   import { IconAuthor, IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
-  export let categories;
-  export let materials;
-  export let duration;
+  let { categories, materials, duration } = $props();
 
   // Functie om underscores te verwijderen en de eerste letter van het eerste woord hoofdletter te maken
   function formatMaterial(material) {

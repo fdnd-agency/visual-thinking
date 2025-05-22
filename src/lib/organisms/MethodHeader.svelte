@@ -1,7 +1,5 @@
 <script>
-  export let title;
-  export let slug;
-  export let pdf;
+  let { title, slug, pdf } = $props();
 </script>
 
 <header>

@@ -4,8 +4,8 @@
 
   const logoSize = 80;
   // Used for the active state for the menu links
-  let activeRoute;
-  $: activeRoute = $page.route.id; // 
+  let activeRoute = $derived($page.route.id);
+   // 
 </script>
 
 <header>

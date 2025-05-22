@@ -1,8 +1,19 @@
 <script>
-  export let name = "undefined";
-  export let width = "24"; 
-  export let height = "24"; 
-  export let color = '#000';
+  /**
+   * @typedef {Object} Props
+   * @property {string} [name]
+   * @property {string} [width]
+   * @property {string} [height]
+   * @property {string} [color]
+   */
+
+  /** @type {Props} */
+  let {
+    name = "undefined",
+    width = "24",
+    height = "24",
+    color = '#000'
+  } = $props();
 </script>
   
 {#if name == "youtube"}

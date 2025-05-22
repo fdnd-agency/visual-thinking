@@ -1,7 +1,7 @@
 <script>
 import { KnowledgeClips } from "$lib/index.js";
 
-export let data
+	let { data } = $props();
 const clips = data.categories;
 </script>
 
