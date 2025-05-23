@@ -54,5 +54,9 @@
     background-color: var(--color-quinary);
     background: var(--color-quinary);
     margin: 0;
-}
+  }
+
+  input[type="checkbox"]:checked + label {
+    background: var(--color-quinary);
+  }
 </style>
