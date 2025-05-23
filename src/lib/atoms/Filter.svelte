@@ -1,8 +1,7 @@
 <script>
   import { Icons } from '$lib/index.js';
   let { categories } = $props();
-
- let form = $state();
+  let form = $state();
 </script>
 
 <!--  bind:this={form} will create some kind of query selector :) -->
@@ -11,7 +10,7 @@
   {#each categories as category}
   <label for={category.slug}>
       {category.title}
-      <Icons name=closeButton />
+      <Icons name="closeButton" class="close-button" />
   </label>
 
 <!-- 
@@ -56,9 +55,4 @@
     background: var(--color-quinary);
     margin: 0;
 }
-
-input[type="checkbox"]:checked {
-    background: var(--color-quinary);
-}
-
 </style>
