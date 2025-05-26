@@ -64,10 +64,12 @@
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
     cursor: pointer;
+
+    .close-button {
+      visibility: hidden;
+    }
   }
-  .close-button {
-    display: hidden;
-  }
+
 
   input[type="checkbox"] {
     -webkit-appearance: none;
@@ -80,8 +82,8 @@
   input[type="checkbox"]:checked + label {
     background: var(--color-quinary);
 
-    &.close-button {
-      display: block;
+    .close-button {
+      visibility: visible;
     }
   }
 </style>
