@@ -1,5 +1,5 @@
 <script>
-
+  import { onMount } from 'svelte';
   let { categories } = $props();
   let form = $state();
 
@@ -9,18 +9,28 @@
 
   // checks if javascript is enabled
   let javascript = $state({ enabled: false });
+
+  onMount(() => {
+    javascript.enabled = true;
+  });
 </script>
 
 <!--  bind:this={form} will create some kind of query selector :) -->
 <form bind:this={form} action="/tekenmethodes" method="get">
   <legend>Filter</legend>
-  <div>
+  {#if javascript.enabled}
+    <p class="js-on">Javascript is enabled</p>
+  {:else}
+    <p class="js-off">Javascript is disabled</p>
+  {/if}
+
+  <div class='js-off'>
     {#each categories as category}
     <!-- 
     value={category.slug} is important to loop through the hygraph data. 
     This makes it so that its visible and can be filtered
     -->
-      <label for={category.slug} class='js-off'>
+      <label for={category.slug} >
           {category.title}
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -97,12 +107,12 @@
     }
   }
 
-  .js-on {
+  .js-on  label{
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
   }
 
-  .js-off {
+  .js-off label {
     padding: 0.5rem .8rem ;
     display: flex;
     align-items: center;
@@ -132,7 +142,7 @@
     }
   }
 
-  .js-off:has(input:checked) {
+  .js-off label:has(input:checked) {
     background-color: var(--color-septenary-40);
     border-bottom: .4em solid var(--color-quinary);
   }
