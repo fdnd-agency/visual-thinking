@@ -13,52 +13,53 @@
 <form bind:this={form} action="/tekenmethodes" method="get">
   <legend>Filter</legend>
   <div>
-  {#each categories as category}
-  <label for={category.slug}>
-      {category.title}
-    <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        width={width} 
-        height={height} 
-        viewBox="0 0 384 512"
-        class = "close-button"
-      >
+    {#each categories as category}
+      <label for={category.slug}>
+          {category.title}
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width={width} 
+            height={height} 
+            viewBox="0 0 384 512"
+            class = "close-button"
+          >
 
-      <path 
-        fill={color} 
-        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-      />
+          <path 
+            fill={color} 
+            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+          />
 
-    </svg>
-  </label>
+        </svg>
+      </label>
 
-<!-- 
-  value={category.slug} is important to loop through the hygraph data. 
- This makes it so that its visible and can be filtered
--->
+    <!-- 
+      value={category.slug} is important to loop through the hygraph data. 
+    This makes it so that its visible and can be filtered
+    -->
 
- <!-- 
-    on:change={() => is a syntax that is being used as a event listener in svelte. 
- -->
-    <input 
-    type="checkbox"
-    id={category.slug}
-    name="filter"
-    value={category.slug}
-    onchange={() => {
-      form.requestSubmit();
-    }}
-    />
-  {/each}
+    <!-- 
+        on:change={() => is a syntax that is being used as a event listener in svelte. 
+    -->
+        <input 
+        type="checkbox"
+        id={category.slug}
+        name="filter"
+        value={category.slug}
+        onchange={() => {
+          form.requestSubmit();
+        }}
+        />
+      {/each}
+    </div>
   <button type="submit" class="filter-button">toepassen</button>
-  </div>
+
 </form>
 
 <style>
 
   form {
     max-width: var(--grid-max-width);
-        margin: auto;
+    margin: auto;
     align-items: start;
     display: grid;
   }
