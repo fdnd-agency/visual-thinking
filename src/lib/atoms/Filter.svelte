@@ -18,13 +18,8 @@
 <!--  bind:this={form} will create some kind of query selector :) -->
 <form bind:this={form} action="/tekenmethodes" method="get">
   <legend>Filter</legend>
-  {#if javascript.enabled}
-    <p class="js-on">Javascript is enabled</p>
-  {:else}
-    <p class="js-off">Javascript is disabled</p>
-  {/if}
 
-  <div class='js-off'>
+  <div class:js-on={javascript.enabled} class:js-off={!javascript.enabled}>
     {#each categories as category}
     <!-- 
     value={category.slug} is important to loop through the hygraph data. 
