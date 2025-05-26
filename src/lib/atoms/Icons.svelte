@@ -13,7 +13,7 @@
     width = "24",
     height = "24",
     color = '#000',
-    className = 'icon'
+    class: className = 'icon'
   } = $props();
 </script>
   
