@@ -16,10 +16,15 @@
 </script>
 
 <!--  bind:this={form} will create some kind of query selector :) -->
-<form bind:this={form} action="/tekenmethodes" method="get">
+<form bind:this={form} 
+  action="/tekenmethodes" 
+  method="get"
+  class:js-on={javascript.enabled} class:js-off={!javascript.enabled}
+  >
+
   <legend>Filter</legend>
 
-  <div class:js-on={javascript.enabled} class:js-off={!javascript.enabled}>
+  <div>
     {#each categories as category}
     <!-- 
     value={category.slug} is important to loop through the hygraph data. 
@@ -56,8 +61,9 @@
 
       </label>
       {/each}
-        <button type="submit" class="filter-button">toepassen</button>
     </div>
+    <button type="submit" class="filter-button">toepassen</button>
+
 </form>
 
 <style>
@@ -75,7 +81,6 @@
   form div {
     display: flex;
     flex-direction: row;
-
     flex-wrap: wrap;
   }
 
@@ -103,8 +108,15 @@
 
   /* styling for when js is on */
 
-  .js-on{
+  .js-on {
 
+    & div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
     & button {
       display: none;
     }
@@ -112,6 +124,12 @@
     & label {
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
+
+    padding: 0.5rem .8rem 0.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: .5rem;
     }
 
 
