@@ -12,6 +12,7 @@
 <!--  bind:this={form} will create some kind of query selector :) -->
 <form bind:this={form} action="/tekenmethodes" method="get">
   <legend>Filter</legend>
+  <div>
   {#each categories as category}
   <label for={category.slug}>
       {category.title}
@@ -50,6 +51,7 @@
     />
   {/each}
   <button type="submit" class="filter-button">toepassen</button>
+  </div>
 </form>
 
 <style>
@@ -59,6 +61,13 @@
         margin: auto;
     align-items: start;
     display: grid;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    flex-wrap: wrap;
   }
   form label {
     padding: 0.5rem .8rem 0.5rem 2rem;
