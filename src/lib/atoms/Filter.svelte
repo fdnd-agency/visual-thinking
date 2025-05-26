@@ -54,6 +54,12 @@
 
 <style>
 
+  form {
+    max-width: var(--grid-max-width);
+        margin: auto;
+    align-items: start;
+    display: grid;
+  }
   form label {
     padding: 0.5rem .8rem 0.5rem 2rem;
     display: flex;
