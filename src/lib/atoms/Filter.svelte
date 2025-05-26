@@ -16,7 +16,11 @@
   <legend>Filter</legend>
   <div>
     {#each categories as category}
-      <label for={category.slug}>
+    <!-- 
+    value={category.slug} is important to loop through the hygraph data. 
+    This makes it so that its visible and can be filtered
+    -->
+      <label for={category.slug} class='js-off'>
           {category.title}
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -32,25 +36,20 @@
           />
 
         </svg>
-      </label>
-
-    <!-- 
-      value={category.slug} is important to loop through the hygraph data. 
-    This makes it so that its visible and can be filtered
-    -->
-
     <!-- 
         on:change={() => is a syntax that is being used as a event listener in svelte. 
     -->
         <input 
-        type="checkbox"
-        id={category.slug}
-        name="filter"
-        value={category.slug}
-        onchange={() => {
-          form.requestSubmit();
-        }}
+          type="checkbox"
+          id={category.slug}
+          name="filter"
+          value={category.slug}
+          onchange={() => {
+            form.requestSubmit();
+          }}
         />
+
+      </label>
       {/each}
     </div>
   <button type="submit" class="filter-button">toepassen</button>
@@ -59,49 +58,82 @@
 
 <style>
 
+  /* basic styling */
+
   form {
     max-width: var(--grid-max-width);
     margin: auto;
     align-items: start;
     display: grid;
+    gap: 1rem;
   }
 
   form div {
     display: flex;
     flex-direction: row;
-    gap: .5rem;
+
     flex-wrap: wrap;
   }
+
   form label {
-    padding: 0.5rem .8rem 0.5rem 2rem;
     display: flex;
     flex-direction: row;
     width: fit-content;
     gap: .5rem;
 
+    cursor: pointer;
+  }
+
+  form button {
+    width: fit-content;
+    padding: .5rem 1rem;
+    font: inherit;
+    border: .15rem solid var(--color-septenary);
+    border-radius: .3rem;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .js-on {
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
-    cursor: pointer;
+  }
+
+  .js-off {
+    padding: 0.5rem .8rem ;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    border-bottom: .4em solid var(--color-primary);
 
     .close-button {
-      visibility: hidden;
+        display: none;
+    }
+
+    &:hover {
+      background-color: var(--color-septenary-40);
+      border-bottom: .4em solid var(--color-quinary-80);
+    }
+
+    & input[type="checkbox"] {
+      border: 1em solid var(--color-quinary);
+      background-color: var(--color-quinary);
+      width: .5rem;
+      height: .5rem;
+
+      &::before {
+        border: .1rem solid var(--color-quinary);
+        background-color: var(--color-primary);
+
+      }
     }
   }
 
-
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: var(--color-quinary);
-    background: var(--color-quinary);
-    margin: 0;
-  }
-
-  input[type="checkbox"]:checked + label {
-    background: var(--color-quinary);
-
-    .close-button {
-      visibility: visible;
-    }
+  .js-off:has(input:checked) {
+    background-color: var(--color-septenary-40);
+    border-bottom: .4em solid var(--color-quinary);
   }
 </style>
