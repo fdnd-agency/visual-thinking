@@ -14,6 +14,10 @@
   <legend>Filter</legend>
   <div>
     {#each categories as category}
+    <!-- 
+    value={category.slug} is important to loop through the hygraph data. 
+    This makes it so that its visible and can be filtered
+    -->
       <label for={category.slug} class='js-off'>
           {category.title}
         <svg 
@@ -30,25 +34,20 @@
           />
 
         </svg>
-      </label>
-
-    <!-- 
-      value={category.slug} is important to loop through the hygraph data. 
-    This makes it so that its visible and can be filtered
-    -->
-
     <!-- 
         on:change={() => is a syntax that is being used as a event listener in svelte. 
     -->
         <input 
-        type="checkbox"
-        id={category.slug}
-        name="filter"
-        value={category.slug}
-        onchange={() => {
-          form.requestSubmit();
-        }}
+          type="checkbox"
+          id={category.slug}
+          name="filter"
+          value={category.slug}
+          onchange={() => {
+            form.requestSubmit();
+          }}
         />
+
+      </label>
       {/each}
     </div>
   <button type="submit" class="filter-button">toepassen</button>
@@ -82,54 +81,29 @@
     cursor: pointer;
   }
 
-  /* when js is on */
   .js-on {
-    padding: 0.5rem .8rem 0.5rem 2rem;
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
-    .close-button {
-      visibility: hidden;
-    }
   }
 
-  input[type="checkbox"]:has(+ .js-on) {
-    -webkit-appearance: none;
-    appearance: none;
-    margin: 0;
-    background-color: var(--color-quinary);
-    background: var(--color-quinary);
-  }
-
-  input[type="checkbox"]:checked + .js-on {
-    background: var(--color-quinary);
-    .close-button {
-      visibility: visible;
-    }
-  }
-
-  /* when js is off */
-
-    .js-off {
+  .js-off {
     padding: 0.5rem .8rem 0.5rem 2rem;
-    border: .4em solid var(--color-quinary);
-    border-radius: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: .4em solid var(--color-primary);
+
     .close-button {
-      visibility: hidden;
+        visibility: hidden;
+    }
+
+    &:hover {
+      background-color: var(--color-septenary-40);
+      border-bottom: .4em solid var(--color-quinary-80);
     }
   }
 
-  input[type="checkbox"]:has(+ .js-off) {
-    -webkit-appearance: none;
-    appearance: none;
-    margin: 0;
-    background-color: var(--color-quinary);
-    background: var(--color-quinary);
-  }
-
-  input[type="checkbox"]:checked + .js-off {
-    background: var(--color-quinary);
-    .close-button {
-      visibility: visible;
-    }
+  .js-off:has(input:checked) {
+    background-color: var(--color-septenary-40);
+    border-bottom: .4em solid var(--color-quinary);
   }
 </style>
