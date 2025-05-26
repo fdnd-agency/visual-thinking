@@ -55,11 +55,11 @@
 <style>
 
   form label {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
     display: flex;
     flex-direction: row;
     width: fit-content;
-    gap: 1rem;
+    gap: .5rem;
 
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
