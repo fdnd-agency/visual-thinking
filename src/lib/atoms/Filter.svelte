@@ -14,7 +14,7 @@
   <legend>Filter</legend>
   <div>
     {#each categories as category}
-      <label for={category.slug}>
+      <label for={category.slug} class='js-off'>
           {category.title}
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -57,6 +57,8 @@
 
 <style>
 
+  /* basic styling */
+
   form {
     max-width: var(--grid-max-width);
     margin: auto;
@@ -70,34 +72,62 @@
     gap: .5rem;
     flex-wrap: wrap;
   }
+
   form label {
-    padding: 0.5rem .8rem 0.5rem 2rem;
     display: flex;
     flex-direction: row;
     width: fit-content;
     gap: .5rem;
 
+    cursor: pointer;
+  }
+
+  /* when js is on */
+  .js-on {
+    padding: 0.5rem .8rem 0.5rem 2rem;
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
-    cursor: pointer;
-
     .close-button {
       visibility: hidden;
     }
   }
 
-
-  input[type="checkbox"] {
+  input[type="checkbox"]:has(+ .js-on) {
     -webkit-appearance: none;
     appearance: none;
+    margin: 0;
     background-color: var(--color-quinary);
     background: var(--color-quinary);
-    margin: 0;
   }
 
-  input[type="checkbox"]:checked + label {
+  input[type="checkbox"]:checked + .js-on {
     background: var(--color-quinary);
+    .close-button {
+      visibility: visible;
+    }
+  }
 
+  /* when js is off */
+
+    .js-off {
+    padding: 0.5rem .8rem 0.5rem 2rem;
+    border: .4em solid var(--color-quinary);
+    border-radius: 3rem;
+    .close-button {
+      visibility: hidden;
+    }
+  }
+
+  input[type="checkbox"]:has(+ .js-off) {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    background-color: var(--color-quinary);
+    background: var(--color-quinary);
+  }
+
+  input[type="checkbox"]:checked + .js-off {
+    background: var(--color-quinary);
     .close-button {
       visibility: visible;
     }
