@@ -20,6 +20,7 @@
   action="/tekenmethodes" 
   method="get"
   class:js-on={javascript.enabled} class:js-off={!javascript.enabled}
+
   >
 
   <legend>Filter</legend>
@@ -76,6 +77,10 @@
     align-items: start;
     display: grid;
     gap: 1rem;
+
+    & .close-button {
+      display: none
+    }
   }
 
   form div {
@@ -134,6 +139,7 @@
 
 
     .close-button {
+      display: block;
       visibility: hidden;
     }
 
