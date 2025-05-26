@@ -7,6 +7,8 @@
   let height = "24";   
   let color = '#000';
 
+  // checks if javascript is enabled
+  let javascript = $state({ enabled: false });
 </script>
 
 <!--  bind:this={form} will create some kind of query selector :) -->
