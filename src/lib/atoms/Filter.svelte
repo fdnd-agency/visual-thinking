@@ -56,6 +56,7 @@
 
       </label>
       {/each}
+        <button type="submit" class="filter-button">toepassen</button>
     </div>
   <button type="submit" class="filter-button">toepassen</button>
 
@@ -102,10 +103,43 @@
     }
   }
 
-  .js-on  label{
+  /* styling for when js is on */
+
+  .js-on{
+
+    }
+
+    & label {
     border: .4em solid var(--color-quinary);
     border-radius: 3rem;
+    }
+
+
+    .close-button {
+      visibility: hidden;
+    }
+
+    & input[type="checkbox"] {
+      /* will remove the checkbox */
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: var(--color-quinary);
+      background: var(--color-quinary);
+      margin: 0;
+    }
   }
+
+    .js-on label:has(input:checked) {
+    background-color: var(--color-quinary);
+
+    .close-button {
+      visibility: visible;
+    }
+  }
+
+
+
+    /* styling for when js is off */
 
   .js-off label {
     padding: 0.5rem .8rem ;
