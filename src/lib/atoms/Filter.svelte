@@ -87,18 +87,32 @@
   }
 
   .js-off {
-    padding: 0.5rem .8rem 0.5rem 2rem;
+    padding: 0.5rem .8rem ;
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
     border-bottom: .4em solid var(--color-primary);
 
     .close-button {
-        visibility: hidden;
+        display: none;
     }
 
     &:hover {
       background-color: var(--color-septenary-40);
       border-bottom: .4em solid var(--color-quinary-80);
+    }
+
+    & input[type="checkbox"] {
+      border: 1em solid var(--color-quinary);
+      background-color: var(--color-quinary);
+      width: .5rem;
+      height: .5rem;
+
+      &::before {
+        border: .1rem solid var(--color-quinary);
+        background-color: var(--color-primary);
+
+      }
     }
   }
 
