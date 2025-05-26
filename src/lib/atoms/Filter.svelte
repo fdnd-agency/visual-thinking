@@ -58,8 +58,6 @@
       {/each}
         <button type="submit" class="filter-button">toepassen</button>
     </div>
-  <button type="submit" class="filter-button">toepassen</button>
-
 </form>
 
 <style>
@@ -107,6 +105,8 @@
 
   .js-on{
 
+    & button {
+      display: none;
     }
 
     & label {
