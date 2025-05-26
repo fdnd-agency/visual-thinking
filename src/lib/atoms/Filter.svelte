@@ -63,12 +63,13 @@
     margin: auto;
     align-items: start;
     display: grid;
+    gap: 1rem;
   }
 
   form div {
     display: flex;
     flex-direction: row;
-    gap: .5rem;
+
     flex-wrap: wrap;
   }
 
@@ -79,6 +80,19 @@
     gap: .5rem;
 
     cursor: pointer;
+  }
+
+  form button {
+    width: fit-content;
+    padding: .5rem 1rem;
+    font: inherit;
+    border: .15rem solid var(--color-septenary);
+    border-radius: .3rem;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .js-on {
