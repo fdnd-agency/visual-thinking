@@ -133,7 +133,7 @@
 
   form button {
     width: fit-content;
-    padding: .5rem 1rem;
+    padding: .3rem;
     font: inherit;
     border: .15rem solid var(--color-septenary);
     border-radius: .3rem;
