@@ -103,7 +103,7 @@
     border-bottom: .4em solid var(--color-primary);
 
     .close-button {
-        display: none;
+      display: none;
     }
 
     &:hover {
@@ -138,6 +138,7 @@
     border: .15rem solid var(--color-septenary);
     border-radius: .3rem;
     transition: all .2s ease-in-out;
+    margin-left: auto;
 
     &:hover {
       transform: scale(1.1);
