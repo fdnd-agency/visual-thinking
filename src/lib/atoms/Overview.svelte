@@ -27,6 +27,10 @@
     justify-content: center;
   }
 
+  h2 {
+    grid-column: 1 / -1;
+  }
+
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -36,10 +40,6 @@
     max-width: var(--grid-max-width);
     align-items: start;
     padding-bottom: 1rem;
-  }
-
-  h2 {
-    grid-column: 1 / -1;
   }
 
   h3 {
