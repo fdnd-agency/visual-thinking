@@ -2,9 +2,9 @@
   let { methods } = $props();
 </script>
 
-<section class="grid">
+<section>
   <h2>Alle methodes ({methods.length})</h2>
-    <ul class="grid">
+    <ul>
       {#each methods as method}
         <li>
           <a href="/tekenmethodes/{method.slug}">
@@ -21,14 +21,21 @@
 </section>
 
 <style>
-  .grid {
+  section {
+    margin: auto;
+    display: grid;
+    justify-content: center;
+  }
+
+  ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
-    margin: 1rem 0;
+    margin: 0;
+    padding: 0;
     max-width: var(--grid-max-width);
-    margin: auto;
-    align-items: start; /* Ensure items align properly within the grid */
+    align-items: start;
+    padding-bottom: 1rem;
   }
 
   h2 {
