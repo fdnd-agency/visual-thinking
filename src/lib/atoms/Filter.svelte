@@ -22,7 +22,7 @@
   class:js-on={javascript.enabled}
   >
 
-  <legend>Filter</legend>
+  <legend>Filter op categorie</legend>
 
   <div>
     {#each categories as category}
@@ -152,6 +152,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
 
     & button {
@@ -159,14 +160,13 @@
     }
 
     & label {
-    border: .4em solid var(--color-quinary);
-    border-radius: 3rem;
-
-    padding: 0.5rem .8rem 0.5rem 2rem;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    gap: .5rem;
+      border: .4em solid var(--color-quinary);
+      border-radius: 3rem;
+      padding: 0.5rem .8rem 0.5rem 2rem;
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      gap: .5rem;
     }
 
     .close-button {
