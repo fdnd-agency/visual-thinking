@@ -114,8 +114,8 @@
     & input[type="checkbox"] {
       border: 1em solid var(--color-quinary);
       background-color: var(--color-quinary);
-      width: .5rem;
-      height: .5rem;
+      width: .8rem;
+      height: .8rem;
 
       &::before {
         border: .1rem solid var(--color-quinary);
