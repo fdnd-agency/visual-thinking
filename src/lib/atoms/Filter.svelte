@@ -19,8 +19,7 @@
 <form bind:this={form} 
   action="/tekenmethodes" 
   method="get"
-  class:js-on={javascript.enabled} class:js-off={!javascript.enabled}
-
+  class:js-on={javascript.enabled}
   >
 
   <legend>Filter</legend>
@@ -87,89 +86,20 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  form label {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
     gap: .5rem;
-
-    cursor: pointer;
   }
 
-  form button {
-    width: fit-content;
-    padding: .5rem 1rem;
-    font: inherit;
-    border: .15rem solid var(--color-septenary);
-    border-radius: .3rem;
-    transition: all .2s ease-in-out;
+  /* styling for when js is off */
 
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  /* styling for when js is on */
-
-  .js-on {
-
-    & div {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    & button {
-      display: none;
-    }
-
-    & label {
-    border: .4em solid var(--color-quinary);
-    border-radius: 3rem;
-
-    padding: 0.5rem .8rem 0.5rem 2rem;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    gap: .5rem;
-    }
-
-
-    .close-button {
-      display: block;
-      visibility: hidden;
-    }
-
-    & input[type="checkbox"] {
-      /* will remove the checkbox */
-      -webkit-appearance: none;
-      appearance: none;
-      background-color: var(--color-quinary);
-      background: var(--color-quinary);
-      margin: 0;
-    }
-  }
-
-    .js-on label:has(input:checked) {
-    background-color: var(--color-quinary);
-
-    .close-button {
-      visibility: visible;
-    }
-  }
-
-
-
-    /* styling for when js is off */
-
-  .js-off label {
-    padding: 0.5rem .8rem ;
+  form div label {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    gap: .5rem;
+    padding: 0.5rem .8rem ;
+    width: fit-content;
+
+    cursor: pointer;
     border-bottom: .4em solid var(--color-primary);
 
     .close-button {
@@ -194,9 +124,71 @@
       }
     }
   }
-
-  .js-off label:has(input:checked) {
+  
+  form div label:has(input:checked) {
     background-color: var(--color-septenary-40);
     border-bottom: .4em solid var(--color-quinary);
   }
+
+
+  form button {
+    width: fit-content;
+    padding: .5rem 1rem;
+    font: inherit;
+    border: .15rem solid var(--color-septenary);
+    border-radius: .3rem;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  /* styling for when js is on */
+  .js-on {
+    & div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    & button {
+      display: none;
+    }
+
+    & label {
+    border: .4em solid var(--color-quinary);
+    border-radius: 3rem;
+
+    padding: 0.5rem .8rem 0.5rem 2rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: .5rem;
+    }
+
+    .close-button {
+      display: block;
+      visibility: hidden;
+    }
+
+    & input[type="checkbox"] {
+      /* will remove the checkbox */
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: var(--color-quinary);
+      background: var(--color-quinary);
+      margin: 0;
+    }
+  }
+
+    .js-on label:has(input:checked) {
+    background-color: var(--color-quinary);
+
+    .close-button {
+      visibility: visible;
+    }
+  }
+
 </style>
