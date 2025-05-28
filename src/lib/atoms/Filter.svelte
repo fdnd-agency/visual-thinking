@@ -177,10 +177,11 @@
     & input[type="checkbox"] {
       /* will remove the checkbox */
       -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
       appearance: none;
-      background-color: var(--color-quinary);
-      background: var(--color-quinary);
       margin: 0;
+      display:none;
     }
   }
 
