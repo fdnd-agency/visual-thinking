@@ -101,6 +101,8 @@
 
     cursor: pointer;
     border-bottom: .4em solid var(--color-primary);
+    transition: all 200ms 100ms ease-in-out;
+
 
     .close-button {
       display: none;
@@ -167,6 +169,12 @@
       flex-direction: row;
       width: fit-content;
       gap: .5rem;
+
+        &:hover {
+        background-color: none;
+        border-color: var(--color-quinary);
+        transform: scale(1.05);
+      }
     }
 
     .close-button {
@@ -183,6 +191,7 @@
       margin: 0;
       display:none;
     }
+
   }
 
     .js-on label:has(input:checked) {
