@@ -87,6 +87,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: .5rem;
+
+    border-style: none;
+    border-color: none;
+    border-image: none;
+    padding-block: 1rem;
+    padding-inline: 0.75em;
   }
 
   /* styling for when js is off */
