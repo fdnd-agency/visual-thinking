@@ -9,9 +9,24 @@
         <li>
           <a href="/tekenmethodes/{method.slug}">
             <picture>
-              <source srcset={method.template.url.replace(":webp", ":avif")}/>
-              <source srcset={method.template.url} />
-              <img src={method.template.url.replace(":webp", ":png")} alt={"Voorbeeld van " + method.title} />
+
+              <source 
+              srcset={method.template.url.replace(":webp", ":avif")}
+              type="image/avif"
+              />
+
+              <source 
+              srcset={method.template.url}
+              type="image/webp" 
+              />
+
+              <img 
+              src={method.template.url.replace(":webp", ":png")} 
+              alt={"Voorbeeld van " + method.title} 
+              width="300"
+              height="150"
+              loading="lazy"
+              />
             </picture>
             <h3>{method.title}</h3>
           </a>
