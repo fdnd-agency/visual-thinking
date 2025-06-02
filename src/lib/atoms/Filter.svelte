@@ -68,6 +68,12 @@
 
 <style>
 
+  /*  to prevent the whole page to shift when you select something */
+  :global(html) {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+  }
+  
   /* basic styling */
 
   form {
@@ -89,7 +95,7 @@
     gap: .5rem;
 
     border-style: none;
-    border-color: none;
+    border: none;
     border-image: none;
     padding-block: 1rem;
     padding-inline: 0.75em;
@@ -108,7 +114,6 @@
     cursor: pointer;
     border-bottom: .4em solid var(--color-primary);
     transition: all 200ms 100ms ease-in-out;
-
 
     .close-button {
       display: none;
@@ -137,7 +142,6 @@
     background-color: var(--color-septenary-40);
     border-bottom: .4em solid var(--color-quinary);
   }
-
 
   form button {
     width: fit-content;
@@ -197,7 +201,6 @@
       margin: 0;
       pointer-events: none;
     }
-
   }
 
     .js-on label:has(input:checked) {
