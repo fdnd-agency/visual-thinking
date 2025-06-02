@@ -183,13 +183,13 @@
     }
 
     & input[type="checkbox"] {
-      /* will remove the checkbox */
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -o-appearance: none;
       appearance: none;
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
       margin: 0;
-      display:none;
+      pointer-events: none;
     }
 
   }
