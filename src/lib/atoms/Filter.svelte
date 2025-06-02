@@ -202,4 +202,10 @@
     }
   }
 
+  .js-on label:has(input[type="checkbox"]:focus-visible) {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: 1rem;
+}
+
 </style>
