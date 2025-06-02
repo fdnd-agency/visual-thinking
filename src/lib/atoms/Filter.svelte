@@ -22,9 +22,9 @@
   class:js-on={javascript.enabled}
   >
 
-  <legend>Filter op categorie</legend>
 
-  <div>
+  <fieldset>
+      <legend>Filter op categorie</legend>
     {#each categories as category}
     <!-- 
     value={category.slug} is important to loop through the hygraph data. 
@@ -61,7 +61,7 @@
 
       </label>
       {/each}
-    </div>
+    </fieldset>
     <button type="submit" class="filter-button">toepassen</button>
 
 </form>
@@ -82,7 +82,7 @@
     }
   }
 
-  form div {
+  form fieldset {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,7 +91,7 @@
 
   /* styling for when js is off */
 
-  form div label {
+  form fieldset label {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -127,7 +127,7 @@
     }
   }
   
-  form div label:has(input:checked) {
+  form fieldset label:has(input:checked) {
     background-color: var(--color-septenary-40);
     border-bottom: .4em solid var(--color-quinary);
   }
@@ -149,7 +149,7 @@
 
   /* styling for when js is on */
   .js-on {
-    & div {
+    & fieldset {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
