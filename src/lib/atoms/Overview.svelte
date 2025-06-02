@@ -24,7 +24,7 @@
               src={method.template.url.replace(":webp", ":png")} 
               alt={"Voorbeeld van " + method.title} 
               width="300"
-              height="150"
+              height="225"
               loading="lazy"
               />
             </picture>
