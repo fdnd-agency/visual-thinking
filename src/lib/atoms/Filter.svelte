@@ -93,6 +93,8 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
+
     gap: .5rem;
     width: fit-content;
     padding: 0.5rem 0.8rem;
@@ -143,13 +145,10 @@
 
   .js-on {
     & fieldset {
-      display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
-    
 
     & button {
       display: none;
