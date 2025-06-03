@@ -74,11 +74,20 @@
 
   --text-max-width: 40rem;
   --grid-max-width: 60rem;
-}
+
+  /* focus styles */
+  --focus-outline: 4px solid var(--color-quaternary);
+  --focus-offset: 0.3rem;}
 
 
 * {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: 1rem;
 }
 
 body {

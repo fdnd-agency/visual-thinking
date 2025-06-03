@@ -22,9 +22,9 @@
   class:js-on={javascript.enabled}
   >
 
-  <legend>Filter op categorie</legend>
 
-  <div>
+  <fieldset>
+      <legend>Filter op categorie</legend>
     {#each categories as category}
     <!-- 
     value={category.slug} is important to loop through the hygraph data. 
@@ -61,13 +61,19 @@
 
       </label>
       {/each}
-    </div>
+    </fieldset>
     <button type="submit" class="filter-button">toepassen</button>
 
 </form>
 
 <style>
 
+  /*  to prevent the whole page to shift when you select something */
+  :global(html) {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
+  }
+  
   /* basic styling */
 
   form {
@@ -82,16 +88,22 @@
     }
   }
 
-  form div {
+  form fieldset {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: .5rem;
+
+    border-style: none;
+    border: none;
+    border-image: none;
+    padding-block: 1rem;
+    padding-inline: 0.75em;
   }
 
   /* styling for when js is off */
 
-  form div label {
+  form fieldset label {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -102,7 +114,6 @@
     cursor: pointer;
     border-bottom: .4em solid var(--color-primary);
     transition: all 200ms 100ms ease-in-out;
-
 
     .close-button {
       display: none;
@@ -127,11 +138,10 @@
     }
   }
   
-  form div label:has(input:checked) {
+  form fieldset label:has(input:checked) {
     background-color: var(--color-septenary-40);
     border-bottom: .4em solid var(--color-quinary);
   }
-
 
   form button {
     width: fit-content;
@@ -149,7 +159,7 @@
 
   /* styling for when js is on */
   .js-on {
-    & div {
+    & fieldset {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -183,15 +193,14 @@
     }
 
     & input[type="checkbox"] {
-      /* will remove the checkbox */
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -o-appearance: none;
       appearance: none;
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
       margin: 0;
-      display:none;
+      pointer-events: none;
     }
-
   }
 
     .js-on label:has(input:checked) {
@@ -201,5 +210,11 @@
       visibility: visible;
     }
   }
+
+  .js-on label:has(input[type="checkbox"]:focus-visible) {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+  border-radius: 1rem;
+}
 
 </style>

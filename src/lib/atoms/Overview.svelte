@@ -9,9 +9,24 @@
         <li>
           <a href="/tekenmethodes/{method.slug}">
             <picture>
-              <source srcset={method.template.url.replace(":webp", ":avif")}/>
-              <source srcset={method.template.url} />
-              <img src={method.template.url.replace(":webp", ":png")} alt={"Voorbeeld van " + method.title} />
+
+              <source 
+              srcset={method.template.url.replace(":webp", ":avif")}
+              type="image/avif"
+              />
+
+              <source 
+              srcset={method.template.url}
+              type="image/webp" 
+              />
+
+              <img 
+              src={method.template.url.replace(":webp", ":png")} 
+              alt={"Voorbeeld van " + method.title} 
+              width="300"
+              height="225"
+              loading="lazy"
+              />
             </picture>
             <h3>{method.title}</h3>
           </a>
@@ -23,22 +38,19 @@
 <style>
   section {
     margin: auto;
-    display: grid;
-    justify-content: center;
-  }
-
-  h2 {
-    grid-column: 1 / -1;
+    max-width: var(--grid-max-width);
+    width: 100%;
+    padding: 0 1rem; 
   }
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 0;
+    list-style: none;
     padding: 0;
-    max-width: var(--grid-max-width);
-    align-items: start;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
     padding-bottom: 1rem;
   }
 
