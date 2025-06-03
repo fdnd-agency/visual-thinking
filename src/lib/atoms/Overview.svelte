@@ -2,16 +2,31 @@
   let { methods } = $props();
 </script>
 
-<section class="grid">
+<section>
   <h2>Alle methodes ({methods.length})</h2>
-    <ul class="grid">
+    <ul>
       {#each methods as method}
         <li>
           <a href="/tekenmethodes/{method.slug}">
             <picture>
-              <source srcset={method.template.url.replace(":webp", ":avif")}/>
-              <source srcset={method.template.url} />
-              <img src={method.template.url.replace(":webp", ":png")} alt={"Voorbeeld van " + method.title} />
+
+              <source 
+              srcset={method.template.url.replace(":webp", ":avif")}
+              type="image/avif"
+              />
+
+              <source 
+              srcset={method.template.url}
+              type="image/webp" 
+              />
+
+              <img 
+              src={method.template.url.replace(":webp", ":png")} 
+              alt={"Voorbeeld van " + method.title} 
+              width="300"
+              height="225"
+              loading="lazy"
+              />
             </picture>
             <h3>{method.title}</h3>
           </a>
@@ -21,18 +36,22 @@
 </section>
 
 <style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 1rem 0;
-    max-width: var(--grid-max-width);
+  section {
     margin: auto;
-    align-items: start; /* Ensure items align properly within the grid */
+    max-width: var(--grid-max-width);
+    width: 100%;
+    padding: 0 1rem; 
   }
 
-  h2 {
-    grid-column: 1 / -1;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    padding-bottom: 1rem;
   }
 
   h3 {
