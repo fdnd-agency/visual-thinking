@@ -154,7 +154,7 @@
       display: none;
     }
     & div {
-      border: .4em solid var(--color-quinary);
+      border: .3em solid var(--color-quinary);
       border-radius: 3rem;
       padding: 0.5rem .8rem 0.5rem 2rem;
 
