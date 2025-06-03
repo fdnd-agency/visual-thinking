@@ -148,25 +148,28 @@
       gap: 1rem;
       justify-content: center;
     }
+    
 
     & button {
       display: none;
     }
-
-    & label {
+    & div {
       border: .4em solid var(--color-quinary);
       border-radius: 3rem;
       padding: 0.5rem .8rem 0.5rem 2rem;
-      display: flex;
-      flex-direction: row;
-      width: fit-content;
-      gap: .5rem;
 
         &:hover {
         background-color: none;
         border-color: var(--color-quinary);
         transform: scale(1.05);
       }
+    }
+
+    & label {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      gap: .5rem;
     }
 
     .close-button {
