@@ -95,6 +95,7 @@
     flex-direction: row-reverse;
     gap: .5rem;
     width: fit-content;
+    padding: 0.5rem 0.8rem;
 
     cursor: pointer;
     border-bottom: .4em solid var(--color-primary);
