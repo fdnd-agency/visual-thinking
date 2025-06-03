@@ -59,10 +59,6 @@
 </form>
 
 <style>
-  :global(html) {
-    scrollbar-gutter: stable;
-    overflow-y: scroll;
-  }
 
   form {
     max-width: var(--grid-max-width);
