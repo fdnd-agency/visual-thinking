@@ -7,7 +7,6 @@
   let height = "24";   
   let color = '#000';
 
-  // checks if javascript is enabled
   let javascript = $state({ enabled: false });
 
   onMount(() => {
@@ -15,7 +14,6 @@
   });
 </script>
 
-<!--  bind:this={form} will create some kind of query selector :) -->
 <form bind:this={form} 
   action="/tekenmethodes" 
   method="get"
@@ -26,10 +24,6 @@
   <fieldset>
       <legend>Filter op categorie</legend>
     {#each categories as category}
-    <!-- 
-    value={category.slug} is important to loop through the hygraph data. 
-    This makes it so that its visible and can be filtered
-    -->
       <label for={category.slug} >
           {category.title}
         <svg 
@@ -44,11 +38,8 @@
             fill={color} 
             d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
           />
-
         </svg>
-    <!-- 
-        on:change={() => is a syntax that is being used as a event listener in svelte. 
-    -->
+
         <input 
           type="checkbox"
           id={category.slug}
@@ -67,14 +58,10 @@
 </form>
 
 <style>
-
-  /*  to prevent the whole page to shift when you select something */
   :global(html) {
     scrollbar-gutter: stable;
     overflow-y: scroll;
   }
-  
-  /* basic styling */
 
   form {
     max-width: var(--grid-max-width);
@@ -100,8 +87,6 @@
     padding-block: 1rem;
     padding-inline: 0.75em;
   }
-
-  /* styling for when js is off */
 
   form fieldset label {
     display: flex;
@@ -157,7 +142,6 @@
     }
   }
 
-  /* styling for when js is on */
   .js-on {
     & fieldset {
       display: flex;
