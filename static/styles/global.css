@@ -1,8 +1,16 @@
-:root {
-  /* Visual Thinking: Primary Colors:
-    Zie kleuren styleguide of eventueel Figma designs voor gebruik! 
-  */
+@font-face {
+  font-family: "Quantico";
+  src: url(/fonts/Quantico-subset.ttf) format('truetype');
+  font-display: swap;
+} 
 
+@font-face {
+  font-family: "Yrsa";
+  src: url(/fonts/Yrsa-subset.ttf) format('truetype');
+  font-display: swap;
+} 
+
+:root {
   --color-primary: hsl(0, 0%, 100%);
   --color-secondary: hsl(0, 0%, 0%);
 
@@ -56,8 +64,8 @@
 
 
   /* Visual Thinking: Fonts,*/
-  --font-family-primary: "rigid-square", sans-serif;
-  --font-family-secondary: "yrsa", serif;
+  --font-family-primary: "Quantico", sans-serif;
+  --font-family-secondary: "Yrsa", serif;
 
   /* fonts */
   font-size: 1.25rem;
