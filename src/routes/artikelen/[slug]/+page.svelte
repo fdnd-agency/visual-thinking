@@ -1,7 +1,7 @@
 <script>
   import { Breadcrumb } from "$lib/index.js";
 
-  export let data;
+  let { data } = $props();
 
   const {title, visual, intro, content} = data.article
 </script>
