@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Quantico";
-  src: url(/fonts/Quantico-subset.ttf) format('truetype');
+  src: url(/fonts/Quantico-subset.woff2) format('woff2');
   font-display: swap;
 } 
 
 @font-face {
   font-family: "Yrsa";
-  src: url(/fonts/Yrsa-subset.ttf) format('truetype');
+  src: url(/fonts/Yrsa-subset.woff2) format('woff2');
   font-display: swap;
 } 
 
