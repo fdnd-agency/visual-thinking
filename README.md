@@ -1,18 +1,7 @@
-heta id="readme-top"></a>
-# Table of Contents
-- [Jump to](#jump-to)
-- [About the Project](#about-the-project)
-  - [Built with](#built-with)
-- [Getting started](#getting-started)
-  - [Installation](#installation)
-- [Script](#script)
-  - [Dev](#dev)
-  - [Build](#build)
-  - [Preview](#preview) 
-- [Team Members](#team-members)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+<heta id="readme-top"></a>
+
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://github.com/fdnd-agency/visual-thinking">
@@ -36,6 +25,22 @@ heta id="readme-top"></a>
     <a href="https://github.com/fdnd-agency/visual-thinking?tab=readme-ov-file#getting-started">Run locally</a>
   </p>
 </div>
+
+# Table of Contents
+- [Jump to](#jump-to)
+- [About the Project](#about-the-project)
+  - [Built with](#built-with)
+- [Getting started](#getting-started)
+  - [Installation](#installation)
+- [Scripts](#scripts)
+  - [Dev](#dev)
+  - [Build](#build)
+  - [Preview](#preview) 
+- [Team Members](#team-members)
+- [License](#license)
+- [Acknowledgements](#Acknowledgments)
+
+
 <!-- JUMP TO -->
 # Jump To 
 An overview of a collection of relevant links
