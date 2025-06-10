@@ -1,4 +1,16 @@
-<a id="readme-top"></a>
+heta id="readme-top"></a>
+# Table of Contents
+- [About the Project](#About-the-Project)
+	- [Built with](#About-the-Project##Built-with)
+- [Getting started](#Getting-started)
+	- Installation
+- [Script]
+	- Dev
+	- Build
+	- Preview
+- [Team Members]
+- [License]
+- [Acknowlegdements]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -24,27 +36,38 @@
     <a href="https://github.com/fdnd-agency/visual-thinking?tab=readme-ov-file#getting-started">Run locally</a>
   </p>
 </div>
+<!-- JUMP TO -->
+# Jump To 
+An overview of a collection of relevant links
+- [Project board | Visual Thinking Platform](https://github.com/orgs/fdnd-agency/projects/7/views/13)
+	- [Backlog](https://github.com/orgs/fdnd-agency/projects/7/views/3)
+	- [Questions](https://github.com/orgs/fdnd-agency/projects/7/views/16)
+	- [Bugs](https://github.com/orgs/fdnd-agency/projects/7/views/22)
+- [Code](https://github.com/fdnd-agency/visual-thinking)
+- [Conventions](https://github.com/fdnd-agency/visual-thinking/wiki/Conventions)
+- *report a [bug](https://github.com/fdnd-agency/visual-thinking/issues/new/choose)*
+- *Share your [ideas](https://github.com/fdnd-agency/visual-thinking/issues/new/choose)*
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 ![Schermafbeelding 2025-01-22 143012](https://github.com/user-attachments/assets/8d685648-7539-4955-858c-a23bd77eccdc)
 
-A website made for Visual Thinking in het HBO: a platform housing articles and methods created by Charley Muhren to bring visual thinking into the classroom. For students and teachers alike.
+A website made for [*Visual Thinking in het HBO*](https://visualthinking.school): a platform housing articles and methods created by Charley Muhren to bring visual thinking into the classroom. For students and teachers alike.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+## Built With
 
 [![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)](https://svelte.dev/) <br>
 [![Hygraph CMS](https://img.shields.io/badge/Hygraph_CMS-101B42?style=for-the-badge&logo=graphql&logoColor=ffffff)](https://hygraph.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Getting Started
+# Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-### Installation
+## Installation
 
 1. Create an account on Hygraph, and get your endpoint URL & permanent auth token
 2. Clone the repo
@@ -69,17 +92,17 @@ To get a local copy up and running follow these simple example steps.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- IMPORTANT SCRIPTS -->
-## Scripts
+# Scripts
 The project has a couple standard NPM scripts to assist you when developing.
 
-### Dev
+## Dev
 ```sh
    npm run dev
 ```
 
 Run this script to start a local SvelteKit development server. This assists you when developing the server using modern features such as Hot Module Reload. By default the development server will be accessible in the browser at `http://localhost:5174/`
 
-### Build
+## Build
 ```sh
    npm run build
 ```
@@ -88,7 +111,7 @@ Running this script will build your project. This tells SvelteKit to take the co
 
 If you're hosting your project on a website like Netlify or Vercel, you don't have to worry about this script, as the hosting service will do this for you.
 
-### Preview
+## Preview
 ```sh
    npm run preview
 ```
@@ -96,7 +119,7 @@ If you're hosting your project on a website like Netlify or Vercel, you don't ha
 Much like the dev command, this script hosts your website locally. The difference is that the preview command will host the latest output in your `/build` directory. This can be used to debug and test your compiled website. By default this preview will be accessible in the browser at `https://localhost:5174/`
 
 <!-- TEAM MEMBERS -->
-## Team Members
+# Team Members
 
 - Inez · <i>Developer</i> · <a href="https://github.com/Einanas"><strong>Github »</strong></a>
 - Anna-Kyra Strik · <i>Developer</i> · <a href="https://github.com/Anna-Kyra"><strong>Github »</strong></a>
@@ -113,7 +136,7 @@ This work is licensed under [GNU GPLv3](./LICENSE).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+# Acknowledgments
 
 * [SvelteKit documentation](https://svelte.dev/docs/kit/introduction)
 * [Hygraph documentation](https://hygraph.com/docs)
