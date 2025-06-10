@@ -29,14 +29,15 @@
 # Table of Contents
 - [Jump to](#jump-to)
 - [About the Project](#about-the-project)
-  - [Built with](#built-with)
+	- [Built with](#built-with)
 - [Getting started](#getting-started)
-  - [Installation](#installation)
+	- [Installation](#installation)
 - [Scripts](#scripts)
-  - [Dev](#dev)
-  - [Build](#build)
-  - [Preview](#preview) 
+	- [Dev](#dev)
+	- [Build](#build)
+	- [Preview](#preview) 
 - [Team Members](#team-members)
+	- [Former Team Members](#former-team-members)
 - [License](#license)
 - [Acknowledgements](#Acknowledgments)
 
@@ -80,7 +81,7 @@ To get a local copy up and running follow these simple example steps.
    git clone https://github.com/fdnd-agency/visual-thinking.git
    ```
 3. Create your `.env` file using `example.env` as a guide
-4. Install NPM packages
+4. Install `npm` packages
    ```sh
    npm install
    ```
