@@ -1,17 +1,17 @@
 heta id="readme-top"></a>
 # Table of Contents
-- [About the Project](#About-the-Project)
-	- [Built with](#About-the-Project##Built-with)
-- [Getting started](#Getting-started)
-	- Installation
-- [Script]
-	- Dev
-	- Build
-	- Preview
-- [Team Members]
-- [License]
-- [Acknowlegdements]
-
+- [Jump to](#jump-to)
+- [About the Project](#about-the-project)
+  - [Built with](#built-with)
+- [Getting started](#getting-started)
+  - [Installation](#installation)
+- [Script](#script)
+  - [Dev](#dev)
+  - [Build](#build)
+  - [Preview](#preview) 
+- [Team Members](#team-members)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -93,7 +93,7 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- IMPORTANT SCRIPTS -->
 # Scripts
-The project has a couple standard NPM scripts to assist you when developing.
+The project has a couple standard `npm` scripts to assist you when developing.
 
 ## Dev
 ```sh
@@ -120,7 +120,13 @@ Much like the dev command, this script hosts your website locally. The differenc
 
 <!-- TEAM MEMBERS -->
 # Team Members
+Here a list of the current team members:
+- Sammy Bensink · <i>Developer</i> · <a href="https://github.com/SamaraFellaDina"><strong>Github »</strong></a>
+- Damian Romeijn · <i>Developer</i> · <a href="https://github.com/DamianR2004"><strong>Github »</strong></a>
+- Sander Wacanno · <i>UI/UX Designer</i> · <a href="https://github.com/sanderwacanno"><strong>Github »</strong></a>
 
+## Former Team Members
+This is a list of members that previously contributred on this project:
 - Inez · <i>Developer</i> · <a href="https://github.com/Einanas"><strong>Github »</strong></a>
 - Anna-Kyra Strik · <i>Developer</i> · <a href="https://github.com/Anna-Kyra"><strong>Github »</strong></a>
 - Robin van der Heijden · <i>Developer</i> · <a href="https://github.com/Robin1224"><strong>Github »</strong></a>
