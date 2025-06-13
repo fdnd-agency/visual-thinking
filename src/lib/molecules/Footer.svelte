@@ -10,7 +10,7 @@
     <a href="/">
       <Icons name='VisualThinkingLogoFooter' />
     </a>
-    <div class="socials">
+    <div>
       <ul>
         <li>
           <a href="https://www.instagram.com/charley_muhren/">
@@ -118,7 +118,7 @@
   }
 
   @media (min-width: 38rem) and (max-width: 50rem) {    
-    .socials {
+    div {
       padding-right: -3rem;
     }
   }

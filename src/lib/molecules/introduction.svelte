@@ -6,7 +6,6 @@
 
 <section class={className}>
   <h1>{title}</h1>
-
   {@html content.html}
 </section>
 
