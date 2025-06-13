@@ -11,52 +11,52 @@
   }
 </script>
 
-<ul class="tags-container">
+<ul>
   <!-- Categories Section -->
-  <li class="tags-group">
+  <li>
     <IconCategories />
-    <div class="span-box">
+    <div>
       {#each categories as category}
         <p>{category.title}</p>
       {/each}
     </div>
   </li>
   <!-- Materials Section -->
-  <li class="tags-group">
+  <li>
     <IconMaterials />
 
     {#each materials as material}
-      <div class="span-box">
+      <div>
         <p>{formatMaterial(material)}</p>
       </div>
     {/each}
   </li>
   <!-- Duration Section -->
-  <li class="tags-group">
+  <li>
     <IconDuration />
 
-    <div class="span-box">
+    <div>
       <p>{duration}</p>
     </div>
   </li>
   <!-- Author Section -->
-  <li class="tags-group">
+  <li>
     <IconAuthor />
 
-    <div class="span-box">
+    <div>
       <p>Charley Muhren</p>
     </div>
   </li>
 </ul>
 
 <style>
-  .tags-container {
+  ul {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
 
-  .tags-group {
+  li {
     display: flex;
     margin-bottom: 0.5rem;
   }
@@ -78,12 +78,12 @@
     max-width: fit-content;
   }
 
-  .tags-container :global(svg) {
+  div :global(svg) {
     flex-shrink: 0;
   }
 
   @media (min-width: 58rem) {
-    .tags-container {
+    li {
       position: -webkit-sticky; /* Voor Safari */
       position: sticky;
       padding: 0;

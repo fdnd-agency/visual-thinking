@@ -10,7 +10,7 @@
 
 <MethodHeader {title} {slug} {pdf} />
 
-<section class="grid">
+<section>
   <div class="sticky">
     <StepsTags {categories} {duration} materials={material} />
   </div>
@@ -18,7 +18,7 @@
 </section>
 
 <style>
-  .grid {
+  section {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;

@@ -1,6 +1,7 @@
 <a id="readme-top"></a>
 
 <!-- PROJECT LOGO -->
+
 <br />
 <div align="center">
   <a href="https://github.com/fdnd-agency/visual-thinking">
@@ -25,26 +26,56 @@
   </p>
 </div>
 
+# Table of Contents
+- [Jump to](#jump-to)
+- [About the Project](#about-the-project)
+	- [Built with](#built-with)
+- [Getting started](#getting-started)
+	- [Installation](#installation)
+- [Scripts](#scripts)
+	- [Dev](#dev)
+	- [Build](#build)
+	- [Preview](#preview) 
+- [Team Members](#team-members)
+	- [Former Team Members](#former-team-members)
+- [License](#license)
+- [Acknowledgements](#Acknowledgments)
+
+
+<!-- JUMP TO -->
+# Jump To 
+An overview of a collection of relevant links
+- [Handover.md](https://github.com/fdnd-agency/visual-thinking/blob/main/handover.md)
+- [Contribution.md](https://github.com/fdnd-agency/visual-thinking/blob/main/CONTRIBUTING.md)
+- [Project board | Visual Thinking Platform](https://github.com/orgs/fdnd-agency/projects/7/views/13)
+	- [Backlog](https://github.com/orgs/fdnd-agency/projects/7/views/3)
+	- [Questions](https://github.com/orgs/fdnd-agency/projects/7/views/16)
+	- [Bugs](https://github.com/orgs/fdnd-agency/projects/7/views/22)
+- [Code](https://github.com/fdnd-agency/visual-thinking)
+- [Conventions](https://github.com/fdnd-agency/visual-thinking/wiki/Conventions)
+- *report a [bug](https://github.com/fdnd-agency/visual-thinking/issues/new/choose)*
+- *Share your [ideas](https://github.com/fdnd-agency/visual-thinking/issues/new/choose)*
+
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 ![Schermafbeelding 2025-01-22 143012](https://github.com/user-attachments/assets/8d685648-7539-4955-858c-a23bd77eccdc)
 
-A website made for Visual Thinking in het HBO: a platform housing articles and methods created by Charley Muhren to bring visual thinking into the classroom. For students and teachers alike.
+A website made for [*Visual Thinking in het HBO*](https://visualthinking.school): a platform housing articles and methods created by Charley Muhren to bring visual thinking into the classroom. For students and teachers alike.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
+## Built With
 
 [![Svelte](https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00)](https://svelte.dev/) <br>
 [![Hygraph CMS](https://img.shields.io/badge/Hygraph_CMS-101B42?style=for-the-badge&logo=graphql&logoColor=ffffff)](https://hygraph.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Getting Started
+# Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-### Installation
+## Installation
 
 1. Create an account on Hygraph, and get your endpoint URL & permanent auth token
 2. Clone the repo
@@ -52,7 +83,7 @@ To get a local copy up and running follow these simple example steps.
    git clone https://github.com/fdnd-agency/visual-thinking.git
    ```
 3. Create your `.env` file using `example.env` as a guide
-4. Install NPM packages
+4. Install `npm` packages
    ```sh
    npm install
    ```
@@ -69,17 +100,17 @@ To get a local copy up and running follow these simple example steps.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- IMPORTANT SCRIPTS -->
-## Scripts
-The project has a couple standard NPM scripts to assist you when developing.
+# Scripts
+The project has a couple standard `npm` scripts to assist you when developing.
 
-### Dev
+## Dev
 ```sh
    npm run dev
 ```
 
 Run this script to start a local SvelteKit development server. This assists you when developing the server using modern features such as Hot Module Reload. By default the development server will be accessible in the browser at `http://localhost:5174/`
 
-### Build
+## Build
 ```sh
    npm run build
 ```
@@ -88,7 +119,7 @@ Running this script will build your project. This tells SvelteKit to take the co
 
 If you're hosting your project on a website like Netlify or Vercel, you don't have to worry about this script, as the hosting service will do this for you.
 
-### Preview
+## Preview
 ```sh
    npm run preview
 ```
@@ -96,8 +127,14 @@ If you're hosting your project on a website like Netlify or Vercel, you don't ha
 Much like the dev command, this script hosts your website locally. The difference is that the preview command will host the latest output in your `/build` directory. This can be used to debug and test your compiled website. By default this preview will be accessible in the browser at `https://localhost:5174/`
 
 <!-- TEAM MEMBERS -->
-## Team Members
+# Team Members
+Here a list of the current team members:
+- Sammy Bensink · <i>Developer</i> · <a href="https://github.com/SamaraFellaDina"><strong>Github »</strong></a>
+- Damian Romeijn · <i>Developer</i> · <a href="https://github.com/DamianR2004"><strong>Github »</strong></a>
+- Sander Wacanno · <i>UI/UX Designer</i> · <a href="https://github.com/sanderwacanno"><strong>Github »</strong></a>
 
+## Former Team Members
+This is a list of members that previously contributred on this project:
 - Inez · <i>Developer</i> · <a href="https://github.com/Einanas"><strong>Github »</strong></a>
 - Anna-Kyra Strik · <i>Developer</i> · <a href="https://github.com/Anna-Kyra"><strong>Github »</strong></a>
 - Robin van der Heijden · <i>Developer</i> · <a href="https://github.com/Robin1224"><strong>Github »</strong></a>
@@ -113,10 +150,11 @@ This work is licensed under [GNU GPLv3](./LICENSE).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+# Acknowledgments
 
 * [SvelteKit documentation](https://svelte.dev/docs/kit/introduction)
 * [Hygraph documentation](https://hygraph.com/docs)
 * [Figma prototype by CMD students Ivar, Eliza, Marco & Trisjan](https://www.figma.com/proto/BcmZb4clafkTX1UM1GN3F2/Prototype-v3-Visual-Thinking-in-het-HBO?node-id=21%3A995&starting-point-node-id=21%3A995&scaling=scale-down)
+* [FDND agency](https://github.com/fdnd-agency)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
