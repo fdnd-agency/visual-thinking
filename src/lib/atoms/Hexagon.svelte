@@ -76,7 +76,6 @@
   span {
     text-align: center;
   }
-
   .hover:hover,
   .hover:focus-visible {
     transform: scale(1.05);

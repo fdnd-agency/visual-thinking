@@ -2,19 +2,21 @@
   let { titel, url, backgroundColor } = $props();
 </script>
 
-<div class="breadcrumb" style="--background-color:{backgroundColor}">
+<div style="--background-color:{backgroundColor}">
   {#if url}
     <a href="{url}">{titel}</a>
   {:else}
     <span>{titel}</span>
   {/if}
 </div>
+
+
 <style>
   div {
     background-color: var(--background-color);
     margin: 0 -1rem;
   }
-  /* MOBILE - STYLING */
+  
   a, span {
     text-transform: uppercase;
     color: var(--color-primary);

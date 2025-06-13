@@ -5,9 +5,9 @@
 <section>
   <!-- Loop through each step in the method -->
   {#each steps as step, stepIndex}
-    <details class="step" open={stepIndex === 0}>
-      <summary class="step-title">{step.title}</summary>
-      <div class="step-content">
+    <details open={stepIndex === 0}>
+      <summary>{step.title}</summary>
+      <div>
         <!-- Check if visual content exists -->
         {#if step.visual[0]}
           <img src={step.visual[0].url} alt="image_voorbeeld" />
@@ -26,13 +26,13 @@
 </section>
 
 <style>
-  .step {
+  details {
     margin-bottom: 0.25rem;
     width: 100%;
     overflow: hidden;
   }
 
-  .step-title {
+  summary {
     font-family: var(--font-family-primary);
     background-color: var(--color-tertiary);
     border-radius: 8px;
@@ -43,12 +43,12 @@
     user-select: none;
   }
 
-  .step-title:hover {
+  summary:hover {
     background-color: var(--color-quinary-80);
     color: black;
   }
 
-  .step-content {
+  div {
     padding: 0.5rem;
     background-color: var(--color-primary);
     border: 1px solid #ccc;
@@ -56,7 +56,7 @@
     margin-top: 0.25rem;
   }
 
-  .step-content img {
+  div img {
     width: 100%;
     height: 100%;
   }
