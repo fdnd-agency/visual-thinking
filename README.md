@@ -45,6 +45,8 @@
 <!-- JUMP TO -->
 # Jump To 
 An overview of a collection of relevant links
+- [Handover.md](https://github.com/fdnd-agency/visual-thinking/blob/main/handover.md)
+- [Contribution.md](https://github.com/fdnd-agency/visual-thinking/blob/main/CONTRIBUTING.md)
 - [Project board | Visual Thinking Platform](https://github.com/orgs/fdnd-agency/projects/7/views/13)
 	- [Backlog](https://github.com/orgs/fdnd-agency/projects/7/views/3)
 	- [Questions](https://github.com/orgs/fdnd-agency/projects/7/views/16)
