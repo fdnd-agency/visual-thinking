@@ -1,8 +1,18 @@
-> click here to see previous [handover]
-
 These are all the changes that are documented from **04/04/25 to 16/06/25**
 
 # Table of contents
+
+-  [The Current Status of the Project](#the-current-status-of-the-project)
+-  [What Did We Change Exactly?](#what-did-we-change-exactly)
+   - [Refactor Overview](#refactor-overview)
+-  [Biggest Recent Changes](#biggest-recent-changes)
+   - [Font Optimization](#font-optimization)
+   - [Filter on `/tekenmethodes`](#filter-on-tekenmethodes)
+   - [Like Button on `/artikelen`](#like-button-on-artikelen)
+-  [What Are the Biggest Challenges?](#what-are-the-biggest-challenges)
+   - [Bugs](#bugs)
+   - [Redesign Ideas](#redesign)
+-  [The Next Step](#the-next-step)
 
 # The current status of the project
 The site is works properly like before. The site is also live at [visualthinking.school](https://visualthinking.school).
