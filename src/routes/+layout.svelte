@@ -1,12 +1,17 @@
 <script>
-    import Header from "$lib/molecules/Header.svelte";
-    import Footer from "$lib/molecules/Footer.svelte";
-    
+    import { Header, Footer } from "$lib/index.js";
+    /**
+     * @typedef {Object} Props
+     * @property {import('svelte').Snippet} [children]
+     */
+
+    /** @type {Props} */
+    let { children } = $props();
 </script>
 
 <Header />
 
-<main><slot /></main>
+<main>{@render children?.()}</main>
 
 <Footer />
 

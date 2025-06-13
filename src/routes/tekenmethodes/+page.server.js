@@ -3,10 +3,11 @@ import { hygraph } from "$lib/utils/hygraph.js";
 
 
 export async function load({ url }) {
-  const categories = url.searchParams.getAll('categorie')
+  const categories = url.searchParams.getAll('filter')
   let filter
 
   categories && categories.length > 0 
+  // This is where the data is being fetched and filtered throught Hygraph to get the right data. 
           ? filter = `, where: {categories_some: {slug_in: ${JSON.stringify(categories)}}}` 
           : filter = ''
 
@@ -40,5 +41,6 @@ export async function load({ url }) {
   `
 
   const data = await hygraph.request(query, { categories });
+
   return data;
 }

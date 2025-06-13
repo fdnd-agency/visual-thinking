@@ -1,17 +1,26 @@
 <script>
-  export let text = "Default text";
-  export let backgroundColor = "--vtGrey-50";
-  export let color = "--vtBlack";
-
-  // If href is given, the hexagon will be clickable
-  export let href = null;
-
-  // Image expects an object with a src and alt property
-  export let img = null;
 
   // Give the ability to pass classes to children
-  let className = "";
-  export { className as class };
+  /**
+   * @typedef {Object} Props
+   * @property {string} [text]
+   * @property {string} [backgroundColor]
+   * @property {string} [color]
+   * @property {any} [href] - If href is given, the hexagon will be clickable
+   * @property {any} [img] - Image expects an object with a src and alt property
+   * @property {string} [class]
+   */
+
+  /** @type {Props} */
+  let {
+    text = "Default text",
+    backgroundColor = "--color-septenary-40",
+    color = "--font-color",
+    href = null,
+    img = null,
+    class: className = ""
+  } = $props();
+  
 </script>
 
 <!-- Check if it's a clickable hexagon or not. If not, render a <div> instead of an <a> -->
@@ -52,22 +61,21 @@
     justify-items: center;
     text-decoration: none;
     color: var(--color);
-    padding: 2rem 0;
+    padding: 2rem;
     font-size: 1.25rem;
     height: 100%;
     transition: 0.15s;
   }
 
   img {
-    width: auto;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
   }
 
   span {
     text-align: center;
   }
-
   .hover:hover,
   .hover:focus-visible {
     transform: scale(1.05);

@@ -1,7 +1,7 @@
 <script>
-  import Hexagon from "$lib/atoms/Hexagon.svelte";
+  import { Hexagon } from "$lib/index.js";
 
-  export let miniCourses;
+  let { miniCourses } = $props();
 </script>
 
 <section>
@@ -13,7 +13,7 @@
           <Hexagon
             href="/minicursussen/{course.slug}"
             backgroundColor="var(--background-color)"
-            color="--vtWhite"
+            color="--color-primary"
             text="{course.title}"
           />
         </li>
@@ -57,19 +57,19 @@
   }
 
   ul li {
-    --background-color: var(--vtRed);
+    --background-color: var(--color-senary);
   }
 
   ul li:nth-of-type(2) {
-    --background-color: var(--vtLightBlue);
+    --background-color: var(--color-quaternary);
   }
 
   ul li:nth-of-type(3) {
-    --background-color: var(--vtYellow);
+    --background-color: var(--color-quinary);
   }
 
   ul li:nth-of-type(4) {
-    --background-color: var(--vtSec-DarkBlue);
+    --background-color: var(--color-tertiary-80);
   }
 
   @media (width > 36rem) {
