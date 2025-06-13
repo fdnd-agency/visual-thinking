@@ -131,7 +131,7 @@
 
 
   <div class="drawing-board">
-    <canvas id="drawing-board" />
+    <canvas id="drawing-board"></canvas>
   </div>
 </section>
 
