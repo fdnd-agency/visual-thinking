@@ -154,7 +154,7 @@ This work is licensed under [GNU GPLv3](./LICENSE).
 
 * [SvelteKit documentation](https://svelte.dev/docs/kit/introduction)
 * [Hygraph documentation](https://hygraph.com/docs)
-* [Figma prototype by CMD students Ivar, Eliza, Marco & Trisjan](https://www.figma.com/proto/BcmZb4clafkTX1UM1GN3F2/Prototype-v3-Visual-Thinking-in-het-HBO?node-id=21%3A995&starting-point-node-id=21%3A995&scaling=scale-down)
+* [Figma vault](https://icthva-my.sharepoint.com/:f:/g/personal/c_j_muhren_hva_nl/EqoM_PB4gnNCsxmZxalMaEoBmoCRm0dWhrdCbsPu01QRBw?e=I5ZBmV), where all figma projects are being held. 
 * [FDND agency](https://github.com/fdnd-agency)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
