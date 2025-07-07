@@ -32,6 +32,7 @@ What did we change exactly?
 	- In the previous handover they also said that at the `/tekenmethode` page, when no results can be shown the website will crash. So make sure there's a state in this list for when no results can be shown. 
 - the `/tekencanvas` pages can be improved. we have already reimagined this in Figma, but couldn't build it yet. There needs to be thought about the phone version, does it need to have a phone version. Maybe it's interesting to investigate how to apply this properly on all devices and make it properly usable.
 ## Redesign: 
-We had worked in this [Figma](https://www.figma.com/design/IA8kp0MG1STYNqoFDIbuVj/Visual-Thinking---Page-Ideas?node-id=649-499&t=wY3WyjIDhP0Ge63j-1) sheet. Here are all the things we reimagined
+We had worked in this [Figma](https://www.figma.com/design/IA8kp0MG1STYNqoFDIbuVj/Visual-Thinking---Page-Ideas?node-id=649-499&t=wY3WyjIDhP0Ge63j-1) sheet. We also have a [Design Rationale](https://icthva-my.sharepoint.com/:b:/g/personal/sander_wacanno_hva_nl/Ef2rkvCIGKpBjr-FCgYBK8UBjDYKmP2wTOd4Hy9396t30Q?e=BOZxEX) that goes further into the redesign, as well as a [Style Guide](https://icthva-my.sharepoint.com/:b:/g/personal/sander_wacanno_hva_nl/EcKTUV98Z5lNtFrPVNYlxvQBCtV5ecOxv8jxyptQBsu8tw?e=0zKNa3) for the made redesign. 
+- The Design Rationale contains a lot of things we couldn't implement, but had at least designed and imagined.
 - The current mobile header isn't really user friendly. Maybe reimagine this by implementing something like a hamburger menu instead.
 
