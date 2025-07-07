@@ -19,7 +19,7 @@
 
 <main>
   <h1 class="screenreader-only">Alle kennisclips</h1>
-  <section>
+  <section class="clips-container">
     <button onclick={previousButton}>
       <Icons name="arrowLeft" width={iconSize} height={iconSize}/>
     </button>
@@ -62,7 +62,7 @@
   }
 
   /* clips */
-  section {
+  .clips-container {
     display: flex;
     justify-content: center;
     align-items: center;
