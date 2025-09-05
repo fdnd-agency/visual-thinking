@@ -1,10 +1,10 @@
 <script>
-  import { page } from "$app/stores";
+  import { page } from "$app/state";
   import { Icons } from "$lib/index.js";
 
   const logoSize = 80;
   // Used for the active state for the menu links
-  let activeRoute = $derived($page.route.id);
+  let activeRoute = $derived(page.route.id);
    // 
 </script>
 
