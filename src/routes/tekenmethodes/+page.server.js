@@ -28,7 +28,7 @@ export async function load({ url }) {
           id
         }
         template {
-          url(transformation: { document: { output: { format: webp } } })
+          url
           height
           width
         }
