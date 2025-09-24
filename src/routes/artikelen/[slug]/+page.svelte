@@ -109,9 +109,10 @@
     }
     
     div.content {
-      padding-left:20rem;
+      padding-left:8rem;
       padding-right:2rem;
       max-width:50em;
+      margin: 0 auto;
     }
   }
 
