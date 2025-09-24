@@ -50,7 +50,7 @@
     line-height: 1.5;
     margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid var(--color-tertiary);
+    border-bottom: 3px solid var(--color-tertiary);
   }
 
   .slide-content {
