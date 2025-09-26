@@ -36,6 +36,7 @@
   </section>
 
   <section class="text-container">
+    
     <h2>{clips[index].title}</h2>
     <p>{@html clips[index].content.html}</p>
   </section>
