@@ -1,21 +1,21 @@
 <script>
     import { Breadcrumb } from "$lib/index.js";
 
-    let index = $state(0);
-
-    let clip = $props();
-    const {title} = data.category;
+    export let clip;
+    
 </script>
 
-<Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
-<main>
+<Breadcrumb titel="Kennisclip" backgroundColor="var(--color-quaternary)" />
 
-    <iframe
-        class="youtubelink"
-        title="kennisclips"
-        src={clip[index].youTubeLink}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-    ></iframe>
-
-</main>
+<article class="knowledge-clip">
+    {#if clip.youTubeLink}
+        <iframe
+            class="youtubelink"
+            title="kennisclip"
+            src={clip.youTubeLink}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+    {/if}
+</article>
