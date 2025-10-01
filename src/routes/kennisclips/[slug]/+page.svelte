@@ -1,13 +1,10 @@
 <script>
-  import { Breadcrumb } from "$lib/index.js";
-
-  let { data } = $props();
-
-  const {title} = data.category
+  import KnowledgeClip from "$lib/organisms/KnowledgeClip.svelte";
+  export let data;
 </script>
 
-<Breadcrumb titel="Kennisclip"  backgroundColor="var(--color-tertiary)" />
-
-<header>
-  <h1>{title}</h1>  
-</header>
+{#if data?.clip}
+  <KnowledgeClip clip={data.clip} />
+{:else}
+  <p>Geen kennisclip gevonden.</p>
+{/if}
