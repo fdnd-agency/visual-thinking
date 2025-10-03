@@ -5,6 +5,7 @@
 
 <section class="clips-overview">
   {#each clips as clip}
+  <article class="clip-card">
     <a href={`/kennisclips/${clip.slug}`} class="clip-card">
       <h2>{clip.title}</h2>
 
@@ -15,13 +16,14 @@
           src={clip.youTubeLink}
         ></iframe>
       {/if}
+    </a>
 
       {#if clip.content}
         <div class="clip-description">
           {@html clip.content.html}
         </div>
       {/if}
-    </a>
+    </article>
   {/each}
 </section>
 
