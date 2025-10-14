@@ -11,12 +11,17 @@
             <picture>
 
               <source 
-              srcset="{method.template.webp}"
+              srcset={method.template.webp}
               type="image/webp" 
               />
 
+              <source 
+              srcset={method.template.avif}
+              type="image/avif" 
+              />
+
               <img 
-              src="{method.template.png}"
+              src={method.template.png}
               alt={"Voorbeeld van " + method.title} 
               width="300"
               height="225"
