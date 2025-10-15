@@ -8,7 +8,3 @@
 {:else}
   <p>Geen kennisclip gevonden.</p>
 {/if}
-
-<a href="/kennisclips">Terug naar alle kennisclips</a>
-
-

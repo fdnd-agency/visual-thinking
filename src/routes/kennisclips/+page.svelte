@@ -7,7 +7,7 @@
   {#each clips as clip}
   <article class="clip-card">
     <a href={`/kennisclips/${clip.slug}`} class="clip-card">
-      <h2>{clip.title}</h2>
+      
 
       {#if clip.youTubeLink}
         <iframe
@@ -17,10 +17,12 @@
         ></iframe>
       {/if}
     </a>
+    <h2>{clip.title}</h2>
 
-      {#if clip.content}
+      {#if clip.introduction}
         <div class="clip-description">
-          {@html clip.content.html}
+          {clip.introduction}
+          <a href={`/kennisclips/${clip.slug}`}>Lees meer...</a>
         </div>
       {/if}
     </article>
@@ -54,8 +56,8 @@
   }
 
   .clip-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-bottom: 0.3rem solid var(--color-quaternary);
+    background-color: var(--color-septenary-40);
   }
 
   h2 {
@@ -78,4 +80,13 @@
     color: var(--color-tertiary);
     margin-top: 0.5rem;
   }
+  
+  .clip-description a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-bottom: 0.3rem solid transparent;
+    padding: 0.3rem;
+    margin: -0.3rem;
+  }
+  
 </style>

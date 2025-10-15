@@ -8,6 +8,7 @@ export const load = async () => {
         slug
         title
         youTubeLink
+        introduction
         content {
           html
         }

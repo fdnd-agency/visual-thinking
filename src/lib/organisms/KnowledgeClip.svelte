@@ -23,6 +23,8 @@
       {@html clip.content.html}
     </div>
   {/if}
+
+  <a href="/kennisclips">Terug naar alle kennisclips</a>
 </article>
 
 <style>
