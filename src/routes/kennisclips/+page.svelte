@@ -46,7 +46,6 @@
   }
 
   .clip-card {
-    cursor: pointer;
     border: 1px solid var(--color-septenary-40);
     background-color: var(--color-septenary-20);
     padding: 1.5rem;
@@ -87,6 +86,7 @@
     border-bottom: 0.3rem solid transparent;
     padding: 0.3rem;
     margin: -0.3rem;
+    cursor: pointer;
   }
   
 </style>

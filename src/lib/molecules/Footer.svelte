@@ -8,25 +8,33 @@
 <footer>
   <nav>
     <a href="/">
-      <Icons name='VisualThinkingLogoFooter' />
+      <Icons name="VisualThinkingLogoFooter" />
     </a>
     <div>
       <ul>
         <li>
+          <a href="/tekenruimte">Tekenruimte</a>
+        </li>
+        <li>
+          <a href="/over">Over</a>
+        </li>
+        <li>
           <a href="https://www.instagram.com/charley_muhren/">
-            <Icons name="instagram" width={iconSize} height={iconSize}/>
+            <Icons name="instagram" width={iconSize} height={iconSize} />
             <span>Instagram</span>
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa">
-            <Icons name="youtube" width={iconSize} height={iconSize}/>
+          <a
+            href="https://www.youtube.com/playlist?list=PLjrep0WCM97y9fznRYBVVKyDkzlT9fWEa"
+          >
+            <Icons name="youtube" width={iconSize} height={iconSize} />
             <span>Youtube</span>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/charleymuhren/">
-            <Icons name="linkedin" width={iconSize} height={iconSize}/>
+            <Icons name="linkedin" width={iconSize} height={iconSize} />
             <span>LinkedIn</span>
           </a>
         </li>
@@ -74,19 +82,17 @@
     align-items: center;
   }
 
-
   span {
     margin-left: 0.25rem;
     color: #555;
   }
 
-  span, 
+  span,
   div p {
     font-size: 0.7rem;
   }
 
   @media (max-width: 21rem) {
-
     footer nav {
       align-items: center;
       display: flex;
@@ -109,7 +115,6 @@
   }
 
   @media (min-width: 44rem) {
-
     footer nav {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -117,7 +122,7 @@
     }
   }
 
-  @media (min-width: 38rem) and (max-width: 50rem) {    
+  @media (min-width: 38rem) and (max-width: 50rem) {
     div {
       padding-right: -3rem;
     }

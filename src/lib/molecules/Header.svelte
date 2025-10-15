@@ -5,53 +5,65 @@
   const logoSize = 80;
   // Used for the active state for the menu links
   let activeRoute = $derived(page.route.id);
-   // 
+  //
 </script>
 
 <header>
-  <a href="/" class="logo">
-    <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize}/>
-  </a>
-
   <nav>
+    <a href="/" class="logo">
+      <Icons name="VisualThinkingLogo" width={logoSize} height={logoSize} />
+    </a>
     <ul>
-      <li><a href="/tekenmethodes" class:active={activeRoute == "/tekenmethodes"}>Tekenmethodes</a></li>
-      <li><a href="/over" class:active={activeRoute == "/over"}>Over</a></li>
-      <li><a href="/minicursussen" class:active={activeRoute == "/minicursussen"}>Minicursussen</a></li>
-      <li><a href="/kennisclips" class:active={activeRoute == "/kennisclips"}>Kennisclips</a></li>
-      <li><a href="/artikelen" class:active={activeRoute == "/artikelen"}>Artikelen</a></li>
-      <li><a href="/tekenruimte" class:active={activeRoute == "/tekenruimte"}>Tekenruimte</a></li>
+      <li>
+        <a href="/tekenmethodes" class:active={activeRoute == "/tekenmethodes"}
+          >Tekenmethodes</a
+        >
+      </li>
+      <li>
+        <a href="/minicursussen" class:active={activeRoute == "/minicursussen"}
+          >Minicursussen</a
+        >
+      </li>
+      <li>
+        <a href="/kennisclips" class:active={activeRoute == "/kennisclips"}
+          >Kennisclips</a
+        >
+      </li>
+      <li>
+        <a href="/artikelen" class:active={activeRoute == "/artikelen"}
+          >Artikelen</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
 
-
 <style>
   a {
-    --background: var(--color-quinary);
+    --background: var(--color-quaternary);
     color: var(--color-tertiary);
     text-decoration: none;
     cursor: pointer;
-    font-size: clamp(.8rem, -1.5rem + 8vw, 1rem);
-    padding: .25rem;
+    font-size: clamp(0.8rem, -1.5rem + 8vw, 1rem);
+    padding: 0.25rem;
   }
 
   a.logo {
     --background: var(--color-tertiary);
-    padding: 1rem .25rem 0;
-    margin-top: -.75rem;
-    position:absolute;
+    padding: 1rem 0.25rem 0;
+    margin-top: -0.75rem;
+    position: absolute;
     top: 1rem;
     left: 1rem;
     z-index: 1;
-    transition: .25s;
+    transition: 0.25s;
   }
 
   a.logo:hover,
   a.logo:focus-visible {
     background: none;
     outline: none;
-    scale: 1.1
+    scale: 1.1;
   }
 
   nav {
@@ -70,14 +82,22 @@
     width: 3rem;
     height: 100%;
 
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
   }
 
   nav::after {
     left: auto;
     right: -1rem;
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%
+    );
   }
 
   ul {
@@ -89,8 +109,12 @@
     padding: 1rem;
     margin: 0 1rem;
     align-items: center;
+    justify-content: center;
     gap: 4vw;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin; 
+    scrollbar-color: var(--color-secondary) transparent; 
     width: 100%;
   }
 
@@ -113,31 +137,19 @@
   li:nth-child(2) a:hover,
   ul li:nth-child(2) a:focus-visible,
   ul li:nth-child(2) a.active {
-    --state-color: var(--color-tertiary-80);
+    --state-color: var(--color-senary);
   }
 
   li:nth-child(3) a:hover,
   ul li:nth-child(3) a:focus-visible,
   ul li:nth-child(3) a.active {
-    --state-color: var(--color-senary);
+    --state-color: var(--color-quaternary);
   }
 
   li:nth-child(4) a:hover,
   ul li:nth-child(4) a:focus-visible,
   ul li:nth-child(4) a.active {
-    --state-color: var(--color-quaternary);
-  }
-
-  li:nth-child(5) a:hover,
-  ul li:nth-child(5) a:focus-visible,
-  ul li:nth-child(5) a.active {
     --state-color: var(--color-tertiary);
-  }
-
-  li:nth-child(6) a:hover,
-  ul li:nth-child(6) a:focus-visible,
-  ul li:nth-child(6) a.active {
-    --state-color: var(--color-septenary);
   }
 
   @media (min-width: 80rem) {
@@ -145,7 +157,7 @@
       position: absolute;
       z-index: 1;
       left: calc(50% - 2rem);
-      top: .5rem;
+      top: 0.5rem;
     }
 
     nav {
@@ -168,7 +180,7 @@
     }
 
     li:nth-of-type(4) {
-      margin-left: var(--spacing-logo);
+      margin-left: 0;
     }
   }
 </style>
