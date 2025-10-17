@@ -68,15 +68,29 @@
             <h2>{slide.title}</h2>
             <div class="slide-content">{@html slide.content.html}</div>
             {#if slide.image?.url}
-              <img src={slide.image.url} alt={slide.title} />
+              <img src={slide.image.url} alt={slide.image.alt ?? ""} />
             {/if}
           </article>
         {/each}
       </div>
-    </div>
 
-    <button class="scroll-btn prev" on:click={scrollPrev}>Vorige</button>
-    <button class="scroll-btn next" on:click={scrollNext}>Volgende</button>
+      
+        <button
+          class="scroll-btn prev"
+          aria-label="Vorige dia"
+          on:click={scrollPrev}
+        >
+          Vorige
+        </button>
+        <button
+          class="scroll-btn next"
+          aria-label="Volgende dia"
+          on:click={scrollNext}
+        >
+          Volgende
+        </button>
+      
+    </div>
   {/if}
 </div>
 
@@ -84,7 +98,6 @@
   :global(html, body) {
     margin: 0;
     height: 100%;
-    overflow: hidden;
   }
 
   .minicourse {
@@ -138,78 +151,85 @@
     display: none;
   }
 
-  .carousel-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-  }
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
 
-  .carousel {
-    flex: 1;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    height: auto;
-    font-family: var(--font-family-primary);
-  }
+.carousel {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
 
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
+.carousel::-webkit-scrollbar {
+  display: none;
+}
 
-  .slide {
-    flex: 0 0 100%;
-    height: 100dvh;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    box-sizing: border-box;
-    background-color: var(--color-tertiary);
-    color: var(--color-primary);
-  }
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  position: relative;
+}
 
-  .slide-content {
-    max-width: 50rem;
-    text-align: left;
-  }
+.slide-content {
+  max-width: 50rem;
+  height: 100%;
+  text-align: left;
+}
 
-  img {
-    max-width: 100%;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-  }
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
 
-  .scroll-btn {
-    position: fixed;
-    bottom: 0%;
-    z-index: 10;
-    background: var(--color-primary);
-    color: var(--color-tertiary);
-    border: none;
-    width: 6rem;
-    height: 3rem;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-family: var(--font-family-primary);
-  }
+.scroll-btn {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  background: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: var(--font-family-primary);
+  border: none;
+  width: 6rem;
+  height: 3.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
 
-  .scroll-btn.prev {
-    left: 2rem;
-  }
+.scroll-btn.prev {
+  left: 1rem;
+}
 
-  .scroll-btn.next {
-    right: 2rem;
-  }
+.scroll-btn.next {
+  right: 1rem;
+}
 
-  .scroll-btn:hover {
-    opacity: 0.9;
-  }
+.scroll-btn:hover,
+.scroll-btn:focus-visible {
+  background: var(--color-quinary);
+  color: var(--color-primary);
+}
 
   .carousel::scroll-button {
     appearance: auto;
