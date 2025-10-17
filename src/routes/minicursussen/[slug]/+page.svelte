@@ -64,7 +64,6 @@
     width: 100%;
     height: 1em;
     background: red;
-
     transform-origin: 0 50%;
     animation: grow-progress auto linear;
     animation-timeline: --page-scroll;
@@ -187,5 +186,18 @@
   }
   .carousel::scroll-button:single-button:end {
     content: "→";
+  }
+
+    @supports selector(::scroll-button) {
+    .carousel::scroll-button{
+      appearance:auto;
+      background:var(--color-quinary);
+      color:#fff;
+      border-radius:50%;
+      width:3rem;height:3rem;
+      font-size:1.5rem;
+    }
+    .carousel::scroll-button:single-button:start{content:"‹"}
+    .carousel::scroll-button:single-button:end{content:"›"}
   }
 </style>
