@@ -61,7 +61,8 @@
   .course-card:focus-visible {
     background-color: var(--color-septenary-40);
     border-bottom-color: var(--color-tertiary);
-    transform: scale(1.03);
+    color: var(--color-tertiary);
+  
   }
 
   @media (max-width: 50rem) {
