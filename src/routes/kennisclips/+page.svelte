@@ -49,6 +49,7 @@
     border: 1px solid var(--color-septenary-40);
     background-color: var(--color-septenary-20);
     padding: 1.5rem;
+    margin: -1.5rem -1.5rem 0;
     display: flex;
     flex-direction: column;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -58,6 +59,7 @@
     border-bottom: 0.3rem solid var(--color-quaternary);
     background-color: var(--color-septenary-40);
   }
+  
 
   h2 {
     font-size: 1.2rem;
