@@ -177,6 +177,7 @@
 
     li:nth-of-type(3) {
       margin-right: var(--spacing-logo);
+      margin-left: var(--spacing-logo);
     }
 
     li:nth-of-type(4) {
