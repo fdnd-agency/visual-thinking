@@ -291,23 +291,39 @@
     content: "›";
   }
 
-  @supports selector(::scroll-button) {
-    .carousel::scroll-button {
-      appearance: auto;
-      background: var(--color-quinary);
-      color: #fff;
-      border-radius: 50%;
-      width: 3rem;
-      height: 3rem;
-      font-size: 1.5rem;
-    }
-
-    .carousel::scroll-button:single-button:start {
-      content: "‹";
-    }
-
-    .carousel::scroll-button:single-button:end {
-      content: "›";
-    }
+@supports selector(::scroll-button(left)) {
+  .carousel::scroll-button {
+    appearance: auto;
+    background: var(--color-quinary);
+    color: #fff;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    opacity: 0.9;
+    transition: opacity 0.2s, transform 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
   }
+
+  .carousel::scroll-button:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .carousel::scroll-button(left) {
+    content: "‹";
+    left: 0.75rem;
+  }
+
+  .carousel::scroll-button(right) {
+    content: "›";
+    right: 0.75rem;
+  }
+}
+
 </style>
