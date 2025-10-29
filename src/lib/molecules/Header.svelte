@@ -52,7 +52,9 @@
     --background: var(--color-tertiary);
     padding: 1rem 0.25rem 0;
     margin-top: -0.75rem;
-    position: absolute;
+    display: inline-block;
+    position: relative;
+    margin-right: 1rem;
     top: 1rem;
     left: 1rem;
     z-index: 1;
@@ -71,6 +73,9 @@
     padding: 1rem 1rem 1rem 3.5rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   nav::before,
@@ -109,13 +114,29 @@
     padding: 1rem;
     margin: 0 1rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 4vw;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: thin; 
-    scrollbar-color: var(--color-secondary) transparent; 
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary) transparent;
     width: 100%;
+  }
+
+  ul li:nth-child(1) {
+    order: 2;
+  }
+
+  ul li:nth-child(2) {
+    order: 3;
+  }
+
+  ul li:nth-child(3) {
+    order: 4;
+  }
+
+  ul li:nth-child(4) {
+    order: 1; /* Artikelen */
   }
 
   ul li a:hover,
@@ -154,10 +175,12 @@
 
   @media (min-width: 80rem) {
     a.logo {
-      position: absolute;
+      position: relative;
       z-index: 1;
       left: calc(50% - 2rem);
-      top: 0.5rem;
+      top: auto;
+      left: auto;
+      margin: 0 1rem 0 0;
     }
 
     nav {
