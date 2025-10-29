@@ -235,7 +235,8 @@
     background: var(--color-primary);
     color: var(--color-tertiary);
     font-family: var(--font-family-primary);
-    border: 2px solid var(--color-senary);
+    border: none;
+    border-bottom: 3px solid transparent;
     width: 5rem;
     height: 2.5rem;
     font-size: 1rem;
@@ -243,7 +244,6 @@
     display: grid;
     place-items: center;
     cursor: pointer;
-    border-radius: 0.5rem;
     opacity: 0.9;
     transition: all 0.2s ease;
   }
@@ -260,7 +260,8 @@
 
   .scroll-btn:hover,
   .scroll-btn:focus-visible {
-    background: var(--color-quinary);
+    background: var(--color-septenary-40);
+    border-bottom: 3px solid var(--color-senary);
     color: var(--color-primary);
     opacity: 1;
   }
@@ -277,6 +278,7 @@
     place-items: center;
     opacity: 0.9;
     transition: opacity 0.2s;
+    visibility: hidden;
   }
 
   .carousel::scroll-button:hover {
@@ -308,6 +310,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 20;
+    visibility: hidden;
   }
 
   .carousel::scroll-button:hover {
@@ -318,11 +321,13 @@
   .carousel::scroll-button(left) {
     content: "‹";
     left: 0.75rem;
+    visibility: hidden;
   }
 
   .carousel::scroll-button(right) {
     content: "›";
     right: 0.75rem;
+    visibility: hidden;
   }
 }
 
