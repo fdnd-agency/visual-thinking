@@ -198,13 +198,13 @@
       justify-content: center;
     }
 
-    li:nth-of-type(3) {
-      margin-right: var(--spacing-logo);
-      margin-left: var(--spacing-logo);
-    }
+li:nth-of-type(3) {
+  margin-right: calc(var(--spacing-logo) / 2);
+}
 
-    li:nth-of-type(4) {
-      margin-left: 0;
-    }
+li:nth-of-type(4) {
+  margin-left: calc(var(--spacing-logo) / 2);
+}
+
   }
 </style>
