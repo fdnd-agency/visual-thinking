@@ -80,7 +80,7 @@ html {
 
   /* grid-size */
 
-  --text-max-width: 40rem;
+  --text-max-width: 60ch;
   --grid-max-width: 60rem;
 
   /* focus styles */
@@ -271,7 +271,7 @@ svg.icon path.background {
 
 @media (width > 70rem) {
   .hexagons p {
-    max-width: 12rem;
+    max-width: 52ch;
   }
 }
 

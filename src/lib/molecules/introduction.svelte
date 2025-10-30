@@ -1,10 +1,10 @@
 <script>
-  let { page, class: className } = $props();
+  let { page } = $props();
   const {title, content} = page;
 
 </script>
 
-<section class={className}>
+<section class="intro">
   <h1>{title}</h1>
   {@html content.html}
 </section>

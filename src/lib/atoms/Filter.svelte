@@ -21,9 +21,19 @@
   class:js-on={javascript.enabled}
 >
   <fieldset>
-    <legend>Filter op categorie</legend>
+    <legend>Filter tekenmethodes</legend>
     {#each categories as category}
       <div>
+        <input
+          type="checkbox"
+          id={category.slug}
+          name="filter"
+          value={category.slug}
+          onchange={() => {
+            form.requestSubmit();
+          }}
+        />
+
         <label for={category.slug}>
           {category.title}
           <svg
@@ -40,15 +50,7 @@
           </svg>
         </label>
 
-        <input
-          type="checkbox"
-          id={category.slug}
-          name="filter"
-          value={category.slug}
-          onchange={() => {
-            form.requestSubmit();
-          }}
-        />
+        
       </div>
     {/each}
   </fieldset>
@@ -121,7 +123,7 @@
 
   form fieldset div:has(input:checked) {
     background-color: transparent;
-    border-bottom: 0.4em solid var(--color-quinary);
+    border-bottom-color: #fff;
   }
 
   form button {
@@ -138,14 +140,13 @@
     & fieldset {
       flex-direction: row;
       gap: 1rem;
-      justify-content: center;
     }
 
     & button {
       display: none;
     }
     & div {
-      padding: 0.5rem 0.8rem 0.5rem 2rem;
+      /* padding: 0.5rem 0.8rem 0.5rem 2rem; */
 
       &:hover {
         background-color: none;
@@ -166,13 +167,8 @@
     }
 
     & input[type="checkbox"] {
-      appearance: auto;
-      position: static;
-      opacity: 0;
-      width: 1px;
-      height: 1px;
       margin: 0;
-      pointer-events: none;
+
     }
   }
 

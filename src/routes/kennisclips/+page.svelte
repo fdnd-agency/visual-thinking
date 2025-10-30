@@ -8,4 +8,3 @@
 <Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
 <Introduction {page}/>
 <KnowledgeClips {clips} />
-
