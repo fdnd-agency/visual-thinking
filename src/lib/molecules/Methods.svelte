@@ -1,7 +1,7 @@
 <script>
-  import { Filter, Overview } from '$lib/index.js';
+  import { Overview } from '$lib/index.js';
   let { methods, categories } = $props();
 </script>
 
-<Filter {categories} />
-<Overview {methods} />
+
+<Overview {methods} {categories} />
