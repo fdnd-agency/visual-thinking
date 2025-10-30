@@ -1,7 +1,10 @@
 <script>
+  import { Breadcrumb } from "$lib/index.js";
   export let data;
   const clips = data.clips;
 </script>
+
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
 
 <section class="clips-overview">
   {#each clips as clip}

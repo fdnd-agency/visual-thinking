@@ -92,13 +92,6 @@ html {
   box-sizing: border-box;
 }
 
-/* *:focus {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-offset);
-  border-radius: 1rem;
-} */
-
-
 body {
   margin: 0;
   padding: 0;
