@@ -11,7 +11,7 @@ export async function load({ url }) {
           ? filter = `, where: {categories_some: {slug_in: ${JSON.stringify(categories)}}}` 
           : filter = ''
 
-  let query = gql`
+let query = gql`
     query Methods {
       page(where: { id: "clv89bh0vn4z007unrv85gsw1" }) {
         title
@@ -28,7 +28,21 @@ export async function load({ url }) {
           id
         }
         template {
-          url(transformation: { document: { output: { format: webp } } })
+          avif: url(
+            transformation: {
+              document: { output: { format: avif } }
+            }
+          )
+          webp: url(
+            transformation: {
+              document: { output: { format: webp } }
+            }
+          )
+          png: url(
+            transformation: {
+              document: { output: { format: png } }
+            }
+          )
           height
           width
         }
@@ -38,7 +52,7 @@ export async function load({ url }) {
         title
       }
     }
-  `
+  `;
 
   const data = await hygraph.request(query, { categories });
 
