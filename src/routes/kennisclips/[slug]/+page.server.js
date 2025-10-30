@@ -1,14 +1,15 @@
 import { gql } from "graphql-request";
 import { hygraph } from "$lib/utils/hygraph.js";
 
-export const load = async () => {
+export const load = async ({ params }) => {
+  const { slug } = params;
+
   const query = gql`
-    query AllCategories {
-      categories {
+    query CategoryBySlug {
+      category(where: { slug: "${slug}" }) {
         slug
         title
         youTubeLink
-        introduction
         content {
           html
         }
@@ -19,6 +20,6 @@ export const load = async () => {
   const data = await hygraph.request(query);
 
   return {
-    clips: data.categories
+    clip: data.category
   };
 };

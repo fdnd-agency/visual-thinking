@@ -27,6 +27,7 @@ export { default as Articles } from "./organisms/Articles.svelte";
 export { default as DrawingSpace } from "./organisms/DrawingSpace.svelte";
 export { default as Homepage } from "./organisms/Homepage.svelte";
 export { default as KnowledgeClips } from "./organisms/KnowledgeClips.svelte";
+export { default as KnowledgeClip } from "./organisms/KnowledgeClip.svelte";
 export { default as MethodHeader } from "./organisms/MethodHeader.svelte";
 export { default as MiniCourses } from "./organisms/MiniCourses.svelte";
 

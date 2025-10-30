@@ -8,6 +8,6 @@
 <Breadcrumb titel="Minicursussen" backgroundColor="var(--color-senary)" />
 
 <div class="hexagons minicourse">
-  <Introduction {page} class="hexagons minicourse"/>
+  <Introduction {page} class="minicourse"/>
   <MiniCourses {miniCourses}/>
 </div>
