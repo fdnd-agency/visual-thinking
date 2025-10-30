@@ -1,9 +1,6 @@
 <script>
   import { Breadcrumb, Introduction, KnowledgeClips } from "$lib/index.js";
-   let { data } = $props();
-
-   console.log(data)
-
+  let { data } = $props();
   const {page, clips} = data
 
 </script>
