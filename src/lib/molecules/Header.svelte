@@ -108,7 +108,7 @@
     padding: 1rem;
     margin: 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     gap: 2vw;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
