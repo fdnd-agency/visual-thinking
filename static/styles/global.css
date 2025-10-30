@@ -10,7 +10,7 @@
   font-display: swap;
 } 
 
-:root {
+html {
   --color-primary: hsl(0, 0%, 100%);
   --color-secondary: hsl(0, 0%, 0%);
 
@@ -80,7 +80,7 @@
 
   /* grid-size */
 
-  --text-max-width: 40rem;
+  --text-max-width: 60ch;
   --grid-max-width: 60rem;
 
   /* focus styles */
@@ -92,18 +92,12 @@
   box-sizing: border-box;
 }
 
-/* *:focus {
-  outline: var(--focus-outline);
-  outline-offset: var(--focus-offset);
-  border-radius: 1rem;
-} */
-
-
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: var(--font-family-secondary);
+  container-type: inline-size;
 }
 
 h1,
@@ -117,6 +111,7 @@ legend {
 h1 {
   font-size: 3.157rem;
   color: var(--color-tertiary);
+  text-wrap:balance;
 }
 
 h2 {
@@ -276,7 +271,7 @@ svg.icon path.background {
 
 @media (width > 70rem) {
   .hexagons p {
-    max-width: 12rem;
+    max-width: 52ch;
   }
 }
 

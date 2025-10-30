@@ -1,9 +1,11 @@
 <script>
-  let { methods } = $props();
+  import { Filter } from '$lib/index.js';
+  let { methods, categories } = $props();
 </script>
 
 <section>
-  <h2>Alle methodes ({methods.length})</h2>
+  <Filter {categories} />
+  <h2>Alle methodes <small>({methods.length})</small></h2>
     <ul>
       {#each methods as method}
         <li>
@@ -40,7 +42,16 @@
     margin: auto;
     max-width: var(--grid-max-width);
     width: 100%;
-    padding: 0 1rem; 
+    padding:0;
+    position:relative;
+
+    @container {
+      padding: 0 1rem; 
+    }
+  }
+
+  small {
+    font-size: 1.25rem;
   }
 
   ul {
