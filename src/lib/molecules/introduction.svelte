@@ -20,7 +20,7 @@
   }
   @media screen and (min-width: 36rem) {
     section {
-          width: 75%;
+          /width: 75%;
       }
       h1 {
           font-size: 3.157rem;
