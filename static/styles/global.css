@@ -189,6 +189,10 @@ main {
   padding: 0 1rem;
 }
 
+.intro p {
+  /max-width:52ch;
+}
+
 .minicursus-quotes {
   font-weight: 800;
   font-family: var(--font-family-primary);
@@ -271,11 +275,11 @@ svg.icon path.background {
 
 @media (width > 70rem) {
   .hexagons section {
-    margin-top:-12rem;
+    margin-top:-26rem;
   }
 
   .hexagons p {
-    max-width: 52ch;
+    max-width: 26ch;
   }
 }
 
