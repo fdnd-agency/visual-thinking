@@ -11,7 +11,7 @@ export { default as IconMaterials } from "./atoms/icons/IconMaterials.svelte";
 export { default as Breadcrumb } from "./atoms/Breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/Hexagon.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
-export { default as Overview } from "./atoms/Overview.svelte";
+
 export { default as Filter } from "./atoms/Filter.svelte";
 
 // molecules
@@ -24,6 +24,7 @@ export { default as Methods } from "./molecules/Methods.svelte";
 
 // organisms
 export { default as Articles } from "./organisms/Articles.svelte";
+export { default as Overview } from "./organisms/Overview.svelte";
 export { default as DrawingSpace } from "./organisms/DrawingSpace.svelte";
 export { default as Homepage } from "./organisms/Homepage.svelte";
 export { default as KnowledgeClips } from "./organisms/KnowledgeClips.svelte";

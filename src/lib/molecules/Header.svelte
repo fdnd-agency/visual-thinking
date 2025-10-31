@@ -69,6 +69,7 @@
       left: 2rem;
       width: 3rem;
       height: 100%;
+      z-index:100;
 
       background: rgb(255, 255, 255);
       background: linear-gradient(
@@ -88,7 +89,7 @@
       );
     }
 
-    @container (min-width: 65em) {
+    @container (min-width: 30em) {
       padding: 0;
 
       &::before,
@@ -137,11 +138,12 @@
       top:rem;
       left:.25rem;
       scale:.75;
+      z-index:200;
     }
 
-    @container (min-width: 65em) {
+    @container (min-width: 30em) {
       justify-content: center;
-      gap: 4vw;
+      gap: 2vw;
 
       li {
         min-width:8rem;
@@ -153,7 +155,6 @@
         position:relative;
         top:auto;
         left:auto;
-        scale:1;
       }
 
       li:nth-child(2) {
@@ -170,6 +171,12 @@
 
       li:nth-child(5) {
         order: 5;
+      }
+    }
+
+    @container (min-width: 45em) {
+      li:nth-child(1) {
+        scale:1;
       }
     }
   }
