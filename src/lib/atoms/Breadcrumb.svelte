@@ -1,26 +1,26 @@
 <script>
-  export let titel;
-  export let url;
-  export let backgroundColor;
+  let { titel, url, backgroundColor } = $props();
 </script>
 
-<div class="breadcrumb" style="--background-color:{backgroundColor}">
+<div style="--background-color:{backgroundColor}">
   {#if url}
     <a href="{url}">{titel}</a>
   {:else}
     <span>{titel}</span>
   {/if}
 </div>
+
+
 <style>
   div {
     background-color: var(--background-color);
     margin: 0 -1rem;
   }
-  /* MOBILE - STYLING */
+  
   a, span {
     text-transform: uppercase;
-    color: var(--vtWhite);
-    font-family: var(--vtPrimaryFont);
+    color: var(--color-primary);
+    font-family: var(--font-family-primary);
     font-size: 0.8rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;

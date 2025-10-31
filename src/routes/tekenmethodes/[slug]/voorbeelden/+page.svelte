@@ -1,9 +1,8 @@
 <script>
-  import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
-  import MethodHeader from "$lib/organisms/MethodHeader.svelte";
+  import { Breadcrumb, MethodHeader } from "$lib/index.js";
   import { onMount } from "svelte";
 
-  export let data;
+  let { data } = $props();
   // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
   const { title, slug, pdf } = data.methods[0];
 
@@ -27,7 +26,7 @@
   });
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--vtYellow)" />
+<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--color-quinary)" />
 <MethodHeader {title} {slug} {pdf} />
 
 <section class="images-buttons">
@@ -127,13 +126,13 @@
   }
 
   .icon-button:hover {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
     transition: 0.2s;
   }
 
   .carousel-btn {
     border-radius: 23px;
-    border: 1px solid var(--vtYellow);
+    border: 1px solid var(--color-quinary);
     cursor: pointer;
   }
 
@@ -154,6 +153,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-align-items: center;
+    align-items: center;
     -webkit-box-align: center;
     border: none;
   }
@@ -163,19 +163,19 @@
     font-size: 2.5rem;
     margin-top: 4em;
     margin-bottom: 4em;
-    font-family: var(--vtPrimaryFont);
-    color: var(--vtDarkBlue);
+    font-family: var(--font-family-primary);
+    color: var(--color-tertiary);
   }
 
   /* Scrollbar */
   #scrollbar::-webkit-scrollbar {
     width: 10px;
     /* height: 7px; */
-    background-color: var(--vtGrey-50);
+    background-color: var(---color-septenary-400);
   }
 
   #scrollbar::-webkit-scrollbar-thumb {
-    background-color: var(--vtYellow);
+    background-color: var(--color-quinary);
     background-image: -webkit-linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.2) 25%,

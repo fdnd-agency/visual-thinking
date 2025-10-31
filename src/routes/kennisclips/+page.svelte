@@ -1,9 +1,10 @@
 <script>
-import KnowledgeClips from "$lib/organisms/KnowledgeClips.svelte";
+  import { Breadcrumb, Introduction, KnowledgeClips } from "$lib/index.js";
+  let { data } = $props();
+  const {page, clips} = data
 
-export let data
-const clips = data.categories;
 </script>
 
-
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
+<Introduction {page}/>
 <KnowledgeClips {clips} />

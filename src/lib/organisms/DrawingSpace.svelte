@@ -2,6 +2,7 @@
   import Breadcrumb from "$lib/atoms/Breadcrumb.svelte"
   import { onMount } from "svelte";
 
+
   // Voer code uit na het renderen van de component
   onMount(() => {
     // Haal het canvas, de toolbar en de 2D-context op
@@ -9,13 +10,16 @@
     const toolbar = document.getElementById("toolbar");
     const ctx = canvas.getContext("2d");
 
+
     // Bepaal de offset van het canvas ten opzichte van het document
     const canvasOffsetX = canvas.offsetLeft;
     const canvasOffsetY = canvas.offsetTop;
 
+
     // Stel de breedte en hoogte van het canvas in op het vensterformaat
     canvas.width = window.innerWidth - canvasOffsetX;
     canvas.height = window.innerHeight - canvasOffsetY;
+
 
     // Initialiseer variabelen voor schilderen
     let isPainting = false;
@@ -23,9 +27,11 @@
     let startX;
     let startY;
 
+
     toolbar.addEventListener("submit", (e) => {
       e.preventDefault();
     });
+
 
     // Voeg een click eventlistener toe aan de toolbar voor wissen
     toolbar.addEventListener("click", (e) => {
@@ -33,6 +39,7 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
       }
     });
+
 
     // Voeg een change eventlistener toe aan de toolbar voor kleur en lijnbreedte
     toolbar.addEventListener("change", (e) => {
@@ -46,11 +53,13 @@
       }
     });
 
+
     // Functie om tekenen te implementeren
     const draw = (e) => {
       if (!isPainting) {
         return;
       }
+
 
       // Bepaal de x- en y-positie op het canvas
       const x =
@@ -60,12 +69,14 @@
         (e.clientY || e.touches[0].clientY) -
         canvas.getBoundingClientRect().top;
 
+
       // Configureer de lijnparameters en teken de lijn
       ctx.lineWidth = lineWidth;
       ctx.lineCap = "round";
       ctx.lineTo(x, y);
       ctx.stroke();
     };
+
 
     // Functie om tekenen te starten
     const start = (e) => {
@@ -74,12 +85,14 @@
       startY = e.clientY || e.touches[0].clientY;
     };
 
+
     // Functie om tekenen te beëindigen
     const end = (e) => {
       isPainting = false;
       ctx.stroke();
       ctx.beginPath();
     };
+
 
     // Voeg eventlisteners toe voor mousedown, mouseup, mousemove, touchstart, touchend en touchmove
     canvas.addEventListener("mousedown", start);
@@ -91,7 +104,9 @@
   });
 </script>
 
+
 <Breadcrumb titel= "Tekenruimte" backgroundColor="var(--vtGrey)" />
+
 
 <header class="screenreader-only">
   <h1>Teken hier!</h1>
@@ -101,6 +116,7 @@
 <section>
   <header id="toolbar">
     <h2 class="screenreader-only">Tekentools</h2>
+
 
     <form>
       <label for="stroke">Kleur</label>
@@ -113,10 +129,12 @@
     </form>
   </header>
 
+
   <div class="drawing-board">
-    <canvas id="drawing-board" />
+    <canvas id="drawing-board"></canvas>
   </div>
 </section>
+
 
 <style>
   h1 {
@@ -124,18 +142,22 @@
     text-align: center;
   }
 
+
   h2 {
     font-size: 1.5rem;
     margin:.25rem;
   }
 
+
   p.disclaimer {
     text-align: center; 
   }
 
+
   p span.attention {
     color: var(--vtYellow);
   }
+
 
   section {
     font-family: var(--vtPrimaryFont);
@@ -144,6 +166,7 @@
     margin:0 -1rem;
   }
 
+
   section header {
     font-weight: 800;
     padding: .25em 1rem;
@@ -151,12 +174,14 @@
     height:3rem;
   }
 
+
   section form {
     display: flex;
     align-items: center;
     margin:.25rem;
     gap: 0.5em; 
   }
+
 
   .drawing-board {
     border: none;
@@ -167,9 +192,11 @@
     cursor: url('/images/pencil.svg'), auto;
   }
 
+
   label {
     white-space: nowrap;
   }
+
 
   input {
     width: 25%;
@@ -181,10 +208,12 @@
     padding:0;
   }
 
+
   input#lineWidth {
     border: none;
     border-radius: 4px;
   }
+
 
   button {
     border: none;
@@ -197,6 +226,7 @@
     font-family: inherit;
     font-weight: bold;
   }
+
 
   button:hover {
     color: var(--vtDarkBlue);

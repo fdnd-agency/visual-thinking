@@ -1,4 +1,4 @@
-export default function methodDescriptionQuery(gql, slug) {
+export default function MethodDescriptionQuery(gql, slug) {
     return gql`
       query VisualThinking {
         methods(where: { slug: "${slug}" }) {

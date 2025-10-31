@@ -1,12 +1,6 @@
 <script>
-  import IconAuthor from "../atoms/icons/IconAuthor.svelte";
-  import IconCategories from "../atoms/icons/IconCategories.svelte";
-  import IconDuration from "../atoms/icons/IconDuration.svelte";
-  import IconMaterials from "../atoms/icons/IconMaterials.svelte";
-
-  export let categories;
-  export let materials;
-  export let duration;
+  import { IconAuthor, IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
+  let { categories, materials, duration } = $props();
 
   // Functie om underscores te verwijderen en de eerste letter van het eerste woord hoofdletter te maken
   function formatMaterial(material) {
@@ -17,52 +11,52 @@
   }
 </script>
 
-<ul class="tags-container">
+<ul>
   <!-- Categories Section -->
-  <li class="tags-group">
+  <li>
     <IconCategories />
-    <div class="span-box">
+    <div>
       {#each categories as category}
         <p>{category.title}</p>
       {/each}
     </div>
   </li>
   <!-- Materials Section -->
-  <li class="tags-group">
+  <li>
     <IconMaterials />
 
     {#each materials as material}
-      <div class="span-box">
+      <div>
         <p>{formatMaterial(material)}</p>
       </div>
     {/each}
   </li>
   <!-- Duration Section -->
-  <li class="tags-group">
+  <li>
     <IconDuration />
 
-    <div class="span-box">
+    <div>
       <p>{duration}</p>
     </div>
   </li>
   <!-- Author Section -->
-  <li class="tags-group">
+  <li>
     <IconAuthor />
 
-    <div class="span-box">
+    <div>
       <p>Charley Muhren</p>
     </div>
   </li>
 </ul>
 
 <style>
-  .tags-container {
+  ul {
     display: flex;
     flex-direction: column;
     padding: 0;
   }
 
-  .tags-group {
+  li {
     display: flex;
     margin-bottom: 0.5rem;
   }
@@ -73,9 +67,9 @@
   }
 
   p {
-    background-color: var(--vtYellow-80);
-    color: var(--vtDarkBlue);
-    font-family: var(--vtPrimaryFont);
+    background-color: var(--color-quinary-80);
+    color: var(--color-tertiary);
+    font-family: var(--font-family-primary);
     font-size: 0.9rem;
     font-weight: 600;
     padding: 0.1rem 0.4rem;
@@ -84,12 +78,12 @@
     max-width: fit-content;
   }
 
-  .tags-container :global(svg) {
+  div :global(svg) {
     flex-shrink: 0;
   }
 
   @media (min-width: 58rem) {
-    .tags-container {
+    li {
       position: -webkit-sticky; /* Voor Safari */
       position: sticky;
       padding: 0;

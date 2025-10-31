@@ -1,21 +1,17 @@
 <script>
-  import Hexagon from "$lib/atoms/Hexagon.svelte";
 
-  export let miniCourses;
+  let { miniCourses } = $props();
 </script>
 
 <section>
   <h2 class="screenreader-only">Kies hier een minicursus</h2>
   <ul>
     {#if miniCourses && miniCourses.length > 0}
-      {#each miniCourses as course, index}
+      {#each miniCourses as course}
         <li>
-          <Hexagon
-            href="/minicursussen/{course.slug}"
-            backgroundColor="var(--background-color)"
-            color="--vtWhite"
-            text="{course.title}"
-          />
+          <a href="/minicursussen/{course.slug}" class="course-card">
+            {course.title}
+          </a>
         </li>
       {/each}
     {/if}
@@ -24,98 +20,54 @@
 
 <style>
   section {
-    padding: 0 0 8rem;
+    display: grid;
+    place-items: center;
+    padding: 2rem 0;
+    margin: auto;
+    max-width: var(--grid-max-width);
   }
 
   ul {
-    --gap: 3rem;
-    --size: 12rem;
-
-    --translateX: 0.365;
-    --column-height: 0.74;
-
-    --column-count: 1;
-    --row-count: 4;
-
     display: grid;
-    grid-template-columns: repeat(var(--column-count), var(--size));
-    grid-template-rows: repeat(
-      var(--row-count),
-      calc(var(--size) * var(--column-height) + var(--gap) * 1)
-    );
+    grid-template-columns: repeat(2, 14rem);
+    grid-auto-rows: auto;
+    gap: 2rem;
     justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
+  }
+
+  li {
     width: 100%;
-    align-items: stretch;
-    gap: var(--gap);
   }
 
-  ul li {
-    width: var(--size);
-    height: calc(var(--size) * 1.1);
+  .course-card {
+    display: block;
+    background-color: var(--color-senary);
+    border-bottom: 0.3rem solid transparent;
+    color: var(--color-primary);
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
   }
 
-  ul li {
-    --background-color: var(--vtRed);
+  .course-card:hover,
+  .course-card:focus-visible {
+    background-color: var(--color-septenary-40);
+    border-bottom-color: var(--color-tertiary);
+    color: var(--color-tertiary);
+  
   }
 
-  ul li:nth-of-type(2) {
-    --background-color: var(--vtLightBlue);
-  }
-
-  ul li:nth-of-type(3) {
-    --background-color: var(--vtYellow);
-  }
-
-  ul li:nth-of-type(4) {
-    --background-color: var(--vtSec-DarkBlue);
-  }
-
-  @media (width > 36rem) {
+  @media (max-width: 50rem) {
     ul {
-      --row-count: 2;
-      --column-count: 2;
+      grid-template-columns: 1fr;
     }
-  }
-
-  @media (width > 70rem) {
-    ul {
-      --gap: 2rem;
-      --size: 14rem;
-
-      --translateX: 0.55;
-      --column-height: 0.71;
-
-      --cc: 4;
-      --rc: 2;
-      
-      --column-count: 4;
-      --row-count: 2;
-      margin-top: calc(1.2rem + 3.157rem); /* breadcrumheight + h1 height */
-    }
-
-    ul li:nth-of-type(1) {
-      grid-column-start: 1;
-      grid-row-start: 1;
-      transform: translateX(calc(var(--size) * var(--translateX)));
-    }
-
-    ul li:nth-of-type(2) {
-      grid-column-start: 4;
-      grid-row-start: 1;
-      transform: translateX(calc(var(--size) * var(--translateX) * -1));
-    }
-
-    ul li:nth-of-type(3) {
-      grid-column-start: 2;
-      grid-row-start: 2;
-
-    }
-
-    ul li:nth-of-type(4) {
-      grid-column-start: 3;
-      grid-row-start: 2;
-    } 
   }
 </style>

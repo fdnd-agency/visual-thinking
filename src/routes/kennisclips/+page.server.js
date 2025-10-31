@@ -1,12 +1,22 @@
 import { gql } from "graphql-request";
 import { hygraph } from "$lib/utils/hygraph.js";
 
-export async function load() {
-  let query = gql`
-    query VisualThinking {
-      categories(first: 10) {
+
+
+export const load = async () => {
+  const query = gql`
+    query AllCategories {
+      page(where: {id: "cmhdhsj6agpqo06uylzxne5vd"}) {
+        title
+        content {
+          html
+        }
+      }
+      categories {
+        slug
         title
         youTubeLink
+        introduction
         content {
           html
         }
@@ -14,5 +24,12 @@ export async function load() {
     }
   `;
 
-  return await hygraph.request(query);
-}
+  const data = await hygraph.request(query);
+
+  console.log(data);
+
+  return {
+    page: data.page,
+    clips: data.categories
+  };
+};
