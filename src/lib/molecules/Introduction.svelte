@@ -28,4 +28,14 @@
           text-align: center;
       }
   }
+
+  @media screen and (min-width: 60rem) {
+    section {
+          max-width: 32rem;
+      }
+      h1 {
+          font-size: 3.157rem;
+          text-align: center;
+      }
+  }
 </style>
