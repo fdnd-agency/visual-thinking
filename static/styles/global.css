@@ -270,6 +270,10 @@ svg.icon path.background {
 }
 
 @media (width > 70rem) {
+  .hexagons section {
+    margin-top:-12rem;
+  }
+
   .hexagons p {
     max-width: 52ch;
   }
