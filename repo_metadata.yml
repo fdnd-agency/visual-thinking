@@ -3,5 +3,5 @@ status: "in progress"
 main_link:"https://visualthinking.school/"
 dev_link:"https://visualthinking.dev.fdnd.nl/"
 tech_stack:
-  - Svelte
+  - SvelteKit
   - Hygraph
