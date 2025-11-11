@@ -128,13 +128,14 @@
 
 header {
   padding: 1rem;
-  background: var(--color-background);
+  background: var(--color-tertiary);
   z-index: 10;
 }
 
 h1 {
   margin: 0;
   font-size: 1.6rem;
+  color: var(--color-primary);
 }
 
 .carousel-wrapper {
@@ -142,6 +143,7 @@ h1 {
   grid-template-rows: auto 1fr auto; /* carousel-title | carousel | carousel-controls */
   width: 100%;
   height: 100%;
+  background: var(--color-tertiary);
 }
 
 .carousel {
@@ -183,6 +185,15 @@ h1 {
 :global(.slide-content a) {
   color: #fff;
   text-decoration: underline;
+  list-style-type: none;
+}
+
+:global(.minicursus-quotes) {
+  color: var(--color-primary);
+}
+
+:global(ul li) {
+  list-style-type: none;
 }
 
 :global(.slide-content a:hover),
@@ -214,7 +225,7 @@ img {
   );
   border-radius: 0.75rem;
   z-index: 10;
-  align-self: end; /* onderaan carousel-wrapper */
+  align-self: end; 
 }
 
 .progress {
@@ -249,7 +260,6 @@ img {
   cursor: pointer;
   opacity: 0.9;
   transition: all 0.2s ease;
-  border-radius: 0.5rem;
 }
 
 .scroll-btn:hover,
