@@ -9,6 +9,9 @@
   const slides = data?.miniCourse?.slides ?? [];
   const total = slides.length;
 
+  const scrollNext = () => updateIndex(currentIndex + 1);
+  const scrollPrev = () => updateIndex(currentIndex - 1);
+
   // Update index en scroll carousel
   function updateIndex(newIndex) {
     if (newIndex < 0 || newIndex >= total) return;
@@ -18,9 +21,6 @@
       behavior: "smooth",
     });
   }
-
-  const scrollNext = () => updateIndex(currentIndex + 1);
-  const scrollPrev = () => updateIndex(currentIndex - 1);
 
   // Keyboard navigatie
   function handleKeydown(e) {
@@ -68,14 +68,13 @@
 
   {#if total > 0}
     <div class="carousel-wrapper">
-      <!-- Carousel -->
+      
       <div class="carousel" bind:this={carousel}>
         {#each slides as slide}
           <Slide {slide} />
         {/each}
       </div>
 
-      <!-- Controls -->
       <CarouselControls
         {scrollPrev}
         {scrollNext}
