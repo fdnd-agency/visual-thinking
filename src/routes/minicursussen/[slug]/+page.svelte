@@ -38,21 +38,30 @@
     window.addEventListener("keydown", handleKeydown);
 
     // Zorg dat elke slide de juiste breedte heeft bij resize
-    const resizeHandler = () => {
-      if (!carousel) return;
-      Array.from(carousel.children).forEach((slide) => {
-        slide.style.minWidth = `${carousel.clientWidth}px`;
-      });
-      carousel.scrollTo({ left: currentIndex * carousel.clientWidth });
-    };
+const resizeHandler = () => {
+  if (!carousel) return;
 
-    window.addEventListener("resize", resizeHandler);
-    resizeHandler();
+  const isMobile = window.innerWidth <= 768;
 
-    return () => {
-      window.removeEventListener("keydown", handleKeydown);
-      window.removeEventListener("resize", resizeHandler);
-    };
+  Array.from(carousel.children).forEach((slide) => {
+    if (isMobile) {
+      slide.style.minWidth = "100%";
+      slide.style.width = "100%";
+    } else {
+      slide.style.minWidth = `${carousel.clientWidth}px`;
+      slide.style.width = `${carousel.clientWidth}px`;
+    }
+  });
+
+  // Alleen horizontaal scrollen als niet op mobiel
+  if (!isMobile) {
+    carousel.scrollTo({
+      left: currentIndex * carousel.clientWidth
+    });
+  } else {
+    carousel.scrollTop = 0;
+  }
+};
   });
 </script>
 
@@ -118,12 +127,12 @@
 
 .minicourse {
   width: 100vw;
-  height: 100dvh;
+  min-height: 100dvh;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* header | carousel-wrapper | eventuele footer */
-  overflow: hidden;
+  grid-template-rows: auto 1fr auto; /* header | carousel-wrapper | footer */
   background: var(--color-background, #fff);
   text-align: center;
+  overflow: hidden;
 }
 
 header {
@@ -138,16 +147,19 @@ h1 {
   color: var(--color-primary);
 }
 
+
 .carousel-wrapper {
   display: grid;
-  grid-template-rows: auto 1fr auto; /* carousel-title | carousel | carousel-controls */
+  grid-template-rows: auto 1fr; /* controls | slides */
   width: 100%;
   height: 100%;
   background: var(--color-tertiary);
+  padding-bottom: 4rem; 
 }
 
+
 .carousel {
-  display: flex; /* slides horizontaal scrollbaar */
+  display: flex;
   flex: 1;
   width: 100%;
   height: 100%;
@@ -155,8 +167,6 @@ h1 {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   background: var(--color-tertiary);
-  margin: 0;
-  padding: 0;
 }
 
 .carousel::-webkit-scrollbar {
@@ -166,9 +176,9 @@ h1 {
 .slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  display: grid;
-  grid-template-rows: auto 1fr; /* slide titel boven, content midden */
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   padding: 2rem;
   box-sizing: border-box;
@@ -179,12 +189,22 @@ h1 {
   max-width: 60rem;
   width: 90%;
   text-align: left;
-  margin: 1rem auto;
+  margin: 1rem auto 2rem auto;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem; 
 }
 
 :global(.slide-content a) {
   color: #fff;
   text-decoration: underline;
+}
+
+:global(ul) {
   list-style-type: none;
 }
 
@@ -192,22 +212,11 @@ h1 {
   color: var(--color-primary);
 }
 
-:global(ul li) {
-  list-style-type: none;
-}
-
 :global(.slide-content a:hover),
 :global(.slide-content a:focus-visible) {
   color: var(--color-senary);
 }
 
-img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
-
-/* Carousel controls / progress */
 .carousel-header {
   display: grid;
   grid-template-columns: 5rem 1fr 5rem;
@@ -216,16 +225,12 @@ img {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0.5rem;
-  backdrop-filter: blur(10px);
-  background-color: color-mix(
-    in srgb,
-    var(--color-background) 80%,
-    transparent
-  );
-  border-radius: 0.75rem;
-  z-index: 10;
-  align-self: end; 
+  padding: 0.75rem;
+  /* backdrop-filter: blur(10px); */
+  background-color: color-mix(in srgb, var(--color-background) 85%, transparent);
+  z-index: 20;
+  position: sticky;
+  bottom: 0;
 }
 
 .progress {
@@ -235,7 +240,6 @@ img {
   border-radius: 0.5rem;
   overflow: hidden;
   cursor: pointer;
-  margin: 0 1rem;
 }
 
 .bar {
@@ -260,6 +264,7 @@ img {
   cursor: pointer;
   opacity: 0.9;
   transition: all 0.2s ease;
+  border-radius: 0.5rem;
 }
 
 .scroll-btn:hover,
@@ -269,12 +274,33 @@ img {
   opacity: 1;
 }
 
+
 @media (max-width: 768px) {
+  .carousel-header {
+    bottom: 0;
+    position: sticky;
+    background-color: color-mix(in srgb, var(--color-background) 90%, transparent);
+    /* backdrop-filter: blur(12px); */
+    padding: 0.9rem;
+  }
+
+  .scroll-btn {
+    width: 4.5rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .slide {
+    padding: 1.5rem;
+  }
+
   .slide-content {
     width: 95%;
   }
 
-
+  img {
+    margin-bottom: 5rem;
+  }
 }
 
 /* scroll-button styles blijven zoals eerder, optioneel */
