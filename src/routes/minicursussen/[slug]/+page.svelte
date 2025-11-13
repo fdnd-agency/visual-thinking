@@ -86,10 +86,15 @@
 </div>
 
 <style>
-  :global(main, .minicursus-quotes) {
+  :global(main, .minicursus-quotes, a) {
     margin: 0;
     padding: 0;
     color: var(--color-primary);
+  }
+
+  :global(ul) {
+    list-style-type: none;
+    text-decoration: underline;
   }
 
 .minicourse {
@@ -151,6 +156,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     z-index: 20;
+    visibility: visible;
   }
 
   .carousel::scroll-button:hover {
