@@ -24,7 +24,7 @@
 }
 
 .slide-content {
-  max-width: 60rem;
+  max-width: 54ch;
   width: 100%;
   text-align: left;
   margin: 1rem auto 2rem auto;
