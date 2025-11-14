@@ -11,6 +11,7 @@ export { default as IconMaterials } from "./atoms/icons/IconMaterials.svelte";
 export { default as Breadcrumb } from "./atoms/Breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/Hexagon.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
+export { default as ProgressBar } from "./atoms/ProgressBar.svelte";
 
 export { default as Filter } from "./atoms/Filter.svelte";
 
@@ -21,6 +22,8 @@ export { default as Introduction } from "./molecules/Introduction.svelte";
 export { default as Steps } from "./molecules/Steps.svelte";
 export { default as StepsTags } from "./molecules/StepsTags.svelte";
 export { default as Methods } from "./molecules/Methods.svelte";
+export { default as CarouselControls } from "./molecules/CarouselControls.svelte";
+export { default as Slide } from "./molecules/Slide.svelte";
 
 // organisms
 export { default as Articles } from "./organisms/Articles.svelte";

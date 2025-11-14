@@ -26,6 +26,7 @@
     padding-bottom: 0.2rem;
     padding-left: 1rem;
     margin-top: 0%;
+    margin-left: 1rem;
     width: 100vw;
     display: flex;
     align-items: center;
