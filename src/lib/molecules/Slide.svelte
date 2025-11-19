@@ -4,11 +4,37 @@
 
 <article class="slide">
   <h2>{slide.title}</h2>
-  <div class="slide-content">{@html slide.content.html}</div>
+
+  <div class="slide-content">
+    {@html slide.content.html}
+  </div>
+
   {#if slide.image?.url}
-    <img src={slide.image.url} alt={slide.image.alt ?? ""} />
+    <picture>
+      <!-- probeer eerst AVIF -->
+      <source
+        srcset={`${slide.image.url.replace(/\.[^/.]+$/, ".avif")}`}
+        type="image/avif"
+      />
+      <!-- dan WebP -->
+      <source
+        srcset={`${slide.image.url.replace(/\.[^/.]+$/, ".webp")}`}
+        type="image/webp"
+      />
+
+      <!-- fallback = origineel formaat -->
+      <img
+        src={slide.image.url}
+        alt={slide.image.alt ?? ""}
+        loading="lazy"
+        width={slide.image.width}
+        height={slide.image.height}
+        class="slide-image"
+      />
+    </picture>
   {/if}
 </article>
+
 
 <style>
 .slide {
