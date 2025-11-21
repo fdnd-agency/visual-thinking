@@ -2,7 +2,7 @@
   export let slide;
 </script>
 
-<article class="slide">
+<article class="slide" tabindex="-1">
   <h2>{slide.title}</h2>
 
   <div class="slide-content">
@@ -47,6 +47,8 @@
   padding: 2rem;
   box-sizing: border-box;
   color: var(--color-primary);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .slide-content {

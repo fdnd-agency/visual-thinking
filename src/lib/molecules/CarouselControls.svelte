@@ -45,4 +45,8 @@
   background: var(--color-tertiary-40);
   color: var(--color-primary);
 }
+
+.scroll-btn:focus-within {
+  outline: 3px solid var(--color-senary);
+}
 </style>

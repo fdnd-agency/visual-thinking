@@ -67,21 +67,22 @@
   </header>
 
   {#if total > 0}
-    <div class="carousel-wrapper">
-      
-      <div class="carousel" bind:this={carousel}>
-        {#each slides as slide}
-          <Slide {slide} />
-        {/each}
-      </div>
+<div class="carousel-wrapper">
 
-      <CarouselControls
-        {scrollPrev}
-        {scrollNext}
-        {currentIndex}
-        {total}
-      />
-    </div>
+  <div class="carousel" bind:this={carousel}>
+    {#each slides as slide, i}
+      <Slide id={"slide-" + i} {slide} />
+    {/each}
+  </div>
+
+  <CarouselControls
+    {scrollPrev}
+    {scrollNext}
+    {currentIndex}
+    {total}
+  />
+</div>
+
   {/if}
 </div>
 
