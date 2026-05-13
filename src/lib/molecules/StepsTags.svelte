@@ -39,14 +39,6 @@
       <p>{duration}</p>
     </div>
   </li>
-  <!-- Author Section -->
-  <li>
-    <IconAuthor />
-
-    <div>
-      <p>Charley Muhren</p>
-    </div>
-  </li>
 </ul>
 
 <style>

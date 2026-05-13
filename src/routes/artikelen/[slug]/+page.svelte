@@ -11,7 +11,6 @@
 <header>
   <div>
     <p>Gepost op <time>26 maart 2019<time></p>
-    <p>Door <strong>Charley Muhren</strong></p>
   </div>
 
   <h1>{title}</h1>
@@ -40,7 +39,7 @@
 
 <style>
   header {
-    margin-top: 1rem;
+    /margin-top: 1rem;
   }
   header h1 {
     font-size: 2.5rem;
