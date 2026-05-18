@@ -6,7 +6,7 @@
 
 <section class="intro">
   <h1>{title}</h1>
-  {@html content.html}
+  <p>{content}</p>
 </section>
 
 <style>

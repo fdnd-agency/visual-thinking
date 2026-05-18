@@ -17,6 +17,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@directus/sdk": "^21.3.0",
 		"graphql": "^16.8.1",
 		"graphql-request": "^6.1.0"
 	}
