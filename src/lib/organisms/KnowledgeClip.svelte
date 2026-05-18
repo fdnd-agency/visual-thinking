@@ -20,7 +20,7 @@
 
   {#if clip.content}
     <div class="richtext">
-      {@html clip.content.html}
+      {@html clip.content}
     </div>
   {/if}
 

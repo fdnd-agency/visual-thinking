@@ -8,3 +8,15 @@ if (url == undefined || url.length === 0) {
 }
 
 export const directus = createDirectus(DIRECTUS_URL).with(graphql())
+
+
+export async function fetchReadFromDirectus(query) {
+    try {
+        const data = await directus.query(query)
+        return data;
+    } catch (error) {
+        console.log(`Error fetching from directus: ${error}`);
+        console.log(error);
+        console.log(error.errors[0].extensions);
+    }
+}
