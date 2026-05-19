@@ -9,6 +9,7 @@ export const load = async () => {
   query AllCategories {
     adconnect_kennisclip {
       title
+      content
       category {
         slug
         title
