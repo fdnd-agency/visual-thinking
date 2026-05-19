@@ -9,10 +9,10 @@ export const load = async () => {
   query AllCategories {
     adconnect_kennisclip {
       title
-        category {
-      slug
-      title
-      youTubeLink
+      category {
+        slug
+        title
+        youTubeLink
      }
     }
   }
