@@ -4,15 +4,15 @@ import { directus } from "../lib/utils/directus";
 
 export async function load() {
     try {
-    const data = await directus.query(`
-        query homePage {
-            adconnect_homepage {
-                title
-                content
-            }
-        }`);
+        const data = await directus.query(`
+            query homePage {
+                adconnect_homepage {
+                    title
+                    content
+                }
+            }`);
         console.log(data);
-    return data;
+        return data;
     
   } catch (error) {
     console.error("Error loading home page:", error);
