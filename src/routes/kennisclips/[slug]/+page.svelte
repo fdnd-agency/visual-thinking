@@ -1,5 +1,5 @@
 <script>
-  import KnowledgeClip from "$lib/organisms/KnowledgeClip.svelte";
+  import { KnowledgeClip } from "$lib/index.js";
   export let data;
 </script>
 

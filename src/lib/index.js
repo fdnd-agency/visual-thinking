@@ -12,7 +12,6 @@ export { default as Breadcrumb } from "./atoms/Breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/Hexagon.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
 export { default as ProgressBar } from "./atoms/ProgressBar.svelte";
-
 export { default as Filter } from "./atoms/Filter.svelte";
 
 // molecules
@@ -34,6 +33,3 @@ export { default as KnowledgeClips } from "./organisms/KnowledgeClips.svelte";
 export { default as KnowledgeClip } from "./organisms/KnowledgeClip.svelte";
 export { default as MethodHeader } from "./organisms/MethodHeader.svelte";
 export { default as MiniCourses } from "./organisms/MiniCourses.svelte";
-
-
-
