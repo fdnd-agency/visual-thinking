@@ -22,7 +22,7 @@
 </header>
 
 <div class="content">
-  {#if visual.url} 
+  {#if visual?.url} 
     <img src="{visual.url}" alt="{title}" />
   {/if}
   
@@ -32,7 +32,7 @@
   </p>
 
   <div class="rich-text">
-    {@html content.html}
+    {@html content}
   </div> 
   
 </div>
