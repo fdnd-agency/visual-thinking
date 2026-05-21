@@ -7,14 +7,13 @@ export async function load() {
       adconnect_artikelen_page {
         title
         content
-      }
-      
-      adconnect_artikel(limit: 6) {
-        title
-        intro
-        slug
-        visual {
-          id
+        artikelen(limit: 6) {
+          title
+          intro
+          slug
+          visual {
+            id
+          }
         }
       }
     }
@@ -30,7 +29,7 @@ export async function load() {
   }
 
   const page = data.adconnect_artikelen_page;
-  const articles = data.adconnect_artikel.map(article => ({
+  const articles = (page?.artikelen || []).map(article => ({
     ...article,
     visual: article.visual ? { url: `${DIRECTUS_URL}/assets/${article.visual.id}` } : null
   }));
