@@ -12,6 +12,7 @@
             alt={article.title}
             width="200"
             height="200"
+            loading="lazy"
           />
         {/if}
         <h2>{article.title}</h2>
@@ -64,5 +65,4 @@
     font-weight: normal;
     text-wrap: balance;
   }
-  
 </style>

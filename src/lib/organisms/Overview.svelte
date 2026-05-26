@@ -11,15 +11,15 @@
       <li>
         <a href="/tekenmethodes/{method.slug}">
           <picture>
-            <source srcset={method.sjabloon.webp} type="image/webp" />
-            <source srcset={method.sjabloon.avif} type="image/avif" />
-            <img
-              src={method.sjabloon.png}
-              alt={"Voorbeeld van " + method.titel}
-              width="300"
-              height="225"
-              loading="lazy"
-            />
+            {#if method.sjabloon?.url}
+              <img
+                src={method.sjabloon.url}
+                alt={method.title}
+                width="300"
+                height="225"
+                loading="lazy"
+              />
+            {/if}
           </picture>
           <h3>{method.titel}</h3>
         </a>

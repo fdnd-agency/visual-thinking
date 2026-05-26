@@ -1,6 +1,7 @@
 // import { gql } from "graphql-request";
 // import { hygraph } from "$lib/utils/hygraph.js";
 import { directus } from "$lib/utils/directus.js";
+import { DIRECTUS_URL } from "$env/static/private";
 
 // export async function load({ url }) {
 //   const categories = url.searchParams.getAll('filter')
@@ -95,11 +96,12 @@ export async function load({ url }) {
   }
 
   const page = data.vt_tekenmethodes_page;
-  const methods = page?.tekenmethodes || [];
-
-  console.log("page", page);
-  console.log("methods", methods);
-  console.log("categories", categories);
+  const methods = (page?.tekenmethodes || []).map((method) => ({
+    ...method,
+    sjabloon: method.sjabloon
+      ? { url: `${DIRECTUS_URL}/assets/${method.sjabloon.id}` }
+      : null,
+  }));
 
   return { page, methods, categories };
 }
