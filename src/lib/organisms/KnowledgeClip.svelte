@@ -7,7 +7,6 @@
 
 <article class="knowledge-clip">
   <h1>{clip.titel}</h1>
-  {console.log("clip", clip)}
 
   {#if clip.youtube_link}
     <iframe
@@ -19,9 +18,9 @@
     ></iframe>
   {/if}
 
-  {#if clip.content}
+  {#if clip.beschrijving}
     <div class="richtext">
-      {@html clip.content.html}
+      {@html clip.beschrijving}
     </div>
   {/if}
 

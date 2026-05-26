@@ -75,7 +75,9 @@ export async function load({ url }) {
         beschrijving
         tekenmethodes {
           titel
-          sjabloon
+          sjabloon {
+            id
+          }
           duur
           beschrijving
         }
@@ -87,13 +89,17 @@ export async function load({ url }) {
   try {
     data = await directus.query(query);
   } catch (error) {
-    console.error("Error loading kennisclips page:", error);
+    console.error("Error loading tekenmethodes page:", error);
     console.error("Error details:", JSON.stringify(error.errors, null, 2));
     throw error;
   }
 
   const page = data.vt_tekenmethodes_page;
   const methods = page?.tekenmethodes || [];
+
+  console.log("page", page);
+  console.log("methods", methods);
+  console.log("categories", categories);
 
   return { page, methods, categories };
 }
