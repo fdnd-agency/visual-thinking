@@ -1,6 +1,7 @@
 <script>
   let { page } = $props();
-  const { titel, beschrijving } = page;
+  const titel = $derived(page.titel);
+  const beschrijving = $derived(page.beschrijving);
 </script>
 
 <section class="intro">
