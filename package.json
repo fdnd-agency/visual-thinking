@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+        "test": "vitest"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -13,7 +14,8 @@
 		"@sveltejs/kit": "^2.5.27",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"svelte": "^5.32.1",
-		"vite": "^5.4.4"
+		"vite": "^5.4.4",
+		"vitest": "^4.1.7"
 	},
 	"type": "module",
 	"dependencies": {
