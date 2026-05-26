@@ -5,6 +5,6 @@
   const clips = $derived(data.clips);
 </script>
 
-<Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
+<Breadcrumb title="Kennisclips" backgroundColor="var(--color-quaternary)" />
 <Introduction {page} />
 <KnowledgeClips {clips} />

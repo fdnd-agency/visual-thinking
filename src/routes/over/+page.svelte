@@ -5,5 +5,5 @@
   const page = data.adconnect_aboutpage;
 </script>
 
-<Breadcrumb titel="Over" backgroundColor="var(--color-tertiary-80)" />
+<Breadcrumb title="Over" backgroundColor="var(--color-tertiary-80)" />
 <Introduction {page} />

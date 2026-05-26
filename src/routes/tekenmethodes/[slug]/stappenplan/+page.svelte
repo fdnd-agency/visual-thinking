@@ -3,10 +3,15 @@
 
   let { data } = $props();
   // Extract the relevant values into a seperate variables so we can give these selectively to their components
-  const { steps, categories, material, duration, title, slug, pdf } = data.methods[0];
+  const { steps, categories, material, duration, title, slug, pdf } =
+    data.methods[0];
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--color-quinary)" />
+<Breadcrumb
+  title="Overzicht"
+  url="/tekenmethodes"
+  backgroundColor="var(--color-quinary)"
+/>
 
 <MethodHeader {title} {slug} {pdf} />
 
@@ -28,7 +33,7 @@
     width: 100%;
   }
   @media (min-width: 74.125em) {
-    .sticky{
+    .sticky {
       position: sticky;
       top: 0;
     }
@@ -39,6 +44,5 @@
       grid-template-columns: 1fr 1fr;
       max-width: 80%;
     }
-
   }
 </style>

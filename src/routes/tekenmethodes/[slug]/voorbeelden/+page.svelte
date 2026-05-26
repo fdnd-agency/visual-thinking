@@ -26,7 +26,11 @@
   });
 </script>
 
-<Breadcrumb titel="Overzicht" url="/tekenmethodes" backgroundColor="var(--color-quinary)" />
+<Breadcrumb
+  title="Overzicht"
+  url="/tekenmethodes"
+  backgroundColor="var(--color-quinary)"
+/>
 <MethodHeader {title} {slug} {pdf} />
 
 <section class="images-buttons">
@@ -102,7 +106,6 @@
     scroll-snap-type: x mandatory;
   }
 
-
   .images-buttons {
     display: flex;
     justify-content: center;
@@ -113,7 +116,7 @@
   .carrousel-img {
     width: 100%;
     height: auto;
-    max-height:20rem; 
+    max-height: 20rem;
     scroll-snap-type: x mandatory;
     scroll-snap-align: center;
   }

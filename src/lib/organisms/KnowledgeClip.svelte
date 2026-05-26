@@ -3,7 +3,7 @@
   export let clip;
 </script>
 
-<Breadcrumb titel="Kennisclip" backgroundColor="var(--color-quaternary)" />
+<Breadcrumb title="Kennisclip" backgroundColor="var(--color-quaternary)" />
 
 <article class="knowledge-clip">
   <h1>{clip.titel}</h1>

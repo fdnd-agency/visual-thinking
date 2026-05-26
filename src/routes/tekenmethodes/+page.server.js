@@ -1,6 +1,6 @@
 // import { gql } from "graphql-request";
 // import { hygraph } from "$lib/utils/hygraph.js";
-import { directus } from "../../lib/utils/directus";
+import { directus } from "$lib/utils/directus.js";
 
 // export async function load({ url }) {
 //   const categories = url.searchParams.getAll('filter')
@@ -59,7 +59,7 @@ import { directus } from "../../lib/utils/directus";
 //   return data;
 // }
 
-export const load = async ({ url }) => {
+export async function load({ url }) {
   const categories = url.searchParams.getAll("filter");
   let filter;
 
@@ -68,25 +68,32 @@ export const load = async ({ url }) => {
       (filter = `, where: {categories_some: {slug_in: ${JSON.stringify(categories)}}}`)
     : (filter = "");
 
-  const directusquery = `
-    query Tekenmethodes {
-      adconnect_tekenmethodes {
-        title
-        content
+  const query = `
+    query Tekenmethodes_Page {
+      vt_tekenmethodes_page {
+        titel
+        beschrijving
+        tekenmethodes {
+          titel
+          sjabloon
+          duur
+          beschrijving
+        }
       }
     }
   `;
 
   let data;
-
   try {
-    data = await directus.query(directusquery);
-    data.categories = categories;
-    data.methods = [];
+    data = await directus.query(query);
   } catch (error) {
-    console.log("Error in routes\\tekenmethodes", error);
-    console.log("Error in routes\\tekenmethodes", error.errors[0].extensions);
+    console.error("Error loading kennisclips page:", error);
+    console.error("Error details:", JSON.stringify(error.errors, null, 2));
+    throw error;
   }
 
-  return data;
-};
+  const page = data.vt_tekenmethodes_page;
+  const methods = page?.tekenmethodes || [];
+
+  return { page, methods, categories };
+}

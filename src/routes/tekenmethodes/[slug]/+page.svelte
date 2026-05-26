@@ -7,7 +7,7 @@
 </script>
 
 <Breadcrumb
-  titel="Overzicht"
+  title="Overzicht"
   url="/tekenmethodes"
   backgroundColor="var(--color-quinary)"
 />

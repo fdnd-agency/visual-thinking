@@ -1,13 +1,11 @@
 <script>
   import { Breadcrumb, Introduction, Methods } from "$lib/index.js";
   let { data } = $props();
-  const page = data.adconnect_tekenmethodes;
-  const categories = data.categories;
-  // const {page, categories} = data;
-
-  console.log(data);
+  const page = $derived(data.page);
+  const methods = $derived(data.methods);
+  const categories = $derived(data.categories);
 </script>
 
-<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--color-quinary)" />
+<Breadcrumb title="Tekenmethodes" backgroundColor="var(--color-quinary)" />
 <Introduction {page} />
-<Methods methods={data.methods} {categories} />
+<Methods {methods} {categories} />
