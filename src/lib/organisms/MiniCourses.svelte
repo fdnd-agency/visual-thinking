@@ -1,17 +1,6 @@
 <script>
     let { miniCourses, directusUrl } = $props();
 
-  // // Afbeeldingen koppelen aan slugs
-  // const imageMap = {
-  //   'structuur-en-kleur': 'structuur-kleur.png',
-  //   'mensen-tekenen': 'mensen_tekenen.png',
-  //   'handlettering': 'handlettering.png',
-  //   'basisvormen': 'basisvormen.png'
-  // };
-
-  // function getImageFilename(slug) {
-  //   return imageMap[slug] ?? 'placeholder.png';
-  // }
 </script>
 
 <section>
