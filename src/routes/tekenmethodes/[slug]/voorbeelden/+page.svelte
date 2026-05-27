@@ -4,7 +4,7 @@
 
   let { data } = $props();
   // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
-  const { title, slug, pdf } = data.methods[0];
+  const { titel, slug, pdf, voorbeelden } = data;
 
   onMount(() => {
     const carrousel = document.querySelector("#js-carrousel .carrousel");
@@ -31,12 +31,12 @@
   url="/tekenmethodes"
   backgroundColor="var(--color-quinary)"
 />
-<MethodHeader {title} {slug} {pdf} />
+<MethodHeader title={titel} {slug} {pdf} />
 
 <section class="images-buttons">
   <div class="js-disable">
     <div class="scroll-btn">
-      {#if data.methods[0].examples.length > 0}
+      {#if voorbeelden.length > 0}
         <div id="button-prev" class="carousel-btn prev-btn">
           <button class="icon-button">
             <svg
@@ -69,20 +69,21 @@
 
   <div id="js-carrousel">
     <div class="carrousel" id="scrollbar">
-      {#each data.methods as method}
-        {#if method.examples.length > 0}
-          {#each method.examples as example}
-            <img
-              class="carrousel-img"
-              src={example.url}
-              alt="Example Slide"
-              loading="lazy"
-            />
-          {/each}
-        {:else}
-          <p class="carrousel-missing">Geen voorbeelden</p>
-        {/if}
-      {/each}
+      <!-- {#each data.methods as method} -->
+      {console.log("voorbeelden", voorbeelden)}
+      {#if voorbeelden.length > 0}
+        {#each voorbeelden as example}
+          <img
+            class="carrousel-img"
+            src={example?.url}
+            alt="Example Slide"
+            loading="lazy"
+          />
+        {/each}
+      {:else}
+        <p class="carrousel-missing">Geen voorbeelden</p>
+      {/if}
+      <!-- {/each} -->
     </div>
   </div>
 </section>
