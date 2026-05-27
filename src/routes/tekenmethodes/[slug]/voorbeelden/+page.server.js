@@ -23,7 +23,9 @@ export const load = async ({ params }) => {
             id
           }
           voorbeelden {
-            id
+            directus_files_id {
+              id
+            }
           }
         }
       }
@@ -42,7 +44,7 @@ export const load = async ({ params }) => {
     ...method,
     pdf: method.pdf ? { url: `${DIRECTUS_URL}/assets/${method.pdf.id}` } : null,
     voorbeelden: (method?.voorbeelden || []).map((example) => ({
-      url: `${DIRECTUS_URL}/assets/${example.id}`,
+      url: `${DIRECTUS_URL}/assets/${example.directus_files_id.id}`,
     })),
   }));
 
