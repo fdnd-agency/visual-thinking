@@ -1,10 +1,8 @@
 <script>
-  import { Breadcrumb, MethodHeader, StepsTags, Steps } from "$lib/index.js";
+  import { Breadcrumb, MethodHeader, MethodTags, Steps } from "$lib/index.js";
 
   let { data } = $props();
-  // Extract the relevant values into a seperate variables so we can give these selectively to their components
-  const { steps, categories, material, duration, title, slug, pdf } =
-    data.methods[0];
+  const { titel, slug, pdf, duur, stappen, categorieen, materialen } = data;
 </script>
 
 <Breadcrumb
@@ -12,14 +10,16 @@
   url="/tekenmethodes"
   backgroundColor="var(--color-quinary)"
 />
-
-<MethodHeader {title} {slug} {pdf} />
-
+<MethodHeader title={titel} {slug} {pdf} />
 <section>
   <div class="sticky">
-    <StepsTags {categories} {duration} materials={material} />
+    <MethodTags
+      categories={categorieen}
+      duration={duur}
+      materials={materialen}
+    />
   </div>
-  <Steps {steps} />
+  <Steps steps={stappen} />
 </section>
 
 <style>
@@ -36,13 +36,6 @@
     .sticky {
       position: sticky;
       top: 0;
-    }
-  }
-
-  @media (min-width: 74em) {
-    .grid {
-      grid-template-columns: 1fr 1fr;
-      max-width: 80%;
     }
   }
 </style>

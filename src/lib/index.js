@@ -19,7 +19,7 @@ export { default as Footer } from "./molecules/Footer.svelte";
 export { default as Header } from "./molecules/Header.svelte";
 export { default as Introduction } from "./molecules/Introduction.svelte";
 export { default as Steps } from "./molecules/Steps.svelte";
-export { default as StepsTags } from "./molecules/StepsTags.svelte";
+export { default as MethodTags } from "./molecules/MethodTags.svelte";
 export { default as Methods } from "./molecules/Methods.svelte";
 export { default as CarouselControls } from "./molecules/CarouselControls.svelte";
 export { default as Slide } from "./molecules/Slide.svelte";
