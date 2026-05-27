@@ -1,5 +1,5 @@
 export default function MethodDescriptionQuery(gql, slug) {
-    return gql`
+  return gql`
       query VisualThinking {
         methods(where: { slug: "${slug}" }) {
           title
@@ -34,4 +34,4 @@ export default function MethodDescriptionQuery(gql, slug) {
         }
       }
     `;
-  }
+}

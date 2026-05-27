@@ -81,6 +81,7 @@ export async function load({ url }) {
           }
           duur
           beschrijving
+          slug
         }
       }
     }

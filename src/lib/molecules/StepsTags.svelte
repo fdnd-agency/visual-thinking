@@ -1,5 +1,10 @@
 <script>
-  import { IconAuthor, IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
+  import {
+    IconAuthor,
+    IconCategories,
+    IconDuration,
+    IconMaterials,
+  } from "$lib/index.js";
   let { categories, materials, duration } = $props();
 
   // Functie om underscores te verwijderen en de eerste letter van het eerste woord hoofdletter te maken
@@ -51,11 +56,6 @@
   li {
     display: flex;
     margin-bottom: 0.5rem;
-  }
-
-  .span-box {
-    display: flex;
-    flex-flow: row wrap;
   }
 
   p {

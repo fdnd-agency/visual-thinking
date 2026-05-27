@@ -1,9 +1,7 @@
 <script>
   import { Breadcrumb, MethodHeader } from "$lib/index.js";
-
-  let { data } = $props();
-  // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
-  const { title, slug, pdf } = data.methods[0];
+  const { data } = $props();
+  const { titel, slug, sjabloon, beschrijving, pdf } = data;
 </script>
 
 <Breadcrumb
@@ -11,16 +9,12 @@
   url="/tekenmethodes"
   backgroundColor="var(--color-quinary)"
 />
-
-<MethodHeader {title} {slug} {pdf} />
-
+<MethodHeader title={titel} {slug} {pdf} />
 <section class="section-wrapper">
-  {#each data.methods as method}
-    <img src={method?.template?.url} alt="template_image" loading="lazy" />
-    <p>
-      {@html method?.description.html}
-    </p>
-  {/each}
+  <img src={sjabloon?.url} alt="template_image" loading="lazy" />
+  <p>
+    {@html beschrijving}
+  </p>
 </section>
 
 <style>

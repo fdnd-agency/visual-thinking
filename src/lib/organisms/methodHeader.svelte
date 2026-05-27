@@ -17,16 +17,16 @@
       </li>
     </ul>
     {#if pdf}
-    <a
-      href={pdf.url}
-      download="{slug}.pdf"
-      target="blank"
-      class="vt-standard-button">
-      Download PDF
-    </a>
-  {/if}
+      <a
+        href={pdf?.url}
+        download="{slug}.pdf"
+        target="blank"
+        class="vt-standard-button"
+      >
+        Download PDF
+      </a>
+    {/if}
   </nav>
-
 </header>
 
 <style>
