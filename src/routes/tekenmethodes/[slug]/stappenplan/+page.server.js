@@ -1,14 +1,3 @@
-// import { gql } from 'graphql-request';
-// import { hygraph } from '$lib/utils/hygraph.js';
-
-// import { MethodStepsQuery } from '$lib/index.js'
-// export const load = async ({ params }) => {
-// 	const { slug } = params;
-// 	const queryUrl = MethodStepsQuery(gql, slug);
-
-// 	return await hygraph.request(queryUrl);
-// };
-
 import { directus } from "$lib/utils/directus.js";
 import { DIRECTUS_URL } from "$env/static/private";
 export const load = async ({ params }) => {
@@ -32,7 +21,9 @@ export const load = async ({ params }) => {
             titel
             beschrijving
             visualisaties {
-              id
+              directus_files_id {
+                id
+              }
             }
           }
         }
@@ -47,10 +38,18 @@ export const load = async ({ params }) => {
     console.error("Error details:", JSON.stringify(error.errors, null, 2));
     throw error;
   }
-  data = (data?.vt_tekenmethodes || []).map((method) => ({
+
+  const method = data?.vt_tekenmethodes?.[0];
+  if (!method) return null;
+
+  return {
     ...method,
     pdf: method.pdf ? { url: `${DIRECTUS_URL}/assets/${method.pdf.id}` } : null,
-  }));
-
-  return data[0];
+    stappen: (method?.stappen || []).map((stap) => ({
+      ...stap,
+      visualisaties: (stap?.visualisaties || []).map((visual) => ({
+        url: `${DIRECTUS_URL}/assets/${visual.directus_files_id.id}`,
+      })),
+    })),
+  };
 };

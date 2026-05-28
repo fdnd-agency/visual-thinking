@@ -29,13 +29,14 @@ export const load = async ({ params }) => {
     throw error;
   }
 
-  data = (data?.vt_tekenmethodes || []).map((method) => ({
+  const method = data?.vt_tekenmethodes?.[0];
+  if (!method) return null;
+
+  return {
     ...method,
     pdf: method.pdf ? { url: `${DIRECTUS_URL}/assets/${method.pdf.id}` } : null,
     voorbeelden: (method?.voorbeelden || []).map((example) => ({
       url: `${DIRECTUS_URL}/assets/${example.directus_files_id.id}`,
     })),
-  }));
-
-  return data[0];
+  };
 };

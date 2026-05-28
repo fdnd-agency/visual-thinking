@@ -1,8 +1,3 @@
-// queries
-export { default as MethodStepsQuery } from "./queries/method.js";
-export { default as MethodExamplesQuery } from "./queries/method.js";
-export { default as MethodDescriptionQuery } from "./queries/method.js";
-
 // atoms
 export { default as IconAuthor } from "./atoms/icons/IconAuthor.svelte";
 export { default as IconCategories } from "./atoms/icons/IconCategories.svelte";

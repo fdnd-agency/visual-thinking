@@ -3,7 +3,6 @@
   import { onMount } from "svelte";
 
   let { data } = $props();
-  // Extract the relevant values into seperate variables so we can give these selectively to MethodHeader
   const { titel, slug, pdf, voorbeelden } = data;
 
   onMount(() => {
@@ -38,7 +37,7 @@
     <div class="scroll-btn">
       {#if voorbeelden.length > 0}
         <div id="button-prev" class="carousel-btn prev-btn">
-          <button class="icon-button">
+          <button class="icon-button" aria-label="Vorige voorbeeld">
             <svg
               id="icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +50,7 @@
           </button>
         </div>
         <div id="button-next" class="carousel-btn next-btn">
-          <button class="icon-button">
+          <button class="icon-button" aria-label="Volgend voorbeeld">
             <svg
               id="icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +68,6 @@
 
   <div id="js-carrousel">
     <div class="carrousel" id="scrollbar">
-      <!-- {#each data.methods as method} -->
-      {console.log("voorbeelden", voorbeelden)}
       {#if voorbeelden.length > 0}
         {#each voorbeelden as example}
           <img
@@ -83,7 +80,6 @@
       {:else}
         <p class="carrousel-missing">Geen voorbeelden</p>
       {/if}
-      <!-- {/each} -->
     </div>
   </div>
 </section>
