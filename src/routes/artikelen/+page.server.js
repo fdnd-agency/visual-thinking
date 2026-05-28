@@ -7,6 +7,8 @@ export async function load() {
       adconnect_artikelen_page {
         title
         content
+        titel
+        beschrijving
         artikelen(limit: 6) {
           title
           intro
@@ -29,9 +31,11 @@ export async function load() {
   }
 
   const page = data.adconnect_artikelen_page;
-  const articles = (page?.artikelen || []).map(article => ({
+  const articles = (page?.artikelen || []).map((article) => ({
     ...article,
-    visual: article.visual ? { url: `${DIRECTUS_URL}/assets/${article.visual.id}` } : null
+    visual: article.visual
+      ? { url: `${DIRECTUS_URL}/assets/${article.visual.id}` }
+      : null,
   }));
 
   return { page, articles };
