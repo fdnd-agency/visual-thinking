@@ -33,16 +33,16 @@
         <div>
           <input
             type="checkbox"
-            id={category.slug}
+            id={category.id}
             name="filter"
-            value={category.slug}
+            value={category.id}
             onchange={() => {
               form.requestSubmit();
             }}
           />
 
-          <label for={category.slug}>
-            <span>{category.title}</span>
+          <label for={category.id}>
+            <span>{category.titel}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               {width}

@@ -1,80 +1,30 @@
-// import { gql } from "graphql-request";
-// import { hygraph } from "$lib/utils/hygraph.js";
 import { directus } from "$lib/utils/directus.js";
 import { DIRECTUS_URL } from "$env/static/private";
 
-// export async function load({ url }) {
-//   const categories = url.searchParams.getAll('filter')
-//   let filter
-
-//   categories && categories.length > 0
-//   // This is where the data is being fetched and filtered throught Hygraph to get the right data.
-//           ? filter = `, where: {categories_some: {slug_in: ${JSON.stringify(categories)}}}`
-//           : filter = ''
-
-// let query = gql`
-//     query Methods {
-//       page(where: { id: "clv89bh0vn4z007unrv85gsw1" }) {
-//         title
-//         content {
-//           html
-//         }
-//       }
-//       methods(first: 100 ${filter}) {
-//         id
-//         slug
-//         title
-//         categories {
-//           title
-//           id
-//         }
-//         template {
-//           avif: url(
-//             transformation: {
-//               document: { output: { format: avif } }
-//             }
-//           )
-//           webp: url(
-//             transformation: {
-//               document: { output: { format: webp } }
-//             }
-//           )
-//           png: url(
-//             transformation: {
-//               document: { output: { format: png } }
-//             }
-//           )
-//           height
-//           width
-//         }
-//       }
-//       categories(first: 10) {
-//         slug
-//         title
-//       }
-//     }
-//   `;
-
-//   const data = await hygraph.request(query, { categories });
-
-//   return data;
-// }
-
 export async function load({ url }) {
-  const categories = url.searchParams.getAll("filter");
-  let filter;
+  const categoryIDs = url.searchParams.getAll("filter");
 
-  categories && categories.length > 0
-    ? // This is where the data is being fetched and filtered throught Hygraph to get the right data.
-      (filter = `, where: {categories_some: {slug_in: ${JSON.stringify(categories)}}}`)
-    : (filter = "");
+  let filter = {};
+  if (categoryIDs && categoryIDs.length > 0) {
+    filter = {
+      categorieen: {
+        _or: categoryIDs.map((cat) => ({
+          id: { _eq: cat },
+        })),
+      },
+    };
+  }
 
   const query = `
-    query Tekenmethodes_Page {
+    query Tekenmethodes_Page($filter: vt_tekenmethodes_filter) {
+      vt_categorieen {
+        id
+        titel
+      }
       vt_tekenmethodes_page {
         titel
         beschrijving
-        tekenmethodes {
+        tekenmethodes(filter: $filter) {
           titel
           sjabloon {
             id
@@ -89,13 +39,14 @@ export async function load({ url }) {
 
   let data;
   try {
-    data = await directus.query(query);
+    data = await directus.query(query, { filter });
   } catch (error) {
     console.error("Error loading tekenmethodes page:", error);
     console.error("Error details:", JSON.stringify(error.errors, null, 2));
     throw error;
   }
 
+  const categories = data.vt_categorieen || [];
   const page = data.vt_tekenmethodes_page;
   const methods = (page?.tekenmethodes || []).map((method) => ({
     ...method,

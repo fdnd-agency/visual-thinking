@@ -1,5 +1,6 @@
 import { directus } from "$lib/utils/directus.js";
 import { DIRECTUS_URL } from "$env/static/private";
+
 export const load = async ({ params }) => {
   const { slug } = params;
   const query = `
