@@ -5,23 +5,16 @@
   let { data } = $props();
   const { titel, slug, pdf, voorbeelden } = data;
 
+  let carouselElement;
+
+  const handleButtonClick = (direction) => {
+    if (!carouselElement) return;
+    const scrollAmount = direction * (carouselElement.offsetWidth + 15);
+    carouselElement.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  };
+
   onMount(() => {
-    const carrousel = document.querySelector("#js-carrousel .carrousel");
-    const prevButton = document.getElementById("button-prev");
-    const nextButton = document.getElementById("button-next");
-
-    const handleButtonClick = (scrollAmount) => {
-      carrousel.scrollBy({ left: scrollAmount });
-    };
-
-    prevButton.addEventListener("click", () =>
-      handleButtonClick(-1 * carrousel.offsetWidth - 15)
-    );
-    nextButton.addEventListener("click", () =>
-      handleButtonClick(carrousel.offsetWidth + 15)
-    );
-
-    document.querySelector(".js-disable")?.classList.remove("js-disable");
+    carouselElement = document.querySelector("#js-carrousel .carrousel");
   });
 </script>
 
@@ -33,37 +26,43 @@
 <MethodHeader title={titel} {slug} {pdf} />
 
 <section class="images-buttons">
-  <div class="js-disable">
-    <div class="scroll-btn">
-      {#if voorbeelden.length > 0}
-        <div id="button-prev" class="carousel-btn prev-btn">
-          <button class="icon-button" aria-label="Vorige voorbeeld">
-            <svg
-              id="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              ><path
-                d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
-              /></svg
-            >
-          </button>
-        </div>
-        <div id="button-next" class="carousel-btn next-btn">
-          <button class="icon-button" aria-label="Volgend voorbeeld">
-            <svg
-              id="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              ><path
-                d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
-              /></svg
-            >
-          </button>
-        </div>
-      {/if}
-    </div>
+  <div class="scroll-btn">
+    {#if voorbeelden.length > 0}
+      <div class="carousel-btn prev-btn">
+        <button
+          class="icon-button"
+          aria-label="Vorige voorbeeld"
+          onclick={() => handleButtonClick(-1)}
+        >
+          <svg
+            id="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            ><path
+              d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+            /></svg
+          >
+        </button>
+      </div>
+      <div class="carousel-btn next-btn">
+        <button
+          class="icon-button"
+          aria-label="Volgend voorbeeld"
+          onclick={() => handleButtonClick(1)}
+        >
+          <svg
+            id="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            ><path
+              d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+            /></svg
+          >
+        </button>
+      </div>
+    {/if}
   </div>
 
   <div id="js-carrousel">
@@ -85,10 +84,6 @@
 </section>
 
 <style>
-  .js-disable {
-    display: none;
-  }
-
   /* Carousel */
 
   .carrousel {
@@ -96,9 +91,9 @@
     align-items: center;
     max-width: 31em;
     gap: 15px;
-    justify-content: space-between;
     margin-bottom: 20px;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
   }
@@ -111,10 +106,10 @@
   }
 
   .carrousel-img {
+    flex: 0 0 auto;
     width: 100%;
     height: auto;
     max-height: 20rem;
-    scroll-snap-type: x mandatory;
     scroll-snap-align: center;
   }
 
