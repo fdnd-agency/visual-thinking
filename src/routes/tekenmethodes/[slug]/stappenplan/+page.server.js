@@ -1,5 +1,6 @@
 import { directus } from "$lib/utils/directus.js";
 import { DIRECTUS_URL } from "$env/static/private";
+import { error } from "@sveltejs/kit";
 
 export const load = async ({ params }) => {
   const { slug } = params;
@@ -41,7 +42,7 @@ export const load = async ({ params }) => {
   }
 
   const method = data?.vt_tekenmethodes?.[0];
-  if (!method) return null;
+  if (!method) throw error(404, "Tekenmethode niet gevonden");
 
   return {
     ...method,

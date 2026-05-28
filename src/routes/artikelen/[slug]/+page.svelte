@@ -14,7 +14,7 @@
 
 <header>
   <div>
-    <p>Gepost op <time>26 maart 2019<time></time></time></p>
+    <p>Gepost op <time>26 maart 2019</time></p>
   </div>
 
   <h1>{title}</h1>
