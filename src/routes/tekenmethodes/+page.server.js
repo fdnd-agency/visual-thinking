@@ -1,5 +1,6 @@
 import { directus } from "$lib/utils/directus.js";
 import { DIRECTUS_URL } from "$env/static/private";
+import { error } from "@sveltejs/kit";
 
 export async function load({ url }) {
   const categoryIDs = url.searchParams.getAll("filter");
@@ -48,6 +49,7 @@ export async function load({ url }) {
 
   const categories = data.vt_categorieen || [];
   const page = data.vt_tekenmethodes_page;
+  if (!page) throw error(404, "Pagina niet gevonden");
   const methods = (page?.tekenmethodes || []).map((method) => ({
     ...method,
     sjabloon: method.sjabloon
