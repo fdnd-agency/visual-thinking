@@ -16,10 +16,11 @@ export async function load({ url }) {
   adconnect_aboutpage{
   title
   content
-  }}`
+  titel
+  beschrijving
+  }}`;
 
   const data = await directus.query(query);
-
 
   return data;
 }

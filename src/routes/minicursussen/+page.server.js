@@ -8,6 +8,8 @@ export async function load() {
         adconnect_minicursussen_page {
           title
           content
+          titel
+          beschrijving
         }
           
         adconnect_minicursussen {
