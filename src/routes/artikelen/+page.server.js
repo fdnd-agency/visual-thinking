@@ -4,14 +4,14 @@ import { DIRECTUS_URL } from "$env/static/private";
 export async function load() {
   const query = `
     query Articles {
-      adconnect_artikelen_page {
-        title
-        content
+      vt_artikelen_page {
+        title: titel
+        content: inhoud
         artikelen(limit: 6) {
-          title
+          title: titel
           intro
           slug
-          visual {
+          visual: visueel {
             id
           }
         }
@@ -28,7 +28,7 @@ export async function load() {
     throw error;
   }
 
-  const page = data.adconnect_artikelen_page;
+  const page = data.vt_artikelen_page;
   const articles = (page?.artikelen || []).map(article => ({
     ...article,
     visual: article.visual ? { url: `${DIRECTUS_URL}/assets/${article.visual.id}` } : null
