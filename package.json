@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-        "test": "vitest"
+		"test": "vitest"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -15,7 +15,8 @@
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"svelte": "^5.32.1",
 		"vite": "^5.4.4",
-		"vitest": "^4.1.7"
+		"vitest": "^4.1.7",
+		"zod": "^4.4.3"
 	},
 	"type": "module",
 	"dependencies": {
