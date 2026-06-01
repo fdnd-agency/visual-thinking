@@ -7,13 +7,13 @@ export const load = async () => {
 
   const directusquery = `
   query AllCategories {
-    adconnect_kennisclip {
-      title
-      content
-      category {
+    vt_kennisclips_page {
+      titel
+      beschrijving
+      kennisclips {
         slug
-        title
-        youTubeLink
+        titel
+        youtube_link
      }
     }
   }
@@ -30,7 +30,7 @@ export const load = async () => {
 
 
   return {
-    page: data.adconnect_kennisclip,
-    clips: data.adconnect_kennisclip.category
+    page: data.vt_kennisclips_page,
+    clips: data.vt_kennisclips_page.kennisclips
   };
 };
