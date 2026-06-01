@@ -3,24 +3,24 @@
   export let clip;
 </script>
 
-<Breadcrumb title="Kennisclip" backgroundColor="var(--color-quaternary)" />
+<Breadcrumb titel="Kennisclip" backgroundColor="var(--color-quaternary)" />
 
 <article class="knowledge-clip">
-  <h1>{clip.titel}</h1>
+  <h1>{clip.title}</h1>
 
-  {#if clip.youtube_link}
+  {#if clip.youTubeLink}
     <iframe
       class="youtubelink"
-      title={clip.titel}
-      src={clip.youtube_link}
+      title={clip.title}
+      src={clip.youTubeLink}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
   {/if}
 
-  {#if clip.beschrijving}
+  {#if clip.content}
     <div class="richtext">
-      {@html clip.beschrijving}
+      {@html clip.content.html}
     </div>
   {/if}
 

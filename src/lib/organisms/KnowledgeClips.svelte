@@ -6,14 +6,18 @@
   {#each clips as clip}
     <article class="clip-card">
       <a href={`/kennisclips/${clip.slug}`}>
-        {#if clip.youtube_link}
-          <iframe class="youtubelink" title={clip.titel} src={clip.youtube_link}
+        {#if clip.youTubeLink}
+          <iframe
+            class="youtubelink"
+            title={clip.title}
+            src={clip.youTubeLink}
           ></iframe>
         {/if}
 
-        <h2>{clip.titel}</h2>
+        <h2>{clip.title}</h2>
       </a>
     </article>
+    
   {/each}
 </section>
 
@@ -39,9 +43,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition:
-      transform 0.2s,
-      box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
   .clip-card a {
@@ -51,7 +53,7 @@
   .clip-card a:hover {
     border-color: var(--color-quaternary);
     background-color: var(--color-septenary-40);
-    text-decoration: none;
+    text-decoration:none;
   }
 
   .clip-card a {
