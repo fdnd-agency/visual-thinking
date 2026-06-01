@@ -6,7 +6,7 @@ export async function load() {
     query Articles {
       vt_artikelen_page {
         titel
-        beschrijving: inhoud
+        inhoud
         artikelen(limit: 6) {
           titel
           intro

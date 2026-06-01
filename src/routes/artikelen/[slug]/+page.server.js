@@ -10,7 +10,7 @@ export const load = async ({ params }) => {
         titel
         intro
         slug
-        beschrijving: inhoud
+        inhoud
         visueel {
           id
         }
