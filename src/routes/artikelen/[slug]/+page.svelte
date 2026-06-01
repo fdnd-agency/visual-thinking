@@ -3,7 +3,7 @@
 
   let { data } = $props();
 
-  const {title, visual, intro, content} = data.article
+  const {titel, visueel, intro, beschrijving} = data.article
 </script>
 
 <Breadcrumb titel="Overzicht" url="/artikelen" backgroundColor="var(--color-tertiary)" />
@@ -13,7 +13,7 @@
     <p>Gepost op <time>26 maart 2019<time></p>
   </div>
 
-  <h1>{title}</h1>
+  <h1>{titel}</h1>
   
   <ul>
     <li><a href="/">Creatief denken</a></li>
@@ -22,8 +22,8 @@
 </header>
 
 <div class="content">
-  {#if visual?.url} 
-    <img src="{visual.url}" alt="{title}" />
+  {#if visueel?.url} 
+    <img src="{visueel.url}" alt="{titel}" />
   {/if}
   
 
@@ -32,7 +32,7 @@
   </p>
 
   <div class="rich-text">
-    {@html content}
+    {@html beschrijving}
   </div> 
   
 </div>

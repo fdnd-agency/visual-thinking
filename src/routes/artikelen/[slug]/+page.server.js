@@ -7,11 +7,11 @@ export const load = async ({ params }) => {
   const query = `
     query Article($slug: String!) {
       vt_artikel(filter: { slug: { _eq: $slug } }) {
-        title: titel
+        titel
         intro
         slug
-        content: inhoud
-        visual: visueel {
+        beschrijving: inhoud
+        visueel {
           id
         }
       }
@@ -35,7 +35,7 @@ export const load = async ({ params }) => {
 
   const article = {
     ...articleData,
-    visual: articleData.visual ? { url: `${DIRECTUS_URL}/assets/${articleData.visual.id}` } : null
+    visueel: articleData.visueel ? { url: `${DIRECTUS_URL}/assets/${articleData.visueel.id}` } : null
   };
 
   return { article };

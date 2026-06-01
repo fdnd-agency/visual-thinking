@@ -1,12 +1,10 @@
 <script>
   let { page } = $props();
-  const {title, content} = page;
-
 </script>
 
 <section class="intro">
-  <h1>{title}</h1>
-  {@html content}
+  <h1>{page.titel}</h1>
+  {@html page.beschrijving}
 </section>
 
 <style>
