@@ -63,7 +63,7 @@
 
 <div class="minicourse">
   <header>
-    <h1>{data.miniCourse?.title}</h1>
+    <h1>{data.miniCourse?.titel}</h1>
   </header>
 
   {#if total > 0}
