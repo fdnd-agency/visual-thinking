@@ -6,21 +6,21 @@
 <Breadcrumb titel="Kennisclip" backgroundColor="var(--color-quaternary)" />
 
 <article class="knowledge-clip">
-  <h1>{clip.title}</h1>
+  <h1>{clip.titel}</h1>
 
   {#if clip.youTubeLink}
     <iframe
       class="youtubelink"
-      title={clip.title}
-      src={clip.youTubeLink}
+      titel={clip.titel}
+      src={clip.youtube_link}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
   {/if}
 
-  {#if clip.content}
+  {#if clip.beschrijving}
     <div class="richtext">
-      {@html clip.content.html}
+      {@html clip.beschrijving}
     </div>
   {/if}
 

@@ -1,25 +1,20 @@
 import { gql } from "graphql-request";
 import { hygraph } from "$lib/utils/hygraph.js";
+import { directus, fetchReadFromDirectus } from "../../../lib/utils/directus.js";
 
 export const load = async ({ params }) => {
   const { slug } = params;
 
-  const query = gql`
+  const graphqlQuery = `
     query CategoryBySlug {
-      category(where: { slug: "${slug}" }) {
+      vt_kennisclips(filter: { slug: { _eq: "${slug}"} }) {
         slug
-        title
-        youTubeLink
-        content {
-          html
-        }
+        titel
+        youtube_link
+        beschrijving
       }
     }
-  `;
-
-  const data = await hygraph.request(query);
-
-  return {
-    clip: data.category
-  };
+  `
+    const knowledgeClipData = await fetchReadFromDirectus(graphqlQuery); 
+    return knowledgeClipData.vt_kennisclips[0];
 };

@@ -3,8 +3,8 @@
   export let data;
 </script>
 
-{#if data?.clip}
-  <KnowledgeClip clip={data.clip} />
+{#if data}
+  <KnowledgeClip clip={data} />
 {:else}
   <p>Geen kennisclip gevonden.</p>
 {/if}
