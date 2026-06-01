@@ -8,7 +8,7 @@
 <article class="knowledge-clip">
   <h1>{clip.titel}</h1>
 
-  {#if clip.youTubeLink}
+  {#if clip.youtube_link}
     <iframe
       class="youtubelink"
       titel={clip.titel}
