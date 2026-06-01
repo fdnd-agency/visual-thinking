@@ -59,7 +59,7 @@
   });
 </script>
 
-<Breadcrumb title="Minicursussen" backgroundColor="var(--color-senary)" />
+<Breadcrumb titel="Minicursussen" backgroundColor="var(--color-senary)" />
 
 <div class="minicourse">
   <header>
@@ -67,15 +67,22 @@
   </header>
 
   {#if total > 0}
-    <div class="carousel-wrapper">
-      <div class="carousel" bind:this={carousel}>
-        {#each slides as slide, i}
-          <Slide id={"slide-" + i} {slide} />
-        {/each}
-      </div>
+<div class="carousel-wrapper">
 
-      <CarouselControls {scrollPrev} {scrollNext} {currentIndex} {total} />
-    </div>
+  <div class="carousel" bind:this={carousel}>
+    {#each slides as slide, i}
+      <Slide id={"slide-" + i} {slide} />
+    {/each}
+  </div>
+
+  <CarouselControls
+    {scrollPrev}
+    {scrollNext}
+    {currentIndex}
+    {total}
+  />
+</div>
+
   {/if}
 </div>
 
@@ -91,83 +98,81 @@
     text-decoration: underline;
   }
 
-  .minicourse {
-    width: 100vw;
-    min-height: 100dvh;
+.minicourse {
+  width: 100vw;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--color-tertiary);
+  text-align: center;
+}
+
+header {
+  padding: 1rem;
+  background: var(--color-tertiary);
+  z-index: 10;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+}
+
+.carousel-wrapper {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  background: var(--color-tertiary);
+  width: 100%;
+  flex: 1;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@supports selector(::scroll-button) {
+  .carousel::scroll-button {
+    appearance: auto;
+    background: var(--color-quinary);
+    color: #fff;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
     display: grid;
-    grid-template-rows: auto 1fr;
-    background: var(--color-tertiary);
-    text-align: center;
+    place-items: center;
+    opacity: 0.9;
+    transition: opacity 0.2s, transform 0.2s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    visibility: visible;
   }
 
-  header {
-    padding: 1rem;
-    background: var(--color-tertiary);
-    z-index: 10;
+  .carousel::scroll-button:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
   }
 
-  h1 {
-    margin: 0;
-    font-size: 1.6rem;
-    color: var(--color-primary);
+  .carousel::scroll-button(left) {
+    content: "Vorige";
+    left: 0.75rem;
   }
 
-  .carousel-wrapper {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    width: 100%;
-    height: 100%;
+  .carousel::scroll-button(right) {
+    content: "Volgende";
+    right: 0.75rem;
   }
-
-  .carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    background: var(--color-tertiary);
-    width: 100%;
-    flex: 1;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-  @supports selector(::scroll-button) {
-    .carousel::scroll-button {
-      appearance: auto;
-      background: var(--color-quinary);
-      color: #fff;
-      border-radius: 50%;
-      width: 3rem;
-      height: 3rem;
-      font-size: 1.5rem;
-      display: grid;
-      place-items: center;
-      opacity: 0.9;
-      transition:
-        opacity 0.2s,
-        transform 0.2s;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 20;
-      visibility: visible;
-    }
-
-    .carousel::scroll-button:hover {
-      opacity: 1;
-      transform: translateY(-50%) scale(1.05);
-    }
-
-    .carousel::scroll-button(left) {
-      content: "Vorige";
-      left: 0.75rem;
-    }
-
-    .carousel::scroll-button(right) {
-      content: "Volgende";
-      right: 0.75rem;
-    }
-  }
+}
 </style>

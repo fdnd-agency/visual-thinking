@@ -6,15 +6,12 @@
   {#each articles as article}
     <a href="/artikelen/{article.slug}">
       <article>
-        {#if article.visual?.url}
-          <img
-            src={article.visual.url}
-            alt={article.title}
-            width="200"
-            height="200"
-            loading="lazy"
-          />
-        {/if}
+        <img
+          src={article.visual.url}
+          alt={article.title}
+          width="200"
+          height="200"
+        />
         <h2>{article.title}</h2>
       </article>
     </a>
@@ -65,4 +62,5 @@
     font-weight: normal;
     text-wrap: balance;
   }
+  
 </style>

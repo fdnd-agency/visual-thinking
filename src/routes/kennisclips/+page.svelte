@@ -1,10 +1,10 @@
 <script>
   import { Breadcrumb, Introduction, KnowledgeClips } from "$lib/index.js";
   let { data } = $props();
-  const page = $derived(data.page);
-  const clips = $derived(data.clips);
+  const {page, clips} = data
+
 </script>
 
-<Breadcrumb title="Kennisclips" backgroundColor="var(--color-quaternary)" />
-<Introduction {page} />
+<Breadcrumb titel="Kennisclips" backgroundColor="var(--color-quaternary)" />
+<Introduction {page}/>
 <KnowledgeClips {clips} />

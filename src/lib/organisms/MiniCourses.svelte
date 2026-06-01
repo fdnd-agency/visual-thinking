@@ -1,6 +1,17 @@
 <script>
-    let { miniCourses, directusUrl } = $props();
+  let { miniCourses } = $props();
 
+  // Afbeeldingen koppelen aan slugs
+  const imageMap = {
+    'structuur-en-kleur': 'structuur-kleur.png',
+    'mensen-tekenen': 'mensen_tekenen.png',
+    'handlettering': 'handlettering.png',
+    'basisvormen': 'basisvormen.png'
+  };
+
+  function getImageFilename(slug) {
+    return imageMap[slug] ?? 'placeholder.png';
+  }
 </script>
 
 <section>
@@ -10,15 +21,13 @@
       {#each miniCourses as course}
         <li>
           <a href={`/minicursussen/${course.slug}`} class="course-card">
-            {#if course.image?.id}
-              <img
-                src={`${directusUrl}/assets/${course.image.id}`}
-                alt={`Afbeelding voor minicursus ${course.title}`}
-                class="course-image"
-                loading="lazy"
-                decoding="async"
-              />
-            {/if}
+            <img
+              src={`/images/${getImageFilename(course.slug)}`}
+              alt={`Afbeelding voor minicursus ${course.title}`}
+              class="course-image"
+              loading="lazy"
+              decoding="async"
+            />
             <span class="course-title">{course.title}</span>
           </a>
         </li>

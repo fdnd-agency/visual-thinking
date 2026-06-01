@@ -3,22 +3,18 @@
 
   let { data } = $props();
 
-  const { title, visual, intro, content } = data.article;
+  const {title, visual, intro, content} = data.article
 </script>
 
-<Breadcrumb
-  title="Overzicht"
-  url="/artikelen"
-  backgroundColor="var(--color-tertiary)"
-/>
+<Breadcrumb titel="Overzicht" url="/artikelen" backgroundColor="var(--color-tertiary)" />
 
 <header>
   <div>
-    <p>Gepost op <time>26 maart 2019</time></p>
+    <p>Gepost op <time>26 maart 2019<time></p>
   </div>
 
   <h1>{title}</h1>
-
+  
   <ul>
     <li><a href="/">Creatief denken</a></li>
     <li><a href="/">Onderwijs</a></li>
@@ -26,17 +22,19 @@
 </header>
 
 <div class="content">
-  {#if visual?.url}
-    <img src={visual.url} alt={title} />
+  {#if visual.url} 
+    <img src="{visual.url}" alt="{title}" />
   {/if}
+  
 
   <p class="intro">
     {intro}
   </p>
 
   <div class="rich-text">
-    {@html content}
-  </div>
+    {@html content.html}
+  </div> 
+  
 </div>
 
 <style>
@@ -53,25 +51,26 @@
   }
   header > ul {
     grid-column: 2 / -1;
-    display: flex;
+    display:flex;
     padding-left: 0;
-    list-style: none;
-    gap: 1rem;
+    list-style:none;
+    gap:1rem;
+    
   }
   header > ul li {
     background-color: var(--color-quinary);
   }
   header > ul li a {
     text-decoration: none;
-    padding: 0.5rem;
-    color: inherit;
+    padding:.5rem;
+    color:inherit
   }
   header p {
     font-size: 1rem;
     font-family: var(--font-family-secondary);
     line-height: 1.5rem;
     color: var(--color-tertiary);
-    margin: 0;
+    margin:0;
   }
 
   time {
@@ -81,37 +80,37 @@
   /* tablet */
   @media (min-width: 50em) {
     header {
-      display: grid;
+      display:grid;
       grid-template-columns: 20rem 10fr;
-      gap: 0 2rem;
+      gap:0 2rem;
       background-color: var(--color-septenary-40);
-      padding: 2rem 0 0;
+      padding:2rem 0 0;
       margin: 0 -1rem 2rem;
     }
     header > div {
-      padding: 0 2rem;
-      align-self: flex-end;
-      border-right: 1px solid var(--color-septenary);
-      text-align: right;
-      flex-shrink: 0;
+      padding:0 2rem;
+      align-self:flex-end;
+      border-right:1px solid var(--color-septenary);
+      text-align:right;
+      flex-shrink:0;
     }
     header > div p {
-      margin: 0;
+      margin:0;
     }
     header > div p * {
       font-weight: bold;
-      display: block;
-      color: var(--color-tertiary);
+      display:block;
+      color: var(--color-tertiary)
     }
     header h1 {
-      align-self: flex-end;
-      margin: 0;
+      align-self:flex-end;
+      margin:0
     }
-
+    
     div.content {
-      padding-left: 20rem;
-      padding-right: 2rem;
-      max-width: 50em;
+      padding-left:20rem;
+      padding-right:2rem;
+      max-width:50em;
     }
   }
 
