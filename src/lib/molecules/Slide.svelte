@@ -6,21 +6,15 @@
   <h2>{slide.title}</h2>
 
   <div class="slide-content">
-    {@html slide.content.html}
+    {@html slide.content}
   </div>
 
   {#if slide.image?.url}
     <picture>
       <!-- probeer eerst AVIF -->
-      <source
-        srcset={`${slide.image.url.replace(/\.[^/.]+$/, ".avif")}`}
-        type="image/avif"
-      />
+      <source srcset={`${slide.image.url}?format=avif`} type="image/avif" />
       <!-- dan WebP -->
-      <source
-        srcset={`${slide.image.url.replace(/\.[^/.]+$/, ".webp")}`}
-        type="image/webp"
-      />
+      <source srcset={`${slide.image.url}?format=webp`} type="image/webp" />
 
       <!-- fallback = origineel formaat -->
       <img
@@ -35,33 +29,32 @@
   {/if}
 </article>
 
-
 <style>
-.slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2rem;
-  box-sizing: border-box;
-  color: var(--color-primary);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    color: var(--color-primary);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
 
-.slide-content {
-  max-width: 54ch;
-  width: 100%;
-  text-align: left;
-  margin: 1rem auto 2rem auto;
-}
+  .slide-content {
+    max-width: 54ch;
+    width: 100%;
+    text-align: left;
+    margin: 1rem auto 2rem auto;
+  }
 
-img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 </style>
