@@ -7,14 +7,14 @@ export const load = async ({ params }) => {
 
   const graphqlQuery = `
     query CategoryBySlug {
-      adconnect_kennisclip_category(filter: { slug: { _eq: "${slug}"} }) {
+      vt_kennisclips(filter: { slug: { _eq: "${slug}"} }) {
         slug
-        title
-        youTubeLink
-        content
+        titel
+        youtube_link
+        beschrijving
       }
     }
   `
     const knowledgeClipData = await fetchReadFromDirectus(graphqlQuery); 
-    return knowledgeClipData.adconnect_kennisclip_category[0];
+    return knowledgeClipData.vt_kennisclips[0];
 };

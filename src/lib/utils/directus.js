@@ -16,7 +16,8 @@ export async function fetchReadFromDirectus(query) {
         return data;
     } catch (error) {
         console.log(`Error fetching from directus: ${error}`);
-        console.log(error);
-        console.log(error.errors[0].extensions);
+        console.log(JSON.stringify(error.errors));
+        throw error
+        
     }
 }
