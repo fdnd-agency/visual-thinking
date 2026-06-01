@@ -9,7 +9,7 @@
   <ul>
     {#each methods as method}
       <li>
-        <a href="/tekenmethodes/{method.slug}">
+        <a href={`/tekenmethodes/${method.slug}`}>
           <picture>
             {#if method.sjabloon?.url}
               <img
