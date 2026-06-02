@@ -6,7 +6,7 @@ export const load = async ({ params }) => {
   const { slug } = params;
 
   const graphqlQuery = `
-    query CategoryBySlug {
+    query KennisClipBySlug {
       vt_kennisclips(filter: { slug: { _eq: "${slug}"} }) {
         slug
         titel

@@ -6,7 +6,7 @@ export const load = async () => {
 
 
   const directusquery = `
-  query AllCategories {
+  query kennisCLipPage {
     vt_kennisclips_page {
       titel
       beschrijving
