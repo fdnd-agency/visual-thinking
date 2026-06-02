@@ -1,12 +1,10 @@
 <script>
   let { page } = $props();
-  const {title, content} = page;
-
 </script>
 
 <section class="intro">
-  <h1>{title}</h1>
-  {@html content}
+  <h1>{page.titel}</h1>
+  {@html page.beschrijving}
 </section>
 
 <style>
@@ -18,24 +16,24 @@
   h1 {
     font-size: 1.7rem;
   }
-  
+
   @media screen and (min-width: 36rem) {
     section {
-          max-width: 75%;
-      }
-      h1 {
-          font-size: 3.157rem;
-          text-align: center;
-      }
+      max-width: 75%;
+    }
+    h1 {
+      font-size: 3.157rem;
+      text-align: center;
+    }
   }
 
   @media screen and (min-width: 60rem) {
     section {
-          max-width: 32rem;
-      }
-      h1 {
-          font-size: 3.157rem;
-          text-align: center;
-      }
+      max-width: 32rem;
+    }
+    h1 {
+      font-size: 3.157rem;
+      text-align: center;
+    }
   }
 </style>
