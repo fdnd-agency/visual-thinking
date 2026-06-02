@@ -1,4 +1,4 @@
-export const kennisclip_query = `
+export const directusKennisclip_query = `
   query kennisclip_page {
     vt_kennisclips_page {
       titel
@@ -12,7 +12,7 @@ export const kennisclip_query = `
   }
 `;
 
-export const kennisclipSlugQuery = (slug) => `
+export const directusKennisclipSlugQuery = (slug) => `
     query SingleKennisClip {
         vt_kennisclips(filter: { slug: { _eq: "${slug}" } })  {
             slug
@@ -21,4 +21,40 @@ export const kennisclipSlugQuery = (slug) => `
             beschrijving
         }
     }
-`
+`;
+
+export const directusKennisclipsQuery = `
+    query allKennisClips {
+        vt_kennisclips {
+            titel
+            beschrijving
+            slug
+            youtube_link
+            }
+    }`
+
+export const hygraphKennisclipSlugQuery = (slug) => `
+    query SingleKennisClip {
+        category(where: {slug: "${slug}"}) {
+            title
+            content {
+                html
+                text
+            }
+            youTubeLink
+            slug
+        }
+    }`;
+
+export const hygraphKennisClipsQuery = 
+    `query allKennisClips {
+        categories {
+            title
+            content {
+                html
+                text
+            }
+            youTubeLink
+            slug
+        }
+    }`;
