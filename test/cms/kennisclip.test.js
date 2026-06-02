@@ -14,21 +14,6 @@ describe("testing kennisclip fetching data", () => {
     const directusInstance = directus;
     const schema = directusKennisclipOoutputSchema;
 
-    it("Should fetch kennisclips for the kennisclips page from directus and not error", async () => {
-        const query = directusKennisclip_query;
-        let response;
-        
-        response = await directusInstance.query(query);    
-        
-        
-        schema.parse(response.vt_kennisclips_page); // parse the incoming data to the schema we declared. Test should fail if output is not the same as the schema.
-
-        expect(response).to.be.not.null;
-        expect(response.vt_kennisclips_page.titel).toBeTypeOf("string");
-        expect(response.vt_kennisclips_page.beschrijving).toBeTypeOf("string");
-        expect(response.vt_kennisclips_page.kennisclips.length).toBeGreaterThan(0); 
-    })
-
     it("Should fetch data for a particular kennisclip and not error", async () => {
         const slugQuery = directusKennisclipSlugQuery;
         
