@@ -1,11 +1,8 @@
 <script>
   import { Breadcrumb, Introduction, Methods } from "$lib/index.js";
   let { data } = $props();
-
-  const {page, categories} = data;
 </script>
 
-<Breadcrumb titel="Tekenmethodes" backgroundColor="var(--color-quinary)" />
-<Introduction {page} />
-<Methods methods={data.methods} {categories}/>
-
+<Breadcrumb title="Tekenmethodes" backgroundColor="var(--color-quinary)" />
+<Introduction page={data.page} />
+<Methods methods={data.methods} categories={data.categories} />
