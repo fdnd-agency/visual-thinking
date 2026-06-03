@@ -6,12 +6,12 @@ export const load = async ({ params }) => {
   const { slug } = params;
   const query = `
     query Article($slug: String!) {
-      adconnect_artikel(filter: { slug: { _eq: $slug } }) {
-        title
+      vt_artikel(filter: { slug: { _eq: $slug } }) {
+        titel
         intro
         slug
-        content
-        visual {
+        inhoud
+        visueel {
           id
         }
       }
@@ -27,7 +27,7 @@ export const load = async ({ params }) => {
     throw err;
   }
 
-  const articleData = data.adconnect_artikel[0];
+  const articleData = data.vt_artikel[0];
 
   if (!articleData) {
     error(404, "Article not found");
@@ -35,7 +35,7 @@ export const load = async ({ params }) => {
 
   const article = {
     ...articleData,
-    visual: articleData.visual ? { url: `${DIRECTUS_URL}/assets/${articleData.visual.id}` } : null
+    visueel: articleData.visueel ? { url: `${DIRECTUS_URL}/assets/${articleData.visueel.id}` } : null
   };
 
   return { article };
