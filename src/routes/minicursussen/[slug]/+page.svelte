@@ -96,15 +96,6 @@
     color: var(--color-primary);
   }
 
-  .minicourse :global(.minicursus-quotes),
-  .minicourse :global(a) {
-    color: var(--color-primary);
-  }
-
-  :global(ul) {
-    list-style-type: none;
-    text-decoration: underline;
-  }
 
 .minicourse {
   width: 100vw;
