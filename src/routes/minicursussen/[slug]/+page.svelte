@@ -87,15 +87,6 @@
 </div>
 
 <style>
-  :global(main) {
-    margin: 0;
-    padding: 0;
-  }
-
-  .minicourse {
-    color: var(--color-primary);
-  }
-
 
 .minicourse {
   width: 100vw;
