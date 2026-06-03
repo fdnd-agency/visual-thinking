@@ -4,6 +4,7 @@ import { GraphQLClient } from "graphql-request";
 const hygraphUrl = process.env.HYGRAPH_URL;
 const directusUrl = process.env.DIRECTUS_URL;
 const directusKey = process.env.DIRECTUS_KEY;
+
 const directus = createDirectus(process.env.DIRECTUS_URL).with(graphql());
 const hygraph = new GraphQLClient(hygraphUrl, {
   headers: {
@@ -30,6 +31,10 @@ const response = await hygraph.request(query);
 console.log(response);
 const methods = response.methods; //array
 
+if (!directusKey) {
+  throw new Error("DIRECTUS_KEY is missing. Add it to your .env file.");
+}
+
 const newTekenMethodes = [];
 methods.forEach((method) => {
   const newDirectusSchema = {
@@ -42,17 +47,26 @@ methods.forEach((method) => {
 });
 
 newTekenMethodes.forEach(async (newTekenMethode, i) => {
-  if (i == 3) {
-    try {
-      const postNewMethods = await fetch(`${directusUrl}/items/vt_tekenmethodes`, { method: "post", body: JSON.stringify(newTekenMethode), headers: {"Authorization": " your token", "Content-Type": "application/json"} });
-      console.log(postNewMethods.ok)
-      console.log(postNewMethods);
-      return;
-    } catch (error) {
-      console.log(error);
-      console.log(JSON.stringify(error.errors));
-      return;
-    }
+  // if (i == 3) {
+  try {
+    const postNewMethods = await fetch(
+      `${directusUrl}/items/vt_tekenmethodes`,
+      {
+        method: "post",
+        body: JSON.stringify(newTekenMethode),
+        headers: {
+          Authorization: `Bearer ${directusKey}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(postNewMethods.ok);
+    console.log(postNewMethods);
+    return;
+  } catch (error) {
+    console.log(error);
+    console.log(JSON.stringify(error.errors));
     return;
   }
+  // }
 });
