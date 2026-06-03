@@ -87,9 +87,17 @@
 </div>
 
 <style>
-  :global(main, .minicursus-quotes, a) {
+  :global(main) {
     margin: 0;
     padding: 0;
+  }
+
+  .minicourse {
+    color: var(--color-primary);
+  }
+
+  .minicourse :global(.minicursus-quotes),
+  .minicourse :global(a) {
     color: var(--color-primary);
   }
 
