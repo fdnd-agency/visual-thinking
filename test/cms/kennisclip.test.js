@@ -16,12 +16,12 @@ describe("testing kennisclip fetching data", () => {
 
     it("Should fetch data for a particular kennisclip and not error", async () => {
         const slugQuery = directusKennisclipSlugQuery;
-        
-        
-        const response = await directus.query(directusKennisclipSlugQuery(slugs[0]));        
+
+
+        const response = await directus.query(directusKennisclipSlugQuery(slugs[0]));
         const kennisclip = response.vt_kennisclips[0];
         directusCategoryOutputSchema.parse(kennisclip);
-        
+
         expect(kennisclip.titel).toBeTypeOf("string");
         expect(kennisclip.youtube_link).toBeTypeOf("string");
         expect(kennisclip.beschrijving).toBeTypeOf("string")
@@ -34,27 +34,47 @@ describe("testing kennisclip fetching data", () => {
 
         // We fetch both from hygraph and directus
         const [directusResponse, hygraphResponse] = await Promise.all([directus.query(directusKennisClipsQuery), hygraph.request(hygraphQuery)]);
-        
-        
-        // Here we normalize both the rich text fields because the different platforms store rich text differently.
-        const normalizedHygraphContent = directusResponse.vt_kennisclips.map((kennisClip) => normalizeHtml(kennisClip.beschrijving));
-        const normalizedDirectusContent = hygraphResponse.categories.map((kennisClip) => kennisClip.content.text = normalizeHtml(kennisClip.content.html));
 
+
+        // Here we normalize both the rich text fields because the different platforms store rich text differently.
+        const normalizedHygraphContent = hygraphResponse.categories.map(c => ({
+            title: c.title,
+            youTubeLink: c.youTubeLink,
+            slug: c.slug,
+            content: normalizeHtml(c.content.html)
+        }));
+        const normalizedDirectusContent = directusResponse.vt_kennisclips.map(c => ({
+            ...c,
+            beschrijving: normalizeHtml(c.beschrijving)
+        }));
+
+        const directusMap = new Map(
+            normalizedDirectusContent.map((clip) => [
+                clip.slug,
+                clip
+            ])
+        );
+        const hygraphMap = new Map(
+            normalizedHygraphContent.map((clip) => [
+                clip.slug,
+                clip
+            ])
+        );
 
         // Here we assert all the fields are equal.
-        for (let i = 0; i < normalizedDirectusContent.length; i++) {
-            const directusKennisClip = normalizedDirectusContent[i];
-            const hygraphKennisCLip = normalizedHygraphContent[i];
-            
-            expect(hygraphKennisCLip.title).toEqual(directusKennisClip.titel)
-            expect(hygraphKennisCLip.youTubeLink).toEqual(directusKennisClip.youtube_link)
-            expect(hygraphKennisCLip.slug).toEqual(directusKennisClip.slug)
-            expect(hygraphKennisCLip.content).toEqual(directusKennisClip.beschrijving);    
-            
+        for (const [slug, directusKennisCLip] of directusMap) {
+            const hygraphKennisClip = hygraphMap.get(slug);
+
+
+            expect(hygraphKennisClip.title).toEqual(directusKennisCLip.titel)
+            expect(hygraphKennisClip.youTubeLink).toEqual(directusKennisCLip.youtube_link)
+            expect(hygraphKennisClip.slug).toEqual(directusKennisCLip.slug)
+            expect(hygraphKennisClip.content).toEqual(directusKennisCLip.beschrijving);
+
         }
-        
-        
+
+
     })
 
-    
+
 })

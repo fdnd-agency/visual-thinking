@@ -1,5 +1,5 @@
 import { createDirectus, graphql } from '@directus/sdk';
-import { DIRECTUS_URL } from "$env/static/private";
+const DIRECTUS_URL = process.env.DIRECTUS_URL
 export const directus = createDirectus(
-  DIRECTUS_URL
+    DIRECTUS_URL
 ).with(graphql());
