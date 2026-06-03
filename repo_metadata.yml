@@ -4,4 +4,4 @@ status: "active"
 years: [2]
 main_link: "https://visualthinking.school/"
 dev_link: "https://visualthinking.dev.fdnd.nl/"
-tech_stack: ["SvelteKit", "Hygraph"]
+tech_stack: ["SvelteKit", "Directus"]
