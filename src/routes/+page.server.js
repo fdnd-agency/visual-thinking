@@ -7,8 +7,8 @@ export async function load() {
         const data = await directus.query(`
             query homePage {
                 adconnect_homepage {
-                    title
-                    content
+                    titel: title
+                    beschrijving: content
                 }
             }`);
         return data;
