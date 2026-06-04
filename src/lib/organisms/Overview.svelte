@@ -1,40 +1,31 @@
 <script>
-  import { Filter } from '$lib/index.js';
+  import { Filter } from "$lib/index.js";
   let { methods, categories } = $props();
 </script>
 
 <section>
   <Filter {categories} />
   <h2>Alle methodes <small>({methods.length})</small></h2>
-    <ul>
-      {#each methods as method}
-        <li>
-          <a href="/tekenmethodes/{method.slug}">
-            <picture>
-
-              <source 
-              srcset={method.template.webp}
-              type="image/webp" 
+  <ul>
+    {#each methods as method}
+      <li>
+        <a href={`/tekenmethodes/${method.slug}`}>
+          <picture>
+            {#if method.sjabloon?.url}
+              <img
+                src={method.sjabloon.url}
+                alt={method.title}
+                width="300"
+                height="225"
+                loading="lazy"
               />
-
-              <source 
-              srcset={method.template.avif}
-              type="image/avif" 
-              />
-
-              <img 
-              src={method.template.png}
-              alt={"Voorbeeld van " + method.title} 
-              width="300"
-              height="225"
-              loading="lazy"
-              />
-            </picture>
-            <h3>{method.title}</h3>
-          </a>
-        </li>
-      {/each}
-    </ul>
+            {/if}
+          </picture>
+          <h3>{method.titel}</h3>
+        </a>
+      </li>
+    {/each}
+  </ul>
 </section>
 
 <style>
@@ -42,11 +33,11 @@
     margin: auto;
     max-width: var(--grid-max-width);
     width: 100%;
-    padding:0;
-    position:relative;
+    padding: 0;
+    position: relative;
 
     @container {
-      padding: 0 1rem; 
+      padding: 0 1rem;
     }
   }
 
@@ -80,7 +71,7 @@
     text-decoration: none;
     color: var(--font-color);
     padding: 0.8rem 0.8rem 0.25rem 0.8rem;
-    display: block; 
+    display: block;
   }
 
   li {
@@ -89,7 +80,7 @@
     transition: 0.1s;
     margin: -0.8rem;
     border-bottom: 0.3rem solid transparent;
-    background-color: var(--color-background); 
+    background-color: var(--color-background);
   }
 
   li img {

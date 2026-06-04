@@ -1,35 +1,36 @@
 import { gql } from "graphql-request";
 import { hygraph } from "$lib/utils/hygraph.js";
-
-
+import { directus } from "../../lib/utils/directus";
 
 export const load = async () => {
-  const query = gql`
-    query AllCategories {
-      page(where: {id: "cmhdhsj6agpqo06uylzxne5vd"}) {
-        title
-        content {
-          html
-        }
-      }
-      categories {
+
+
+  const directusquery = `
+  query AllCategories {
+    adconnect_kennisclip {
+      title
+      content
+      category {
         slug
         title
         youTubeLink
-        introduction
-        content {
-          html
-        }
-      }
+     }
     }
-  `;
+  }
+`;
 
-  const data = await hygraph.request(query);
 
-  console.log(data);
+  let data
+  try {
+    data = await directus.query(directusquery);
+  } catch (error) {
+    console.log(error)
+    console.log(error.errors[0].extensions)
+  }
+
 
   return {
-    page: data.page,
-    clips: data.categories
+    page: data.adconnect_kennisclip,
+    clips: data.adconnect_kennisclip.category
   };
 };

@@ -1,8 +1,6 @@
 <script>
-  import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
   import { onMount } from "svelte";
-  
+
   let { categories } = $props();
   let form = $state();
 
@@ -22,7 +20,7 @@
   action="/tekenmethodes"
   method="get"
   class:js-on={javascript.enabled}
-  data-sveltekit-preserve-scroll 
+  data-sveltekit-preserve-scroll
   data-sveltekit-keepfocus
 >
   <fieldset>
@@ -30,21 +28,21 @@
       <summary>
         <legend>Filter tekenmethodes</legend>
       </summary>
-    
+
       {#each categories as category}
         <div>
           <input
             type="checkbox"
-            id={category.slug}
+            id={category.id}
             name="filter"
-            value={category.slug}
+            value={category.id}
             onchange={() => {
               form.requestSubmit();
             }}
           />
 
-          <label for={category.slug}>
-            <span>{category.title}</span>
+          <label for={category.id}>
+            <span>{category.titel}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               {width}
@@ -58,8 +56,6 @@
               />
             </svg>
           </label>
-
-          
         </div>
       {/each}
     </details>
@@ -74,16 +70,15 @@
     align-items: start;
     display: grid;
     gap: 1rem;
-    
 
     & .close-button {
       display: none;
     }
 
     @container (min-width:35rem) {
-      position:absolute;
-      top:-1rem;
-      right:-1rem;
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
     }
   }
 
@@ -95,7 +90,7 @@
     border-style: none;
     border: none;
     border-image: none;
-    padding:0;
+    padding: 0;
 
     @container (min-width:35rem) {
       padding-block: 1rem;
@@ -108,7 +103,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin:0 -1rem;
+    margin: 0 -1rem;
     padding: 0.5rem 1rem;
 
     cursor: pointer;
@@ -132,8 +127,8 @@
       width: 0.8rem;
       height: 0.8rem;
       cursor: pointer;
-      height:1px;
-      width:1px;
+      height: 1px;
+      width: 1px;
       visibility: hidden;
 
       &::before {
@@ -180,7 +175,7 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-      align-items:center;
+      align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
     }
@@ -192,7 +187,6 @@
 
     & input[type="checkbox"] {
       margin: 0;
-
     }
   }
 
@@ -215,17 +209,17 @@
   }
 
   details {
-    padding:1rem;
-    width:calc(100vw - 2rem);
+    padding: 1rem;
+    width: calc(100vw - 2rem);
 
-    @container (min-width:35rem){
-      width:16rem;
+    @container (min-width:35rem) {
+      width: 16rem;
     }
   }
 
   details[open] {
     border: 1px solid;
-    background:#fff
+    background: #fff;
   }
 
   details summary {
@@ -239,12 +233,12 @@
     content: " "; /* closed icon */
     background: url("/images/caret-down.svg") no-repeat center / contain;
     position: absolute;
-    right: -.35rem;
-    top: .25rem;
-    height:1.5rem;
-    width:1.5rem;
+    right: -0.35rem;
+    top: 0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
     transform-origin: center center;
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 
   details[open] legend::before {
