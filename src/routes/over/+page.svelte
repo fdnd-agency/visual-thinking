@@ -4,6 +4,6 @@
   let { data } = $props();
 </script>
 
-<Breadcrumb titel="Over" backgroundColor="var(--color-tertiary-80)" />
+<Breadcrumb title="Over" backgroundColor="var(--color-tertiary-80)" />
 
 <Introduction page={data.page} />
