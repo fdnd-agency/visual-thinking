@@ -3,15 +3,17 @@ import { hygraph } from "$lib/utils/hygraph.js";
 import { directus } from "../lib/utils/directus";
 
 export async function load() {
-  
-    const data = await directus.query(`
+
+    const response = await directus.query(`
         query homePage {
             vt_homepage {
                 titel
                 beschrijving
             }
         }`);
-    return data;
-    
-  
+    const page = response.vt_homepage;
+    return page;
+
+
+
 }
