@@ -10,16 +10,16 @@
       {#each miniCourses as course}
         <li>
           <a href={`/minicursussen/${course.slug}`} class="course-card">
-            {#if course.image?.id}
+            {#if course.afbeelding?.id}
               <img
-                src={`${directusUrl}/assets/${course.image.id}`}
-                alt={`Afbeelding voor minicursus ${course.title}`}
+                src={`${directusUrl}/assets/${course.afbeelding.id}`}
+                alt={`Afbeelding voor minicursus ${course.titel}`}
                 class="course-image"
                 loading="lazy"
                 decoding="async"
               />
             {/if}
-            <span class="course-title">{course.title}</span>
+            <span class="course-title">{course.titel}</span>
           </a>
         </li>
       {/each}
