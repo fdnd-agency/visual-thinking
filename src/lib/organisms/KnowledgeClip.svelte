@@ -11,7 +11,7 @@
   {#if clip.youtube_link}
     <iframe
       class="youtubelink"
-      titel={clip.titel}
+      title={clip.titel}
       src={clip.youtube_link}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
