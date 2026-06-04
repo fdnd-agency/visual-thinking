@@ -50,12 +50,14 @@ export async function load({ url }) {
   const categories = data.vt_categorieen || [];
   const page = data.vt_tekenmethodes_page;
   if (!page) throw error(404, "Pagina niet gevonden");
-  const methods = (page?.tekenmethodes || []).map((method) => ({
-    ...method,
-    sjabloon: method.sjabloon
-      ? { url: `${DIRECTUS_URL}/assets/${method.sjabloon.id}` }
-      : null,
-  }));
+  const methods = (page?.tekenmethodes || [])
+    .map((method) => ({
+      ...method,
+      sjabloon: method.sjabloon
+        ? { url: `${DIRECTUS_URL}/assets/${method.sjabloon.id}` }
+        : null,
+    }))
+    .sort((a, b) => (a.titel || "").localeCompare(b.titel || ""));
 
   return { page, methods, categories };
 }

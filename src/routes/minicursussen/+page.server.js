@@ -5,15 +5,15 @@ export async function load() {
   try {
     const data = await directus.query(`
       query minicursus_page {
-        adconnect_minicursussen_page {
-          title
-          content
+        vt_minicursussen_page {
+          titel
+          beschrijving
         }
           
-        adconnect_minicursussen {
-          title
+        vt_minicursussen {
+          titel
           slug
-          image {
+          afbeelding {
             id
           }
         }
@@ -21,8 +21,8 @@ export async function load() {
     `);
 
     return {
-      cursussen: data.adconnect_minicursussen,
-      page: data.adconnect_minicursussen_page,
+      cursussen: data.vt_minicursussen,
+      page: data.vt_minicursussen_page,
       directusUrl: DIRECTUS_URL,
     };
   } catch (error) {
