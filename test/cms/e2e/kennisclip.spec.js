@@ -5,7 +5,6 @@ test('kennisclip has title', async ({ page }) => {
     const slug = 'onderzoeken-en-begrijpen';
 
     await page.goto(`/kennisclips/${slug}`);
-    console.log(await page.content())
 
     const h1 = page.locator('h1');
 
