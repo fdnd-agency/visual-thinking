@@ -3,23 +3,22 @@ import { hygraph } from "$lib/utils/hygraph.js";
 import { directus } from "../../lib/utils/directus";
 
 export async function load({ url }) {
-  // let query = gql`
-  // query About {
-  //   page(where: {id: "clv8dd2bhtwu607w49x2wmn7y"}) {
-  //     title
-  //     content {
-  //       html
-  //     }
-  //   }
-  // }`;
-  const query = `query {
-  adconnect_aboutpage{
-  title
-  content
-  }}`
+
+  const query = `
+    query {
+      vt_over_page{
+        titel
+        beschrijving
+     }
+  }
+  `;
 
   const data = await directus.query(query);
 
-
-  return data;
+  return {
+    page: {
+      title: data.vt_over_page[0].titel,
+      content: data.vt_over_page[0].beschrijving
+    }
+  };
 }
