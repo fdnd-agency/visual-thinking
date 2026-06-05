@@ -16,8 +16,6 @@
               loading="lazy"
             />
           {/each}
-        {:else}
-          <p>Geen visualisaties</p>
         {/if}
         {@html step?.beschrijving}
       </div>
