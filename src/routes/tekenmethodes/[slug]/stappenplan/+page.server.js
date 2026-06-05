@@ -42,11 +42,12 @@ export const load = async ({ params }) => {
       }
     `;
 
+  let data;
   let method;
   let catMatData;
 
   try {
-    const data = await directus.query(query, { slug });
+    data = await directus.query(query, { slug });
   } catch (error) {
     console.error("Error loading method data:", error);
     console.error("Error details:", JSON.stringify(error.errors, null, 2));
