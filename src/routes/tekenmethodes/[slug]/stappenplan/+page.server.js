@@ -15,6 +15,7 @@ export const load = async ({ params }) => {
             id
           }
           stappen {
+            id
             titel
             beschrijving
             visualisaties {
@@ -78,11 +79,13 @@ export const load = async ({ params }) => {
     materialen: (
       catMatData?.vt_tekenmethodes_vt_tekenmethodes_materialen || []
     ).map((item) => ({ titel: item?.vt_tekenmethodes_materialen_id?.titel })),
-    stappen: (method?.stappen || []).map((stap) => ({
-      ...stap,
-      visualisaties: (stap?.visualisaties || []).map((visual) => ({
-        url: `${DIRECTUS_URL}/assets/${visual.directus_files_id.id}`,
-      })),
-    })),
+    stappen: (method?.stappen || [])
+      .map((stap) => ({
+        ...stap,
+        visualisaties: (stap?.visualisaties || []).map((visual) => ({
+          url: `${DIRECTUS_URL}/assets/${visual.directus_files_id.id}`,
+        })),
+      }))
+      .sort((a, b) => a.id - b.id),
   };
 };
