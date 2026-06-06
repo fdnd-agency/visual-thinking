@@ -7,8 +7,8 @@
     <details open={stepIndex === 0}>
       <summary>{step.titel}</summary>
       <div>
-        {#if step?.visualisaties?.length > 0}
-          {#each step.visualisaties as visual}
+        {#if step?.visuals?.length > 0}
+          {#each step.visuals as visual}
             <img
               class="carrousel-img"
               src={visual?.url}
