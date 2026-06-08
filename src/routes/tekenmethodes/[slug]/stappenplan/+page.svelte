@@ -2,7 +2,7 @@
   import { Breadcrumb, MethodHeader, MethodTags, Steps } from "$lib/index.js";
 
   let { data } = $props();
-  const { titel, slug, pdf, duur, stappen, categorieen, materialen } = data;
+  const { titel, slug, pdf, duur, steps, categories, materials } = data;
 </script>
 
 <Breadcrumb
@@ -14,12 +14,12 @@
 <section>
   <div class="sticky">
     <MethodTags
-      categories={categorieen}
+      {categories}
       duration={duur}
-      materials={materialen}
+      {materials}
     />
   </div>
-  <Steps steps={stappen} />
+  <Steps {steps} />
 </section>
 
 <style>

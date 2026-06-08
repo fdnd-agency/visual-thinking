@@ -14,12 +14,17 @@ export const load = async ({ params }) => {
             id
           }
           categorieen {
-            titel
+            vt_categorieen_id {
+              titel
+            }
           }
           materialen {
-            titel
+            vt_tekenmethodes_materialen_id {
+              titel
+            }
           }
           stappen {
+            id
             titel
             beschrijving
             visualisaties {
@@ -47,11 +52,17 @@ export const load = async ({ params }) => {
   return {
     ...method,
     pdf: method.pdf ? { url: `${DIRECTUS_URL}/assets/${method.pdf.id}` } : null,
-    stappen: (method?.stappen || []).map((stap) => ({
-      ...stap,
-      visualisaties: (stap?.visualisaties || []).map((visual) => ({
-        url: `${DIRECTUS_URL}/assets/${visual.directus_files_id.id}`,
-      })),
-    })),
+    categories: method.categorieen.map((cat) => cat.vt_categorieen_id.titel),
+    materials: method.materialen.map(
+      (mat) => mat.vt_tekenmethodes_materialen_id.titel
+    ),
+    steps: (method?.stappen || [])
+      .map((stap) => ({
+        ...stap,
+        visuals: (stap?.visualisaties || []).map((visual) => ({
+          url: `${DIRECTUS_URL}/assets/${visual.directus_files_id.id}`,
+        })),
+      }))
+      .sort((a, b) => a.id - b.id),
   };
 };
