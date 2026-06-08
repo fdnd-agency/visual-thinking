@@ -24,3 +24,24 @@ test('homepage has description', async ({ page }) => {
     await expect(description).toContainText('leert studenten en docenten hun gedachten')
 })
 
+
+test("Monkey test: random navigations", async ( { page } ) => {
+    const pages = ['tekenmethodes', 'minicursussen', 'artikelen'];
+
+    const amountOfNavigations = 50;
+
+    for (let i = 0; i < amountOfNavigations; i++) {
+        const specificPage = pages[Math.floor(Math.random() * pages.length)];
+        await page.goto(specificPage);
+
+        const content = await page.content();
+
+        expect(content.toLowerCase()).not.toContain("internal server error");
+
+        const h1 = await page.locator('h1').innerText()
+        expect(h1).toBeDefined();
+        expect(h1.length).toBeGreaterThan(0);
+        console.log(h1);
+    }
+})
+
