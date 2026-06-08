@@ -9,17 +9,16 @@
     <IconCategories />
     <div>
       {#each categories as category}
-        <p>{category.titel}</p>
+        <p>{category}</p>
       {/each}
     </div>
   </li>
   <!-- Materials Section -->
   <li>
     <IconMaterials />
-
     {#each materials as material}
       <div>
-        <p>{material.titel}</p>
+        <p>{material}</p>
       </div>
     {/each}
   </li>
