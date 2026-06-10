@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: ['main', 'dev', 'dev_temp']
+    branches: ["main", "dev", "dev_temp"]
   pull_request:
-    branches: ['main', 'dev', 'dev_temp']
+    branches: ["main", "dev", "dev_temp"]
 
 jobs:
   build:
@@ -23,13 +23,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run build --if-present
         env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          HYGRAPH_KEY: ${{ secrets.HYGRAPH_KEY }}
+          HYGRAPH_URL: ${{ secrets.HYGRAPH_URL }}
+          DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
       - run: npm run test
       - run: npm run test:e2e
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
