@@ -32,4 +32,12 @@ jobs:
           HYGRAPH_URL: ${{ secrets.HYGRAPH_URL }}
           DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
       - run: npm run test
+        env:
+          HYGRAPH_KEY: ${{ secrets.HYGRAPH_KEY }}
+          HYGRAPH_URL: ${{ secrets.HYGRAPH_URL }}
+          DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
       - run: npm run test:e2e
+        env:
+          HYGRAPH_KEY: ${{ secrets.HYGRAPH_KEY }}
+          HYGRAPH_URL: ${{ secrets.HYGRAPH_URL }}
+          DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
