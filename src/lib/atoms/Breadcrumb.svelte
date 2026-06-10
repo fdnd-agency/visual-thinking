@@ -1,23 +1,23 @@
 <script>
-  let { titel, url, backgroundColor } = $props();
+  let { title, url, backgroundColor } = $props();
 </script>
 
 <div style="--background-color:{backgroundColor}">
   {#if url}
-    <a href="{url}">{titel}</a>
+    <a href={url}>{title}</a>
   {:else}
-    <span>{titel}</span>
+    <span>{title}</span>
   {/if}
 </div>
-
 
 <style>
   div {
     background-color: var(--background-color);
     margin: 0 -1rem;
   }
-  
-  a, span {
+
+  a,
+  span {
     text-transform: uppercase;
     color: var(--color-primary);
     font-family: var(--font-family-primary);
@@ -30,11 +30,10 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    text-decoration:none;
+    text-decoration: none;
   }
 
   a:hover {
     text-decoration: underline;
   }
-
 </style>

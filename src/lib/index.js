@@ -1,8 +1,3 @@
-// queries
-export { default as MethodStepsQuery } from "./queries/method.js";
-export { default as MethodExamplesQuery } from "./queries/method.js";
-export { default as MethodDescriptionQuery } from "./queries/method.js";
-
 // atoms
 export { default as IconAuthor } from "./atoms/icons/IconAuthor.svelte";
 export { default as IconCategories } from "./atoms/icons/IconCategories.svelte";
@@ -12,7 +7,6 @@ export { default as Breadcrumb } from "./atoms/Breadcrumb.svelte";
 export { default as Hexagon } from "./atoms/Hexagon.svelte";
 export { default as Icons } from "./atoms/Icons.svelte";
 export { default as ProgressBar } from "./atoms/ProgressBar.svelte";
-
 export { default as Filter } from "./atoms/Filter.svelte";
 
 // molecules
@@ -20,7 +14,7 @@ export { default as Footer } from "./molecules/Footer.svelte";
 export { default as Header } from "./molecules/Header.svelte";
 export { default as Introduction } from "./molecules/Introduction.svelte";
 export { default as Steps } from "./molecules/Steps.svelte";
-export { default as StepsTags } from "./molecules/StepsTags.svelte";
+export { default as MethodTags } from "./molecules/MethodTags.svelte";
 export { default as Methods } from "./molecules/Methods.svelte";
 export { default as CarouselControls } from "./molecules/CarouselControls.svelte";
 export { default as Slide } from "./molecules/Slide.svelte";
@@ -34,6 +28,3 @@ export { default as KnowledgeClips } from "./organisms/KnowledgeClips.svelte";
 export { default as KnowledgeClip } from "./organisms/KnowledgeClip.svelte";
 export { default as MethodHeader } from "./organisms/MethodHeader.svelte";
 export { default as MiniCourses } from "./organisms/MiniCourses.svelte";
-
-
-

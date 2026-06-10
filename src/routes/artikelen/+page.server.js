@@ -1,27 +1,38 @@
-import { gql } from "graphql-request";
-import { hygraph } from "$lib/utils/hygraph.js";
+import { directus } from "$lib/utils/directus.js";
+import { DIRECTUS_URL } from "$env/static/private";
 
 export async function load() {
-  let query = gql`
+  const query = `
     query Articles {
-      page(where: {id: "clv8dqjvwum6i07w4u8fwvnsu"}) {
-        title
-        content {
-          html
+      vt_artikelen_page {
+        titel
+        inhoud
+        artikelen(limit: 6) {
+          titel
+          intro
+          slug
+          visueel {
+            id
+          }
         }
-      }
-      
-      articles(first:6) {
-        visual {
-          url
-        }
-        title
-        intro
-        slug
       }
     }
   `;
-  const data = await hygraph.request(query);
-  
-  return data
+
+  let data;
+  try {
+    data = await directus.query(query);
+  } catch (error) {
+    console.error("Error loading articles page:", error);
+    console.error("Error details:", JSON.stringify(error.errors, null, 2));
+    throw error;
+  }
+
+  const page = data.vt_artikelen_page;
+  const articles = (page?.artikelen || []).map(article => ({
+    ...article,
+    visueel: article.visueel ? { url: `${DIRECTUS_URL}/assets/${article.visueel.id}` } : null
+  }));
+
+  return { page, articles };
 }

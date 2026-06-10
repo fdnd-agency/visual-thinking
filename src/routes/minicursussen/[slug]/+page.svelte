@@ -63,7 +63,7 @@
 
 <div class="minicourse">
   <header>
-    <h1>{data.miniCourse?.title}</h1>
+    <h1>{data.miniCourse?.titel}</h1>
   </header>
 
   {#if total > 0}
@@ -87,16 +87,6 @@
 </div>
 
 <style>
-  :global(main, .minicursus-quotes, a) {
-    margin: 0;
-    padding: 0;
-    color: var(--color-primary);
-  }
-
-  :global(ul) {
-    list-style-type: none;
-    text-decoration: underline;
-  }
 
 .minicourse {
   width: 100vw;

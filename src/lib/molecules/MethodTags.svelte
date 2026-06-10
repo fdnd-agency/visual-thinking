@@ -1,14 +1,6 @@
 <script>
-  import { IconAuthor, IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
+  import { IconCategories, IconDuration, IconMaterials } from "$lib/index.js";
   let { categories, materials, duration } = $props();
-
-  // Functie om underscores te verwijderen en de eerste letter van het eerste woord hoofdletter te maken
-  function formatMaterial(material) {
-    // Verwijder underscores
-    let formatted = material.replace(/_/g, " ");
-    // Zet de eerste letter van de string in hoofdletters
-    return formatted.charAt(0).toUpperCase() + formatted.slice(1);
-  }
 </script>
 
 <ul>
@@ -17,17 +9,16 @@
     <IconCategories />
     <div>
       {#each categories as category}
-        <p>{category.title}</p>
+        <p>{category}</p>
       {/each}
     </div>
   </li>
   <!-- Materials Section -->
   <li>
     <IconMaterials />
-
     {#each materials as material}
       <div>
-        <p>{formatMaterial(material)}</p>
+        <p>{material}</p>
       </div>
     {/each}
   </li>
@@ -51,11 +42,6 @@
   li {
     display: flex;
     margin-bottom: 0.5rem;
-  }
-
-  .span-box {
-    display: flex;
-    flex-flow: row wrap;
   }
 
   p {

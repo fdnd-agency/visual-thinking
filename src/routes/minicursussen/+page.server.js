@@ -1,24 +1,33 @@
-import { gql } from "graphql-request";
-import { hygraph } from "$lib/utils/hygraph.js";
+import { directus } from "$lib/utils/directus.js";
+import { DIRECTUS_URL } from "$env/static/private";
 
 export async function load() {
-  const query = gql`
-    query MiniCourses {
-      page(where: {id: "clv8eb8jmw1hv07uncpsrut9l"}) {
-        title
-        content {
-          html
+  try {
+    const data = await directus.query(`
+      query minicursus_page {
+        vt_minicursussen_page {
+          titel
+          beschrijving
+        }
+          
+        vt_minicursussen {
+          titel
+          slug
+          afbeelding {
+            id
+          }
         }
       }
+    `);
 
-      miniCourses {
-        title
-        slug
-      }
-    }
-  `;
-
-  const { page, miniCourses } = await hygraph.request(query);
-
-  return { page, miniCourses };
+    return {
+      cursussen: data.vt_minicursussen,
+      page: data.vt_minicursussen_page,
+      directusUrl: DIRECTUS_URL,
+    };
+  } catch (error) {
+    console.error("Error loading home page:", error);
+    console.error(error.errors[0].extensions);
+    throw error;
+  }
 }

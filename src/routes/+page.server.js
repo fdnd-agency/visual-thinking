@@ -1,18 +1,19 @@
 import { gql } from "graphql-request";
 import { hygraph } from "$lib/utils/hygraph.js";
+import { directus } from "../lib/utils/directus";
 
 export async function load() {
-  let query = gql`
-    query Home {
-      page(where: {id: "clv8j3yo84g2107unotjahr7y"}) {
-        title
-        content {
-          html
-        }
-      }
-    }
-  `;
-  const data = await hygraph.request(query);
-  
-  return data
+
+    const response = await directus.query(`
+        query homePage {
+            vt_homepage {
+                titel
+                beschrijving
+            }
+        }`);
+    const page = response.vt_homepage;
+    return page;
+
+
+
 }
