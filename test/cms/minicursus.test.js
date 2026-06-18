@@ -9,14 +9,14 @@ import { normalizeHtml } from "./helpers/normalizeHtml";
 
 describe("testing minicursus fetching data", () => {
  
-  const slugs = ["basisvormen", "handlettering"];
+  const slug = ["basisvormen"];
   const directusInstance = directus;
   const schema = directusMiniCursusOutputSchema;
 
   it("Should fetch data for a particular minicursus and not error", async () => {
     const slugQuery = directusMiniCursusSlugQuery;
 
-    const response = await directus.query(directusMiniCursusSlugQuery(slugs[0]),);
+    const response = await directus.query(directusMiniCursusSlugQuery(slug[0]),);
     const minicursus = response.vt_minicursussen[0];
     directusMiniCursusOutputSchema.parse(minicursus);
 
