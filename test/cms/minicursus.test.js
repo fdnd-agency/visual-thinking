@@ -1,22 +1,24 @@
 import { describe, expect, it } from "vitest";
-import { directusMiniCursusSlugQuery, hygraphMiniCursusSlugQuery, directusMiniCursusesQuery, hygraphMiniCursusesQuery } from "./queries/minicursus";
+import {
+  directusMiniCursusSlugQuery,
+  hygraphMiniCursusSlugQuery,
+} from "./queries/minicursus";
 import { directus } from "./directus";
 import z, { json } from "zod";
-import { directusMiniCursusOutputSchema, directusMiniCursusesOutputSchema, directusMinicursusSlideOutputSchema } from "./schemas/minicursus_schema";
+import {
+  directusMiniCursusOutputSchema, 
+} from "./schemas/minicursus_schema";
 import { hygraph } from "./hygraph";
 import * as cheerio from "cheerio";
 import { normalizeHtml } from "./helpers/normalizeHtml";
 
 describe("testing minicursus fetching data", () => {
- 
   const slug = ["basisvormen"];
   const directusInstance = directus;
   const schema = directusMiniCursusOutputSchema;
 
   it("Should fetch data for a particular minicursus and not error", async () => {
-    const slugQuery = directusMiniCursusSlugQuery;
-
-    const response = await directusInstance.query(directusMiniCursusSlugQuery(slug[0]),);
+    const response = await directusInstance.query(directusMiniCursusSlugQuery(slug[0]));
     const minicursus = response.vt_minicursussen[0];
     schema.parse(minicursus);
 
@@ -26,43 +28,31 @@ describe("testing minicursus fetching data", () => {
     expect(minicursus.slides[0]?.titel).toBeTypeOf("string");
   });
 
-  it("Should be the same data in Hygraph and Directus for minicursuses", async () => {
-    const hygraphQuery = hygraphMiniCursusesQuery;
-    const directusMiniCursusesListQuery = directusMiniCursusesQuery;
+  it("Should have matching slide data (count, title, content) for the minicursus", async () => {
+    const [directusCourseResponse, hygraphCourseResponse] = await Promise.all([
+      directusInstance.query(directusMiniCursusSlugQuery(slug[0])),
+      hygraph.request(hygraphMiniCursusSlugQuery(slug[0])),
+    ]);
 
-    // We fetch both from Hygraph and Directus
-    const [directusResponse, hygraphResponse] = await Promise.all([directusInstance.query(directusMiniCursusesListQuery), hygraph.request(hygraphQuery),]);
+    const directusCourse = directusCourseResponse.vt_minicursussen[0];
+    const hygraphCourse = hygraphCourseResponse.miniCourse;
 
-    // normalize data: titel to title, slug to slug, 
-    const normalizedHygraphContent = hygraphResponse.miniCourses.map((c) => ({
-      title: c.title,
-      slug: c.slug,
-    }));
-    const normalizedDirectusContent = directusResponse.vt_minicursussen.map((c) => ({
-      ...c,
-      title: c.titel,
-  }));
+    // Course title should match
+    expect(directusCourse.titel).toEqual(hygraphCourse.title);
 
-    const directusMap = new Map(
-      normalizedDirectusContent.map((course) => [
-        course.slug,
-        course
-      ])
-    );
-    const hygraphMap = new Map(
-      normalizedHygraphContent.map((course) => [
-        course.slug,
-        course
-      ])
-    );
+    // Same number of slides
+    expect(directusCourse.slides.length).toEqual(hygraphCourse.slides.length);
 
-    // Assert all fields are equal.
-    for (const [slug, directusMiniCursus] of directusMap) {
-      const hygraphMiniCursus = hygraphMap.get(slug);
+    // Compare each slide, matched by position in the array
+    directusCourse.slides.forEach((directusSlide, index) => {
+      const hygraphSlide = hygraphCourse.slides[index];
 
-      expect(hygraphMiniCursus).toBeDefined();
-      expect(hygraphMiniCursus.title).toEqual(directusMiniCursus.title);
-      expect(hygraphMiniCursus.slug).toEqual(directusMiniCursus.slug);
-    }
+      expect(directusSlide.titel).toEqual(hygraphSlide.title);
+
+      const directusContent = normalizeHtml(directusSlide.inhoud ?? "");
+      const hygraphContent = normalizeHtml(hygraphSlide.content.html ?? "");
+
+      expect(directusContent).toEqual(hygraphContent);
+    });
   });
 });
