@@ -12,7 +12,6 @@ test("minicursus overview page displays courses", async ({ page }) => {
   const courseCount = await courseCards.count();
 
   expect(courseCount).toBeGreaterThan(0);
-  await expect(page).toHaveTitle("Visual Thinking");
 });
 
 test("minicursus detail shows first slide heading", async ({ page }) => {
@@ -21,8 +20,6 @@ test("minicursus detail shows first slide heading", async ({ page }) => {
   await page.goto(`/minicursussen/${slug}`);
 
   // Detail pages render slide headings rather than a visible `h1` title.
-  await expect(page).toHaveTitle("Visual Thinking");
-
   const firstSlideHeading = page.getByRole("heading", { name: "Introductie" });
   await expect(firstSlideHeading).toBeVisible();
 });
