@@ -16,9 +16,9 @@ describe("testing minicursus fetching data", () => {
   it("Should fetch data for a particular minicursus and not error", async () => {
     const slugQuery = directusMiniCursusSlugQuery;
 
-    const response = await directus.query(directusMiniCursusSlugQuery(slug[0]),);
+    const response = await directusInstance.query(directusMiniCursusSlugQuery(slug[0]),);
     const minicursus = response.vt_minicursussen[0];
-    directusMiniCursusOutputSchema.parse(minicursus);
+    schema.parse(minicursus);
 
     expect(minicursus.titel).toBeTypeOf("string");
     expect(minicursus.slug).toBeTypeOf("string");
@@ -31,9 +31,9 @@ describe("testing minicursus fetching data", () => {
     const directusMiniCursusesListQuery = directusMiniCursusesQuery;
 
     // We fetch both from Hygraph and Directus
-    const [directusResponse, hygraphResponse] = await Promise.all([directus.query(directusMiniCursusesListQuery), hygraph.request(hygraphQuery),]);
+    const [directusResponse, hygraphResponse] = await Promise.all([directusInstance.query(directusMiniCursusesListQuery), hygraph.request(hygraphQuery),]);
 
-    // normalize both the rich text field since Directus and Hygraph store rich text differently
+    // normalize data: titel to title, slug to slug, 
     const normalizedHygraphContent = hygraphResponse.miniCourses.map((c) => ({
       title: c.title,
       slug: c.slug,
