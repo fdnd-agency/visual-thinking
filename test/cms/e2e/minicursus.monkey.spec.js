@@ -16,6 +16,9 @@ test('minicursus monkey test: overview -> detail -> carousel navigation', async 
   await expect(page).toHaveURL(/\/minicursussen\/.+/);
   await expect(page.locator('.carousel')).toBeVisible();
 
+  // Wait for the page to hydrate before interacting: the carousel buttons are
+  await page.waitForLoadState('networkidle');
+
   const slides = page.locator('article.slide');
   await expect(slides.first()).toBeVisible();
   // The detail page renders slide headings rather than a visible header title.
