@@ -7,7 +7,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "test": "vitest",
-        "test:e2e": "playwright test"
+        "test:e2e": "playwright test",
+        "debug": "node --inspect node_modules/vite/bin/vite.js"
     },
     "devDependencies": {
         "@playwright/test": "^1.60.0",
@@ -16,6 +17,7 @@
         "@sveltejs/kit": "^2.5.27",
         "@sveltejs/vite-plugin-svelte": "^4.0.0",
         "cheerio": "^1.2.0",
+        "fast-check": "^4.8.0",
         "svelte": "^5.32.1",
         "vite": "^5.4.4",
         "vitest": "^4.1.7",
