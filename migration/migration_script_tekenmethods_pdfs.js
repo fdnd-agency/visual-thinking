@@ -1,7 +1,6 @@
 import {
   createDirectus,
   graphql,
-  rest,
   staticToken,
   updateItem,
   uploadFiles,
@@ -13,8 +12,7 @@ const directusToken = process.env.DIRECTUS_TOKEN; // Ensure DIRECTUS_TOKEN is av
 
 const directus = createDirectus(directusUrl)
   .with(staticToken(directusToken))
-  .with(graphql())
-  .with(rest());
+  .with(graphql());
 
 const hygraph = new GraphQLClient(process.env.HYGRAPH_URL, {
   headers: {
