@@ -3,23 +3,21 @@
 </script>
 
 <section>
-  <!-- Loop through each step in the method -->
   {#each steps as step, stepIndex}
     <details open={stepIndex === 0}>
-      <summary>{step.title}</summary>
+      <summary>{step.titel}</summary>
       <div>
-        <!-- Check if visual content exists -->
-        {#if step.visual[0]}
-          <img src={step.visual[0].url} alt="image_voorbeeld" />
+        {#if step?.visuals?.length > 0}
+          {#each step.visuals as visual}
+            <img
+              class="carrousel-img"
+              src={visual?.url}
+              alt="image_voorbeeld"
+              loading="lazy"
+            />
+          {/each}
         {/if}
-        <!-- Check if description is HTML or plain text -->
-        {#if typeof step.description === "object"}
-          <!-- i used {@html} for injecting HTML content without the html tags -->
-          {@html step.description.html}
-        {:else}
-          <!-- text description -->
-          <p>{step.description}</p>
-        {/if}
+        {@html step?.beschrijving}
       </div>
     </details>
   {/each}

@@ -1,9 +1,9 @@
 <script>
   import { Breadcrumb, Introduction } from "$lib/index.js";
-  let { data } = $props();
 
-  const page = data.adconnect_aboutpage;
+  let { data } = $props();
 </script>
 
-<Breadcrumb titel="Over" backgroundColor="var(--color-tertiary-80)" />
-<Introduction {page} />
+<Breadcrumb title="Over" backgroundColor="var(--color-tertiary-80)" />
+
+<Introduction page={data.page} />

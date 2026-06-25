@@ -6,15 +6,15 @@
   {#each articles as article}
     <a href="/artikelen/{article.slug}">
       <article>
-        {#if article.visual?.url}
+        {#if article.visueel?.url}
           <img
-            src={article.visual.url}
-            alt={article.title}
+            src={article.visueel.url}
+            alt={article.titel}
             width="200"
             height="200"
           />
         {/if}
-        <h2>{article.title}</h2>
+        <h2>{article.titel}</h2>
       </article>
     </a>
   {/each}

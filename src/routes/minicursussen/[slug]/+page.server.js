@@ -6,12 +6,14 @@ export async function load({ params }) {
   const { slug } = params;
   const query = `
       query MiniCourse($slug: String!) {
-        adconnect_minicursussen(filter: { slug: { _eq: $slug } }) {
-          title
+        vt_minicursussen(filter: { slug: { _eq: $slug } }) {
+          titel
           slides {
-            title
-            content
-            image { id }
+            titel
+            inhoud
+            afbeelding {
+              id
+            }
           }
         }
       }
@@ -25,17 +27,17 @@ export async function load({ params }) {
     throw err;
   }
 
-  const courseData = data.adconnect_minicursussen?.[0];
+  const courseData = data.vt_minicursussen?.[0];
   if (!courseData) {
     throw error(404, "Minicursus not found");
   }
 
   const miniCourse = {
-    title: courseData.title,
-    slides: (courseData.slides ?? []).map(({ title, content, image }) => ({
-      title,
-      content: content ?? "",
-      image: image ? { url: `${DIRECTUS_URL}/assets/${image.id}` } : null,
+    title: courseData.titel,
+    slides: (courseData.slides ?? []).map(({ titel, inhoud, afbeelding }) => ({
+      title: titel,
+      content: inhoud ?? "",
+      image: afbeelding ? { url: `${DIRECTUS_URL}/assets/${afbeelding.id}` } : null,
     })),
   };
 
